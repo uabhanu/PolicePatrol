@@ -3,30 +3,20 @@ using System.Collections;
 
 public class Player : MonoBehaviour 
 {
-	public bool selected;
-	public float speed;
-	
-	void Start () 
-	{
-	
-	}
-
-	void Update () 
-	{
-
-	}
-
-	void OnCollisionEnter2D(Collision2D col)
-	{
-		if(col.gameObject.tag.Equals("Enemy"))
-		{
-			Debug.Log("Collided");
-		}
-	}
-
-	void OnMouseDown()
-	{
-		Debug.Log("Player Selected");
-		selected = true;
-	}
+//	NavMeshAgent nmAgent;
+//	public float speed;
+//	public Transform target;
+//	
+//	void Start () 
+//	{
+//		nmAgent = GetComponent<NavMeshAgent>();
+//	}
+//
+//	void Update () 
+//	{
+//		if(target)
+//		{
+//			nmAgent.SetDestination(target.position);
+//		}
+//	}	
 }

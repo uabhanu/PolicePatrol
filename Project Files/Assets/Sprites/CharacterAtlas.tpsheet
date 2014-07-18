@@ -1,0 +1,58 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: CharacterAtlas.png (852 x 976)
+# $TexturePacker:SmartUpdate:25ebca1536289612dd4380b1feec4d06:9a438d573f458905157100caae251611:06b3f60fbbb402f7934a9956d367cd31$
+#
+
+Thug_WalkDown_01.png;744;4;104;160;0.5;0.5
+Thug_WalkDown_02.png;744;166;104;160;0.5;0.5
+Thug_WalkDown_03.png;638;4;104;160;0.5;0.5
+Thug_WalkDown_04.png;638;166;104;160;0.5;0.5
+Thug_WalkDown_05.png;532;4;104;160;0.5;0.5
+Thug_WalkDown_06.png;532;166;104;160;0.5;0.5
+Thug_WalkDown_07.png;744;328;104;160;0.5;0.5
+Thug_WalkDown_08.png;638;328;104;160;0.5;0.5
+Thug_WalkDown_09.png;532;328;104;160;0.5;0.5
+Thug_WalkDown_10.png;426;4;104;160;0.5;0.5
+Thug_WalkDown_11.png;426;166;104;160;0.5;0.5
+Thug_WalkDown_12.png;426;328;104;160;0.5;0.5
+Thug_WalkLeft_01.png;320;4;104;160;0.5;0.5
+Thug_WalkLeft_02.png;320;166;104;160;0.5;0.5
+Thug_WalkLeft_03.png;320;328;104;160;0.5;0.5
+Thug_WalkLeft_04.png;744;490;104;160;0.5;0.5
+Thug_WalkLeft_05.png;638;490;104;160;0.5;0.5
+Thug_WalkLeft_06.png;532;490;104;160;0.5;0.5
+Thug_WalkLeft_07.png;426;490;104;160;0.5;0.5
+Thug_WalkLeft_08.png;320;490;104;160;0.5;0.5
+Thug_WalkLeft_09.png;214;4;104;160;0.5;0.5
+Thug_WalkLeft_10.png;214;166;104;160;0.5;0.5
+Thug_WalkLeft_11.png;214;328;104;160;0.5;0.5
+Thug_WalkLeft_12.png;214;490;104;160;0.5;0.5
+Thug_WalkRight_01.png;744;652;104;160;0.5;0.5
+Thug_WalkRight_02.png;638;652;104;160;0.5;0.5
+Thug_WalkRight_03.png;532;652;104;160;0.5;0.5
+Thug_WalkRight_04.png;426;652;104;160;0.5;0.5
+Thug_WalkRight_05.png;320;652;104;160;0.5;0.5
+Thug_WalkRight_06.png;214;652;104;160;0.5;0.5
+Thug_WalkRight_07.png;108;4;104;160;0.5;0.5
+Thug_WalkRight_08.png;108;166;104;160;0.5;0.5
+Thug_WalkRight_09.png;108;328;104;160;0.5;0.5
+Thug_WalkRight_10.png;108;490;104;160;0.5;0.5
+Thug_WalkRight_11.png;108;652;104;160;0.5;0.5
+Thug_WalkRight_12.png;2;4;104;160;0.5;0.5
+Thug_WalkUp_01.png;2;166;104;160;0.5;0.5
+Thug_WalkUp_02.png;2;328;104;160;0.5;0.5
+Thug_WalkUp_03.png;2;490;104;160;0.5;0.5
+Thug_WalkUp_04.png;2;652;104;160;0.5;0.5
+Thug_WalkUp_05.png;744;814;104;160;0.5;0.5
+Thug_WalkUp_06.png;638;814;104;160;0.5;0.5
+Thug_WalkUp_07.png;532;814;104;160;0.5;0.5
+Thug_WalkUp_08.png;426;814;104;160;0.5;0.5
+Thug_WalkUp_09.png;320;814;104;160;0.5;0.5
+Thug_WalkUp_10.png;214;814;104;160;0.5;0.5
+Thug_WalkUp_11.png;108;814;104;160;0.5;0.5
+Thug_WalkUp_12.png;2;814;104;160;0.5;0.5
