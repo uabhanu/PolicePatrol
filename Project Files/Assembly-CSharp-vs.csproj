@@ -48,6 +48,16 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\UFTAtlasEditor\Demo\Scripts\PlaneController.cs" />
+     <Compile Include="Assets\UFTAtlasEditor\Demo\Scripts\PlaneCreateController.cs" />
+     <Compile Include="Assets\UFTAtlasEditor\Resources\Scripts\Core\Atlas\UFTAtlasMetadata.cs" />
+     <Compile Include="Assets\UFTAtlasEditor\Resources\Scripts\Core\Atlas\UFTAtlasSize.cs" />
+     <Compile Include="Assets\UFTAtlasEditor\Resources\Scripts\Core\Atlas\UFTTextureState.cs" />
+     <Compile Include="Assets\UFTAtlasEditor\Resources\Scripts\Core\Exceptions\TextureDoesNotExistsException.cs" />
+     <Compile Include="Assets\UFTAtlasEditor\Resources\Scripts\UFTSelectTextureFromAtlas.cs" />
+     <Compile Include="Assets\UFTAtlasEditor\Resources\Scripts\Utils\UFTFileUtil.cs" />
+     <Compile Include="Assets\UFTAtlasEditor\Resources\Scripts\Utils\UFTMeshUtil.cs" />
+     <Compile Include="Assets\UFTAtlasEditor\Resources\Scripts\Utils\UFTTextureUtil.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
