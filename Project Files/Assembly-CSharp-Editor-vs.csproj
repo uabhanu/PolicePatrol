@@ -46,12 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\UFTAtlasEditor\Editor\UFTAtlas.cs" />
-     <Compile Include="Assets\UFTAtlasEditor\Editor\UFTAtlasEditor.cs" />
-     <Compile Include="Assets\UFTAtlasEditor\Editor\UFTAtlasEditorEventManager.cs" />
-     <Compile Include="Assets\UFTAtlasEditor\Editor\UFTAtlasEntry.cs" />
-     <Compile Include="Assets\UFTAtlasEditor\Editor\UFTCreatePlane.cs" />
-     <Compile Include="Assets\UFTAtlasEditor\Editor\UFTSelectTextureFromAtlasEditor.cs" />
      <Compile Include="Assets\codeandweb.com\Editor\TexturePackerImporter.cs" />
  <Reference Include="UnityEditor.Graphs">
  <HintPath>D:/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>

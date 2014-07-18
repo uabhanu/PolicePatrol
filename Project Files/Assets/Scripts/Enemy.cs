@@ -3,17 +3,15 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour 
 {
-	
-	NavMeshAgent nmAgent;
-	public Transform target;
+	public float speed;
 	
 	void Start () 
 	{
-		nmAgent = GetComponent<NavMeshAgent>();
+
 	}
 	
 	void Update () 
 	{
-		nmAgent.SetDestination(target.position);
+
 	}
 }
