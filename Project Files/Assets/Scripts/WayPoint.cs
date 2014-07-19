@@ -1,15 +1,20 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class WayPoint : MonoBehaviour 
 {
-	private int breakWhile = 1 , countDown = 3;
+	private int breakWhile = 1;
+	public int countDown = 3;
 	public Collider[] wayPointColliders;
 	public int wayPointDistance = 10;
 	public LayerMask layer = 1 << 8;
+	public List<Transform> truckLocation;
 	
 	void Awake () 
 	{
+		truckLocation = new List<Transform>();
+
 		while(wayPointColliders.Length < 3 && breakWhile < 10)
 		{
 			wayPointColliders = Physics.OverlapSphere(transform.position , wayPointDistance , layer);
@@ -18,8 +23,12 @@ public class WayPoint : MonoBehaviour
 		}
 	}
 	
-	public void SetData(int incomingData)
+	public void SetData(int incomingData , List<Transform> newList)
 	{
+		//Debug.Log("SetData Method");
+
+		truckLocation = newList;
+		truckLocation.Add (transform);
 		countDown = incomingData;
 		countDown--;
 
@@ -34,7 +43,10 @@ public class WayPoint : MonoBehaviour
 		{
 			foreach(Collider wayPointCollider in wayPointColliders)
 			{
-				wayPointCollider.gameObject.GetComponent<WayPoint>().SetData(countDown);
+				if(!truckLocation.Contains(wayPointCollider.transform))
+				{
+					wayPointCollider.gameObject.GetComponent<WayPoint>().SetData(countDown , truckLocation);
+				}
 			}
 		}
 	}

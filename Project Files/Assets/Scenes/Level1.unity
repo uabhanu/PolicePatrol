@@ -128,11 +128,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
     serializedVersion: 2
     m_Bits: 49152
+  truckLocation: []
 --- !u!1 &173522703
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,11 +355,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
     serializedVersion: 2
     m_Bits: 6144
+  truckLocation: []
 --- !u!1 &363734168
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,11 +416,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
     serializedVersion: 2
     m_Bits: 380928
+  truckLocation: []
 --- !u!1001 &453749508
 Prefab:
   m_ObjectHideFlags: 0
@@ -539,11 +545,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
     serializedVersion: 2
     m_Bits: 950272
+  truckLocation: []
 --- !u!1 &513773995
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,11 +606,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
     serializedVersion: 2
     m_Bits: 5888
+  truckLocation: []
 --- !u!1 &519442312
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,11 +667,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
     serializedVersion: 2
     m_Bits: 47616
+  truckLocation: []
 --- !u!1 &817582715
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,11 +728,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
     serializedVersion: 2
     m_Bits: 12288
+  truckLocation: []
 --- !u!1 &825445825
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,11 +789,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
     serializedVersion: 2
     m_Bits: 768
+  truckLocation: []
 --- !u!1 &959386701
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,11 +850,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
     serializedVersion: 2
     m_Bits: 9728
+  truckLocation: []
 --- !u!1 &1265117434
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,11 +990,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
     serializedVersion: 2
     m_Bits: 786432
+  truckLocation: []
 --- !u!1 &1498043189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,11 +1051,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
     serializedVersion: 2
     m_Bits: 393216
+  truckLocation: []
 --- !u!1001 &1563381521
 Prefab:
   m_ObjectHideFlags: 0
@@ -1352,6 +1374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fabecd70d1e62d48ac10226837d2d74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  truckLocation: []
   wayPointScript: {fileID: 825445829}
 --- !u!1 &2062674948
 GameObject:
@@ -1407,11 +1430,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
     serializedVersion: 2
     m_Bits: 98304
+  truckLocation: []
 --- !u!1 &2104956130
 GameObject:
   m_ObjectHideFlags: 0
