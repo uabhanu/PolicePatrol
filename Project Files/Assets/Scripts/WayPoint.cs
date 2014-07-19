@@ -5,7 +5,6 @@ using UnityEngine;
 public class WayPoint : MonoBehaviour 
 {
 	private int breakWhile = 1;
-	public int countDown = 3;
 	public Collider[] wayPointColliders;
 	public int wayPointDistance = 10;
 	public LayerMask layer = 1 << 8;
@@ -22,31 +21,31 @@ public class WayPoint : MonoBehaviour
 			breakWhile++;
 		}
 	}
+
+	public void InitializeData()
+	{
+		truckLocation.Clear();
+		SetData(truckLocation);
+	}
 	
-	public void SetData(int incomingData , List<Transform> newList)
+	public void SetData(List<Transform> newList)
 	{
 		//Debug.Log("SetData Method");
 
 		truckLocation = newList;
 		truckLocation.Add (transform);
-		countDown = incomingData;
-		countDown--;
 
-		Debug.Log("WayPoint : " + this.name + " Sent the countdown of : " + countDown);
 
 		SendData();
 	}
 
 	public void SendData()
 	{
-		if(countDown > 0)
+		foreach(Collider wayPointCollider in wayPointColliders)
 		{
-			foreach(Collider wayPointCollider in wayPointColliders)
+			if(!truckLocation.Contains(wayPointCollider.transform))
 			{
-				if(!truckLocation.Contains(wayPointCollider.transform))
-				{
-					wayPointCollider.gameObject.GetComponent<WayPoint>().SetData(countDown , truckLocation);
-				}
+				wayPointCollider.gameObject.GetComponent<WayPoint>().SetData(new List<Transform>(truckLocation));
 			}
 		}
 	}

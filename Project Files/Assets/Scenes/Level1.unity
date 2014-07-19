@@ -128,7 +128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
@@ -355,7 +354,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
@@ -416,7 +414,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
@@ -545,7 +542,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
@@ -606,7 +602,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
@@ -667,7 +662,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
@@ -728,7 +722,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
@@ -789,7 +782,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
@@ -850,7 +842,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
@@ -990,7 +981,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
@@ -1051,7 +1041,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
@@ -1374,7 +1363,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fabecd70d1e62d48ac10226837d2d74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  truckLocation: []
   wayPointScript: {fileID: 825445829}
 --- !u!1 &2062674948
 GameObject:
@@ -1430,7 +1418,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd741b8ea2a0f24893051f81bfdf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDown: 3
   wayPointColliders: []
   wayPointDistance: 0
   layer:
