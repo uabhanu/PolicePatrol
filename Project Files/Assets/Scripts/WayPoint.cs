@@ -32,11 +32,12 @@ public class WayPoint : MonoBehaviour
 	{
 		//Debug.Log("SetData Method");
 
-		truckLocation = newList;
-		truckLocation.Add (transform);
-
-
-		SendData();
+		if(truckLocation.Count == 0 || newList[0] != truckLocation[0] || newList.Count < truckLocation.Count)
+		{
+			truckLocation = newList;
+			truckLocation.Add (transform);
+			SendData();
+		}
 	}
 
 	public void SendData()
@@ -48,6 +49,11 @@ public class WayPoint : MonoBehaviour
 				wayPointCollider.gameObject.GetComponent<WayPoint>().SetData(new List<Transform>(truckLocation));
 			}
 		}
+	}
+
+	public List<Transform> GetTruckLocation()
+	{
+		return new List<Transform>(truckLocation);
 	}
 
 	void Update () 

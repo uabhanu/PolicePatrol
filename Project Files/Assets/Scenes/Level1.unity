@@ -86,7 +86,7 @@ GameObject:
   - 114: {fileID: 59811402}
   m_Layer: 14
   m_Name: WayPointG
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -134,6 +134,56 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 49152
   truckLocation: []
+--- !u!1 &138319876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 138319878}
+  - 212: {fileID: 138319877}
+  m_Layer: 0
+  m_Name: PF_Truck
+  m_TagString: Truck
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!212 &138319877
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 138319876}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 1280867773
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &138319878
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 138319876}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
 --- !u!1 &173522703
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +362,7 @@ GameObject:
   - 114: {fileID: 319423233}
   m_Layer: 11
   m_Name: WayPointD
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -372,7 +422,7 @@ GameObject:
   - 114: {fileID: 363734172}
   m_Layer: 15
   m_Name: WayPointH
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -500,7 +550,7 @@ GameObject:
   - 114: {fileID: 475523259}
   m_Layer: 18
   m_Name: WayPointK
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -560,7 +610,7 @@ GameObject:
   - 114: {fileID: 513773999}
   m_Layer: 9
   m_Name: WayPointB
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -620,7 +670,7 @@ GameObject:
   - 114: {fileID: 519442316}
   m_Layer: 12
   m_Name: WayPointE
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -680,7 +730,7 @@ GameObject:
   - 114: {fileID: 817582719}
   m_Layer: 13
   m_Name: WayPointF
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -740,7 +790,7 @@ GameObject:
   - 114: {fileID: 825445829}
   m_Layer: 8
   m_Name: WayPointA
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -800,7 +850,7 @@ GameObject:
   - 114: {fileID: 959386705}
   m_Layer: 10
   m_Name: WayPointC
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -848,6 +898,56 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 9728
   truckLocation: []
+--- !u!1 &968088214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 968088216}
+  - 212: {fileID: 968088215}
+  m_Layer: 0
+  m_Name: PF_Truck
+  m_TagString: Truck
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!212 &968088215
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 968088214}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 1280867773
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &968088216
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 968088214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1 &1265117434
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,7 +1039,7 @@ GameObject:
   - 114: {fileID: 1408082333}
   m_Layer: 19
   m_Name: WayPointL
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -999,7 +1099,7 @@ GameObject:
   - 114: {fileID: 1498043193}
   m_Layer: 17
   m_Name: WayPointJ
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1334,7 +1434,7 @@ GameObject:
   - 4: {fileID: 1870873533}
   - 114: {fileID: 1870873534}
   m_Layer: 0
-  m_Name: WayPointRadio
+  m_Name: WayPointController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1363,6 +1463,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fabecd70d1e62d48ac10226837d2d74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wayPoints: []
+  layer:
+    serializedVersion: 2
+    m_Bits: 256
+  truckLocation: {fileID: 0}
   wayPointScript: {fileID: 825445829}
 --- !u!1 &2062674948
 GameObject:
@@ -1376,7 +1481,7 @@ GameObject:
   - 114: {fileID: 2062674952}
   m_Layer: 16
   m_Name: WayPointI
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

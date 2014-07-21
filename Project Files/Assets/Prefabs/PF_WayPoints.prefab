@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11400022}
   m_Layer: 19
   m_Name: WayPointL
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ GameObject:
   - 114: {fileID: 11400020}
   m_Layer: 18
   m_Name: WayPointK
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +46,7 @@ GameObject:
   - 114: {fileID: 11400018}
   m_Layer: 17
   m_Name: WayPointJ
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +63,7 @@ GameObject:
   - 114: {fileID: 11400016}
   m_Layer: 16
   m_Name: WayPointI
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,7 +80,7 @@ GameObject:
   - 114: {fileID: 11400014}
   m_Layer: 15
   m_Name: WayPointH
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,7 @@ GameObject:
   - 114: {fileID: 11400012}
   m_Layer: 14
   m_Name: WayPointG
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,7 +114,7 @@ GameObject:
   - 114: {fileID: 11400010}
   m_Layer: 13
   m_Name: WayPointF
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,7 +131,7 @@ GameObject:
   - 114: {fileID: 11400008}
   m_Layer: 12
   m_Name: WayPointE
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,7 +148,7 @@ GameObject:
   - 114: {fileID: 11400006}
   m_Layer: 11
   m_Name: WayPointD
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,7 +165,7 @@ GameObject:
   - 114: {fileID: 11400004}
   m_Layer: 10
   m_Name: WayPointC
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,7 +182,7 @@ GameObject:
   - 114: {fileID: 11400002}
   m_Layer: 9
   m_Name: WayPointB
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,7 +214,7 @@ GameObject:
   - 114: {fileID: 11400000}
   m_Layer: 8
   m_Name: WayPointA
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -403,6 +403,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 768
+  truckLocation: []
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -419,6 +420,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 5888
+  truckLocation: []
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -435,6 +437,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 9728
+  truckLocation: []
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -451,6 +454,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 6144
+  truckLocation: []
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -467,6 +471,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 47616
+  truckLocation: []
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -483,6 +488,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 12288
+  truckLocation: []
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -499,6 +505,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 49152
+  truckLocation: []
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -515,6 +522,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 380928
+  truckLocation: []
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -531,6 +539,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 98304
+  truckLocation: []
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -547,6 +556,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 393216
+  truckLocation: []
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -563,6 +573,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 950272
+  truckLocation: []
 --- !u!114 &11400022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -579,6 +590,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 786432
+  truckLocation: []
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
