@@ -1,14 +1,16 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour 
 {
 	Enemy enemyScript;
+	//public bool enemyPlaced;
 	public GameObject enemyObj;
 	public GameObject[] wayPoints;
-	public int enemies = 0;
-	public int maxEnemies = 5;
-	//public Vector2 spawnLocation;
+	public int enemies = 0 , maxEnemies = 5;
+	public Vector2[] randomLocations;
+	public Vector2 enemySpawnLocation;
 	
 	void Start () 
 	{
@@ -17,16 +19,19 @@ public class EnemySpawner : MonoBehaviour
 			enemyScript = enemyObj.GetComponent<Enemy>();
 		}
 
-
+		randomLocations[0] = new Vector2(-1.3f , 5.0f);
+		randomLocations[1] = new Vector2(-1.7f , -5.0f);
+		randomLocations[2] = new Vector2(1.75f , -5.0f);
+		randomLocations[3] = new Vector2(1.4f , 5.0f);
+	
 		StartCoroutine("EnemySpawnTimer");
-
-		//wayPoints = GameObject.FindGameObjectsWithTag("WayPoint");
-		//spawnLocation = Random.Range (0 , wayPoints.Length - 1);
 	}
 
 	public void EnemySpawn()
 	{
-		Instantiate (enemyObj , transform.position , Quaternion.identity);
+		enemySpawnLocation = randomLocations[Random.Range(0 , 3)];
+		//enemySpawnLocation = randomLocations[enemies];
+		Instantiate (enemyObj , enemySpawnLocation , Quaternion.identity);
 		enemies++;
 	}
 

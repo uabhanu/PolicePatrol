@@ -23,7 +23,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 4.0999999, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -40,7 +40,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyObj: {fileID: 100000, guid: 8dc3f24de44b7a547aee1ccc8815ab1d, type: 2}
-  maxEnemies: 5
+  wayPoints: []
+  enemies: 0
+  maxEnemies: 4
+  inputLocations:
+  - {x: -1.29999995, y: 5}
+  - {x: -1.70000005, y: -5}
+  - {x: 1.75, y: -5}
+  - {x: 1.39999998, y: 5}
+  enemySpawnLocation: {x: 0, y: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
