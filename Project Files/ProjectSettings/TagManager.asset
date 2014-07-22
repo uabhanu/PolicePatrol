@@ -7,6 +7,7 @@ TagManager:
   - WayPoint
   - Truck
   - WayPointControl
+  - ESpawn
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

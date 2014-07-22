@@ -14,21 +14,20 @@ public class WayPointController : MonoBehaviour
 		truckLocation = GameObject.FindGameObjectWithTag("Truck").transform;
 		wayPoints = GameObject.FindGameObjectsWithTag("WayPoint");
 
-		if(wayPointScript != null)
-		{
-			wayPointScript.InitializeData();
-		}
+		WaitAndUpdate ();
 	}
 
 	void Update () 
 	{
 	
 	}
-
-	public GameObject GetRandomWayPoint()
+	
+	public void WaitAndUpdate()
 	{
-		randomWayPoint = Random.Range (0 , wayPoints.Length - 1);
-		return wayPoints[randomWayPoint];
+
+		GameObject closestToTruck = FindClosestWayPoint(truckLocation);
+		closestToTruck.GetComponent<WayPoint>().InitializeData();
+		StartCoroutine("WaitAndUpdateTimer");
 	}
 
 	public GameObject FindClosestWayPoint(Transform inTransform)
@@ -55,5 +54,11 @@ public class WayPointController : MonoBehaviour
 		}
 
 		return null;
+	}
+
+	IEnumerator WaitAndUpdateTimer()
+	{
+		yield return new WaitForSeconds(2);
+		WaitAndUpdate();
 	}
 }
