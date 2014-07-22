@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
 	{
 		if(firstUpdate)
 		{
-			closestWayPoint = wayPointControlScript.ClosestWayPoint(transform);
+			closestWayPoint = wayPointControlScript.FindClosestWayPoint(transform);
 		}
 	}
 }

@@ -51,10 +51,10 @@ public class WayPoint : MonoBehaviour
 		}
 	}
 
-	public List<Transform> GetTruckLocation()
-	{
-		return new List<Transform>(truckLocation);
-	}
+//	public List<Transform> GetTruckLocation()
+//	{
+//		return new List<Transform>(truckLocation);
+//	}
 
 	void Update () 
 	{

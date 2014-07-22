@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class WayPointController : MonoBehaviour 
 {
-	Collider[] closestWayPointColliders;
 	public GameObject[] wayPoints;
 	public LayerMask layer = 1 << 8;
 	public Transform truckLocation;
@@ -25,14 +24,15 @@ public class WayPointController : MonoBehaviour
 	
 	}
 
-	public GameObject ClosestWayPoint(Transform inTransform)
+	public GameObject FindClosestWayPoint(Transform inTransform)
 	{
+		Collider[] closestWayPointColliders;
 		GameObject wayPoint = null;
 		int breakWhile = 1;
-		int sphereDistance = 10;
-		Vector3 inPosition = inTransform.position;
+		int sphereDistance = 2;
+		Vector2 inPosition = inTransform.position;
 
-		closestWayPointColliders = Physics.OverlapSphere(inPosition , 1 , layer);
+		closestWayPointColliders = Physics.OverlapSphere(inPosition , 0 , layer);
 
 		while(closestWayPointColliders.Length < 3 && breakWhile < 10)
 		{
