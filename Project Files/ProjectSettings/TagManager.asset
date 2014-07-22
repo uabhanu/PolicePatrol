@@ -53,7 +53,15 @@ TagManager:
     userID: 2
     uniqueID: 639017069
     locked: 0
+  - name: CargoFront
+    userID: 4
+    uniqueID: 656898691
+    locked: 0
   - name: Characters
     userID: 3
     uniqueID: 1280867773
+    locked: 0
+  - name: CargoTop
+    userID: 5
+    uniqueID: 2282472789
     locked: 0
