@@ -4,6 +4,7 @@ using UnityEngine;
 public class WayPointController : MonoBehaviour 
 {
 	public GameObject[] wayPoints;
+	public int randomWayPoint;
 	public LayerMask layer = 1 << 8;
 	public Transform truckLocation;
 	public WayPoint wayPointScript;
@@ -22,6 +23,12 @@ public class WayPointController : MonoBehaviour
 	void Update () 
 	{
 	
+	}
+
+	public GameObject GetRandomWayPoint()
+	{
+		randomWayPoint = Random.Range (0 , wayPoints.Length - 1);
+		return wayPoints[randomWayPoint];
 	}
 
 	public GameObject FindClosestWayPoint(Transform inTransform)

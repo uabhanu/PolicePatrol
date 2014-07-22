@@ -5,16 +5,16 @@ public class Enemy : MonoBehaviour
 {
 	public bool firstUpdate;
 	public float speed;
-	public GameObject closestWayPoint , wayPointObj;
+	public GameObject closestWayPoint , randomWayPoint , wayPointControlObj;
 	WayPointController wayPointControlScript;
 	
 	void Start () 
 	{
-		wayPointObj = GameObject.FindGameObjectWithTag("WayPointControl");
+		wayPointControlObj = GameObject.FindGameObjectWithTag("WayPointControl");
 
-		if(wayPointObj != null)
+		if(wayPointControlObj != null)
 		{
-			wayPointControlScript = wayPointObj.GetComponent<WayPointController>();
+			wayPointControlScript = wayPointControlObj.GetComponent<WayPointController>();
 		}
 	}
 	
@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
 		if(firstUpdate)
 		{
 			closestWayPoint = wayPointControlScript.FindClosestWayPoint(transform);
+			randomWayPoint = wayPointControlScript.GetRandomWayPoint();
 		}
 	}
 }

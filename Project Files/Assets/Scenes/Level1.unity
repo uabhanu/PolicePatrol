@@ -2562,7 +2562,8 @@ MonoBehaviour:
   firstUpdate: 1
   speed: 0
   closestWayPoint: {fileID: 0}
-  wayPointObj: {fileID: 1870873532}
+  randomWayPoint: {fileID: 0}
+  wayPointControlObj: {fileID: 0}
 --- !u!1 &1634850877
 GameObject:
   m_ObjectHideFlags: 0
@@ -2742,6 +2743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wayPoints: []
+  randomWayPoint: 0
   layer:
     serializedVersion: 2
     m_Bits: 4294967240
