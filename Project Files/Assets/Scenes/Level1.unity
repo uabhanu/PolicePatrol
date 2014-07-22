@@ -1186,6 +1186,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8dc3f24de44b7a547aee1ccc8815ab1d, type: 2}
+      propertyPath: wayPointObj
+      value: 
+      objectReference: {fileID: 1870873532}
+    - target: {fileID: 11400000, guid: 8dc3f24de44b7a547aee1ccc8815ab1d, type: 2}
+      propertyPath: firstUpdate
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8dc3f24de44b7a547aee1ccc8815ab1d, type: 2}
   m_RootGameObject: {fileID: 1612149779}
@@ -1335,7 +1343,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0907450727df544b649ebfab616408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstUpdate: 0
   speed: 0
+  closestWayPoint: {fileID: 0}
+  wayPointObj: {fileID: 1870873532}
 --- !u!1 &1848582927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,7 +1446,7 @@ GameObject:
   - 114: {fileID: 1870873534}
   m_Layer: 0
   m_Name: WayPointController
-  m_TagString: Untagged
+  m_TagString: WayPointControl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1466,7 +1477,7 @@ MonoBehaviour:
   wayPoints: []
   layer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 4294967240
   truckLocation: {fileID: 0}
   wayPointScript: {fileID: 825445829}
 --- !u!1 &2062674948

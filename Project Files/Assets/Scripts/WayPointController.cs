@@ -27,7 +27,7 @@ public class WayPointController : MonoBehaviour
 
 	public GameObject ClosestWayPoint(Transform inTransform)
 	{
-		GameObject closestCollider;
+		GameObject wayPoint = null;
 		int breakWhile = 1;
 		int sphereDistance = 10;
 		Vector3 inPosition = inTransform.position;
@@ -40,11 +40,13 @@ public class WayPointController : MonoBehaviour
 
 			if(closestWayPointColliders.Length > 0)
 			{
-				return closestWayPointColliders[0].gameObject;
+				return wayPoint = closestWayPointColliders[0].gameObject;
 			}
 
 			sphereDistance += 10;
 			breakWhile++;
 		}
+
+		return null;
 	}
 }
