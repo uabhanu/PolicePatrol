@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
 	//public bool enemyPlaced;
 	public GameObject enemyObj;
 	public GameObject[] wayPoints;
-	public int enemies = 0 , maxEnemies = 5;
+	public int enemies = 0 , maxEnemies = 4;
 	public Vector2[] randomLocations;
 	public Vector2 enemySpawnLocation;
 	
@@ -29,8 +29,8 @@ public class EnemySpawner : MonoBehaviour
 
 	public void EnemySpawn()
 	{
-		enemySpawnLocation = randomLocations[Random.Range(0 , 3)];
-		//enemySpawnLocation = randomLocations[enemies];
+		//enemySpawnLocation = randomLocations[Random.Range(0 , 3)];
+		enemySpawnLocation = randomLocations[enemies];
 		Instantiate (enemyObj , enemySpawnLocation , Quaternion.identity);
 		enemies++;
 	}
