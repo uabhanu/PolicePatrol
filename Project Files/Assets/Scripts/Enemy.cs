@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour 
 {
+	public Animator anim;
 	public float smoothTime;
 	public GameObject closestWayPoint , wayPointControlObj , wayPointObj;
 	//public Transform truckLocation;
@@ -23,6 +24,11 @@ public class Enemy : MonoBehaviour
 	
 	void Start () 
 	{
+		if(this.gameObject != null)
+		{
+			anim = GetComponent<Animator>();
+		}
+
 		//truckLocation = GameObject.FindGameObjectWithTag("Truck").transform;
 
 		wayPointControlObj = GameObject.FindGameObjectWithTag("WayPointControl");
@@ -33,8 +39,12 @@ public class Enemy : MonoBehaviour
 		}
 
 		closestWayPoint = wayPointControlScript.FindClosestWayPoint(transform);
-
 		truckLocations = closestWayPoint.GetComponent<WayPoint>().GetTruckLocation();
+
+		if(transform.position.y < 0)
+		{
+			anim.SetInteger("AnimIndex" , 1);
+		}
 	}
 
 	public void SetState(int newState)
