@@ -35,7 +35,7 @@ public class WayPointController : MonoBehaviour
 		Collider[] closestWayPointColliders;
 		GameObject wayPoint = null;
 		int breakWhile = 1;
-		int sphereDistance = 2;
+		int sphereDistance = 1;
 		Vector2 inPosition = inTransform.position;
 
 		closestWayPointColliders = Physics.OverlapSphere(inPosition , 0 , layer);
