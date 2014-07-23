@@ -68,9 +68,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstUpdate: 1
-  speed: 0
+  smoothTime: 3.20000005
   closestWayPoint: {fileID: 0}
-  wayPointObj: {fileID: 0}
+  wayPointControlObj: {fileID: 0}
+  truckLocations: []
+  velocity: {x: 0, y: 0, z: 0}
+  wayPointControlScript: {fileID: 0}
+  currentState: 0
+  previousState: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour 
 {
-	public bool firstUpdate;
 	public float smoothTime;
-	public GameObject closestWayPoint , wayPointControlObj;
+	public GameObject closestWayPoint , wayPointControlObj , wayPointObj;
 	//public Transform truckLocation;
 	public List<Transform> truckLocations;
 	public Vector3 velocity;
@@ -24,8 +23,6 @@ public class Enemy : MonoBehaviour
 	
 	void Start () 
 	{
-		smoothTime = 3.2f;
-		velocity = Vector3.zero;
 		//truckLocation = GameObject.FindGameObjectWithTag("Truck").transform;
 
 		wayPointControlObj = GameObject.FindGameObjectWithTag("WayPointControl");
