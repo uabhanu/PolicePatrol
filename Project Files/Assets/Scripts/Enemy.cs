@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
 	
 	public State currentState;
 	public State previousState;
-	
+
 	void Start () 
 	{
 		if(this.gameObject != null)
