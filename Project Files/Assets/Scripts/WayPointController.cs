@@ -3,15 +3,15 @@ using UnityEngine;
 
 public class WayPointController : MonoBehaviour 
 {
+	public Collider[] closestWayPointColliders;
+	public GameObject closestToLeftTruck , closestToRightTruck;
 	public GameObject[] wayPoints;
-	public int randomWayPoint;
 	public LayerMask layer = 1 << 8;
-	public Transform truckLocation;
+	public Transform leftTruckLocation , rightTruckLocation;
 	public WayPoint wayPointScript;
 	
 	void Start () 
 	{
-		truckLocation = GameObject.FindGameObjectWithTag("Truck").transform;
 		wayPoints = GameObject.FindGameObjectsWithTag("WayPoint");
 
 		WaitAndUpdate ();
@@ -24,23 +24,33 @@ public class WayPointController : MonoBehaviour
 	
 	public void WaitAndUpdate()
 	{
+		closestToLeftTruck = FindClosestWayPoint(leftTruckLocation);
+		closestToRightTruck = FindClosestWayPoint(rightTruckLocation);
 
-		GameObject closestToTruck = FindClosestWayPoint(truckLocation);
-		closestToTruck.GetComponent<WayPoint>().InitializeData();
+		if(closestToLeftTruck != null)
+		{
+			closestToLeftTruck.GetComponent<WayPoint>().InitializeData();
+		}
+
+		if(closestToRightTruck != null)
+		{
+			closestToRightTruck.GetComponent<WayPoint>().InitializeData();
+		}
+
 		StartCoroutine("WaitAndUpdateTimer");
 	}
 
 	public GameObject FindClosestWayPoint(Transform inTransform)
 	{
-		Collider[] closestWayPointColliders;
+		//Collider[] closestWayPointColliders;
 		GameObject wayPoint = null;
 		int breakWhile = 1;
-		int sphereDistance = 1;
+		int sphereDistance = 6;
 		Vector2 inPosition = inTransform.position;
 
 		closestWayPointColliders = Physics.OverlapSphere(inPosition , 0 , layer);
 
-		while(closestWayPointColliders.Length < 3 && breakWhile < 10)
+		while(closestWayPointColliders.Length < 3 && breakWhile < 6)
 		{
 			closestWayPointColliders = Physics.OverlapSphere(inPosition , sphereDistance , layer);
 
@@ -49,7 +59,7 @@ public class WayPointController : MonoBehaviour
 				return wayPoint = closestWayPointColliders[0].gameObject;
 			}
 
-			sphereDistance += 10;
+			sphereDistance += 6;
 			breakWhile++;
 		}
 

@@ -42,12 +42,8 @@ MonoBehaviour:
   enemyObj: {fileID: 100000, guid: 8dc3f24de44b7a547aee1ccc8815ab1d, type: 2}
   wayPoints: []
   enemies: 0
-  maxEnemies: 4
-  inputLocations:
-  - {x: -1.29999995, y: 5}
-  - {x: -1.70000005, y: -5}
-  - {x: 1.75, y: -5}
-  - {x: 1.39999998, y: 5}
+  maxEnemies: 2
+  randomLocations: []
   enemySpawnLocation: {x: 0, y: 0}
 --- !u!1001 &100100000
 Prefab:
