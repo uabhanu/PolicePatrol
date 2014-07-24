@@ -7,14 +7,18 @@ public class Enemy : MonoBehaviour
 	public Animator anim;
 	public float enemyToWayPointDistance , smoothTime , wayPointDistance = 10.0f;
 	public GameObject closestWayPoint , wayPointControlObj , wayPointObj;
+	public GameObject[] destinationObjs;
+	public List<Transform> destinations;
 	//public Transform truckLocation;
-	public List<Transform> truckLocation;
+	//public List<Transform> truckLocation;
 	public Vector3 velocity;
-	public WayPointController wayPointControllerScript;
+	//public WayPointController wayPointControllerScript;
 
 	public enum State
 	{
 		Walk,
+		LeftWalk,
+		RightWalk,
 		Hit,
 		Death,
 	};
@@ -29,19 +33,24 @@ public class Enemy : MonoBehaviour
 			anim = GetComponent<Animator>();
 		}
 
-		wayPointControlObj = GameObject.FindGameObjectWithTag("WayPointControl");
+		destinationObjs = GameObject.FindGameObjectsWithTag("Destination");
 
-		if(wayPointControlObj != null)
-		{
-			wayPointControllerScript = wayPointControlObj.GetComponent<WayPointController>();
-		}
+		SetDestinations();
+		GetDestinations();
 
-		closestWayPoint = wayPointControllerScript.FindClosestWayPoint(transform);
-
-		if(closestWayPoint != null)
-		{
-			truckLocation = closestWayPoint.GetComponent<WayPoint>().GetTruckLocation();
-		}
+//		wayPointControlObj = GameObject.FindGameObjectWithTag("WayPointControl");
+//
+//		if(wayPointControlObj != null)
+//		{
+//			wayPointControllerScript = wayPointControlObj.GetComponent<WayPointController>();
+//		}
+//
+//		closestWayPoint = wayPointControllerScript.FindClosestWayPoint(transform);
+//
+//		if(closestWayPoint != null)
+//		{
+//			truckLocation = closestWayPoint.GetComponent<WayPoint>().GetTruckLocation();
+//		}
 
 		if(transform.position.y < 0)
 		{
@@ -51,21 +60,19 @@ public class Enemy : MonoBehaviour
 
 	void Movement()
 	{
-		//closestWayPoint = wayPointControlScript.FindClosestWayPoint(transform);
-		//truckLocation = closestWayPoint.GetComponent<WayPoint>().GetTruckLocation();
-
 		//transform.Translate(Vector3.SmoothDamp(transform.position , closestWayPoint.transform.position , ref velocity , smoothTime));
-		if(closestWayPoint != null)
-		{
-			transform.position = Vector3.SmoothDamp(transform.position , closestWayPoint.transform.position , ref velocity , smoothTime);
+	}
 
-			enemyToWayPointDistance = Vector3.Distance(transform.position , closestWayPoint.transform.position);
-			
-			if(enemyToWayPointDistance < wayPointDistance && truckLocation.Count > 1)
-			{
-				closestWayPoint = truckLocation[truckLocation.Count - 2].gameObject;
-				truckLocation = closestWayPoint.GetComponent<WayPoint>().GetTruckLocation();
-			}
+	void SetDestinations()
+	{
+		if(destinationObjs != null)
+		{
+			destinations.Add(destinationObjs[0].transform);
+			destinations.Add(destinationObjs[1].transform);
+			destinations.Add(destinationObjs[2].transform);
+			destinations.Add(destinationObjs[3].transform);
+			destinations.Add(destinationObjs[4].transform);
+			destinations.Add(destinationObjs[5].transform);
 		}
 	}
 
@@ -73,6 +80,11 @@ public class Enemy : MonoBehaviour
 	{
 		previousState = currentState;
 		currentState = (State)newState;
+	}
+
+	public List<Transform> GetDestinations()
+	{
+		return new List<Transform>(destinations);
 	}
 	
 	void Update () 
