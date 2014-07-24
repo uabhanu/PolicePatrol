@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 022f5f1d0eea88e4faad6ca7b7d931be
+guid: 0375463e811062344a2dbc3f43881693
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Spr_Truck
+    21300000: Spr_LeftTruck
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -44,5 +44,5 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites: []
-  spritePackingTag: '[TIGHT]'
+  spritePackingTag: 
   userData: 
