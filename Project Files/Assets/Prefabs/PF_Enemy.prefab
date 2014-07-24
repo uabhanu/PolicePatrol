@@ -73,7 +73,9 @@ MonoBehaviour:
   closestWayPoint: {fileID: 0}
   wayPointControlObj: {fileID: 0}
   destinations: []
-  truckLocation: []
+  truckLocations:
+  - {fileID: 0}
+  - {fileID: 0}
   velocity: {x: 0, y: 0, z: 0}
   wayPointControllerScript: {fileID: 0}
   currentState: 0

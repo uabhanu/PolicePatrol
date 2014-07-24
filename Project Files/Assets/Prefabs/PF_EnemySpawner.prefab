@@ -42,7 +42,7 @@ MonoBehaviour:
   enemyObj: {fileID: 100000, guid: 8dc3f24de44b7a547aee1ccc8815ab1d, type: 2}
   wayPoints: []
   enemies: 0
-  maxEnemies: 2
+  maxEnemies: 4
   randomLocations: []
   enemySpawnLocation: {x: 0, y: 0}
 --- !u!1001 &100100000
