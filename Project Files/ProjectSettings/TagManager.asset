@@ -4,13 +4,15 @@
 TagManager:
   tags:
   - Enemy
-  - WayPoint
+  - Waypoint
   - Left
   - WayPointControl
   - ESpawn
   - Right
   - Destination
-  - Truck
+  - 
+  - 
+  - 
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

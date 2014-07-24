@@ -2,12 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaypointController : Waypoint 
+public class WaypointController : MonoBehaviour 
 {
+	public GameObject[] waypointObjs;
+	public Transform truckLeftTransform , truckRightTransform;
+	Waypoint waypointScript;
+
 	void Start () 
 	{
-		truckLocations.Add(transform);
-		SetData(3 , truckLocations);
+		truckLeftTransform = GameObject.FindGameObjectWithTag("Left").transform;
+		truckRightTransform = GameObject.FindGameObjectWithTag("Right").transform;
+
+		waypointObjs = GameObject.FindGameObjectsWithTag("Waypoint");
+
+		waypointScript = GetComponent<Waypoint>();
+
+		if(waypointScript != null)
+		{
+			waypointScript.InitializeData();
+		}
 	}
 
 	void Update () 

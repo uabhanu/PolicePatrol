@@ -6,7 +6,7 @@ public class Waypoint : MonoBehaviour
 {
 	private int breakWhile = 1;
 	public Collider[] waypointColliders;
-	public int countDown = 3 , sphereDistance = 10;
+	public int sphereDistance = 10;
 	public LayerMask layerMask = 1 << 8;
 	public List<Transform> truckLocations;
 
@@ -20,34 +20,32 @@ public class Waypoint : MonoBehaviour
 		}
 	}
 
-	void Start () 
+	public void SetData(List<Transform> newList)
 	{
-
-	}
-
-	public void SetData(int inData , List<Transform> newList)
-	{
-		truckLocations = newList;
-		truckLocations.Add(transform);
-		countDown = inData;
-		countDown--;
-		Debug.Log("The Waypoint " + this.name + " sent the countdown of " + countDown);
-		SendData();
+		//if(truckLocations.Count == 0 || newList[0] != truckLocations[0] || newList.Count < truckLocations.Count)
+		//{
+			truckLocations = newList;
+			truckLocations.Add(transform);
+			SendData();
+		//}
 	}
 
 	void SendData()
 	{
-		if(countDown > 0)
+		foreach(Collider wayPointCollider in waypointColliders)
 		{
-			foreach(Collider wayPointCollider in waypointColliders)
+			if(!truckLocations.Contains(wayPointCollider.transform))
 			{
-				if(!truckLocations.Contains(wayPointCollider.transform))
-				{
-					//wayPointCollider.gameObject.GetComponent<Waypoint>().SetData(countDown);
-					SetData(countDown , truckLocations);
-				}
+				//wayPointCollider.gameObject.GetComponent<Waypoint>().SetData(new List<Transform>(truckLocations));
+				wayPointCollider.gameObject.GetComponent<Waypoint>().SetData(truckLocations);
 			}
 		}
+	}
+
+	public void InitializeData()
+	{
+		truckLocations.Clear();
+		SetData(truckLocations);
 	}
 
 	void Update () 
