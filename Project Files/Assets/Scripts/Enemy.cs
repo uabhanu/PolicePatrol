@@ -5,14 +5,14 @@ using UnityEngine;
 public class Enemy : MonoBehaviour 
 {
 	public Animator anim;
-	public float enemyToWayPointDistance , smoothTime , wayPointDistance = 10.0f;
-	public GameObject closestWayPoint , wayPointControlObj , wayPointObj;
-	public GameObject[] destinationObjs;
+	public float enemyToWayPointDistance , smoothTime;
+	public GameObject closestWayPoint , wayPointControlObj;
+	//public GameObject[] destinationObjs;
 	public List<Transform> destinations;
 	//public Transform truckLocation;
-	//public List<Transform> truckLocation;
+	public List<Transform> truckLocation;
 	public Vector3 velocity;
-	//public WayPointController wayPointControllerScript;
+	public WayPointController wayPointControllerScript;
 
 	public enum State
 	{
@@ -33,24 +33,21 @@ public class Enemy : MonoBehaviour
 			anim = GetComponent<Animator>();
 		}
 
-		destinationObjs = GameObject.FindGameObjectsWithTag("Destination");
+		//destinationObjs = GameObject.FindGameObjectsWithTag("Destination");
 
-		SetDestinations();
-		GetDestinations();
+		wayPointControlObj = GameObject.FindGameObjectWithTag("WayPointControl");
 
-//		wayPointControlObj = GameObject.FindGameObjectWithTag("WayPointControl");
-//
-//		if(wayPointControlObj != null)
-//		{
-//			wayPointControllerScript = wayPointControlObj.GetComponent<WayPointController>();
-//		}
-//
-//		closestWayPoint = wayPointControllerScript.FindClosestWayPoint(transform);
-//
-//		if(closestWayPoint != null)
-//		{
-//			truckLocation = closestWayPoint.GetComponent<WayPoint>().GetTruckLocation();
-//		}
+		if(wayPointControlObj != null)
+		{
+			wayPointControllerScript = wayPointControlObj.GetComponent<WayPointController>();
+		}
+
+		closestWayPoint = wayPointControllerScript.FindClosestWayPoint(transform);
+
+		if(closestWayPoint != null)
+		{
+			truckLocation = closestWayPoint.GetComponent<WayPoint>().GetTruckLocation();
+		}
 
 		if(transform.position.y < 0)
 		{
@@ -60,31 +57,13 @@ public class Enemy : MonoBehaviour
 
 	void Movement()
 	{
-		//transform.Translate(Vector3.SmoothDamp(transform.position , closestWayPoint.transform.position , ref velocity , smoothTime));
-	}
-
-	void SetDestinations()
-	{
-		if(destinationObjs != null)
-		{
-			destinations.Add(destinationObjs[0].transform);
-			destinations.Add(destinationObjs[1].transform);
-			destinations.Add(destinationObjs[2].transform);
-			destinations.Add(destinationObjs[3].transform);
-			destinations.Add(destinationObjs[4].transform);
-			destinations.Add(destinationObjs[5].transform);
-		}
+		transform.position = Vector3.SmoothDamp(transform.position , closestWayPoint.transform.position , ref velocity , smoothTime);
 	}
 
 	public void SetState(int newState)
 	{
 		previousState = currentState;
 		currentState = (State)newState;
-	}
-
-	public List<Transform> GetDestinations()
-	{
-		return new List<Transform>(destinations);
 	}
 	
 	void Update () 
