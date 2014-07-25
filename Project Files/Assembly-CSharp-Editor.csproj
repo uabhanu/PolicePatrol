@@ -46,12 +46,46 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\codeandweb.com\Editor\TexturePackerImporter.cs" />
+     <Compile Include="Assets\Editor\iOS\MiniJSON\MiniJSON.cs" />
+     <Compile Include="Assets\Editor\iOS\NativeXPostProcess.cs" />
+     <Compile Include="Assets\Editor\iOS\PBX Editor\PBXBuildFile.cs" />
+     <Compile Include="Assets\Editor\iOS\PBX Editor\PBXBuildPhase.cs" />
+     <Compile Include="Assets\Editor\iOS\PBX Editor\PBXDictionary.cs" />
+     <Compile Include="Assets\Editor\iOS\PBX Editor\PBXFileReference.cs" />
+     <Compile Include="Assets\Editor\iOS\PBX Editor\PBXGroup.cs" />
+     <Compile Include="Assets\Editor\iOS\PBX Editor\PBXList.cs" />
+     <Compile Include="Assets\Editor\iOS\PBX Editor\PBXObject.cs" />
+     <Compile Include="Assets\Editor\iOS\PBX Editor\PBXParser.cs" />
+     <Compile Include="Assets\Editor\iOS\PBX Editor\PBXProject.cs" />
+     <Compile Include="Assets\Editor\iOS\XCBuildConfiguration.cs" />
+     <Compile Include="Assets\Editor\iOS\XCConfigurationList.cs" />
+     <Compile Include="Assets\Editor\iOS\XCMod.cs" />
+     <Compile Include="Assets\Editor\iOS\XCProject.cs" />
+     <Compile Include="Assets\Editor\iOS\XCodePostProcess.cs" />
+     <None Include="Assets\Plugins\Android\Unity34Manifest.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_TW.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_IT.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_JA.xml" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_KR.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_ZH.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_US.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_UK.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_DE.xml" />
+     <None Include="Assets\Plugins\Android\Unity35Manifest.xml" />
+     <None Include="Assets\link.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_BG.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_FR.xml" />
+ <Reference Include="JsonFx.Json">
+ <HintPath>E:/Projects/Unity Projects/PolicePatrolGit/Project Files/Assets/Plugins/NativeX/JsonFx.Json.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>D:/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{6D9C7EC5-7779-951F-D1A4-F4D746B62B24}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{279C00DE-7FBE-E6F0-ADF8-345AD8F2F1C7}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>

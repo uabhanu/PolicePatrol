@@ -46,11 +46,33 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AndroidAds.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Waypoint.cs" />
      <Compile Include="Assets\Scripts\WaypointController.cs" />
+     <None Include="Assets\Plugins\Android\Unity34Manifest.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_TW.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_IT.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_JA.xml" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_KR.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_ZH.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_US.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_UK.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_DE.xml" />
+     <None Include="Assets\Plugins\Android\Unity35Manifest.xml" />
+     <None Include="Assets\link.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_BG.xml" />
+     <None Include="Assets\Plugins\Android\assets\strings_FR.xml" />
+ <Reference Include="JsonFx.Json">
+ <HintPath>E:/Projects/Unity Projects/PolicePatrolGit/Project Files/Assets/Plugins/NativeX/JsonFx.Json.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
+      <Project>{6D9C7EC5-7779-951F-D1A4-F4D746B62B24}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
