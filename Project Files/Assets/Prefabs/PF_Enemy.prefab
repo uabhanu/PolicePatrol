@@ -67,17 +67,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0907450727df544b649ebfab616408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  enemyToWayPointDistance: 0
-  smoothTime: 3
-  closestWayPoint: {fileID: 0}
-  wayPointControlObj: {fileID: 0}
-  destinations: []
-  truckLocations:
-  - {fileID: 0}
-  - {fileID: 0}
-  velocity: {x: 0, y: 0, z: 0}
-  wayPointControllerScript: {fileID: 0}
+  anim: {fileID: 9500000}
+  closestWaypointObj: {fileID: 0}
+  waypointControllerScript: {fileID: 0}
   currentState: 0
   previousState: 0
 --- !u!212 &21200000

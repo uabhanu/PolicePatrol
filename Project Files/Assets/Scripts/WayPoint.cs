@@ -22,12 +22,12 @@ public class Waypoint : MonoBehaviour
 
 	public void SetData(List<Transform> newList)
 	{
-		//if(truckLocations.Count == 0 || newList[0] != truckLocations[0] || newList.Count < truckLocations.Count)
-		//{
+		if(truckLocations.Count == 0 || newList[0] != truckLocations[0] || newList.Count < truckLocations.Count)
+		{
 			truckLocations = newList;
 			truckLocations.Add(transform);
 			SendData();
-		//}
+		}
 	}
 
 	void SendData()
@@ -36,8 +36,8 @@ public class Waypoint : MonoBehaviour
 		{
 			if(!truckLocations.Contains(wayPointCollider.transform))
 			{
-				//wayPointCollider.gameObject.GetComponent<Waypoint>().SetData(new List<Transform>(truckLocations));
-				wayPointCollider.gameObject.GetComponent<Waypoint>().SetData(truckLocations);
+				wayPointCollider.gameObject.GetComponent<Waypoint>().SetData(new List<Transform>(truckLocations));
+				//wayPointCollider.gameObject.GetComponent<Waypoint>().SetData(truckLocations);
 			}
 		}
 	}

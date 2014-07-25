@@ -5,6 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour 
 {
 	public Animator anim;
+	public GameObject closestWaypointObj;
+	public WaypointController waypointControllerScript;
 
 	public enum State
 	{
@@ -20,6 +22,8 @@ public class Enemy : MonoBehaviour
 
 	void Start () 
 	{
+		closestWaypointObj = waypointControllerScript.FindClosestWayPoint(transform);
+
 		if(this.gameObject != null)
 		{
 			anim = GetComponent<Animator>();
