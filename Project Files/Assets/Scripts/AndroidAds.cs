@@ -11,11 +11,12 @@ public class AndroidAds : MonoBehaviour
 	
 	void Start () 
 	{
+		//androidActionID = //This will be available after you successfully completed creating a Campaign from NativeX Self Service
 		NativeXCore.initialization(androidAds , iOSAds);
 		NativeXCore.appWasRun();
-		NativeXCore.actionTaken(androidActionID , iOSActionID);
+		NativeXCore.actionTaken(20146 , iOSActionID);
 		NativeXCore.redeemCurrency();
-		NativeXCore.showAd("Top");
+		NativeXCore.showAd("Startup");
 	}
 
 	void OnEnable()
