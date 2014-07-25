@@ -62,6 +62,17 @@
      <Compile Include="Assets\Editor\iOS\XCMod.cs" />
      <Compile Include="Assets\Editor\iOS\XCProject.cs" />
      <Compile Include="Assets\Editor\iOS\XCodePostProcess.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\External\Editor\Clipper\clipper.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Generic\Editor\AboutUtillityWindow.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Generic\Editor\DragWrapper.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Generic\Editor\GUIHelper\GUISidebar.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Generic\Editor\GUIHelper\GUIWidget.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Generic\Editor\VersionedEditorWindow.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Navmesh2D\Editor\NavMesh2DBehaviourInspector.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Navmesh2D\Editor\Navmesh2DEditor.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Navmesh2D\Editor\OffMeshLink2DEditor.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Utillities\Editor\RangePropertyDrawer.cs" />
+     <None Include="Assets\PigeonCoopToolkit\__SharedDemoAssets\_Shaders\Unlit Transparent Color.shader" />
      <None Include="Assets\Plugins\Android\Unity34Manifest.xml" />
      <None Include="Assets\Plugins\Android\assets\strings_TW.xml" />
      <None Include="Assets\Plugins\Android\assets\strings_IT.xml" />
@@ -75,12 +86,16 @@
      <None Include="Assets\Plugins\Android\Unity35Manifest.xml" />
      <None Include="Assets\link.xml" />
      <None Include="Assets\Plugins\Android\assets\strings_BG.xml" />
+     <None Include="Assets\PigeonCoopToolkit\External\Editor\Poly2Tri\Poly2Tri Lic.txt" />
      <None Include="Assets\Plugins\Android\assets\strings_FR.xml" />
  <Reference Include="JsonFx.Json">
  <HintPath>E:/Projects/Unity Projects/PolicePatrolGit/Project Files/Assets/Plugins/NativeX/JsonFx.Json.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>D:/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="Poly2Tri">
+ <HintPath>E:/Projects/Unity Projects/PolicePatrolGit/Project Files/Assets/PigeonCoopToolkit/External/Editor/Poly2Tri/Poly2Tri.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

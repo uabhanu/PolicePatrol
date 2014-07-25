@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour 
 {
 	public Animator anim;
+	public float speed;
 
 	public enum State
 	{
@@ -34,6 +35,11 @@ public class Enemy : MonoBehaviour
 	void Movement()
 	{
 		//transform.position = Vector3.SmoothDamp(transform.position , closestWayPoint.transform.position , ref velocity , smoothTime);
+
+		if(transform.position.y >= 0)
+		{
+			transform.position = new Vector2(transform.position.x , transform.position.y - speed);
+		}
 	}
 
 	public void SetState(int newState)

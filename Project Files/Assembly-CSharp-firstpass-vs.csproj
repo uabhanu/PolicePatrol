@@ -57,6 +57,7 @@
      <Compile Include="Assets\Plugins\NativeX\NativeXMessage.cs" />
      <Compile Include="Assets\Plugins\NativeX\NativeXiOS.cs" />
      <Compile Include="Assets\Plugins\NativeX\TestScene\TestUI.cs" />
+     <None Include="Assets\PigeonCoopToolkit\__SharedDemoAssets\_Shaders\Unlit Transparent Color.shader" />
      <None Include="Assets\Plugins\Android\Unity34Manifest.xml" />
      <None Include="Assets\Plugins\Android\assets\strings_TW.xml" />
      <None Include="Assets\Plugins\Android\assets\strings_IT.xml" />
@@ -70,6 +71,7 @@
      <None Include="Assets\Plugins\Android\Unity35Manifest.xml" />
      <None Include="Assets\link.xml" />
      <None Include="Assets\Plugins\Android\assets\strings_BG.xml" />
+     <None Include="Assets\PigeonCoopToolkit\External\Editor\Poly2Tri\Poly2Tri Lic.txt" />
      <None Include="Assets\Plugins\Android\assets\strings_FR.xml" />
  <Reference Include="JsonFx.Json">
  <HintPath>E:/Projects/Unity Projects/PolicePatrolGit/Project Files/Assets/Plugins/NativeX/JsonFx.Json.dll</HintPath>

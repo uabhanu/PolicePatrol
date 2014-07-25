@@ -46,10 +46,24 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\PigeonCoopToolkit\Generic\VersionInformation.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Navmesh2D\NavMesh2D.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Navmesh2D\NavMesh2DBehaviour.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Navmesh2D\NavMesh2DConnection.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Navmesh2D\NavMesh2DNode.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Navmesh2D\NodeIndexQuadTree.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Navmesh2D\NodeIndexQuadTreeNode.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Navmesh2D\OffMeshLink2D.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Utillities\CircularBuffer.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Utillities\GizmosExtra.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Utillities\Range.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\__Navmesh2D Examples\Scripts\Mover.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\__Navmesh2D Examples\Scripts\PathFollower.cs" />
      <Compile Include="Assets\Scripts\AndroidAds.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <None Include="Assets\PigeonCoopToolkit\__SharedDemoAssets\_Shaders\Unlit Transparent Color.shader" />
      <None Include="Assets\Plugins\Android\Unity34Manifest.xml" />
      <None Include="Assets\Plugins\Android\assets\strings_TW.xml" />
      <None Include="Assets\Plugins\Android\assets\strings_IT.xml" />
@@ -63,6 +77,7 @@
      <None Include="Assets\Plugins\Android\Unity35Manifest.xml" />
      <None Include="Assets\link.xml" />
      <None Include="Assets\Plugins\Android\assets\strings_BG.xml" />
+     <None Include="Assets\PigeonCoopToolkit\External\Editor\Poly2Tri\Poly2Tri Lic.txt" />
      <None Include="Assets\Plugins\Android\assets\strings_FR.xml" />
  <Reference Include="JsonFx.Json">
  <HintPath>E:/Projects/Unity Projects/PolicePatrolGit/Project Files/Assets/Plugins/NativeX/JsonFx.Json.dll</HintPath>
