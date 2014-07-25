@@ -88,14 +88,14 @@
      <None Include="Assets\Plugins\Android\assets\strings_BG.xml" />
      <None Include="Assets\PigeonCoopToolkit\External\Editor\Poly2Tri\Poly2Tri Lic.txt" />
      <None Include="Assets\Plugins\Android\assets\strings_FR.xml" />
+ <Reference Include="Poly2Tri">
+ <HintPath>E:/Projects/Unity Projects/PolicePatrolGit/Project Files/Assets/PigeonCoopToolkit/External/Editor/Poly2Tri/Poly2Tri.dll</HintPath>
+ </Reference>
  <Reference Include="JsonFx.Json">
  <HintPath>E:/Projects/Unity Projects/PolicePatrolGit/Project Files/Assets/Plugins/NativeX/JsonFx.Json.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>D:/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
- </Reference>
- <Reference Include="Poly2Tri">
- <HintPath>E:/Projects/Unity Projects/PolicePatrolGit/Project Files/Assets/PigeonCoopToolkit/External/Editor/Poly2Tri/Poly2Tri.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
