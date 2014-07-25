@@ -50,8 +50,6 @@
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\Scripts\Waypoint.cs" />
-     <Compile Include="Assets\Scripts\WaypointController.cs" />
      <None Include="Assets\Plugins\Android\Unity34Manifest.xml" />
      <None Include="Assets\Plugins\Android\assets\strings_TW.xml" />
      <None Include="Assets\Plugins\Android\assets\strings_IT.xml" />
