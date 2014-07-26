@@ -6,6 +6,9 @@ public class Enemy : MonoBehaviour
 {
 	public Animator anim;
 	public float speed;
+	public Transform[] trucks;
+	public List<Vector2> path;
+	public Transform pathTarget;
 
 	public enum State
 	{
@@ -21,6 +24,9 @@ public class Enemy : MonoBehaviour
 
 	void Start () 
 	{
+		trucks[0] = GameObject.FindGameObjectWithTag("Left").transform;
+		trucks[1] = GameObject.FindGameObjectWithTag("Right").transform;
+
 		if(this.gameObject != null)
 		{
 			anim = GetComponent<Animator>();
@@ -30,15 +36,28 @@ public class Enemy : MonoBehaviour
 		{
 			anim.SetInteger("AnimIndex" , 1);
 		}
+
+		pathTarget = trucks[0];
+		path = NavMesh2D.GetSmoothedPath(transform.position , pathTarget.position);
 	}
 
 	void Movement()
 	{
 		//transform.position = Vector3.SmoothDamp(transform.position , closestWayPoint.transform.position , ref velocity , smoothTime);
 
+		if(path != null && path.Count != 0)
+		{
+			transform.position = Vector2.MoveTowards(transform.position , path[0] , speed * Time.deltaTime);
+
+			if(Vector2.Distance(transform.position , path[0]) < 0.01f)
+			{
+				path.RemoveAt(0);
+			}
+		}
+
 		if(transform.position.y >= 0)
 		{
-			transform.position = new Vector2(transform.position.x , transform.position.y - speed);
+			//transform.position = new Vector2(transform.position.x , transform.position.y - speed);
 		}
 	}
 
