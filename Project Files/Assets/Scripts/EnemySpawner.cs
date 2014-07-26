@@ -19,10 +19,10 @@ public class EnemySpawner : MonoBehaviour
 			enemyScript = enemyObj.GetComponent<Enemy>();
 		}
 
-		randomLocations[0] = new Vector2(-1.3f , 5.0f);
+		randomLocations[0] = new Vector2(-1.4f , 4.2f);
 		randomLocations[1] = new Vector2(-1.7f , -5.0f);
 		randomLocations[2] = new Vector2(1.75f , -5.0f);
-		randomLocations[3] = new Vector2(1.4f , 5.0f);
+		randomLocations[3] = new Vector2(1.4f , 4.2f);
 	
 		StartCoroutine("EnemySpawnTimer");
 	}
