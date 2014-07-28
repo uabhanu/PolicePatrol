@@ -35,10 +35,36 @@ public class Enemy : MonoBehaviour
 		if(transform.position.y < 0)
 		{
 			anim.SetInteger("AnimIndex" , 1);
+
+			if(transform.position.x < 0)
+			{
+				pathTarget = trucks[0];
+				path = NavMesh2D.GetSmoothedPath(transform.position , pathTarget.position);
+			}
+
+			else if(transform.position.x > 0)
+			{
+				pathTarget = trucks[1];
+				path = NavMesh2D.GetSmoothedPath(transform.position , pathTarget.position);
+			}
 		}
 
-		pathTarget = trucks[0];
-		path = NavMesh2D.GetSmoothedPath(transform.position , pathTarget.position);
+		if(transform.position.y > 0)
+		{
+			anim.SetInteger("AnimIndex" , 0);
+			
+			if(transform.position.x < 0)
+			{
+				pathTarget = trucks[0];
+				path = NavMesh2D.GetSmoothedPath(transform.position , pathTarget.position);
+			}
+			
+			else if(transform.position.x > 0)
+			{
+				pathTarget = trucks[1];
+				path = NavMesh2D.GetSmoothedPath(transform.position , pathTarget.position);
+			}
+		}
 	}
 
 	void Movement()
