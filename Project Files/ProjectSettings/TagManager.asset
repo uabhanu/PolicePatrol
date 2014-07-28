@@ -10,9 +10,10 @@ TagManager:
   - ESpawn
   - Right
   - Destination
-  - LeftWalk
-  - RightWalk
-  - 
+  - TopLeft
+  - TopRight
+  - BottomLeft
+  - BottomRight
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

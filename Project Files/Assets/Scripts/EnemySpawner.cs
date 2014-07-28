@@ -8,9 +8,9 @@ public class EnemySpawner : MonoBehaviour
 	//public bool enemyPlaced;
 	public GameObject enemyObj;
 	public GameObject[] wayPoints;
-	public int enemies = 0 , maxEnemies = 4;
+	public int enemies , maxEnemies;
 	public Vector2[] randomLocations;
-	public Vector2 enemySpawnLocation;
+	Vector2 enemySpawnLocation;
 	
 	void Start () 
 	{
@@ -23,6 +23,10 @@ public class EnemySpawner : MonoBehaviour
 		randomLocations[1] = new Vector2(-1.7f , -5.0f);
 		randomLocations[2] = new Vector2(1.75f , -5.0f);
 		randomLocations[3] = new Vector2(1.4f , 4.2f);
+		randomLocations[4] = new Vector2(1.4f , 4.2f);
+		randomLocations[5] = new Vector2(1.4f , 4.2f);
+		randomLocations[6] = new Vector2(1.4f , 4.2f);
+		randomLocations[7] = new Vector2(1.4f , 4.2f);
 	
 		StartCoroutine("EnemySpawnTimer");
 	}

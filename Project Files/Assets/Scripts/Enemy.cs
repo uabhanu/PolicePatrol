@@ -5,7 +5,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour 
 {
 	public Animator anim;
+	public int hitpoints;
 	public float speed;
+	public string type;
 	public Transform[] trucks;
 	public List<Vector2> path;
 	public Transform pathTarget;
@@ -33,6 +35,7 @@ public class Enemy : MonoBehaviour
 		if(transform.position.y < 0)
 		{
 			anim.SetInteger("AnimIndex" , 1);
+			type = "Bottom";
 
 			if(transform.position.x < 0)
 			{
@@ -50,6 +53,7 @@ public class Enemy : MonoBehaviour
 		if(transform.position.y > 0)
 		{
 			anim.SetInteger("AnimIndex" , 0);
+			type = "Top";
 			
 			if(transform.position.x < 0)
 			{
@@ -78,6 +82,20 @@ public class Enemy : MonoBehaviour
 		}		
 	}
 
+	public void DeductHitPoints(int val)
+	{
+		if(hitpoints > 0)
+		{
+			hitpoints = hitpoints - val;
+		}
+		
+		if (hitpoints <= 0)
+		{
+			//Debug.Log("Enemy Died");
+			Destroy(this.gameObject);
+		}	
+	}
+
 	public void SetState(int newState)
 	{
 		previousState = currentState;
@@ -86,16 +104,39 @@ public class Enemy : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if(col.gameObject.tag.Equals("LeftWalk"))
+		if(type == "Top")
 		{
-			Debug.Log("Left Walk");
-			anim.SetInteger("AnimIndex" , 2);
+			if(col.gameObject.tag.Equals("TopLeft"))
+			{
+				Debug.Log("Left Walk");
+				anim.SetInteger("AnimIndex" , 2);
+			}
+			
+			if(col.gameObject.tag.Equals("TopRight"))
+			{
+				Debug.Log("Right Walk");
+				anim.SetInteger("AnimIndex" , 3);
+			}
 		}
 
-		if(col.gameObject.tag.Equals("RightWalk"))
+		else if(type == "Bottom")
 		{
-			Debug.Log("Right Walk");
-			anim.SetInteger("AnimIndex" , 3);
+			if(col.gameObject.tag.Equals("BottomLeft"))
+			{
+				Debug.Log("Left Walk");
+				anim.SetInteger("AnimIndex" , 2);
+			}
+			
+			if(col.gameObject.tag.Equals("BottomRight"))
+			{
+				Debug.Log("Right Walk");
+				anim.SetInteger("AnimIndex" , 3);
+			}
+		}
+
+		if(col.gameObject.tag.Equals("Left") || col.gameObject.tag.Equals("Right"))
+		{
+			DeductHitPoints(hitpoints);
 		}
 	}
 	
