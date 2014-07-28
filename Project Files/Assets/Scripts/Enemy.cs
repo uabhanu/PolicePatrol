@@ -13,8 +13,6 @@ public class Enemy : MonoBehaviour
 	public enum State
 	{
 		Walk,
-		LeftWalk,
-		RightWalk,
 		Hit,
 		Death,
 	};
@@ -69,8 +67,6 @@ public class Enemy : MonoBehaviour
 
 	void Movement()
 	{
-		//transform.position = Vector3.SmoothDamp(transform.position , closestWayPoint.transform.position , ref velocity , smoothTime);
-
 		if(path != null && path.Count != 0)
 		{
 			transform.position = Vector2.MoveTowards(transform.position , path[0] , speed * Time.deltaTime);
@@ -79,12 +75,7 @@ public class Enemy : MonoBehaviour
 			{
 				path.RemoveAt(0);
 			}
-		}
-
-		if(transform.position.y >= 0)
-		{
-			//transform.position = new Vector2(transform.position.x , transform.position.y - speed);
-		}
+		}		
 	}
 
 	public void SetState(int newState)
