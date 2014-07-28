@@ -92,6 +92,21 @@ public class Enemy : MonoBehaviour
 		previousState = currentState;
 		currentState = (State)newState;
 	}
+
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		if(col.gameObject.tag.Equals("LeftWalk"))
+		{
+			Debug.Log("Left Walk");
+			anim.SetInteger("AnimIndex" , 2);
+		}
+
+		if(col.gameObject.tag.Equals("RightWalk"))
+		{
+			Debug.Log("Right Walk");
+			anim.SetInteger("AnimIndex" , 3);
+		}
+	}
 	
 	void Update () 
 	{

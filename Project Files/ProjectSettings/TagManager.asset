@@ -10,8 +10,8 @@ TagManager:
   - ESpawn
   - Right
   - Destination
-  - 
-  - 
+  - LeftWalk
+  - RightWalk
   - 
   - 
   Builtin Layer 0: Default
