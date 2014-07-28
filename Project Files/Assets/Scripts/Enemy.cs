@@ -5,6 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour 
 {
 	public Animator anim;
+	public EnemySpawner enemySpawnerScript;
+	public GameObject enemySpawner;
 	public int hitpoints;
 	public float speed;
 	public string type;
@@ -24,6 +26,13 @@ public class Enemy : MonoBehaviour
 
 	void Start () 
 	{
+		enemySpawner = GameObject.Find("PF_EnemySpawner");
+
+		if(enemySpawner != null)
+		{
+			enemySpawnerScript = enemySpawner.GetComponent<EnemySpawner>();
+		}
+
 		trucks[0] = GameObject.FindGameObjectWithTag("Left").transform;
 		trucks[1] = GameObject.FindGameObjectWithTag("Right").transform;
 
@@ -92,6 +101,7 @@ public class Enemy : MonoBehaviour
 		if (hitpoints <= 0)
 		{
 			//Debug.Log("Enemy Died");
+			enemySpawnerScript.enemies--;
 			Destroy(this.gameObject);
 		}	
 	}
