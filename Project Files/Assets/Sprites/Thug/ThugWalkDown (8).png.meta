@@ -1,8 +1,9 @@
 fileFormatVersion: 2
-guid: f9dda4121686afc4c9d21a968f283a0d
+guid: 2fb6e2bf66a61d042b6a5526816f1e2b
 TextureImporter:
   fileIDToRecycleName:
-    21300000: ThugWalkDown (8)
+    21300000: Thug_WalkDown_08.png
+    21300002: ThugWalkDown (8)
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,10 +26,10 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 1024
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -36,7 +37,7 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: .5, y: .400000006}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
@@ -44,5 +45,5 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites: []
-  spritePackingTag: 
+  spritePackingTag: '[TIGHT]'
   userData: 

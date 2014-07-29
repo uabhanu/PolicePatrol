@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 3df932140fe8a5f45b4785962efd5201
+guid: fb99cb39dd90d5e4090630e17ea84412
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Thug_WalkDown_06.png
-    21300002: ThugWalkDown (6)
+    21300000: Thug_WalkUp_04.png
+    21300002: ThugWalkUp (4)
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -37,7 +37,7 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .400000006}
+  spritePivot: {x: .5, y: .600000024}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
