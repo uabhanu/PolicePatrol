@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
 	//public bool enemyPlaced;
 	public GameObject enemyObj;
 	public GameObject[] wayPoints;
-	public int enemies , maxEnemies;
+	public int enemies , i , maxEnemies;
 	public Vector2[] randomLocations;
 	Vector2 enemySpawnLocation;
 	
@@ -19,14 +19,7 @@ public class EnemySpawner : MonoBehaviour
 			enemyScript = enemyObj.GetComponent<Enemy>();
 		}
 
-		//randomLocations[0] = new Vector2(-4.2f , 4.2f);
-		//randomLocations[1] = new Vector2(-1.4f , 4.2f);
-		//randomLocations[2] = new Vector2(1.4f , 4.2f);
-		//randomLocations[3] = new Vector2(4.2f , 4.2f);
-		//randomLocations[4] = new Vector2(-5.2f , -4.2f);
-		//randomLocations[5] = new Vector2(-1.7f , -4.2f);
-		//randomLocations[6] = new Vector2(1.7f , -4.2f);
-		//randomLocations[7] = new Vector2(5.2f , -4.2f);
+		i = enemies;
 
 		randomLocations[0] = new Vector2(-1.7f , -4.2f);
 		randomLocations[1] = new Vector2(-4.2f , 4.2f);
@@ -38,15 +31,15 @@ public class EnemySpawner : MonoBehaviour
 		randomLocations[7] = new Vector2(5.2f , -4.2f);
 
 		StartCoroutine("EnemySpawnTimer");
+		StartCoroutine("SpawnLocationTimer");
 	}
 
 	public void EnemySpawn()
 	{
-		//enemySpawnLocation = randomLocations[Random.Range(0 , 3)];
-		enemySpawnLocation = randomLocations[enemies];
-		Instantiate (enemyObj , enemySpawnLocation , Quaternion.identity);
-		enemies++;
 
+		Instantiate (enemyObj , randomLocations[i] , Quaternion.identity);
+		enemies++;
+		i++;
 	}
 
 	IEnumerator EnemySpawnTimer()
@@ -57,6 +50,13 @@ public class EnemySpawner : MonoBehaviour
 			EnemySpawn();
 			StartCoroutine("EnemySpawnTimer");
 		}
+	}
+
+	IEnumerator SpawnLocationTimer()
+	{
+		yield return new WaitForSeconds(32);
+		i -= (maxEnemies - 1);
+		StartCoroutine("SpawnLocationTimer");
 	}
 
 	void Update () 

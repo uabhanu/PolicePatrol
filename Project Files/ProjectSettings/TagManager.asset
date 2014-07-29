@@ -7,7 +7,7 @@ TagManager:
   - Waypoint
   - Left
   - WayPointControl
-  - ESpawn
+  - 
   - Right
   - Destination
   - TopLeft
@@ -15,6 +15,7 @@ TagManager:
   - BottomLeft
   - BottomRight
   - Spawn
+  - IGUI
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

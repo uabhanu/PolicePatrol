@@ -6,7 +6,8 @@ public class Enemy : MonoBehaviour
 {
 	public Animator anim;
 	public EnemySpawner enemySpawnerScript;
-	public GameObject enemySpawner;
+	public GameObject enemySpawner , iguiObj;
+	public InGameGUI iguiScript;
 	public int hitpoints;
 	public float speed;
 	public string type;
@@ -27,6 +28,13 @@ public class Enemy : MonoBehaviour
 	void Start () 
 	{
 		enemySpawner = GameObject.Find("PF_EnemySpawner");
+
+		iguiObj = GameObject.FindGameObjectWithTag("IGUI");
+
+		if(iguiObj != null)
+		{
+			iguiScript = iguiObj.GetComponent<InGameGUI>();
+		}
 
 		if(enemySpawner != null)
 		{
@@ -144,8 +152,23 @@ public class Enemy : MonoBehaviour
 			}
 		}
 
-		if(col.gameObject.tag.Equals("Left") || col.gameObject.tag.Equals("Right"))
+		if(col.gameObject.tag.Equals("Left"))
 		{
+			if(iguiScript.leftScoreValue < 5)
+			{
+				iguiScript.leftScoreValue++;
+			}
+
+			DeductHitPoints(hitpoints);
+		}
+
+		if(col.gameObject.tag.Equals("Right"))
+		{
+			if(iguiScript.rightScoreValue < 5)
+			{
+				iguiScript.rightScoreValue++;
+			}
+	
 			DeductHitPoints(hitpoints);
 		}
 	}

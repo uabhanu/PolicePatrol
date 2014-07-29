@@ -11,7 +11,7 @@ GameObject:
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: PF_EnemySpawner
-  m_TagString: ESpawn
+  m_TagString: Spawn
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -42,6 +42,7 @@ MonoBehaviour:
   enemyObj: {fileID: 100000, guid: 8dc3f24de44b7a547aee1ccc8815ab1d, type: 2}
   wayPoints: []
   enemies: 0
+  i: 0
   maxEnemies: 8
   randomLocations:
   - {x: 0, y: 0}

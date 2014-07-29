@@ -8,9 +8,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
   m_Layer: 5
   m_Name: UI
-  m_TagString: Untagged
+  m_TagString: IGUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -397,6 +398,21 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_Enabled: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1e396dc501978048bf885644a2540ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftScoreLabel: {fileID: 13200006}
+  rightScoreLabel: {fileID: 13200000}
+  leftScoreValue: 0
+  rightScoreValue: 0
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
