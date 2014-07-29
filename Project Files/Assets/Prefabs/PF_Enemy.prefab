@@ -84,6 +84,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 9500000}
+  enemySpawnerScript: {fileID: 0}
+  enemySpawner: {fileID: 0}
   hitpoints: 10
   speed: .699999988
   type: 
