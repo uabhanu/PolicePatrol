@@ -5,15 +5,16 @@ using UnityEngine;
 public class Enemy : MonoBehaviour 
 {
 	public Animator anim;
+	public bool selected;
 	public EnemySpawner enemySpawnerScript;
+	public float speed;
 	public GameObject enemySpawner , iguiObj;
 	public InGameGUI iguiScript;
 	public int hitpoints;
-	public float speed;
-	public string type;
-	public Transform[] trucks;
 	public List<Vector2> path;
+	public string type;
 	public Transform pathTarget;
+	public Transform[] trucks;
 
 	public enum State
 	{
@@ -86,19 +87,6 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
-	void Movement()
-	{
-		if(path != null && path.Count != 0)
-		{
-			transform.position = Vector2.MoveTowards(transform.position , path[0] , speed * Time.deltaTime);
-
-			if(Vector2.Distance(transform.position , path[0]) < 0.01f)
-			{
-				path.RemoveAt(0);
-			}
-		}		
-	}
-
 	public void DeductHitPoints(int val)
 	{
 		if(hitpoints > 0)
@@ -114,10 +102,22 @@ public class Enemy : MonoBehaviour
 		}	
 	}
 
-	public void SetState(int newState)
+	void Movement()
 	{
-		previousState = currentState;
-		currentState = (State)newState;
+		if(path != null && path.Count != 0)
+		{
+			transform.position = Vector2.MoveTowards(transform.position , path[0] , speed * Time.deltaTime);
+
+			if(Vector2.Distance(transform.position , path[0]) < 0.01f)
+			{
+				path.RemoveAt(0);
+			}
+		}		
+	}
+
+	void OnMouseDown()
+	{
+		selected = true;
 	}
 
 	void OnTriggerEnter2D(Collider2D col)
@@ -126,13 +126,13 @@ public class Enemy : MonoBehaviour
 		{
 			if(col.gameObject.tag.Equals("TopLeft"))
 			{
-				Debug.Log("Left Walk");
+				//Debug.Log("Left Walk");
 				anim.SetInteger("AnimIndex" , 2);
 			}
 			
 			if(col.gameObject.tag.Equals("TopRight"))
 			{
-				Debug.Log("Right Walk");
+				//Debug.Log("Right Walk");
 				anim.SetInteger("AnimIndex" , 3);
 			}
 		}
@@ -141,13 +141,13 @@ public class Enemy : MonoBehaviour
 		{
 			if(col.gameObject.tag.Equals("BottomLeft"))
 			{
-				Debug.Log("Left Walk");
+				//Debug.Log("Left Walk");
 				anim.SetInteger("AnimIndex" , 2);
 			}
 			
 			if(col.gameObject.tag.Equals("BottomRight"))
 			{
-				Debug.Log("Right Walk");
+				//Debug.Log("Right Walk");
 				anim.SetInteger("AnimIndex" , 3);
 			}
 		}
@@ -171,6 +171,12 @@ public class Enemy : MonoBehaviour
 	
 			DeductHitPoints(hitpoints);
 		}
+	}
+
+	public void SetState(int newState)
+	{
+		previousState = currentState;
+		currentState = (State)newState;
 	}
 	
 	void Update () 
