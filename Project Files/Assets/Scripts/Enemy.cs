@@ -47,7 +47,7 @@ public class Enemy : MonoBehaviour
 
 		if(this.gameObject != null)
 		{
-			anim = GetComponent<Animator>();
+			anim = this.gameObject.GetComponent<Animator>();
 		}
 
 		if(transform.position.y < 0)
