@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour 
 {
 	public Animator anim;
+	public bool clicked;
 	public EnemySpawner enemySpawnerScript;
 	public float speed;
 	public GameObject enemySpawner , iguiObj , playerObj;
@@ -105,11 +106,12 @@ public class Enemy : MonoBehaviour
 		{
 			//Debug.Log("Enemy Died");
 			enemySpawnerScript.enemies--;
+			clicked = false;
 			Destroy(this.gameObject);
 		}	
 	}
 
-	void Movement()
+	void Walk()
 	{
 		if(path != null && path.Count != 0)
 		{
@@ -124,8 +126,9 @@ public class Enemy : MonoBehaviour
 
 	void OnMouseDown()
 	{
+		clicked = true;
 		Debug.Log("Thug Clicked");
-		playerScript.pathTarget = this.gameObject.transform;
+		playerScript.pathTarget = this.transform;
 		playerScript.path = NavMesh2D.GetSmoothedPath(transform.position , playerScript.pathTarget.position);
 		playerScript.SetState(1);
 	}
@@ -196,10 +199,17 @@ public class Enemy : MonoBehaviour
 			return;
 		}
 
+//		if(clicked)
+//		{
+//			playerScript.pathTarget = this.gameObject.transform;
+//			playerScript.path = NavMesh2D.GetSmoothedPath(transform.position , playerScript.pathTarget.position);
+//			playerScript.SetState(1);
+//		}
+
 		switch(currentState)
 		{
 			case State.Walk :
-				Movement();
+				Walk();
 			break;
 		}
 	}

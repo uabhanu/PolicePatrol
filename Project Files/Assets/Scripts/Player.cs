@@ -24,6 +24,13 @@ public class Player : MonoBehaviour
 	
 	void Start () 
 	{
+		enemyObj = GameObject.FindGameObjectWithTag("Enemy");
+
+		if(enemyObj != null)
+		{
+			enemyScript = enemyObj.GetComponent<Enemy>();
+		}
+
 		if(this.gameObject != null)
 		{
 			anim = this.gameObject.GetComponent<Animator>();
@@ -61,17 +68,15 @@ public class Player : MonoBehaviour
 	{
 		//Debug.Log("Run Method");
 
-		//path = NavMesh2D.GetSmoothedPath(transform.position , pathTarget.position);
-
 		if(path != null && path.Count != 0)
 		{
 			//anim.SetBool("Running" , true);
 			transform.position = Vector2.MoveTowards(transform.position , path[0] , speed * Time.deltaTime);
 			
-			if(Vector2.Distance(transform.position , path[0]) < 0.01f)
+			if(Vector2.Distance(transform.position , path[0]) < 0.2f)
 			{
 				path.RemoveAt(0);
-				//SetState(0);
+				SetState(0);
 			}
 		}
 	}
@@ -97,6 +102,13 @@ public class Player : MonoBehaviour
 		{
 			return;
 		}
+
+//		path = NavMesh2D.GetSmoothedPath(transform.position , pathTarget.position);
+//
+//		if(pathTarget != null && enemyScript.clicked)
+//		{
+//			path = NavMesh2D.GetSmoothedPath(transform.position , pathTarget.position);
+//		}
 
 		switch(currentState)
 		{
