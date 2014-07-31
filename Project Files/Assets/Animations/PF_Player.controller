@@ -8,7 +8,7 @@ AnimatorController:
   m_Name: PF_Player
   serializedVersion: 2
   m_AnimatorParameters:
-  - m_Name: Moving
+  - m_Name: Running
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -193,7 +193,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: Moving
+    m_ConditionEvent: Running
     m_EventTreshold: 0
     m_ExitTime: .899999976
   m_Atomic: 1
@@ -273,7 +273,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Moving
+    m_ConditionEvent: Running
     m_EventTreshold: 0
     m_ExitTime: .899999976
   m_Atomic: 1

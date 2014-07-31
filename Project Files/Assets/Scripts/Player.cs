@@ -46,13 +46,13 @@ public class Player : MonoBehaviour
 		}	
 	}
 
-	void Movement()
+	void Run()
 	{
-		//Debug.Log("Movement Method");
+		//Debug.Log("Run Method");
 
 		if(path != null && path.Count != 0)
 		{
-			anim.SetBool("Moving" , true);
+			anim.SetBool("Running" , true);
 			transform.position = Vector2.MoveTowards(transform.position , path[0] , speed * Time.deltaTime);
 			
 			if(Vector2.Distance(transform.position , path[0]) < 0.01f)
@@ -88,12 +88,12 @@ public class Player : MonoBehaviour
 		switch(currentState)
 		{
 			case State.Idle :
-				anim.SetBool("Moving" , false);
+				anim.SetBool("Running" , false);
 				anim.SetBool("Attacking" , false);
 			break;
 
 			case State.Run :
-				Movement();
+				Run();
 			break;
 
 			case State.Attack :
