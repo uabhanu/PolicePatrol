@@ -13,12 +13,12 @@ GameObject:
   - 114: {fileID: 11400000}
   - 50: {fileID: 5000000}
   - 212: {fileID: 21200000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PF_Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &400000
 Transform:
@@ -85,17 +85,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 9500000}
   enemySpawnerScript: {fileID: 0}
+  speed: .699999988
   enemySpawner: {fileID: 0}
   iguiObj: {fileID: 0}
+  playerObj: {fileID: 0}
   iguiScript: {fileID: 0}
   hitpoints: 10
-  speed: .699999988
+  path: []
+  playerScript: {fileID: 0}
   type: 
+  pathTarget: {fileID: 0}
   trucks:
   - {fileID: 0}
   - {fileID: 0}
-  path: []
-  pathTarget: {fileID: 0}
   currentState: 0
   previousState: 0
 --- !u!212 &21200000

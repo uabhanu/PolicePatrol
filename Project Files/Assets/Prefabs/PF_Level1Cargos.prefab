@@ -9,12 +9,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo10Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100002
 GameObject:
@@ -25,12 +25,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400002}
   - 212: {fileID: 21200002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo10Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100004
 GameObject:
@@ -41,12 +41,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400004}
   - 212: {fileID: 21200004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo9Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100006
 GameObject:
@@ -57,12 +57,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400006}
   - 212: {fileID: 21200006}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo9Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100008
 GameObject:
@@ -73,12 +73,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400008}
   - 212: {fileID: 21200008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo8Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100010
 GameObject:
@@ -89,12 +89,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400010}
   - 212: {fileID: 21200010}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo7Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100012
 GameObject:
@@ -105,12 +105,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400012}
   - 212: {fileID: 21200012}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo7Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100014
 GameObject:
@@ -121,12 +121,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400014}
   - 212: {fileID: 21200014}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo6Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100016
 GameObject:
@@ -137,12 +137,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400016}
   - 212: {fileID: 21200016}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo6Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100018
 GameObject:
@@ -153,12 +153,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400018}
   - 212: {fileID: 21200018}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo5Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100020
 GameObject:
@@ -169,12 +169,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400020}
   - 212: {fileID: 21200020}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo5Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100022
 GameObject:
@@ -185,12 +185,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400022}
   - 212: {fileID: 21200022}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo4Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100024
 GameObject:
@@ -201,12 +201,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400024}
   - 212: {fileID: 21200024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo4Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100026
 GameObject:
@@ -217,12 +217,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400026}
   - 212: {fileID: 21200026}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo3Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100028
 GameObject:
@@ -233,12 +233,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400028}
   - 212: {fileID: 21200028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo2Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100030
 GameObject:
@@ -249,12 +249,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400030}
   - 212: {fileID: 21200030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo2Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100032
 GameObject:
@@ -265,12 +265,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400032}
   - 212: {fileID: 21200032}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo4Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100034
 GameObject:
@@ -280,12 +280,12 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400034}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PF_Level1Cargos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100036
 GameObject:
@@ -296,12 +296,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400036}
   - 212: {fileID: 21200034}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo9Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100038
 GameObject:
@@ -312,12 +312,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400038}
   - 212: {fileID: 21200036}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo10Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100040
 GameObject:
@@ -328,12 +328,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400040}
   - 212: {fileID: 21200038}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo2Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100042
 GameObject:
@@ -344,12 +344,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400042}
   - 212: {fileID: 21200040}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo7Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100044
 GameObject:
@@ -360,12 +360,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400044}
   - 212: {fileID: 21200042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo5Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100046
 GameObject:
@@ -376,12 +376,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400046}
   - 212: {fileID: 21200044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo1Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100048
 GameObject:
@@ -392,12 +392,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400048}
   - 212: {fileID: 21200046}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo1Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100050
 GameObject:
@@ -408,12 +408,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400050}
   - 212: {fileID: 21200048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo8Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100052
 GameObject:
@@ -424,12 +424,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400052}
   - 212: {fileID: 21200050}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo3Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100054
 GameObject:
@@ -440,12 +440,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400054}
   - 212: {fileID: 21200052}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo6Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &100056
 GameObject:
@@ -456,12 +456,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400056}
   - 212: {fileID: 21200054}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cargo1Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &400000
 Transform:

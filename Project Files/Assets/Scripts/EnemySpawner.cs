@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
 	Enemy enemyScript;
 	//public bool enemyPlaced;
 	public GameObject enemyObj;
-	public GameObject[] wayPoints;
+	//public GameObject[] wayPoints;
 	public int enemies , i , maxEnemies;
 	public Vector2[] randomLocations;
 	Vector2 enemySpawnLocation;

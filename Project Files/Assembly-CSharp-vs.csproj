@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\InGameGUI.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\PlayerSpawner.cs" />
      <None Include="Assets\PigeonCoopToolkit\__SharedDemoAssets\_Shaders\Unlit Transparent Color.shader" />
      <None Include="Assets\Plugins\Android\Unity34Manifest.xml" />
      <None Include="Assets\Plugins\Android\assets\strings_TW.xml" />

@@ -5,9 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour 
 {
 	public Animator anim;
-	//public Enemy enemyScript;
+	public Enemy enemyScript;
 	public float speed;
-	//public GameObject enemyObj;
+	public GameObject enemyObj;
 	public int attack , hitpoints;
 	public List<Vector2> path;
 	public Transform pathTarget;
@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
 		}
 
 		SetState(0);
+		//StartCoroutine("PathTimer");
 	}
 
 	public void DeductHitPoints(int val)
@@ -46,19 +47,31 @@ public class Player : MonoBehaviour
 		}	
 	}
 
+//	IEnumerator PathTimer()
+//	{
+//		yield return new WaitForSeconds(4);
+//		enemyObj = GameObject.FindGameObjectWithTag("Enemy");
+//		pathTarget = enemyObj.transform;
+//		path = path = NavMesh2D.GetSmoothedPath(transform.position , pathTarget.position);
+//		SetState(1);
+//		StartCoroutine("PathTimer");
+//	}
+
 	void Run()
 	{
 		//Debug.Log("Run Method");
 
+		//path = NavMesh2D.GetSmoothedPath(transform.position , pathTarget.position);
+
 		if(path != null && path.Count != 0)
 		{
-			anim.SetBool("Running" , true);
+			//anim.SetBool("Running" , true);
 			transform.position = Vector2.MoveTowards(transform.position , path[0] , speed * Time.deltaTime);
 			
 			if(Vector2.Distance(transform.position , path[0]) < 0.01f)
 			{
 				path.RemoveAt(0);
-				SetState(0);
+				//SetState(0);
 			}
 		}
 	}
@@ -89,10 +102,10 @@ public class Player : MonoBehaviour
 		{
 			case State.Idle :
 				anim.SetBool("Running" , false);
-				anim.SetBool("Attacking" , false);
 			break;
 
 			case State.Run :
+				anim.SetBool("Running" , true);
 				Run();
 			break;
 

@@ -124,6 +124,7 @@ public class Enemy : MonoBehaviour
 
 	void OnMouseDown()
 	{
+		Debug.Log("Thug Clicked");
 		playerScript.pathTarget = this.gameObject.transform;
 		playerScript.path = NavMesh2D.GetSmoothedPath(transform.position , playerScript.pathTarget.position);
 		playerScript.SetState(1);
