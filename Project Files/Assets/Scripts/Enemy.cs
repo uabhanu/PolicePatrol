@@ -5,13 +5,13 @@ using UnityEngine;
 public class Enemy : MonoBehaviour 
 {
 	public Animator anim;
-	public bool selected;
 	public EnemySpawner enemySpawnerScript;
 	public float speed;
-	public GameObject enemySpawner , iguiObj;
+	public GameObject enemySpawner , iguiObj , playerObj;
 	public InGameGUI iguiScript;
 	public int hitpoints;
 	public List<Vector2> path;
+	public Player playerScript;
 	public string type;
 	public Transform pathTarget;
 	public Transform[] trucks;
@@ -40,6 +40,13 @@ public class Enemy : MonoBehaviour
 		if(enemySpawner != null)
 		{
 			enemySpawnerScript = enemySpawner.GetComponent<EnemySpawner>();
+		}
+
+		playerObj = GameObject.FindGameObjectWithTag("Player");
+
+		if(playerObj != null)
+		{
+			playerScript = playerObj.GetComponent<Player>();
 		}
 
 		trucks[0] = GameObject.FindGameObjectWithTag("Left").transform;
@@ -117,7 +124,9 @@ public class Enemy : MonoBehaviour
 
 	void OnMouseDown()
 	{
-		selected = true;
+		playerScript.pathTarget = this.gameObject.transform;
+		playerScript.path = NavMesh2D.GetSmoothedPath(transform.position , playerScript.pathTarget.position);
+		playerScript.SetState(1);
 	}
 
 	void OnTriggerEnter2D(Collider2D col)

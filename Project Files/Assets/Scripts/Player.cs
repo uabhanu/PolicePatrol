@@ -5,9 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour 
 {
 	public Animator anim;
-	public Enemy enemyScript;
-	public float axisX , axisY , speed;
-	public GameObject enemyObj;
+	//public Enemy enemyScript;
+	public float speed;
+	//public GameObject enemyObj;
 	public int attack , hitpoints;
 	public List<Vector2> path;
 	public Transform pathTarget;
@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
 	public enum State
 	{
 		Idle,
-		Walk,
+		Run,
 		Attack,
 	};
 	
@@ -24,16 +24,12 @@ public class Player : MonoBehaviour
 	
 	void Start () 
 	{
-		axisX = Input.GetAxis("Horizontal");
-		axisY = Input.GetAxis("Vertical");
-
 		if(this.gameObject != null)
 		{
 			anim = this.gameObject.GetComponent<Animator>();
 		}
 
 		SetState(0);
-		StartCoroutine("GetEnemyTimer");
 	}
 
 	public void DeductHitPoints(int val)
@@ -50,42 +46,9 @@ public class Player : MonoBehaviour
 		}	
 	}
 
-	IEnumerator GetEnemyTimer()
-	{
-		yield return new WaitForSeconds(4);
-
-		//Debug.Log("Get Enemy Timer");
-
-		enemyObj = GameObject.FindGameObjectWithTag("Enemy");
-
-		if(enemyObj != null)
-		{
-			enemyScript = enemyObj.GetComponent<Enemy>();
-		}
-
-		pathTarget = enemyObj.transform;
-		path = NavMesh2D.GetSmoothedPath(transform.position , pathTarget.position);
-
-		SetState(1);
-		StartCoroutine("GetEnemyTimer");
-	}
-
 	void Movement()
 	{
 		//Debug.Log("Movement Method");
-
-		anim.SetFloat("SpeedX" , axisX);
-		anim.SetFloat("SpeedY" , axisY);
-
-		if(transform.position.x >= -5.0f && transform.position.x <= 1.0f)
-		{
-			axisX = speed - 2;
-		}
-
-		else if(transform.position.x >= 1.0f && transform.position.x <= 5.0f)
-		{
-			axisX = speed;
-		}
 
 		if(path != null && path.Count != 0)
 		{
@@ -95,7 +58,17 @@ public class Player : MonoBehaviour
 			if(Vector2.Distance(transform.position , path[0]) < 0.01f)
 			{
 				path.RemoveAt(0);
+				SetState(0);
 			}
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if(col.gameObject.tag.Equals("Enemy"))
+		{
+			Debug.Log("Collided Enemy");
+			SetState(2);
 		}
 	}
 
@@ -115,16 +88,17 @@ public class Player : MonoBehaviour
 		switch(currentState)
 		{
 			case State.Idle :
-
+				anim.SetBool("Moving" , false);
+				anim.SetBool("Attacking" , false);
 			break;
 
-			case State.Walk :
+			case State.Run :
 				Movement();
 			break;
 
 			case State.Attack :
-
+				anim.SetBool("Attacking" , true);
 			break;
 		}
-	}	
+	}
 }
