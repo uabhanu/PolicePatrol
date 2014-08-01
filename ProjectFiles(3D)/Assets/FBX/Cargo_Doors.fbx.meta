@@ -5,20 +5,18 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     100002: Cargo_Doors
-    100004: group1
-    100006: LeftDoor_Hinge
-    100008: LeftDoor_HingeEnd
-    100010: RightDoor_Hinge
-    100012: RightDoor_HingeEnd
-    100014: Root
+    100004: LeftDoor_Hinge
+    100006: LeftDoor_HingeEnd
+    100008: RightDoor_Hinge
+    100010: RightDoor_HingeEnd
+    100012: Root
     400000: //RootNode
     400002: Cargo_Doors
-    400004: group1
-    400006: LeftDoor_Hinge
-    400008: LeftDoor_HingeEnd
-    400010: RightDoor_Hinge
-    400012: RightDoor_HingeEnd
-    400014: Root
+    400004: LeftDoor_Hinge
+    400006: LeftDoor_HingeEnd
+    400008: RightDoor_Hinge
+    400010: RightDoor_HingeEnd
+    400012: Root
     4300000: Cargo_Doors
     9500000: //RootNode
     13700000: Cargo_Doors
@@ -41,7 +39,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .5
+    globalScale: .0500000007
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

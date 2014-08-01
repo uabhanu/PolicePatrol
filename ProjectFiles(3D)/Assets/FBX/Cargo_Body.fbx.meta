@@ -1,14 +1,12 @@
 fileFormatVersion: 2
-guid: 25168655fbda2e04dadc631bb466fef7
+guid: ab91b0a985da32e4f8c19559dc6a17c3
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Cargo_Body
     400000: //RootNode
-    400002: Cargo_Body
-    2300000: Cargo_Body
-    3300000: Cargo_Body
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Cargo_Body
     9500000: //RootNode
   materials:
