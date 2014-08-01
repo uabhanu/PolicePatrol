@@ -1,0 +1,3704 @@
+fileFormatVersion: 2
+guid: ddac345a3dfec8d4da235543a06480a0
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Thug_Base.001|chest
+    100004: Thug_Base.001|DEF-breast.L
+    100006: Thug_Base.001|DEF-breast.R
+    100008: Thug_Base.001|DEF-chest
+    100010: Thug_Base.001|DEF-chest-1
+    100012: Thug_Base.001|DEF-elbow_fan.L
+    100014: Thug_Base.001|DEF-elbow_fan.R
+    100016: Thug_Base.001|DEF-eye.L
+    100018: Thug_Base.001|DEF-eye.R
+    100020: Thug_Base.001|DEF-f_index.01.L.01
+    100022: Thug_Base.001|DEF-f_index.01.L.02
+    100024: Thug_Base.001|DEF-f_index.01.R.01
+    100026: Thug_Base.001|DEF-f_index.01.R.02
+    100028: Thug_Base.001|DEF-f_index.02.L
+    100030: Thug_Base.001|DEF-f_index.02.R
+    100032: Thug_Base.001|DEF-f_index.03.L
+    100034: Thug_Base.001|DEF-f_index.03.R
+    100036: Thug_Base.001|DEF-f_middle.01.L.01
+    100038: Thug_Base.001|DEF-f_middle.01.L.02
+    100040: Thug_Base.001|DEF-f_middle.01.R.01
+    100042: Thug_Base.001|DEF-f_middle.01.R.02
+    100044: Thug_Base.001|DEF-f_middle.02.L
+    100046: Thug_Base.001|DEF-f_middle.02.R
+    100048: Thug_Base.001|DEF-f_middle.03.L
+    100050: Thug_Base.001|DEF-f_middle.03.R
+    100052: Thug_Base.001|DEF-f_pinky.01.L.01
+    100054: Thug_Base.001|DEF-f_pinky.01.L.02
+    100056: Thug_Base.001|DEF-f_pinky.01.R.01
+    100058: Thug_Base.001|DEF-f_pinky.01.R.02
+    100060: Thug_Base.001|DEF-f_pinky.02.L
+    100062: Thug_Base.001|DEF-f_pinky.02.R
+    100064: Thug_Base.001|DEF-f_pinky.03.L
+    100066: Thug_Base.001|DEF-f_pinky.03.R
+    100068: Thug_Base.001|DEF-f_ring.01.L.01
+    100070: Thug_Base.001|DEF-f_ring.01.L.02
+    100072: Thug_Base.001|DEF-f_ring.01.R.01
+    100074: Thug_Base.001|DEF-f_ring.01.R.02
+    100076: Thug_Base.001|DEF-f_ring.02.L
+    100078: Thug_Base.001|DEF-f_ring.02.R
+    100080: Thug_Base.001|DEF-f_ring.03.L
+    100082: Thug_Base.001|DEF-f_ring.03.R
+    100084: Thug_Base.001|DEF-femoris.L
+    100086: Thug_Base.001|DEF-femoris.R
+    100088: Thug_Base.001|DEF-foot.L
+    100090: Thug_Base.001|DEF-foot.R
+    100092: Thug_Base.001|DEF-forearm.01.L
+    100094: Thug_Base.001|DEF-forearm.01.R
+    100096: Thug_Base.001|DEF-forearm.02.L
+    100098: Thug_Base.001|DEF-forearm.02.R
+    100100: Thug_Base.001|DEF-gluteus.L
+    100102: Thug_Base.001|DEF-gluteus.R
+    100104: Thug_Base.001|DEF-hand.L
+    100106: Thug_Base.001|DEF-hand.R
+    100108: Thug_Base.001|DEF-head
+    100110: Thug_Base.001|DEF-hips
+    100112: Thug_Base.001|DEF-jaw
+    100114: Thug_Base.001|DEF-knee_fan.L
+    100116: Thug_Base.001|DEF-knee_fan.R
+    100118: Thug_Base.001|DEF-lat_dorsi.L
+    100120: Thug_Base.001|DEF-lat_dorsi.R
+    100122: Thug_Base.001|DEF-lolid.L
+    100124: Thug_Base.001|DEF-lolid.R
+    100126: Thug_Base.001|DEF-neck
+    100128: Thug_Base.001|DEF-palm.01.L
+    100130: Thug_Base.001|DEF-palm.01.R
+    100132: Thug_Base.001|DEF-palm.02.L
+    100134: Thug_Base.001|DEF-palm.02.R
+    100136: Thug_Base.001|DEF-palm.03.L
+    100138: Thug_Base.001|DEF-palm.03.R
+    100140: Thug_Base.001|DEF-palm.04.L
+    100142: Thug_Base.001|DEF-palm.04.R
+    100144: Thug_Base.001|DEF-pectoralis.L
+    100146: Thug_Base.001|DEF-pectoralis.R
+    100148: Thug_Base.001|DEF-platysma.L
+    100150: Thug_Base.001|DEF-platysma.R
+    100152: Thug_Base.001|DEF-quadriceps.L
+    100154: Thug_Base.001|DEF-quadriceps.R
+    100156: Thug_Base.001|DEF-scapula.L
+    100158: Thug_Base.001|DEF-scapula.R
+    100160: Thug_Base.001|DEF-shin.01.L
+    100162: Thug_Base.001|DEF-shin.01.R
+    100164: Thug_Base.001|DEF-shin.02.L
+    100166: Thug_Base.001|DEF-shin.02.R
+    100168: Thug_Base.001|DEF-shoulder.L
+    100170: Thug_Base.001|DEF-shoulder.R
+    100172: Thug_Base.001|DEF-soleus.L
+    100174: Thug_Base.001|DEF-soleus.R
+    100176: Thug_Base.001|DEF-spine
+    100178: Thug_Base.001|DEF-spine-1
+    100180: Thug_Base.001|DEF-stomach
+    100182: Thug_Base.001|DEF-thigh.01.L
+    100184: Thug_Base.001|DEF-thigh.01.R
+    100186: Thug_Base.001|DEF-thigh.02.L
+    100188: Thug_Base.001|DEF-thigh.02.R
+    100190: Thug_Base.001|DEF-thumb.01.L.01
+    100192: Thug_Base.001|DEF-thumb.01.L.02
+    100194: Thug_Base.001|DEF-thumb.01.R.01
+    100196: Thug_Base.001|DEF-thumb.01.R.02
+    100198: Thug_Base.001|DEF-thumb.02.L
+    100200: Thug_Base.001|DEF-thumb.02.R
+    100202: Thug_Base.001|DEF-thumb.03.L
+    100204: Thug_Base.001|DEF-thumb.03.R
+    100206: Thug_Base.001|DEF-toe.L
+    100208: Thug_Base.001|DEF-toe.R
+    100210: Thug_Base.001|DEF-tongue_base
+    100212: Thug_Base.001|DEF-tongue_mid
+    100214: Thug_Base.001|DEF-tongue_tip
+    100216: Thug_Base.001|DEF-trapezius1.L
+    100218: Thug_Base.001|DEF-trapezius1.R
+    100220: Thug_Base.001|DEF-trapezius2.L
+    100222: Thug_Base.001|DEF-trapezius2.R
+    100224: Thug_Base.001|DEF-uplid.L
+    100226: Thug_Base.001|DEF-uplid.R
+    100228: Thug_Base.001|DEF-upper_arm.01.L
+    100230: Thug_Base.001|DEF-upper_arm.01.R
+    100232: Thug_Base.001|DEF-upper_arm.02.L
+    100234: Thug_Base.001|DEF-upper_arm.02.R
+    100236: Thug_Base.001|elbow_hose.L
+    100238: Thug_Base.001|elbow_hose.R
+    100240: Thug_Base.001|elbow_target.ik.L
+    100242: Thug_Base.001|elbow_target.ik.R
+    100244: Thug_Base.001|f_index.01.L
+    100246: Thug_Base.001|f_index.01.R
+    100248: Thug_Base.001|f_index.02.L
+    100250: Thug_Base.001|f_index.02.R
+    100252: Thug_Base.001|f_index.03.L
+    100254: Thug_Base.001|f_index.03.R
+    100256: Thug_Base.001|f_index.L
+    100258: Thug_Base.001|f_index.R
+    100260: Thug_Base.001|f_middle.01.L
+    100262: Thug_Base.001|f_middle.01.R
+    100264: Thug_Base.001|f_middle.02.L
+    100266: Thug_Base.001|f_middle.02.R
+    100268: Thug_Base.001|f_middle.03.L
+    100270: Thug_Base.001|f_middle.03.R
+    100272: Thug_Base.001|f_middle.L
+    100274: Thug_Base.001|f_middle.R
+    100276: Thug_Base.001|f_pinky.01.L
+    100278: Thug_Base.001|f_pinky.01.R
+    100280: Thug_Base.001|f_pinky.02.L
+    100282: Thug_Base.001|f_pinky.02.R
+    100284: Thug_Base.001|f_pinky.03.L
+    100286: Thug_Base.001|f_pinky.03.R
+    100288: Thug_Base.001|f_pinky.L
+    100290: Thug_Base.001|f_pinky.R
+    100292: Thug_Base.001|f_ring.01.L
+    100294: Thug_Base.001|f_ring.01.R
+    100296: Thug_Base.001|f_ring.02.L
+    100298: Thug_Base.001|f_ring.02.R
+    100300: Thug_Base.001|f_ring.03.L
+    100302: Thug_Base.001|f_ring.03.R
+    100304: Thug_Base.001|f_ring.L
+    100306: Thug_Base.001|f_ring.R
+    100308: Thug_Base.001|foot.fk.L
+    100310: Thug_Base.001|foot.fk.R
+    100312: Thug_Base.001|foot.ik.L
+    100314: Thug_Base.001|foot.ik.R
+    100316: Thug_Base.001|foot_roll.ik.L
+    100318: Thug_Base.001|foot_roll.ik.R
+    100320: Thug_Base.001|forearm.fk.L
+    100322: Thug_Base.001|forearm.fk.R
+    100324: Thug_Base.001|forearm_hose.L
+    100326: Thug_Base.001|forearm_hose.R
+    100328: Thug_Base.001|hand.fk.L
+    100330: Thug_Base.001|hand.fk.R
+    100332: Thug_Base.001|hand.ik.L
+    100334: Thug_Base.001|hand.ik.R
+    100336: Thug_Base.001|head
+    100338: Thug_Base.001|hips
+    100340: Thug_Base.001|knee_hose.L
+    100342: Thug_Base.001|knee_hose.R
+    100344: Thug_Base.001|knee_target.ik.L
+    100346: Thug_Base.001|knee_target.ik.R
+    100348: Thug_Base.001|MCH-chest.flex
+    100350: Thug_Base.001|MCH-chest.flex_s
+    100352: Thug_Base.001|MCH-chest.reverse
+    100354: Thug_Base.001|MCH-elbow_hose_parent.L
+    100356: Thug_Base.001|MCH-elbow_hose_parent.R
+    100358: Thug_Base.001|MCH-f_index.01.L
+    100360: Thug_Base.001|MCH-f_index.01.L.tip
+    100362: Thug_Base.001|MCH-f_index.01.R
+    100364: Thug_Base.001|MCH-f_index.01.R.tip
+    100366: Thug_Base.001|MCH-f_index.02.L
+    100368: Thug_Base.001|MCH-f_index.02.R
+    100370: Thug_Base.001|MCH-f_index.03.L
+    100372: Thug_Base.001|MCH-f_index.03.R
+    100374: Thug_Base.001|MCH-f_middle.01.L
+    100376: Thug_Base.001|MCH-f_middle.01.L.tip
+    100378: Thug_Base.001|MCH-f_middle.01.R
+    100380: Thug_Base.001|MCH-f_middle.01.R.tip
+    100382: Thug_Base.001|MCH-f_middle.02.L
+    100384: Thug_Base.001|MCH-f_middle.02.R
+    100386: Thug_Base.001|MCH-f_middle.03.L
+    100388: Thug_Base.001|MCH-f_middle.03.R
+    100390: Thug_Base.001|MCH-f_pinky.01.L
+    100392: Thug_Base.001|MCH-f_pinky.01.L.tip
+    100394: Thug_Base.001|MCH-f_pinky.01.R
+    100396: Thug_Base.001|MCH-f_pinky.01.R.tip
+    100398: Thug_Base.001|MCH-f_pinky.02.L
+    100400: Thug_Base.001|MCH-f_pinky.02.R
+    100402: Thug_Base.001|MCH-f_pinky.03.L
+    100404: Thug_Base.001|MCH-f_pinky.03.R
+    100406: Thug_Base.001|MCH-f_ring.01.L
+    100408: Thug_Base.001|MCH-f_ring.01.L.tip
+    100410: Thug_Base.001|MCH-f_ring.01.R
+    100412: Thug_Base.001|MCH-f_ring.01.R.tip
+    100414: Thug_Base.001|MCH-f_ring.02.L
+    100416: Thug_Base.001|MCH-f_ring.02.R
+    100418: Thug_Base.001|MCH-f_ring.03.L
+    100420: Thug_Base.001|MCH-f_ring.03.R
+    100422: Thug_Base.001|MCH-foot.L
+    100424: Thug_Base.001|MCH-foot.L.001
+    100426: Thug_Base.001|MCH-foot.L.rocker.01
+    100428: Thug_Base.001|MCH-foot.L.rocker.02
+    100430: Thug_Base.001|MCH-foot.L.roll.01
+    100432: Thug_Base.001|MCH-foot.L.roll.02
+    100434: Thug_Base.001|MCH-foot.R
+    100436: Thug_Base.001|MCH-foot.R.001
+    100438: Thug_Base.001|MCH-foot.R.rocker.01
+    100440: Thug_Base.001|MCH-foot.R.rocker.02
+    100442: Thug_Base.001|MCH-foot.R.roll.01
+    100444: Thug_Base.001|MCH-foot.R.roll.02
+    100446: Thug_Base.001|MCH-forearm.01.L
+    100448: Thug_Base.001|MCH-forearm.01.R
+    100450: Thug_Base.001|MCH-forearm.ik.L
+    100452: Thug_Base.001|MCH-forearm.ik.R
+    100454: Thug_Base.001|MCH-forearm.junc.L
+    100456: Thug_Base.001|MCH-forearm.junc.R
+    100458: Thug_Base.001|MCH-forearm.nostr.ik.L
+    100460: Thug_Base.001|MCH-forearm.nostr.ik.R
+    100462: Thug_Base.001|MCH-forearm.stretch.ik.L
+    100464: Thug_Base.001|MCH-forearm.stretch.ik.R
+    100466: Thug_Base.001|MCH-forearm_antistr.fk.L
+    100468: Thug_Base.001|MCH-forearm_antistr.fk.R
+    100470: Thug_Base.001|MCH-forearm_hose_parent.L
+    100472: Thug_Base.001|MCH-forearm_hose_parent.R
+    100474: Thug_Base.001|MCH-forearm_smth.01.L
+    100476: Thug_Base.001|MCH-forearm_smth.01.R
+    100478: Thug_Base.001|MCH-gluteus0.L
+    100480: Thug_Base.001|MCH-gluteus0.R
+    100482: Thug_Base.001|MCH-hand.L
+    100484: Thug_Base.001|MCH-hand.L.001
+    100486: Thug_Base.001|MCH-hand.R
+    100488: Thug_Base.001|MCH-hand.R.001
+    100490: Thug_Base.001|MCH-head
+    100492: Thug_Base.001|MCH-head.001
+    100494: Thug_Base.001|MCH-head.02
+    100496: Thug_Base.001|MCH-head.socket1
+    100498: Thug_Base.001|MCH-head.socket2
+    100500: Thug_Base.001|MCH-hips.flex
+    100502: Thug_Base.001|MCH-hips.flex_s
+    100504: Thug_Base.001|MCH-hips.reverse
+    100506: Thug_Base.001|MCH-hips_fk_ns_ch
+    100508: Thug_Base.001|MCH-hips_fk_ns_ch.001
+    100510: Thug_Base.001|MCH-hips_fk_ns_intr
+    100512: Thug_Base.001|MCH-hips_fk_ns_intr.001
+    100514: Thug_Base.001|MCH-hips_ik_ns_ch
+    100516: Thug_Base.001|MCH-hips_ik_ns_ch.001
+    100518: Thug_Base.001|MCH-hips_ik_ns_intr
+    100520: Thug_Base.001|MCH-hips_ik_ns_intr.001
+    100522: Thug_Base.001|MCH-hips_rh_ns_ch
+    100524: Thug_Base.001|MCH-hips_rh_ns_ch.001
+    100526: Thug_Base.001|MCH-hips_rh_ns_intr
+    100528: Thug_Base.001|MCH-hips_rh_ns_intr.001
+    100530: Thug_Base.001|MCH-hipside.L
+    100532: Thug_Base.001|MCH-hipside.R
+    100534: Thug_Base.001|MCH-knee_hose_parent.L
+    100536: Thug_Base.001|MCH-knee_hose_parent.R
+    100538: Thug_Base.001|MCH-neck
+    100540: Thug_Base.001|MCH-neck.02
+    100542: Thug_Base.001|MCH-neck.child
+    100544: Thug_Base.001|MCH-neck.follow
+    100546: Thug_Base.001|MCH-par_spine
+    100548: Thug_Base.001|MCH-par_spine-1
+    100550: Thug_Base.001|MCH-pubis
+    100552: Thug_Base.001|MCH-shin.01.L
+    100554: Thug_Base.001|MCH-shin.01.R
+    100556: Thug_Base.001|MCH-shin.ik.L
+    100558: Thug_Base.001|MCH-shin.ik.R
+    100560: Thug_Base.001|MCH-shin.junc.L
+    100562: Thug_Base.001|MCH-shin.junc.R
+    100564: Thug_Base.001|MCH-shin.nostr.ik.L
+    100566: Thug_Base.001|MCH-shin.nostr.ik.R
+    100568: Thug_Base.001|MCH-shin.stretch.ik.L
+    100570: Thug_Base.001|MCH-shin.stretch.ik.R
+    100572: Thug_Base.001|MCH-shin_antistr.fk.L
+    100574: Thug_Base.001|MCH-shin_antistr.fk.R
+    100576: Thug_Base.001|MCH-shin_hose_parent.L
+    100578: Thug_Base.001|MCH-shin_hose_parent.R
+    100580: Thug_Base.001|MCH-shin_smth.01.L
+    100582: Thug_Base.001|MCH-shin_smth.01.R
+    100584: Thug_Base.001|MCH-shoulder_fk_ns_ch.L
+    100586: Thug_Base.001|MCH-shoulder_fk_ns_ch.R
+    100588: Thug_Base.001|MCH-shoulder_fk_ns_intr.L
+    100590: Thug_Base.001|MCH-shoulder_fk_ns_intr.R
+    100592: Thug_Base.001|MCH-shoulder_ik_ns_ch.L
+    100594: Thug_Base.001|MCH-shoulder_ik_ns_ch.R
+    100596: Thug_Base.001|MCH-shoulder_ik_ns_intr.L
+    100598: Thug_Base.001|MCH-shoulder_ik_ns_intr.R
+    100600: Thug_Base.001|MCH-shoulder_rh_ns_ch.L
+    100602: Thug_Base.001|MCH-shoulder_rh_ns_ch.R
+    100604: Thug_Base.001|MCH-shoulder_rh_ns_intr.L
+    100606: Thug_Base.001|MCH-shoulder_rh_ns_intr.R
+    100608: Thug_Base.001|MCH-sole.L
+    100610: Thug_Base.001|MCH-sole.R
+    100612: Thug_Base.001|MCH-spine-1.flex
+    100614: Thug_Base.001|MCH-spine-1.flex_s
+    100616: Thug_Base.001|MCH-spine-1.reverse
+    100618: Thug_Base.001|MCH-spine.flex
+    100620: Thug_Base.001|MCH-spine.flex_s
+    100622: Thug_Base.001|MCH-spine.reverse
+    100624: Thug_Base.001|MCH-sub_chest
+    100626: Thug_Base.001|MCH-sub_hips
+    100628: Thug_Base.001|MCH-sub_spine
+    100630: Thug_Base.001|MCH-sub_spine-1
+    100632: Thug_Base.001|MCH-thigh.fk.L.socket1
+    100634: Thug_Base.001|MCH-thigh.fk.L.socket2
+    100636: Thug_Base.001|MCH-thigh.fk.R.socket1
+    100638: Thug_Base.001|MCH-thigh.fk.R.socket2
+    100640: Thug_Base.001|MCH-thigh.ik.L
+    100642: Thug_Base.001|MCH-thigh.ik.R
+    100644: Thug_Base.001|MCH-thigh.nostr.ik.L
+    100646: Thug_Base.001|MCH-thigh.nostr.ik.R
+    100648: Thug_Base.001|MCH-thigh.stretch.ik.L
+    100650: Thug_Base.001|MCH-thigh.stretch.ik.R
+    100652: Thug_Base.001|MCH-thigh_antistr.fk.L
+    100654: Thug_Base.001|MCH-thigh_antistr.fk.R
+    100656: Thug_Base.001|MCH-thigh_hose_parent.L
+    100658: Thug_Base.001|MCH-thigh_hose_parent.R
+    100660: Thug_Base.001|MCH-thigh_smth.02.L
+    100662: Thug_Base.001|MCH-thigh_smth.02.R
+    100664: Thug_Base.001|MCH-thumb.01.L
+    100666: Thug_Base.001|MCH-thumb.01.L.tip
+    100668: Thug_Base.001|MCH-thumb.01.R
+    100670: Thug_Base.001|MCH-thumb.01.R.tip
+    100672: Thug_Base.001|MCH-thumb.02.L
+    100674: Thug_Base.001|MCH-thumb.02.R
+    100676: Thug_Base.001|MCH-thumb.03.L
+    100678: Thug_Base.001|MCH-thumb.03.R
+    100680: Thug_Base.001|MCH-toe.L.parent
+    100682: Thug_Base.001|MCH-toe.L.socket1
+    100684: Thug_Base.001|MCH-toe.L.socket2
+    100686: Thug_Base.001|MCH-toe.R.parent
+    100688: Thug_Base.001|MCH-toe.R.socket1
+    100690: Thug_Base.001|MCH-toe.R.socket2
+    100692: Thug_Base.001|MCH-upper_arm.fk.L.socket1
+    100694: Thug_Base.001|MCH-upper_arm.fk.L.socket2
+    100696: Thug_Base.001|MCH-upper_arm.fk.R.socket1
+    100698: Thug_Base.001|MCH-upper_arm.fk.R.socket2
+    100700: Thug_Base.001|MCH-upper_arm.ik.L
+    100702: Thug_Base.001|MCH-upper_arm.ik.R
+    100704: Thug_Base.001|MCH-upper_arm.nostr.ik.L
+    100706: Thug_Base.001|MCH-upper_arm.nostr.ik.R
+    100708: Thug_Base.001|MCH-upper_arm.stretch.ik.L
+    100710: Thug_Base.001|MCH-upper_arm.stretch.ik.R
+    100712: Thug_Base.001|MCH-upper_arm_antistr.fk.L
+    100714: Thug_Base.001|MCH-upper_arm_antistr.fk.R
+    100716: Thug_Base.001|MCH-upper_arm_hose_parent.L
+    100718: Thug_Base.001|MCH-upper_arm_hose_parent.R
+    100720: Thug_Base.001|MCH-upper_arm_smth.02.L
+    100722: Thug_Base.001|MCH-upper_arm_smth.02.R
+    100724: Thug_Base.001|neck
+    100726: Thug_Base.001|ORG-chest
+    100728: Thug_Base.001|ORG-f_index.01.L
+    100730: Thug_Base.001|ORG-f_index.01.R
+    100732: Thug_Base.001|ORG-f_index.02.L
+    100734: Thug_Base.001|ORG-f_index.02.R
+    100736: Thug_Base.001|ORG-f_index.03.L
+    100738: Thug_Base.001|ORG-f_index.03.R
+    100740: Thug_Base.001|ORG-f_middle.01.L
+    100742: Thug_Base.001|ORG-f_middle.01.R
+    100744: Thug_Base.001|ORG-f_middle.02.L
+    100746: Thug_Base.001|ORG-f_middle.02.R
+    100748: Thug_Base.001|ORG-f_middle.03.L
+    100750: Thug_Base.001|ORG-f_middle.03.R
+    100752: Thug_Base.001|ORG-f_pinky.01.L
+    100754: Thug_Base.001|ORG-f_pinky.01.R
+    100756: Thug_Base.001|ORG-f_pinky.02.L
+    100758: Thug_Base.001|ORG-f_pinky.02.R
+    100760: Thug_Base.001|ORG-f_pinky.03.L
+    100762: Thug_Base.001|ORG-f_pinky.03.R
+    100764: Thug_Base.001|ORG-f_ring.01.L
+    100766: Thug_Base.001|ORG-f_ring.01.R
+    100768: Thug_Base.001|ORG-f_ring.02.L
+    100770: Thug_Base.001|ORG-f_ring.02.R
+    100772: Thug_Base.001|ORG-f_ring.03.L
+    100774: Thug_Base.001|ORG-f_ring.03.R
+    100776: Thug_Base.001|ORG-foot.L
+    100778: Thug_Base.001|ORG-foot.R
+    100780: Thug_Base.001|ORG-forearm.L
+    100782: Thug_Base.001|ORG-forearm.R
+    100784: Thug_Base.001|ORG-hand.L
+    100786: Thug_Base.001|ORG-hand.R
+    100788: Thug_Base.001|ORG-head
+    100790: Thug_Base.001|ORG-heel.02.L
+    100792: Thug_Base.001|ORG-heel.02.R
+    100794: Thug_Base.001|ORG-heel.L
+    100796: Thug_Base.001|ORG-heel.R
+    100798: Thug_Base.001|ORG-hips
+    100800: Thug_Base.001|ORG-neck
+    100802: Thug_Base.001|ORG-palm.01.L
+    100804: Thug_Base.001|ORG-palm.01.R
+    100806: Thug_Base.001|ORG-palm.02.L
+    100808: Thug_Base.001|ORG-palm.02.R
+    100810: Thug_Base.001|ORG-palm.03.L
+    100812: Thug_Base.001|ORG-palm.03.R
+    100814: Thug_Base.001|ORG-palm.04.L
+    100816: Thug_Base.001|ORG-palm.04.R
+    100818: Thug_Base.001|ORG-shin.L
+    100820: Thug_Base.001|ORG-shin.R
+    100822: Thug_Base.001|ORG-shoulder.L
+    100824: Thug_Base.001|ORG-shoulder.R
+    100826: Thug_Base.001|ORG-spine
+    100828: Thug_Base.001|ORG-spine-1
+    100830: Thug_Base.001|ORG-thigh.L
+    100832: Thug_Base.001|ORG-thigh.R
+    100834: Thug_Base.001|ORG-thumb.01.L
+    100836: Thug_Base.001|ORG-thumb.01.R
+    100838: Thug_Base.001|ORG-thumb.02.L
+    100840: Thug_Base.001|ORG-thumb.02.R
+    100842: Thug_Base.001|ORG-thumb.03.L
+    100844: Thug_Base.001|ORG-thumb.03.R
+    100846: Thug_Base.001|ORG-toe.L
+    100848: Thug_Base.001|ORG-toe.R
+    100850: Thug_Base.001|ORG-upper_arm.L
+    100852: Thug_Base.001|ORG-upper_arm.R
+    100854: Thug_Base.001|palm.L
+    100856: Thug_Base.001|palm.R
+    100858: Thug_Base.001|root
+    100860: Thug_Base.001|shin.fk.L
+    100862: Thug_Base.001|shin.fk.R
+    100864: Thug_Base.001|shin_hose.L
+    100866: Thug_Base.001|shin_hose.R
+    100868: Thug_Base.001|shoulder.L
+    100870: Thug_Base.001|shoulder.R
+    100872: Thug_Base.001|spine
+    100874: Thug_Base.001|spine-1
+    100876: Thug_Base.001|thigh.fk.L
+    100878: Thug_Base.001|thigh.fk.R
+    100880: Thug_Base.001|thigh_hose.L
+    100882: Thug_Base.001|thigh_hose.R
+    100884: Thug_Base.001|thumb.01.L
+    100886: Thug_Base.001|thumb.01.R
+    100888: Thug_Base.001|thumb.02.L
+    100890: Thug_Base.001|thumb.02.R
+    100892: Thug_Base.001|thumb.03.L
+    100894: Thug_Base.001|thumb.03.R
+    100896: Thug_Base.001|thumb.L
+    100898: Thug_Base.001|thumb.R
+    100900: Thug_Base.001|toe.L
+    100902: Thug_Base.001|toe.R
+    100904: Thug_Base.001|torso
+    100906: Thug_Base.001|upper_arm.fk.L
+    100908: Thug_Base.001|upper_arm.fk.R
+    100910: Thug_Base.001|upper_arm_hose.L
+    100912: Thug_Base.001|upper_arm_hose.R
+    100914: Thug_Base.001|VIS-foot.ik.L
+    100916: Thug_Base.001|VIS-foot.ik.R
+    100918: Thug_Base.001|VIS-hand.ik.L
+    100920: Thug_Base.001|VIS-hand.ik.R
+    100922: Thug_Base.001|VIS-thigh_pole.ik.L
+    100924: Thug_Base.001|VIS-thigh_pole.ik.R
+    100926: Thug_Base.001|VIS-upper_arm_pole.ik.L
+    100928: Thug_Base.001|VIS-upper_arm_pole.ik.R
+    400000: //RootNode
+    400002: Thug_Base.001|chest
+    400004: Thug_Base.001|DEF-breast.L
+    400006: Thug_Base.001|DEF-breast.R
+    400008: Thug_Base.001|DEF-chest
+    400010: Thug_Base.001|DEF-chest-1
+    400012: Thug_Base.001|DEF-elbow_fan.L
+    400014: Thug_Base.001|DEF-elbow_fan.R
+    400016: Thug_Base.001|DEF-eye.L
+    400018: Thug_Base.001|DEF-eye.R
+    400020: Thug_Base.001|DEF-f_index.01.L.01
+    400022: Thug_Base.001|DEF-f_index.01.L.02
+    400024: Thug_Base.001|DEF-f_index.01.R.01
+    400026: Thug_Base.001|DEF-f_index.01.R.02
+    400028: Thug_Base.001|DEF-f_index.02.L
+    400030: Thug_Base.001|DEF-f_index.02.R
+    400032: Thug_Base.001|DEF-f_index.03.L
+    400034: Thug_Base.001|DEF-f_index.03.R
+    400036: Thug_Base.001|DEF-f_middle.01.L.01
+    400038: Thug_Base.001|DEF-f_middle.01.L.02
+    400040: Thug_Base.001|DEF-f_middle.01.R.01
+    400042: Thug_Base.001|DEF-f_middle.01.R.02
+    400044: Thug_Base.001|DEF-f_middle.02.L
+    400046: Thug_Base.001|DEF-f_middle.02.R
+    400048: Thug_Base.001|DEF-f_middle.03.L
+    400050: Thug_Base.001|DEF-f_middle.03.R
+    400052: Thug_Base.001|DEF-f_pinky.01.L.01
+    400054: Thug_Base.001|DEF-f_pinky.01.L.02
+    400056: Thug_Base.001|DEF-f_pinky.01.R.01
+    400058: Thug_Base.001|DEF-f_pinky.01.R.02
+    400060: Thug_Base.001|DEF-f_pinky.02.L
+    400062: Thug_Base.001|DEF-f_pinky.02.R
+    400064: Thug_Base.001|DEF-f_pinky.03.L
+    400066: Thug_Base.001|DEF-f_pinky.03.R
+    400068: Thug_Base.001|DEF-f_ring.01.L.01
+    400070: Thug_Base.001|DEF-f_ring.01.L.02
+    400072: Thug_Base.001|DEF-f_ring.01.R.01
+    400074: Thug_Base.001|DEF-f_ring.01.R.02
+    400076: Thug_Base.001|DEF-f_ring.02.L
+    400078: Thug_Base.001|DEF-f_ring.02.R
+    400080: Thug_Base.001|DEF-f_ring.03.L
+    400082: Thug_Base.001|DEF-f_ring.03.R
+    400084: Thug_Base.001|DEF-femoris.L
+    400086: Thug_Base.001|DEF-femoris.R
+    400088: Thug_Base.001|DEF-foot.L
+    400090: Thug_Base.001|DEF-foot.R
+    400092: Thug_Base.001|DEF-forearm.01.L
+    400094: Thug_Base.001|DEF-forearm.01.R
+    400096: Thug_Base.001|DEF-forearm.02.L
+    400098: Thug_Base.001|DEF-forearm.02.R
+    400100: Thug_Base.001|DEF-gluteus.L
+    400102: Thug_Base.001|DEF-gluteus.R
+    400104: Thug_Base.001|DEF-hand.L
+    400106: Thug_Base.001|DEF-hand.R
+    400108: Thug_Base.001|DEF-head
+    400110: Thug_Base.001|DEF-hips
+    400112: Thug_Base.001|DEF-jaw
+    400114: Thug_Base.001|DEF-knee_fan.L
+    400116: Thug_Base.001|DEF-knee_fan.R
+    400118: Thug_Base.001|DEF-lat_dorsi.L
+    400120: Thug_Base.001|DEF-lat_dorsi.R
+    400122: Thug_Base.001|DEF-lolid.L
+    400124: Thug_Base.001|DEF-lolid.R
+    400126: Thug_Base.001|DEF-neck
+    400128: Thug_Base.001|DEF-palm.01.L
+    400130: Thug_Base.001|DEF-palm.01.R
+    400132: Thug_Base.001|DEF-palm.02.L
+    400134: Thug_Base.001|DEF-palm.02.R
+    400136: Thug_Base.001|DEF-palm.03.L
+    400138: Thug_Base.001|DEF-palm.03.R
+    400140: Thug_Base.001|DEF-palm.04.L
+    400142: Thug_Base.001|DEF-palm.04.R
+    400144: Thug_Base.001|DEF-pectoralis.L
+    400146: Thug_Base.001|DEF-pectoralis.R
+    400148: Thug_Base.001|DEF-platysma.L
+    400150: Thug_Base.001|DEF-platysma.R
+    400152: Thug_Base.001|DEF-quadriceps.L
+    400154: Thug_Base.001|DEF-quadriceps.R
+    400156: Thug_Base.001|DEF-scapula.L
+    400158: Thug_Base.001|DEF-scapula.R
+    400160: Thug_Base.001|DEF-shin.01.L
+    400162: Thug_Base.001|DEF-shin.01.R
+    400164: Thug_Base.001|DEF-shin.02.L
+    400166: Thug_Base.001|DEF-shin.02.R
+    400168: Thug_Base.001|DEF-shoulder.L
+    400170: Thug_Base.001|DEF-shoulder.R
+    400172: Thug_Base.001|DEF-soleus.L
+    400174: Thug_Base.001|DEF-soleus.R
+    400176: Thug_Base.001|DEF-spine
+    400178: Thug_Base.001|DEF-spine-1
+    400180: Thug_Base.001|DEF-stomach
+    400182: Thug_Base.001|DEF-thigh.01.L
+    400184: Thug_Base.001|DEF-thigh.01.R
+    400186: Thug_Base.001|DEF-thigh.02.L
+    400188: Thug_Base.001|DEF-thigh.02.R
+    400190: Thug_Base.001|DEF-thumb.01.L.01
+    400192: Thug_Base.001|DEF-thumb.01.L.02
+    400194: Thug_Base.001|DEF-thumb.01.R.01
+    400196: Thug_Base.001|DEF-thumb.01.R.02
+    400198: Thug_Base.001|DEF-thumb.02.L
+    400200: Thug_Base.001|DEF-thumb.02.R
+    400202: Thug_Base.001|DEF-thumb.03.L
+    400204: Thug_Base.001|DEF-thumb.03.R
+    400206: Thug_Base.001|DEF-toe.L
+    400208: Thug_Base.001|DEF-toe.R
+    400210: Thug_Base.001|DEF-tongue_base
+    400212: Thug_Base.001|DEF-tongue_mid
+    400214: Thug_Base.001|DEF-tongue_tip
+    400216: Thug_Base.001|DEF-trapezius1.L
+    400218: Thug_Base.001|DEF-trapezius1.R
+    400220: Thug_Base.001|DEF-trapezius2.L
+    400222: Thug_Base.001|DEF-trapezius2.R
+    400224: Thug_Base.001|DEF-uplid.L
+    400226: Thug_Base.001|DEF-uplid.R
+    400228: Thug_Base.001|DEF-upper_arm.01.L
+    400230: Thug_Base.001|DEF-upper_arm.01.R
+    400232: Thug_Base.001|DEF-upper_arm.02.L
+    400234: Thug_Base.001|DEF-upper_arm.02.R
+    400236: Thug_Base.001|elbow_hose.L
+    400238: Thug_Base.001|elbow_hose.R
+    400240: Thug_Base.001|elbow_target.ik.L
+    400242: Thug_Base.001|elbow_target.ik.R
+    400244: Thug_Base.001|f_index.01.L
+    400246: Thug_Base.001|f_index.01.R
+    400248: Thug_Base.001|f_index.02.L
+    400250: Thug_Base.001|f_index.02.R
+    400252: Thug_Base.001|f_index.03.L
+    400254: Thug_Base.001|f_index.03.R
+    400256: Thug_Base.001|f_index.L
+    400258: Thug_Base.001|f_index.R
+    400260: Thug_Base.001|f_middle.01.L
+    400262: Thug_Base.001|f_middle.01.R
+    400264: Thug_Base.001|f_middle.02.L
+    400266: Thug_Base.001|f_middle.02.R
+    400268: Thug_Base.001|f_middle.03.L
+    400270: Thug_Base.001|f_middle.03.R
+    400272: Thug_Base.001|f_middle.L
+    400274: Thug_Base.001|f_middle.R
+    400276: Thug_Base.001|f_pinky.01.L
+    400278: Thug_Base.001|f_pinky.01.R
+    400280: Thug_Base.001|f_pinky.02.L
+    400282: Thug_Base.001|f_pinky.02.R
+    400284: Thug_Base.001|f_pinky.03.L
+    400286: Thug_Base.001|f_pinky.03.R
+    400288: Thug_Base.001|f_pinky.L
+    400290: Thug_Base.001|f_pinky.R
+    400292: Thug_Base.001|f_ring.01.L
+    400294: Thug_Base.001|f_ring.01.R
+    400296: Thug_Base.001|f_ring.02.L
+    400298: Thug_Base.001|f_ring.02.R
+    400300: Thug_Base.001|f_ring.03.L
+    400302: Thug_Base.001|f_ring.03.R
+    400304: Thug_Base.001|f_ring.L
+    400306: Thug_Base.001|f_ring.R
+    400308: Thug_Base.001|foot.fk.L
+    400310: Thug_Base.001|foot.fk.R
+    400312: Thug_Base.001|foot.ik.L
+    400314: Thug_Base.001|foot.ik.R
+    400316: Thug_Base.001|foot_roll.ik.L
+    400318: Thug_Base.001|foot_roll.ik.R
+    400320: Thug_Base.001|forearm.fk.L
+    400322: Thug_Base.001|forearm.fk.R
+    400324: Thug_Base.001|forearm_hose.L
+    400326: Thug_Base.001|forearm_hose.R
+    400328: Thug_Base.001|hand.fk.L
+    400330: Thug_Base.001|hand.fk.R
+    400332: Thug_Base.001|hand.ik.L
+    400334: Thug_Base.001|hand.ik.R
+    400336: Thug_Base.001|head
+    400338: Thug_Base.001|hips
+    400340: Thug_Base.001|knee_hose.L
+    400342: Thug_Base.001|knee_hose.R
+    400344: Thug_Base.001|knee_target.ik.L
+    400346: Thug_Base.001|knee_target.ik.R
+    400348: Thug_Base.001|MCH-chest.flex
+    400350: Thug_Base.001|MCH-chest.flex_s
+    400352: Thug_Base.001|MCH-chest.reverse
+    400354: Thug_Base.001|MCH-elbow_hose_parent.L
+    400356: Thug_Base.001|MCH-elbow_hose_parent.R
+    400358: Thug_Base.001|MCH-f_index.01.L
+    400360: Thug_Base.001|MCH-f_index.01.L.tip
+    400362: Thug_Base.001|MCH-f_index.01.R
+    400364: Thug_Base.001|MCH-f_index.01.R.tip
+    400366: Thug_Base.001|MCH-f_index.02.L
+    400368: Thug_Base.001|MCH-f_index.02.R
+    400370: Thug_Base.001|MCH-f_index.03.L
+    400372: Thug_Base.001|MCH-f_index.03.R
+    400374: Thug_Base.001|MCH-f_middle.01.L
+    400376: Thug_Base.001|MCH-f_middle.01.L.tip
+    400378: Thug_Base.001|MCH-f_middle.01.R
+    400380: Thug_Base.001|MCH-f_middle.01.R.tip
+    400382: Thug_Base.001|MCH-f_middle.02.L
+    400384: Thug_Base.001|MCH-f_middle.02.R
+    400386: Thug_Base.001|MCH-f_middle.03.L
+    400388: Thug_Base.001|MCH-f_middle.03.R
+    400390: Thug_Base.001|MCH-f_pinky.01.L
+    400392: Thug_Base.001|MCH-f_pinky.01.L.tip
+    400394: Thug_Base.001|MCH-f_pinky.01.R
+    400396: Thug_Base.001|MCH-f_pinky.01.R.tip
+    400398: Thug_Base.001|MCH-f_pinky.02.L
+    400400: Thug_Base.001|MCH-f_pinky.02.R
+    400402: Thug_Base.001|MCH-f_pinky.03.L
+    400404: Thug_Base.001|MCH-f_pinky.03.R
+    400406: Thug_Base.001|MCH-f_ring.01.L
+    400408: Thug_Base.001|MCH-f_ring.01.L.tip
+    400410: Thug_Base.001|MCH-f_ring.01.R
+    400412: Thug_Base.001|MCH-f_ring.01.R.tip
+    400414: Thug_Base.001|MCH-f_ring.02.L
+    400416: Thug_Base.001|MCH-f_ring.02.R
+    400418: Thug_Base.001|MCH-f_ring.03.L
+    400420: Thug_Base.001|MCH-f_ring.03.R
+    400422: Thug_Base.001|MCH-foot.L
+    400424: Thug_Base.001|MCH-foot.L.001
+    400426: Thug_Base.001|MCH-foot.L.rocker.01
+    400428: Thug_Base.001|MCH-foot.L.rocker.02
+    400430: Thug_Base.001|MCH-foot.L.roll.01
+    400432: Thug_Base.001|MCH-foot.L.roll.02
+    400434: Thug_Base.001|MCH-foot.R
+    400436: Thug_Base.001|MCH-foot.R.001
+    400438: Thug_Base.001|MCH-foot.R.rocker.01
+    400440: Thug_Base.001|MCH-foot.R.rocker.02
+    400442: Thug_Base.001|MCH-foot.R.roll.01
+    400444: Thug_Base.001|MCH-foot.R.roll.02
+    400446: Thug_Base.001|MCH-forearm.01.L
+    400448: Thug_Base.001|MCH-forearm.01.R
+    400450: Thug_Base.001|MCH-forearm.ik.L
+    400452: Thug_Base.001|MCH-forearm.ik.R
+    400454: Thug_Base.001|MCH-forearm.junc.L
+    400456: Thug_Base.001|MCH-forearm.junc.R
+    400458: Thug_Base.001|MCH-forearm.nostr.ik.L
+    400460: Thug_Base.001|MCH-forearm.nostr.ik.R
+    400462: Thug_Base.001|MCH-forearm.stretch.ik.L
+    400464: Thug_Base.001|MCH-forearm.stretch.ik.R
+    400466: Thug_Base.001|MCH-forearm_antistr.fk.L
+    400468: Thug_Base.001|MCH-forearm_antistr.fk.R
+    400470: Thug_Base.001|MCH-forearm_hose_parent.L
+    400472: Thug_Base.001|MCH-forearm_hose_parent.R
+    400474: Thug_Base.001|MCH-forearm_smth.01.L
+    400476: Thug_Base.001|MCH-forearm_smth.01.R
+    400478: Thug_Base.001|MCH-gluteus0.L
+    400480: Thug_Base.001|MCH-gluteus0.R
+    400482: Thug_Base.001|MCH-hand.L
+    400484: Thug_Base.001|MCH-hand.L.001
+    400486: Thug_Base.001|MCH-hand.R
+    400488: Thug_Base.001|MCH-hand.R.001
+    400490: Thug_Base.001|MCH-head
+    400492: Thug_Base.001|MCH-head.001
+    400494: Thug_Base.001|MCH-head.02
+    400496: Thug_Base.001|MCH-head.socket1
+    400498: Thug_Base.001|MCH-head.socket2
+    400500: Thug_Base.001|MCH-hips.flex
+    400502: Thug_Base.001|MCH-hips.flex_s
+    400504: Thug_Base.001|MCH-hips.reverse
+    400506: Thug_Base.001|MCH-hips_fk_ns_ch
+    400508: Thug_Base.001|MCH-hips_fk_ns_ch.001
+    400510: Thug_Base.001|MCH-hips_fk_ns_intr
+    400512: Thug_Base.001|MCH-hips_fk_ns_intr.001
+    400514: Thug_Base.001|MCH-hips_ik_ns_ch
+    400516: Thug_Base.001|MCH-hips_ik_ns_ch.001
+    400518: Thug_Base.001|MCH-hips_ik_ns_intr
+    400520: Thug_Base.001|MCH-hips_ik_ns_intr.001
+    400522: Thug_Base.001|MCH-hips_rh_ns_ch
+    400524: Thug_Base.001|MCH-hips_rh_ns_ch.001
+    400526: Thug_Base.001|MCH-hips_rh_ns_intr
+    400528: Thug_Base.001|MCH-hips_rh_ns_intr.001
+    400530: Thug_Base.001|MCH-hipside.L
+    400532: Thug_Base.001|MCH-hipside.R
+    400534: Thug_Base.001|MCH-knee_hose_parent.L
+    400536: Thug_Base.001|MCH-knee_hose_parent.R
+    400538: Thug_Base.001|MCH-neck
+    400540: Thug_Base.001|MCH-neck.02
+    400542: Thug_Base.001|MCH-neck.child
+    400544: Thug_Base.001|MCH-neck.follow
+    400546: Thug_Base.001|MCH-par_spine
+    400548: Thug_Base.001|MCH-par_spine-1
+    400550: Thug_Base.001|MCH-pubis
+    400552: Thug_Base.001|MCH-shin.01.L
+    400554: Thug_Base.001|MCH-shin.01.R
+    400556: Thug_Base.001|MCH-shin.ik.L
+    400558: Thug_Base.001|MCH-shin.ik.R
+    400560: Thug_Base.001|MCH-shin.junc.L
+    400562: Thug_Base.001|MCH-shin.junc.R
+    400564: Thug_Base.001|MCH-shin.nostr.ik.L
+    400566: Thug_Base.001|MCH-shin.nostr.ik.R
+    400568: Thug_Base.001|MCH-shin.stretch.ik.L
+    400570: Thug_Base.001|MCH-shin.stretch.ik.R
+    400572: Thug_Base.001|MCH-shin_antistr.fk.L
+    400574: Thug_Base.001|MCH-shin_antistr.fk.R
+    400576: Thug_Base.001|MCH-shin_hose_parent.L
+    400578: Thug_Base.001|MCH-shin_hose_parent.R
+    400580: Thug_Base.001|MCH-shin_smth.01.L
+    400582: Thug_Base.001|MCH-shin_smth.01.R
+    400584: Thug_Base.001|MCH-shoulder_fk_ns_ch.L
+    400586: Thug_Base.001|MCH-shoulder_fk_ns_ch.R
+    400588: Thug_Base.001|MCH-shoulder_fk_ns_intr.L
+    400590: Thug_Base.001|MCH-shoulder_fk_ns_intr.R
+    400592: Thug_Base.001|MCH-shoulder_ik_ns_ch.L
+    400594: Thug_Base.001|MCH-shoulder_ik_ns_ch.R
+    400596: Thug_Base.001|MCH-shoulder_ik_ns_intr.L
+    400598: Thug_Base.001|MCH-shoulder_ik_ns_intr.R
+    400600: Thug_Base.001|MCH-shoulder_rh_ns_ch.L
+    400602: Thug_Base.001|MCH-shoulder_rh_ns_ch.R
+    400604: Thug_Base.001|MCH-shoulder_rh_ns_intr.L
+    400606: Thug_Base.001|MCH-shoulder_rh_ns_intr.R
+    400608: Thug_Base.001|MCH-sole.L
+    400610: Thug_Base.001|MCH-sole.R
+    400612: Thug_Base.001|MCH-spine-1.flex
+    400614: Thug_Base.001|MCH-spine-1.flex_s
+    400616: Thug_Base.001|MCH-spine-1.reverse
+    400618: Thug_Base.001|MCH-spine.flex
+    400620: Thug_Base.001|MCH-spine.flex_s
+    400622: Thug_Base.001|MCH-spine.reverse
+    400624: Thug_Base.001|MCH-sub_chest
+    400626: Thug_Base.001|MCH-sub_hips
+    400628: Thug_Base.001|MCH-sub_spine
+    400630: Thug_Base.001|MCH-sub_spine-1
+    400632: Thug_Base.001|MCH-thigh.fk.L.socket1
+    400634: Thug_Base.001|MCH-thigh.fk.L.socket2
+    400636: Thug_Base.001|MCH-thigh.fk.R.socket1
+    400638: Thug_Base.001|MCH-thigh.fk.R.socket2
+    400640: Thug_Base.001|MCH-thigh.ik.L
+    400642: Thug_Base.001|MCH-thigh.ik.R
+    400644: Thug_Base.001|MCH-thigh.nostr.ik.L
+    400646: Thug_Base.001|MCH-thigh.nostr.ik.R
+    400648: Thug_Base.001|MCH-thigh.stretch.ik.L
+    400650: Thug_Base.001|MCH-thigh.stretch.ik.R
+    400652: Thug_Base.001|MCH-thigh_antistr.fk.L
+    400654: Thug_Base.001|MCH-thigh_antistr.fk.R
+    400656: Thug_Base.001|MCH-thigh_hose_parent.L
+    400658: Thug_Base.001|MCH-thigh_hose_parent.R
+    400660: Thug_Base.001|MCH-thigh_smth.02.L
+    400662: Thug_Base.001|MCH-thigh_smth.02.R
+    400664: Thug_Base.001|MCH-thumb.01.L
+    400666: Thug_Base.001|MCH-thumb.01.L.tip
+    400668: Thug_Base.001|MCH-thumb.01.R
+    400670: Thug_Base.001|MCH-thumb.01.R.tip
+    400672: Thug_Base.001|MCH-thumb.02.L
+    400674: Thug_Base.001|MCH-thumb.02.R
+    400676: Thug_Base.001|MCH-thumb.03.L
+    400678: Thug_Base.001|MCH-thumb.03.R
+    400680: Thug_Base.001|MCH-toe.L.parent
+    400682: Thug_Base.001|MCH-toe.L.socket1
+    400684: Thug_Base.001|MCH-toe.L.socket2
+    400686: Thug_Base.001|MCH-toe.R.parent
+    400688: Thug_Base.001|MCH-toe.R.socket1
+    400690: Thug_Base.001|MCH-toe.R.socket2
+    400692: Thug_Base.001|MCH-upper_arm.fk.L.socket1
+    400694: Thug_Base.001|MCH-upper_arm.fk.L.socket2
+    400696: Thug_Base.001|MCH-upper_arm.fk.R.socket1
+    400698: Thug_Base.001|MCH-upper_arm.fk.R.socket2
+    400700: Thug_Base.001|MCH-upper_arm.ik.L
+    400702: Thug_Base.001|MCH-upper_arm.ik.R
+    400704: Thug_Base.001|MCH-upper_arm.nostr.ik.L
+    400706: Thug_Base.001|MCH-upper_arm.nostr.ik.R
+    400708: Thug_Base.001|MCH-upper_arm.stretch.ik.L
+    400710: Thug_Base.001|MCH-upper_arm.stretch.ik.R
+    400712: Thug_Base.001|MCH-upper_arm_antistr.fk.L
+    400714: Thug_Base.001|MCH-upper_arm_antistr.fk.R
+    400716: Thug_Base.001|MCH-upper_arm_hose_parent.L
+    400718: Thug_Base.001|MCH-upper_arm_hose_parent.R
+    400720: Thug_Base.001|MCH-upper_arm_smth.02.L
+    400722: Thug_Base.001|MCH-upper_arm_smth.02.R
+    400724: Thug_Base.001|neck
+    400726: Thug_Base.001|ORG-chest
+    400728: Thug_Base.001|ORG-f_index.01.L
+    400730: Thug_Base.001|ORG-f_index.01.R
+    400732: Thug_Base.001|ORG-f_index.02.L
+    400734: Thug_Base.001|ORG-f_index.02.R
+    400736: Thug_Base.001|ORG-f_index.03.L
+    400738: Thug_Base.001|ORG-f_index.03.R
+    400740: Thug_Base.001|ORG-f_middle.01.L
+    400742: Thug_Base.001|ORG-f_middle.01.R
+    400744: Thug_Base.001|ORG-f_middle.02.L
+    400746: Thug_Base.001|ORG-f_middle.02.R
+    400748: Thug_Base.001|ORG-f_middle.03.L
+    400750: Thug_Base.001|ORG-f_middle.03.R
+    400752: Thug_Base.001|ORG-f_pinky.01.L
+    400754: Thug_Base.001|ORG-f_pinky.01.R
+    400756: Thug_Base.001|ORG-f_pinky.02.L
+    400758: Thug_Base.001|ORG-f_pinky.02.R
+    400760: Thug_Base.001|ORG-f_pinky.03.L
+    400762: Thug_Base.001|ORG-f_pinky.03.R
+    400764: Thug_Base.001|ORG-f_ring.01.L
+    400766: Thug_Base.001|ORG-f_ring.01.R
+    400768: Thug_Base.001|ORG-f_ring.02.L
+    400770: Thug_Base.001|ORG-f_ring.02.R
+    400772: Thug_Base.001|ORG-f_ring.03.L
+    400774: Thug_Base.001|ORG-f_ring.03.R
+    400776: Thug_Base.001|ORG-foot.L
+    400778: Thug_Base.001|ORG-foot.R
+    400780: Thug_Base.001|ORG-forearm.L
+    400782: Thug_Base.001|ORG-forearm.R
+    400784: Thug_Base.001|ORG-hand.L
+    400786: Thug_Base.001|ORG-hand.R
+    400788: Thug_Base.001|ORG-head
+    400790: Thug_Base.001|ORG-heel.02.L
+    400792: Thug_Base.001|ORG-heel.02.R
+    400794: Thug_Base.001|ORG-heel.L
+    400796: Thug_Base.001|ORG-heel.R
+    400798: Thug_Base.001|ORG-hips
+    400800: Thug_Base.001|ORG-neck
+    400802: Thug_Base.001|ORG-palm.01.L
+    400804: Thug_Base.001|ORG-palm.01.R
+    400806: Thug_Base.001|ORG-palm.02.L
+    400808: Thug_Base.001|ORG-palm.02.R
+    400810: Thug_Base.001|ORG-palm.03.L
+    400812: Thug_Base.001|ORG-palm.03.R
+    400814: Thug_Base.001|ORG-palm.04.L
+    400816: Thug_Base.001|ORG-palm.04.R
+    400818: Thug_Base.001|ORG-shin.L
+    400820: Thug_Base.001|ORG-shin.R
+    400822: Thug_Base.001|ORG-shoulder.L
+    400824: Thug_Base.001|ORG-shoulder.R
+    400826: Thug_Base.001|ORG-spine
+    400828: Thug_Base.001|ORG-spine-1
+    400830: Thug_Base.001|ORG-thigh.L
+    400832: Thug_Base.001|ORG-thigh.R
+    400834: Thug_Base.001|ORG-thumb.01.L
+    400836: Thug_Base.001|ORG-thumb.01.R
+    400838: Thug_Base.001|ORG-thumb.02.L
+    400840: Thug_Base.001|ORG-thumb.02.R
+    400842: Thug_Base.001|ORG-thumb.03.L
+    400844: Thug_Base.001|ORG-thumb.03.R
+    400846: Thug_Base.001|ORG-toe.L
+    400848: Thug_Base.001|ORG-toe.R
+    400850: Thug_Base.001|ORG-upper_arm.L
+    400852: Thug_Base.001|ORG-upper_arm.R
+    400854: Thug_Base.001|palm.L
+    400856: Thug_Base.001|palm.R
+    400858: Thug_Base.001|root
+    400860: Thug_Base.001|shin.fk.L
+    400862: Thug_Base.001|shin.fk.R
+    400864: Thug_Base.001|shin_hose.L
+    400866: Thug_Base.001|shin_hose.R
+    400868: Thug_Base.001|shoulder.L
+    400870: Thug_Base.001|shoulder.R
+    400872: Thug_Base.001|spine
+    400874: Thug_Base.001|spine-1
+    400876: Thug_Base.001|thigh.fk.L
+    400878: Thug_Base.001|thigh.fk.R
+    400880: Thug_Base.001|thigh_hose.L
+    400882: Thug_Base.001|thigh_hose.R
+    400884: Thug_Base.001|thumb.01.L
+    400886: Thug_Base.001|thumb.01.R
+    400888: Thug_Base.001|thumb.02.L
+    400890: Thug_Base.001|thumb.02.R
+    400892: Thug_Base.001|thumb.03.L
+    400894: Thug_Base.001|thumb.03.R
+    400896: Thug_Base.001|thumb.L
+    400898: Thug_Base.001|thumb.R
+    400900: Thug_Base.001|toe.L
+    400902: Thug_Base.001|toe.R
+    400904: Thug_Base.001|torso
+    400906: Thug_Base.001|upper_arm.fk.L
+    400908: Thug_Base.001|upper_arm.fk.R
+    400910: Thug_Base.001|upper_arm_hose.L
+    400912: Thug_Base.001|upper_arm_hose.R
+    400914: Thug_Base.001|VIS-foot.ik.L
+    400916: Thug_Base.001|VIS-foot.ik.R
+    400918: Thug_Base.001|VIS-hand.ik.L
+    400920: Thug_Base.001|VIS-hand.ik.R
+    400922: Thug_Base.001|VIS-thigh_pole.ik.L
+    400924: Thug_Base.001|VIS-thigh_pole.ik.R
+    400926: Thug_Base.001|VIS-upper_arm_pole.ik.L
+    400928: Thug_Base.001|VIS-upper_arm_pole.ik.R
+    7400000: Thug_Base.001|Boss_Camera_Action01
+    7400002: Thug_Base.001|LampAction
+    7400004: Thug_Base.001|SpotAction
+    7400006: Thug_Base.001|Whole_Cargo_ContainerAction
+    7400008: Thug_Base.001|WidgetsAction
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .5
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: Thug_Base.001|ORG-hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-thigh.L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-thigh.R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-shin.L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-shin.R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-foot.L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-foot.R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-spine-1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|DEF-head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-shoulder.L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-shoulder.R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-upper_arm.L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-upper_arm.R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-forearm.L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-forearm.R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-hand.L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-hand.R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-toe.L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-toe.R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|DEF-eye.L
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|DEF-eye.R
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|DEF-jaw
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|MCH-f_index.01.L
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|f_index.01.L
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|MCH-f_index.02.L
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|MCH-f_middle.01.L
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|f_middle.01.L
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|MCH-f_middle.02.L
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-f_ring.01.L
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-f_ring.02.L
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-f_ring.03.L
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|MCH-f_pinky.01.L
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|f_pinky.01.L
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|MCH-f_pinky.02.L
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|MCH-f_index.01.R
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|f_index.01.R
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|MCH-f_index.02.R
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|MCH-f_middle.01.R
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|f_middle.01.R
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|MCH-f_middle.02.R
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-f_ring.01.R
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-f_ring.02.R
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|ORG-f_ring.03.R
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|MCH-f_pinky.01.R
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|f_pinky.01.R
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thug_Base.001|MCH-f_pinky.02.R
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: ThugIdle(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|root
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-hips
+      position: {x: -1.16415502e-10, y: -.0408660173, z: 4.59056997}
+      rotation: {x: .647349358, y: -3.41145601e-18, z: -1.05182939e-10, w: .762193501}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-gluteus.L
+      position: {x: -.558290005, y: -.0648466647, z: -.0647648498}
+      rotation: {x: -.679514587, y: -.0239201114, z: -.0281637162, w: .732730985}
+      scale: {x: 1, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-gluteus.R
+      position: {x: .558290005, y: -.0648466647, z: -.0647648498}
+      rotation: {x: -.679514587, y: .0239201114, z: .0281637162, w: .732730985}
+      scale: {x: 1, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hipside.L
+      position: {x: 2.21665741e-10, y: -.314009458, z: .403158307}
+      rotation: {x: -.255536377, y: .346022964, z: .407409906, w: .805596948}
+      scale: {x: 1.00000012, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hipside.R
+      position: {x: 2.21665741e-10, y: -.314009458, z: .403158307}
+      rotation: {x: -.255536377, y: -.346022993, z: -.407409877, w: .805596948}
+      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-pubis
+      position: {x: 2.21665741e-10, y: -.314009458, z: .403158307}
+      rotation: {x: -.183845997, y: 5.21906199e-11, z: 9.13213741e-11, w: .982955098}
+      scale: {x: 1, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|foot.ik.L
+      position: {x: -.971379995, y: -.0818715096, z: .35590449}
+      rotation: {x: .999473631, y: .00338490331, z: -.0322643593, w: .000109463654}
+      scale: {x: .99630636, y: .999999821, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|foot_roll.ik.L
+      position: {x: .00908611342, y: -.301513225, z: .315025955}
+      rotation: {x: .99993825, y: .00490854587, z: -.00996726565, w: -.000264744362}
+      scale: {x: 1.00232768, y: 1.00000012, z: 1.00000942}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-foot.L.rocker.01
+      position: {x: .173987567, y: .26024437, z: .316444069}
+      rotation: {x: .709120154, y: -.704360008, z: -.0227236804, w: .0225665364}
+      scale: {x: .999999821, y: 1.00000024, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-foot.L.rocker.02
+      position: {x: 3.94162996e-08, y: .501845837, z: -3.60171271e-09}
+      rotation: {x: -5.08509856e-07, y: 3.60957271e-12, z: 1, w: -4.37113883e-08}
+      scale: {x: 1, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-foot.L.roll.01
+      position: {x: -.560637057, y: .332329988, z: .0119723938}
+      rotation: {x: .707992911, y: .705873489, z: -.015653383, w: .0156085091}
+      scale: {x: 1, y: .999999821, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-foot.L.roll.02
+      position: {x: -6.62403181e-08, y: .927257657, z: 1.62981451e-09}
+      rotation: {x: 1, y: -3.01899616e-10, z: 8.14949308e-05, w: 4.37114132e-08}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-foot.L.001
+      position: {x: -1.14509021e-07, y: .625869095, z: .315274656}
+      rotation: {x: .9728477, y: .00250451663, z: -.0105383806, w: -.231192619}
+      scale: {x: 1.00000012, y: 1, z: 1.00000036}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-toe.L.socket1
+      position: {x: -6.62403181e-08, y: .927257657, z: 1.62981451e-09}
+      rotation: {x: -.707103193, y: .0295104552, z: .00224714144, w: .706490755}
+      scale: {x: .99999994, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-toe.L.parent
+      position: {x: .0384375043, y: .314956576, z: -.624847949}
+      rotation: {x: .851290345, y: -.0349296071, z: -.00441431487, w: .523512363}
+      scale: {x: .999999881, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|toe.L
+      position: {x: -1.07334927e-07, y: .700792253, z: -4.47034836e-08}
+      rotation: {x: -.231466174, y: -.000196303023, z: 4.6312176e-05, w: .972842932}
+      scale: {x: .99999994, y: .999999762, z: .999999762}
+      transformModified: 1
+    - name: Thug_Base.001|foot.ik.R
+      position: {x: .971379995, y: -.0818715096, z: .35590449}
+      rotation: {x: .999473631, y: -.00338490331, z: .0322643593, w: .000109463654}
+      scale: {x: .99630636, y: .999999821, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|foot_roll.ik.R
+      position: {x: -.00908611342, y: -.301513225, z: .315025955}
+      rotation: {x: .99993825, y: -.00490854494, z: .00996738859, w: -.00026474378}
+      scale: {x: 1.0023278, y: 1.00000024, z: 1.00000942}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-foot.R.rocker.01
+      position: {x: .326817393, y: .256864011, z: .348572552}
+      rotation: {x: -.70435977, y: .709120333, z: -.0225666892, w: .0227247104}
+      scale: {x: .999999881, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-foot.R.rocker.02
+      position: {x: -1.93041139e-10, y: .501845956, z: -9.01763997e-10}
+      rotation: {x: 4.04185641e-07, y: 2.88280718e-14, z: 1, w: -4.37113883e-08}
+      scale: {x: 1, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-foot.R.roll.01
+      position: {x: -.560636997, y: .167670012, z: .0119723948}
+      rotation: {x: .705873489, y: .707993031, z: .015606557, w: -.0156541541}
+      scale: {x: .999999881, y: .999999762, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-foot.R.roll.02
+      position: {x: -2.42143869e-08, y: .927257717, z: 6.65750122e-09}
+      rotation: {x: 1, y: 1.93202954e-10, z: -8.14949162e-05, w: -4.37113741e-08}
+      scale: {x: 1.00000012, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-foot.R.001
+      position: {x: 5.27506927e-08, y: .625869036, z: .315274686}
+      rotation: {x: .9728477, y: -.00250450452, z: .0105385408, w: -.231192604}
+      scale: {x: .999999881, y: .999999881, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-toe.R.socket1
+      position: {x: -2.42143869e-08, y: .927257717, z: 6.65750122e-09}
+      rotation: {x: -.707103193, y: -.0295104813, z: -.00224699127, w: .706490755}
+      scale: {x: 1.00000024, y: .99999994, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-toe.R.parent
+      position: {x: -.0384374596, y: .314956576, z: -.624847829}
+      rotation: {x: .851290345, y: .0349296145, z: .00441432372, w: .523512363}
+      scale: {x: .99999994, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|toe.R
+      position: {x: -1.0477379e-07, y: .700792253, z: -4.47034836e-08}
+      rotation: {x: -.231466144, y: .000196307024, z: -4.63143151e-05, w: .972842932}
+      scale: {x: .999999881, y: .99999994, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|hand.ik.L
+      position: {x: -2.67825508, y: -1.01718998, z: 5.43340015}
+      rotation: {x: .806918919, y: -.274597436, z: .483720958, w: -.198726341}
+      scale: {x: 1, y: .99999994, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hand.L.001
+      position: {x: -1.78813934e-07, y: 5.96046448e-08, z: 1.86264515e-08}
+      rotation: {x: 2.79396817e-09, y: -9.31322663e-09, z: 7.45058015e-09, w: 1}
+      scale: {x: .99999994, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|hand.ik.R
+      position: {x: 2.67800498, y: -1.01718998, z: 5.43359995}
+      rotation: {x: .80697161, y: .274769217, z: -.483514577, w: -.198777407}
+      scale: {x: .999999881, y: .999999881, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hand.R.001
+      position: {x: 1.1920929e-07, y: -5.96046448e-08, z: 1.86264515e-07}
+      rotation: {x: 7.4505806e-09, y: 7.07805157e-08, z: -1.86264515e-09, w: 1}
+      scale: {x: 1, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-head.socket2
+      position: {x: -0, y: -.0623859763, z: 7.57889986}
+      rotation: {x: .71367532, y: -1.88581645e-17, z: 2.52262405e-10, w: .700476646}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|head
+      position: {x: -1.99245125e-16, y: -4.88944352e-09, z: 0}
+      rotation: {x: 0, y: -1.73472348e-18, z: -1.62630326e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-head
+      position: {x: -1.99245125e-16, y: -4.88944352e-09, z: 0}
+      rotation: {x: -.71367532, y: 1.08545386e-17, z: -2.52262433e-10, w: .700476646}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hips_fk_ns_ch
+      position: {x: -.558290005, y: .0125476122, z: 4.51609516}
+      rotation: {x: .647349358, y: 6.6109779e-19, z: 5.61486219e-19, w: .762193501}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thigh.fk.L.socket1
+      position: {x: -0, y: -6.23287633e-07, z: -2.88709998e-08}
+      rotation: {x: .977917731, y: -.029095998, z: -.200553089, w: -.0510763824}
+      scale: {x: 1.00000274, y: 1, z: 1.00000358}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hips_fk_ns_ch.001
+      position: {x: .558290005, y: .0125476122, z: 4.51609516}
+      rotation: {x: .647349358, y: 6.6109779e-19, z: 5.61486219e-19, w: .762193501}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thigh.fk.R.socket1
+      position: {x: -0, y: -6.23287633e-07, z: -2.88709998e-08}
+      rotation: {x: .977917731, y: .029095998, z: .200553089, w: -.0510763824}
+      scale: {x: 1.00000274, y: 1, z: 1.00000358}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hips_ik_ns_ch
+      position: {x: -.558290005, y: .0125476122, z: 4.51609516}
+      rotation: {x: .647349358, y: 6.6109779e-19, z: 5.61486219e-19, w: .762193501}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|knee_target.ik.L
+      position: {x: 1.4481883, y: -2.74069118, z: 3.61545038}
+      rotation: {x: -.647349179, y: -1.07017293e-19, z: 9.08923635e-20, w: .762193561}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shin.stretch.ik.L
+      position: {x: -.159254968, y: -2.04482079, z: -.181736708}
+      rotation: {x: .97368294, y: -.0399537608, z: -.198672533, w: -.104281068}
+      scale: {x: 1.00000048, y: .99999994, z: 1.00000131}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thigh.ik.L
+      position: {x: -0, y: -6.23287633e-07, z: -2.88709998e-08}
+      rotation: {x: .977917731, y: -.0290949624, z: -.20055306, w: -.0510775112}
+      scale: {x: 1.00000262, y: 1, z: 1.00000334}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shin.ik.L
+      position: {x: -0, y: 2.05904865, z: 7.4505806e-09}
+      rotation: {x: .0544726476, y: -1.5935891e-06, z: 1.06655102e-06, w: .998515248}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thigh.nostr.ik.L
+      position: {x: -0, y: -6.23287633e-07, z: -2.88709998e-08}
+      rotation: {x: .977917731, y: -.0290949624, z: -.20055306, w: -.0510775112}
+      scale: {x: 1.00000262, y: 1, z: 1.00000334}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shin.nostr.ik.L
+      position: {x: -0, y: 2.05904865, z: 7.4505806e-09}
+      rotation: {x: .0544726476, y: -1.5935891e-06, z: 1.06655102e-06, w: .998515248}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thigh.stretch.ik.L
+      position: {x: -0, y: -6.23287633e-07, z: -2.88709998e-08}
+      rotation: {x: .977917731, y: -.0290949624, z: -.20055306, w: -.0510775112}
+      scale: {x: 1.00000262, y: 1, z: 1.00000334}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hips_ik_ns_ch.001
+      position: {x: .558290005, y: .0125476122, z: 4.51609516}
+      rotation: {x: .647349358, y: 6.6109779e-19, z: 5.61486219e-19, w: .762193501}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|knee_target.ik.R
+      position: {x: -1.4481883, y: -2.74069118, z: 3.61545038}
+      rotation: {x: -.647349179, y: -1.07017293e-19, z: 9.08923635e-20, w: .762193561}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shin.stretch.ik.R
+      position: {x: .159254968, y: -2.04482079, z: -.181736708}
+      rotation: {x: .97368294, y: .0399537608, z: .198672533, w: -.104281068}
+      scale: {x: 1.00000048, y: .99999994, z: 1.00000131}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thigh.ik.R
+      position: {x: -0, y: -6.23287633e-07, z: -2.88709998e-08}
+      rotation: {x: .977917731, y: .0290949624, z: .20055306, w: -.0510775112}
+      scale: {x: 1.00000262, y: 1, z: 1.00000334}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shin.ik.R
+      position: {x: -0, y: 2.05904865, z: 7.4505806e-09}
+      rotation: {x: .0544726476, y: 1.5935891e-06, z: -1.06655102e-06, w: .998515248}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thigh.nostr.ik.R
+      position: {x: -0, y: -6.23287633e-07, z: -2.88709998e-08}
+      rotation: {x: .977917731, y: .0290949624, z: .20055306, w: -.0510775112}
+      scale: {x: 1.00000262, y: 1, z: 1.00000334}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shin.nostr.ik.R
+      position: {x: -0, y: 2.05904865, z: 7.4505806e-09}
+      rotation: {x: .0544726476, y: 1.5935891e-06, z: -1.06655102e-06, w: .998515248}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thigh.stretch.ik.R
+      position: {x: -0, y: -6.23287633e-07, z: -2.88709998e-08}
+      rotation: {x: .977917731, y: .0290949624, z: .20055306, w: -.0510775112}
+      scale: {x: 1.00000262, y: 1, z: 1.00000334}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hips_rh_ns_ch
+      position: {x: -.558290005, y: .0125476122, z: 4.51609516}
+      rotation: {x: .647349358, y: 6.6109779e-19, z: 5.61486219e-19, w: .762193501}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-thigh.01.L
+      position: {x: -0, y: -6.23287633e-07, z: -2.88709998e-08}
+      rotation: {x: .977917671, y: -.0290977359, z: -.200553253, w: -.0510757342}
+      scale: {x: 1.00000286, y: 1, z: 1.00000393}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-femoris.L
+      position: {x: .0971874595, y: .514144123, z: .144638598}
+      rotation: {x: -.0221629292, y: .992279053, z: -.0311457347, w: -.117987514}
+      scale: {x: 1, y: .999999642, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-knee_fan.L
+      position: {x: 8.56816769e-08, y: 2.05904841, z: -4.09781933e-08}
+      rotation: {x: .0544727519, y: -1.23677012e-06, z: 6.95100312e-07, w: .998515248}
+      scale: {x: .99999994, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-quadriceps.L
+      position: {x: -.211873114, y: 1.25446856, z: -.232450187}
+      rotation: {x: .986156821, y: -.00385861308, z: -.164771602, w: -.0181702357}
+      scale: {x: .999972522, y: .999999702, z: .999888122}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-gluteus0.L
+      position: {x: 2.84053385e-08, y: -1.19674951e-07, z: 3.7252903e-09}
+      rotation: {x: .677856743, y: .141298518, z: -.191533223, w: .69560045}
+      scale: {x: .999999881, y: .999999762, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-knee_hose_parent.L
+      position: {x: -.159254968, y: -2.04482079, z: -.181736708}
+      rotation: {x: .973683, y: -.0399486125, z: -.198671877, w: -.104283258}
+      scale: {x: .999999523, y: .999999821, z: .999999285}
+      transformModified: 1
+    - name: Thug_Base.001|knee_hose.L
+      position: {x: -6.33299351e-08, y: 8.89413059e-08, z: -5.96046448e-08}
+      rotation: {x: -8.76837873e-08, y: .925115705, z: -.379685432, w: -1.33421008e-06}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shin_hose_parent.L
+      position: {x: -.286172509, y: -3.08271337, z: -.381002992}
+      rotation: {x: .97368288, y: -.039956484, z: -.198672876, w: -.104279943}
+      scale: {x: 1.00000107, y: 1.00000012, z: 1.00000238}
+      transformModified: 1
+    - name: Thug_Base.001|shin_hose.L
+      position: {x: -1.86264515e-08, y: -3.50410119e-07, z: 5.21540642e-08}
+      rotation: {x: -2.9046364e-06, y: .707106888, z: -.707106769, w: 2.93410562e-06}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thigh_hose_parent.L
+      position: {x: -.0796275139, y: -1.02241051, z: -.0908683389}
+      rotation: {x: .977917731, y: -.029095998, z: -.200553089, w: -.0510763824}
+      scale: {x: 1.00000274, y: 1, z: 1.00000358}
+      transformModified: 1
+    - name: Thug_Base.001|thigh_hose.L
+      position: {x: 6.89178705e-08, y: -1.85798854e-07, z: -4.09781933e-08}
+      rotation: {x: 2.16150943e-06, y: .707106888, z: -.707106709, w: -2.15994555e-06}
+      scale: {x: .99999994, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hips_rh_ns_ch.001
+      position: {x: .558290005, y: .0125476122, z: 4.51609516}
+      rotation: {x: .647349358, y: 6.6109779e-19, z: 5.61486219e-19, w: .762193501}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-thigh.01.R
+      position: {x: -0, y: -6.23287633e-07, z: -2.88709998e-08}
+      rotation: {x: .977917671, y: .0290977359, z: .200553253, w: -.0510757342}
+      scale: {x: 1.00000286, y: 1, z: 1.00000393}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-femoris.R
+      position: {x: -.0971874595, y: .514144123, z: .144638598}
+      rotation: {x: .0221629292, y: .992279053, z: -.0311457347, w: .117987514}
+      scale: {x: 1, y: .999999642, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-knee_fan.R
+      position: {x: -8.56816769e-08, y: 2.05904841, z: -4.09781933e-08}
+      rotation: {x: .0544727519, y: 1.23677012e-06, z: -6.95100312e-07, w: .998515248}
+      scale: {x: .99999994, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-quadriceps.R
+      position: {x: .211873114, y: 1.25446856, z: -.232450187}
+      rotation: {x: .986156821, y: .00385861308, z: .164771602, w: -.0181702357}
+      scale: {x: .999972522, y: .999999702, z: .999888122}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-gluteus0.R
+      position: {x: -2.84053385e-08, y: -1.19674951e-07, z: 3.7252903e-09}
+      rotation: {x: .677856743, y: -.141298518, z: .191533223, w: .69560045}
+      scale: {x: .999999881, y: .999999762, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-knee_hose_parent.R
+      position: {x: .159254968, y: -2.04482079, z: -.181736708}
+      rotation: {x: .973683, y: .0399486125, z: .198671877, w: -.104283258}
+      scale: {x: .999999523, y: .999999821, z: .999999285}
+      transformModified: 1
+    - name: Thug_Base.001|knee_hose.R
+      position: {x: 6.33299351e-08, y: 8.89413059e-08, z: -5.96046448e-08}
+      rotation: {x: 8.76837873e-08, y: .925115705, z: -.379685432, w: 1.33421008e-06}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shin_hose_parent.R
+      position: {x: .286172509, y: -3.08271337, z: -.381002992}
+      rotation: {x: .97368288, y: .039956484, z: .198672876, w: -.104279943}
+      scale: {x: 1.00000107, y: 1.00000012, z: 1.00000238}
+      transformModified: 1
+    - name: Thug_Base.001|shin_hose.R
+      position: {x: 1.86264515e-08, y: -3.50410119e-07, z: 5.21540642e-08}
+      rotation: {x: 2.9046364e-06, y: .707106888, z: -.707106769, w: -2.93410562e-06}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thigh_hose_parent.R
+      position: {x: .0796275139, y: -1.02241051, z: -.0908683389}
+      rotation: {x: .977917731, y: .029095998, z: .200553089, w: -.0510763824}
+      scale: {x: 1.00000274, y: 1, z: 1.00000358}
+      transformModified: 1
+    - name: Thug_Base.001|thigh_hose.R
+      position: {x: -6.89178705e-08, y: -1.85798854e-07, z: -4.09781933e-08}
+      rotation: {x: -2.16150943e-06, y: .707106888, z: -.707106709, w: 2.15994555e-06}
+      scale: {x: .99999994, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shoulder_fk_ns_ch.L
+      position: {x: -1.13954997, y: -.0950509906, z: 7.05480003}
+      rotation: {x: -.0963769332, y: 3.85521703e-09, z: .637553453, w: .76435411}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-upper_arm.fk.L.socket1
+      position: {x: 2.98023224e-08, y: 1.2665987e-07, z: 5.68106771e-08}
+      rotation: {x: -.223128706, y: -.701241553, z: .270040244, w: .620928466}
+      scale: {x: 1, y: 1, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shoulder_fk_ns_ch.R
+      position: {x: 1.13954997, y: -.0950509906, z: 7.05480003}
+      rotation: {x: -.0963769332, y: -3.85521703e-09, z: -.637553453, w: .76435411}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-upper_arm.fk.R.socket1
+      position: {x: -2.98023224e-08, y: 1.2665987e-07, z: 5.68106771e-08}
+      rotation: {x: -.223144099, y: .70123297, z: -.270048946, w: .620928824}
+      scale: {x: .999999762, y: .999999642, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shoulder_ik_ns_ch.L
+      position: {x: -1.13954997, y: -.0950509906, z: 7.05480003}
+      rotation: {x: -.0963769332, y: 3.85521703e-09, z: .637553453, w: .76435411}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|elbow_target.ik.L
+      position: {x: 2.1552906, y: 1.94064927, z: -1.30527747}
+      rotation: {x: .0963769704, y: -2.09144204e-08, z: -.637553632, w: .764353871}
+      scale: {x: .99999994, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-forearm.stretch.ik.L
+      position: {x: -.0297362506, y: 1.00095201, z: -.869943023}
+      rotation: {x: .0397954173, y: -.537932396, z: .524677396, w: .658603609}
+      scale: {x: 1.00000024, y: 1.00000024, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-upper_arm.ik.L
+      position: {x: 2.98023224e-08, y: 1.2665987e-07, z: 5.68106771e-08}
+      rotation: {x: -.223128527, y: -.701241672, z: .270040214, w: .620928407}
+      scale: {x: 1, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-forearm.ik.L
+      position: {x: 1.39698386e-08, y: 1.32649517, z: 8.19563866e-08}
+      rotation: {x: .394325823, y: 6.2123936e-06, z: 3.54115241e-06, w: .918970704}
+      scale: {x: 1.00000012, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-upper_arm.nostr.ik.L
+      position: {x: 2.98023224e-08, y: 1.2665987e-07, z: 5.68106771e-08}
+      rotation: {x: -.223128527, y: -.701241672, z: .270040214, w: .620928407}
+      scale: {x: 1, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-forearm.nostr.ik.L
+      position: {x: 1.39698386e-08, y: 1.32649517, z: 8.19563866e-08}
+      rotation: {x: .394325823, y: 6.2123936e-06, z: 3.54115241e-06, w: .918970704}
+      scale: {x: 1.00000012, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-upper_arm.stretch.ik.L
+      position: {x: 2.98023224e-08, y: 1.2665987e-07, z: 5.68106771e-08}
+      rotation: {x: -.223128527, y: -.701241672, z: .270040214, w: .620928407}
+      scale: {x: 1, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shoulder_ik_ns_ch.R
+      position: {x: 1.13954997, y: -.0950509906, z: 7.05480003}
+      rotation: {x: -.0963769332, y: -3.85521703e-09, z: -.637553453, w: .76435411}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|elbow_target.ik.R
+      position: {x: -2.1549859, y: 1.94072855, z: -1.30550361}
+      rotation: {x: .0963768885, y: -2.08731876e-08, z: .637553453, w: .76435405}
+      scale: {x: .999999881, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-forearm.stretch.ik.R
+      position: {x: .0297322571, y: 1.0010885, z: -.870125473}
+      rotation: {x: .0398874506, y: .537849605, z: -.524759233, w: .658600569}
+      scale: {x: 1.00000012, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-upper_arm.ik.R
+      position: {x: -2.98023224e-08, y: 1.2665987e-07, z: 5.68106771e-08}
+      rotation: {x: -.223144397, y: .701232672, z: -.270049155, w: .620928943}
+      scale: {x: 1.00000024, y: 1, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-forearm.ik.R
+      position: {x: -1.5180558e-07, y: 1.32671869, z: 7.4505806e-09}
+      rotation: {x: .394462824, y: 2.70910141e-06, z: 4.65443054e-06, w: .918911934}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-upper_arm.nostr.ik.R
+      position: {x: -2.98023224e-08, y: 1.2665987e-07, z: 5.68106771e-08}
+      rotation: {x: -.223144397, y: .701232672, z: -.270049155, w: .620928943}
+      scale: {x: 1.00000024, y: 1, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-forearm.nostr.ik.R
+      position: {x: -1.5180558e-07, y: 1.32671869, z: 7.4505806e-09}
+      rotation: {x: .394462824, y: 2.70910141e-06, z: 4.65443054e-06, w: .918911934}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-upper_arm.stretch.ik.R
+      position: {x: -2.98023224e-08, y: 1.2665987e-07, z: 5.68106771e-08}
+      rotation: {x: -.223144397, y: .701232672, z: -.270049155, w: .620928943}
+      scale: {x: 1.00000024, y: 1, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shoulder_rh_ns_ch.L
+      position: {x: -1.13954997, y: -.0950509906, z: 7.05480003}
+      rotation: {x: -.0963769332, y: 3.85521703e-09, z: .637553453, w: .76435411}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-upper_arm.01.L
+      position: {x: 2.98023224e-08, y: 1.2665987e-07, z: 5.68106771e-08}
+      rotation: {x: -.223128706, y: -.701241553, z: .270040244, w: .620928466}
+      scale: {x: 1, y: 1, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-elbow_fan.L
+      position: {x: 8.22357833e-07, y: 1.32649529, z: 1.49011612e-08}
+      rotation: {x: .394319564, y: 2.71773679e-05, z: 2.3870587e-05, w: .918973386}
+      scale: {x: .99999994, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-lat_dorsi.L
+      position: {x: 5.88688999e-06, y: .132640675, z: 1.11758709e-07}
+      rotation: {x: -.575819373, y: .756133616, z: -.252197266, w: -.181908086}
+      scale: {x: 1, y: 1, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-elbow_hose_parent.L
+      position: {x: -.0297362506, y: 1.00095201, z: -.869943023}
+      rotation: {x: .0397963524, y: -.537932813, z: .524677396, w: .658603311}
+      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|elbow_hose.L
+      position: {x: -3.16649675e-08, y: 3.09199095e-07, z: 5.0291419e-07}
+      rotation: {x: 2.3599664e-06, y: .813870668, z: -.581046104, w: -4.20308794e-07}
+      scale: {x: .99999994, y: 1, z: .999999702}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-forearm_hose_parent.L
+      position: {x: -.508522511, y: 1.29207659, z: -1.20399499}
+      rotation: {x: .0397948399, y: -.537932038, z: .524677694, w: .658603668}
+      scale: {x: 1, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|forearm_hose.L
+      position: {x: 4.58210707e-07, y: 8.94069672e-08, z: -2.38418579e-07}
+      rotation: {x: 1.0425191e-06, y: .707107067, z: -.707106531, w: 7.57758443e-08}
+      scale: {x: .99999994, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-upper_arm_hose_parent.L
+      position: {x: -.0148680732, y: .500475943, z: -.434971958}
+      rotation: {x: -.223128647, y: -.701241553, z: .270040274, w: .620928466}
+      scale: {x: .999999881, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|upper_arm_hose.L
+      position: {x: 1.38767064e-07, y: -2.27417331e-07, z: 7.4505806e-09}
+      rotation: {x: -7.54463301e-08, y: -.70710665, z: .707107008, w: -1.37263527e-07}
+      scale: {x: 1, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shoulder_rh_ns_ch.R
+      position: {x: 1.13954997, y: -.0950509906, z: 7.05480003}
+      rotation: {x: -.0963769332, y: -3.85521703e-09, z: -.637553453, w: .76435411}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-upper_arm.01.R
+      position: {x: -2.98023224e-08, y: 1.2665987e-07, z: 5.68106771e-08}
+      rotation: {x: -.223144412, y: .701232731, z: -.270049185, w: .620928884}
+      scale: {x: 1.00000024, y: 1, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-elbow_fan.R
+      position: {x: 9.03382897e-08, y: 1.32671857, z: 5.96046448e-08}
+      rotation: {x: .394475698, y: 3.94023009e-05, z: 3.94648814e-05, w: .918906391}
+      scale: {x: 1.00000012, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-lat_dorsi.R
+      position: {x: 1.14031136e-05, y: .132689089, z: -1.13993883e-06}
+      rotation: {x: .575808227, y: .756138325, z: -.252206683, w: .181911096}
+      scale: {x: 1, y: 1.00000012, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-elbow_hose_parent.R
+      position: {x: .0297322571, y: 1.0010885, z: -.870125473}
+      rotation: {x: .0398865268, y: .537849069, z: -.524759293, w: .658600867}
+      scale: {x: .999999881, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|elbow_hose.R
+      position: {x: 3.99537385e-07, y: 1.45286322e-07, z: -4.32133675e-07}
+      rotation: {x: 1.46564582e-06, y: .813793123, z: -.581154704, w: -3.48321146e-06}
+      scale: {x: 1, y: .999999762, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-forearm_hose_parent.R
+      position: {x: .508509398, y: 1.29200792, z: -1.20400357}
+      rotation: {x: .0398877859, y: .537849844, z: -.524758935, w: .65860045}
+      scale: {x: .999999881, y: 1.00000024, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|forearm_hose.R
+      position: {x: 8.56816769e-08, y: -1.78813934e-07, z: -6.2584877e-07}
+      rotation: {x: 1.23190816e-07, y: .707106948, z: -.707106709, w: -1.64206231e-08}
+      scale: {x: 1.00000012, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-upper_arm_hose_parent.R
+      position: {x: .0148661584, y: .500544369, z: -.435062945}
+      rotation: {x: -.223144069, y: .70123291, z: -.270049065, w: .620928824}
+      scale: {x: .99999994, y: .999999523, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|upper_arm_hose.R
+      position: {x: -5.03845513e-07, y: -2.10944563e-07, z: -2.98023224e-08}
+      rotation: {x: 5.73161969e-07, y: .707106948, z: -.707106709, w: 2.07957868e-07}
+      scale: {x: 1, y: .99999994, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thigh.fk.L.socket2
+      position: {x: -.558290005, y: .0125476122, z: 4.51609516}
+      rotation: {x: -.712290645, y: -.107671604, z: .171676219, w: .67199415}
+      scale: {x: .999999881, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|thigh.fk.L
+      position: {x: 3.58559191e-08, y: -3.09722964e-07, z: -2.70083547e-08}
+      rotation: {x: 6.51925847e-09, y: -3.78349796e-09, z: 1.21071944e-08, w: 1}
+      scale: {x: 1, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thigh_antistr.fk.L
+      position: {x: -0, y: 2.05904818, z: 5.21540642e-08}
+      rotation: {x: 4.3772161e-08, y: 2.55531649e-08, z: -3.86498868e-08, w: 1}
+      scale: {x: 1, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|shin.fk.L
+      position: {x: -1.11758709e-08, y: 1.32247806e-07, z: -7.4505806e-09}
+      rotation: {x: .0544726215, y: -1.61381729e-06, z: 1.0963978e-06, w: .998515308}
+      scale: {x: .99999994, y: .999999881, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shin_antistr.fk.L
+      position: {x: -7.4505806e-09, y: 2.12888312, z: 1.86264515e-08}
+      rotation: {x: 5.72763383e-08, y: -1.51223503e-07, z: 1.24098733e-07, w: 1}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|foot.fk.L
+      position: {x: 7.4505806e-08, y: 1.04308128e-07, z: 3.7252903e-08}
+      rotation: {x: -.707030058, y: .153579533, z: .11815048, w: .680119336}
+      scale: {x: 1, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-foot.L
+      position: {x: -8.90577212e-09, y: -6.43343867e-08, z: -1.53449946e-08}
+      rotation: {x: .231465936, y: -.000623494096, z: -.000147657527, w: .972842813}
+      scale: {x: .99999994, y: .999999762, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thigh.fk.R.socket2
+      position: {x: .558290005, y: .0125476122, z: 4.51609516}
+      rotation: {x: -.712290645, y: .107671604, z: -.171676219, w: .67199415}
+      scale: {x: .999999881, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|thigh.fk.R
+      position: {x: -3.58559191e-08, y: -3.09722964e-07, z: -2.70083547e-08}
+      rotation: {x: 6.51925847e-09, y: 3.78349796e-09, z: -1.21071944e-08, w: 1}
+      scale: {x: 1, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thigh_antistr.fk.R
+      position: {x: -0, y: 2.05904818, z: 5.21540642e-08}
+      rotation: {x: 4.3772161e-08, y: -2.55531649e-08, z: 3.86498868e-08, w: 1}
+      scale: {x: 1, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|shin.fk.R
+      position: {x: 1.11758709e-08, y: 1.32247806e-07, z: -7.4505806e-09}
+      rotation: {x: .0544726215, y: 1.61381729e-06, z: -1.0963978e-06, w: .998515308}
+      scale: {x: .99999994, y: .999999881, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shin_antistr.fk.R
+      position: {x: 7.4505806e-09, y: 2.12888312, z: 1.86264515e-08}
+      rotation: {x: 5.72763383e-08, y: 1.51223503e-07, z: -1.24098733e-07, w: 1}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|foot.fk.R
+      position: {x: -7.4505806e-08, y: 1.04308128e-07, z: 3.7252903e-08}
+      rotation: {x: -.707030058, y: -.153579533, z: -.11815048, w: .680119336}
+      scale: {x: 1, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-foot.R
+      position: {x: 8.90577212e-09, y: -6.43343867e-08, z: -1.53449946e-08}
+      rotation: {x: .231465936, y: .000623494096, z: .000147657527, w: .972842813}
+      scale: {x: .99999994, y: .999999762, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-upper_arm.fk.L.socket2
+      position: {x: -1.13954997, y: -.0950509906, z: 7.05480003}
+      rotation: {x: .216686755, y: -.6522277, z: .669864774, w: .280939609}
+      scale: {x: 1.00000012, y: 1.00000048, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|upper_arm.fk.L
+      position: {x: 1.45286322e-07, y: 7.42264092e-07, z: -3.7252903e-08}
+      rotation: {x: 1.32713458e-08, y: 5.49480283e-08, z: 9.82690693e-08, w: 1}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-upper_arm_antistr.fk.L
+      position: {x: -1.12690032e-07, y: 1.32649517, z: -3.7252903e-08}
+      rotation: {x: 1.79279596e-08, y: -2.12341561e-07, z: -1.04788356e-07, w: 1}
+      scale: {x: .99999994, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|forearm.fk.L
+      position: {x: 1.62050128e-07, y: -2.39466317e-07, z: 2.23517418e-08}
+      rotation: {x: .394325674, y: 6.4515657e-06, z: 3.58037619e-06, w: .918970764}
+      scale: {x: 1, y: .999999881, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-forearm_antistr.fk.L
+      position: {x: 7.4505806e-08, y: 1.30473113, z: 1.78813934e-07}
+      rotation: {x: 4.58210678e-07, y: -1.00582838e-06, z: -2.83122063e-07, w: 1}
+      scale: {x: 1, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|hand.fk.L
+      position: {x: -3.57627869e-07, y: 0, z: -2.38418579e-07}
+      rotation: {x: .123462707, y: -.668405056, z: .0715923831, w: .729976833}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hand.L
+      position: {x: -1.78813934e-07, y: 1.1920929e-07, z: -2.4586916e-07}
+      rotation: {x: 7.45057971e-09, y: -6.14672828e-08, z: -1.117587e-08, w: 1}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-upper_arm.fk.R.socket2
+      position: {x: 1.13954997, y: -.0950509906, z: 7.05480003}
+      rotation: {x: -.216668531, y: -.652230024, z: .669871211, w: -.280932993}
+      scale: {x: .99999994, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|upper_arm.fk.R
+      position: {x: -7.24568963e-07, y: -1.77009497e-07, z: -2.98023224e-08}
+      rotation: {x: -1.39698386e-09, y: 1.02445483e-08, z: 7.71979103e-08, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-upper_arm_antistr.fk.R
+      position: {x: -2.57976353e-07, y: 1.32671785, z: 5.21540642e-08}
+      rotation: {x: 1.55996513e-08, y: 1.62050128e-07, z: 1.29512046e-07, w: 1}
+      scale: {x: 1, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|forearm.fk.R
+      position: {x: 7.26431608e-08, y: 8.32369551e-09, z: 3.7252903e-08}
+      rotation: {x: .394462734, y: 2.47700837e-06, z: 4.58687373e-06, w: .918911934}
+      scale: {x: 1, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-forearm_antistr.fk.R
+      position: {x: -4.69386578e-07, y: 1.30435538, z: -2.98023224e-07}
+      rotation: {x: -7.4505806e-08, y: -1.4435501e-06, z: -5.77419996e-07, w: 1}
+      scale: {x: 1, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|hand.fk.R
+      position: {x: 2.30967999e-07, y: -2.38418579e-07, z: -2.98023224e-07}
+      rotation: {x: .123158045, y: .668559074, z: -.0717340335, w: .729873419}
+      scale: {x: 1.00000012, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hand.R
+      position: {x: 1.78813934e-07, y: -2.98023224e-07, z: 7.15255737e-07}
+      rotation: {x: -5.58793634e-09, y: -2.23517418e-08, z: -7.4505806e-09, w: 1}
+      scale: {x: 1, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-hips
+      position: {x: -1.16415502e-10, y: -.0408660173, z: 4.59056997}
+      rotation: {x: .647349358, y: -3.41145601e-18, z: -1.05182939e-10, w: .762193501}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-spine
+      position: {x: -0, y: .726056039, z: 6.70552254e-08}
+      rotation: {x: -.0576584861, y: 6.33543495e-11, z: 8.39623371e-11, w: .998336375}
+      scale: {x: 1, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hips_fk_ns_intr
+      position: {x: -.558290005, y: -.0648466647, z: -.0647648573}
+      rotation: {x: -1.49011612e-08, y: 6.80900891e-11, z: 1.40946282e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hips_fk_ns_intr.001
+      position: {x: .558290005, y: -.0648466647, z: -.0647648573}
+      rotation: {x: -1.49011612e-08, y: 6.80900891e-11, z: 1.40946282e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hips_ik_ns_intr
+      position: {x: -.558290005, y: -.0648466647, z: -.0647648573}
+      rotation: {x: -1.49011612e-08, y: 6.80900891e-11, z: 1.40946282e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hips_ik_ns_intr.001
+      position: {x: .558290005, y: -.0648466647, z: -.0647648573}
+      rotation: {x: -1.49011612e-08, y: 6.80900891e-11, z: 1.40946282e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hips_rh_ns_intr
+      position: {x: -.558290005, y: -.0648466647, z: -.0647648573}
+      rotation: {x: -1.49011612e-08, y: 6.80900891e-11, z: 1.40946282e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hips_rh_ns_intr.001
+      position: {x: .558290005, y: -.0648466647, z: -.0647648573}
+      rotation: {x: -1.49011612e-08, y: 6.80900891e-11, z: 1.40946282e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-spine
+      position: {x: -0, y: .726056039, z: 6.70552254e-08}
+      rotation: {x: -.0576584861, y: 6.33543495e-11, z: 8.39623371e-11, w: .998336375}
+      scale: {x: 1, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-spine-1
+      position: {x: 4.21345125e-24, y: .134981319, z: 5.96046448e-08}
+      rotation: {x: 5.09023666e-05, y: 4.41558997e-22, z: -1.28489664e-26, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-spine-1
+      position: {x: 4.21345125e-24, y: .134981319, z: 5.96046448e-08}
+      rotation: {x: 5.09023666e-05, y: 4.41558997e-22, z: -1.28489664e-26, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-chest
+      position: {x: 3.36042124e-25, y: .135029808, z: -5.96046448e-08}
+      rotation: {x: .0678222552, y: 4.54231958e-10, z: 6.01921457e-10, w: .997697413}
+      scale: {x: 1, y: 1.00000024, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-chest-1
+      position: {x: 3.60822483e-16, y: .81734103, z: 2.98023224e-08}
+      rotation: {x: .203070253, y: -1.00252362e-09, z: -9.22437793e-10, w: .979164183}
+      scale: {x: 1, y: .999999821, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-breast.L
+      position: {x: -.570834994, y: .174451604, z: .526448548}
+      rotation: {x: -.177740678, y: .726970434, z: .554906428, w: -.363319606}
+      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-breast.R
+      position: {x: .570834994, y: .170497224, z: .527529657}
+      rotation: {x: .174268097, y: .729038715, z: .556485355, w: .358409405}
+      scale: {x: .999999881, y: .999999642, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-pectoralis.L
+      position: {x: -.0484705009, y: .446798921, z: .85733819}
+      rotation: {x: -.57320869, y: .405401647, z: .30944863, w: .641344547}
+      scale: {x: .999999881, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-pectoralis.R
+      position: {x: .0484705009, y: .446798921, z: .85733819}
+      rotation: {x: -.573221922, y: -.405407012, z: -.309452832, w: .641327322}
+      scale: {x: 1.00000024, y: 1.00000024, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-stomach
+      position: {x: 1.55900493e-09, y: .34062475, z: .901645184}
+      rotation: {x: .996338904, y: 4.13852175e-10, z: -4.55415317e-10, w: .0854917914}
+      scale: {x: 1, y: 1, z: 1.00000179}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-trapezius2.L
+      position: {x: -.137513503, y: .292037308, z: -.263929009}
+      rotation: {x: .047401391, y: .507882118, z: .387673438, w: .767800868}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-trapezius2.R
+      position: {x: .137513503, y: .292037338, z: -.263929009}
+      rotation: {x: .0474013835, y: -.507882118, z: -.387673467, w: .767800868}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-chest
+      position: {x: 3.36042124e-25, y: .135029808, z: -5.96046448e-08}
+      rotation: {x: .0678222552, y: 4.54231958e-10, z: 6.01921457e-10, w: .997697413}
+      scale: {x: 1, y: 1.00000024, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-neck
+      position: {x: 1.74523807e-09, y: 1.9617219, z: .496003389}
+      rotation: {x: .0349303186, y: -5.13608878e-10, z: -5.52124901e-10, w: .999389768}
+      scale: {x: 1, y: .999999821, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-platysma.L
+      position: {x: -.316992998, y: .321302563, z: .134866446}
+      rotation: {x: .98068434, y: .132964551, z: .142942473, w: .012089801}
+      scale: {x: .99999845, y: .999999762, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-platysma.R
+      position: {x: .316992998, y: .321302563, z: .134866446}
+      rotation: {x: .98068434, y: -.132964551, z: -.142942473, w: .012089801}
+      scale: {x: .99999845, y: .999999762, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-trapezius1.L
+      position: {x: -.0355479494, y: .345710158, z: -.0846158564}
+      rotation: {x: .795405447, y: -.409772903, z: -.44050166, w: -.0733126476}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-trapezius1.R
+      position: {x: .0355479494, y: .345710158, z: -.0846158564}
+      rotation: {x: .795405447, y: .409772903, z: .44050166, w: -.0733126476}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-head.02
+      position: {x: 2.32153541e-09, y: 2.50016356, z: .533688247}
+      rotation: {x: -.655116141, y: 8.28802548e-17, z: -7.5407991e-10, w: .755528271}
+      scale: {x: 1, y: 1, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-head.001
+      position: {x: -5.81250957e-26, y: -3.04952437e-08, z: 4.18835633e-09}
+      rotation: {x: .71367538, y: 1.35950699e-17, z: 2.52262655e-10, w: .700476587}
+      scale: {x: 1, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-head.socket1
+      position: {x: 1.74523807e-09, y: 1.9617219, z: .496003389}
+      rotation: {x: .0803083554, y: -3.72906872e-10, z: -3.37623818e-10, w: .996770084}
+      scale: {x: 1, y: .999999702, z: .999999702}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-neck.02
+      position: {x: 1.74523807e-09, y: 1.9617219, z: .496003389}
+      rotation: {x: -.655116141, y: 3.51243705e-16, z: -7.54079466e-10, w: .755528271}
+      scale: {x: 1, y: .999999881, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-neck
+      position: {x: 6.6174449e-24, y: 6.0383968e-08, z: 6.50736709e-09}
+      rotation: {x: .681107223, y: -2.43596749e-16, z: -2.26603601e-16, w: .732183695}
+      scale: {x: 1, y: .999999821, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-neck.follow
+      position: {x: 1.74523807e-09, y: 1.9617219, z: .496003389}
+      rotation: {x: .0803083554, y: -3.72906872e-10, z: -3.37623818e-10, w: .996770084}
+      scale: {x: 1, y: .999999702, z: .999999702}
+      transformModified: 1
+    - name: Thug_Base.001|neck
+      position: {x: -3.67154134e-16, y: -5.00585884e-09, z: 0}
+      rotation: {x: -.04544181, y: -1.71817782e-10, z: -1.84702434e-10, w: .998966992}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-neck.child
+      position: {x: -1.01329625e-22, y: -1.54599547e-07, z: -3.7252903e-09}
+      rotation: {x: -.681107283, y: 1.45684651e-16, z: -1.35521817e-16, w: .732183635}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-neck
+      position: {x: 1.74523807e-09, y: 1.9617219, z: .496003389}
+      rotation: {x: .0349303186, y: -5.13608878e-10, z: -5.52124901e-10, w: .999389768}
+      scale: {x: 1, y: .999999821, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-head
+      position: {x: 4.34269822e-24, y: .539758265, z: -1.86264515e-08}
+      rotation: {x: .0454418138, y: 1.71817768e-10, z: 1.84702559e-10, w: .998966992}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-eye.L
+      position: {x: -.147320002, y: .152811438, z: .612636328}
+      rotation: {x: .669094265, y: -.323807836, z: -.273001134, w: .610681415}
+      scale: {x: .99999994, y: .999999762, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-eye.R
+      position: {x: .147320002, y: .152811438, z: .612636387}
+      rotation: {x: .669094265, y: .323807836, z: .273001134, w: .610681415}
+      scale: {x: .99999994, y: .999999762, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-jaw
+      position: {x: -1.06350782e-10, y: -.0174089242, z: .278276414}
+      rotation: {x: .918887794, y: -2.33397912e-10, z: 9.5717767e-11, w: .394519031}
+      scale: {x: 1, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-tongue_base
+      position: {x: -1.58818678e-22, y: .179447263, z: .0808312595}
+      rotation: {x: -.419977844, y: -6.23146522e-17, z: 2.88372301e-17, w: .907534361}
+      scale: {x: 1, y: .999999821, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-tongue_mid
+      position: {x: -0, y: .148270845, z: -3.65078449e-07}
+      rotation: {x: .0677066222, y: -1.66821981e-17, z: -1.13209789e-18, w: .997705281}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-tongue_tip
+      position: {x: -4.63221143e-23, y: .103124112, z: -5.40167093e-08}
+      rotation: {x: .244528726, y: -5.63814114e-17, z: -1.42185184e-17, w: .969642043}
+      scale: {x: 1, y: .999999881, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-lolid.L
+      position: {x: -.151806504, y: .152811438, z: .612636328}
+      rotation: {x: .836980939, y: -4.90660082e-11, z: -7.50455392e-11, w: .547232032}
+      scale: {x: 1, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-lolid.R
+      position: {x: .151806504, y: .152811438, z: .612636387}
+      rotation: {x: .836980939, y: -4.90660082e-11, z: -7.50455392e-11, w: .547232032}
+      scale: {x: 1, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-uplid.L
+      position: {x: -.150594503, y: .152811438, z: .612636328}
+      rotation: {x: .65716964, y: -1.50431931e-10, z: -1.31157904e-10, w: .753742695}
+      scale: {x: 1, y: .999999881, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-uplid.R
+      position: {x: .149894506, y: .152811438, z: .612636387}
+      rotation: {x: .648193359, y: -1.54719862e-10, z: -1.31702663e-10, w: .761475801}
+      scale: {x: 1, y: .999999762, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-head
+      position: {x: 4.34269822e-24, y: .539758265, z: -1.86264515e-08}
+      rotation: {x: .0454418138, y: 1.71817768e-10, z: 1.84702559e-10, w: .998966992}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-shoulder.L
+      position: {x: -.128414497, y: 1.56483114, z: .648774803}
+      rotation: {x: -.573556125, y: .417671502, z: .481689602, w: .514353037}
+      scale: {x: 1, y: 1, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-shoulder.L
+      position: {x: 1.13621354e-07, y: 6.33299351e-08, z: 4.89875674e-07}
+      rotation: {x: -4.19095159e-09, y: -3.77185643e-08, z: -4.19095159e-09, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-scapula.L
+      position: {x: .419709206, y: .820816934, z: .09176597}
+      rotation: {x: .291174382, y: -.351059139, z: .858026803, w: -.236146152}
+      scale: {x: 1, y: 1.00000048, z: 1.00000048}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shoulder_fk_ns_intr.L
+      position: {x: 6.70552254e-08, y: 1.03745234, z: 5.6065619e-07}
+      rotation: {x: -4.83822078e-07, y: 3.74391675e-07, z: -9.45292413e-08, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shoulder_ik_ns_intr.L
+      position: {x: 6.70552254e-08, y: 1.03745234, z: 5.6065619e-07}
+      rotation: {x: -4.83822078e-07, y: 3.74391675e-07, z: -9.45292413e-08, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shoulder_rh_ns_intr.L
+      position: {x: 6.70552254e-08, y: 1.03745234, z: 5.6065619e-07}
+      rotation: {x: -4.83822078e-07, y: 3.74391675e-07, z: -9.45292413e-08, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-upper_arm.L
+      position: {x: 6.70552254e-08, y: 1.03745234, z: 5.6065619e-07}
+      rotation: {x: .093224287, y: -.721368611, z: .0338289067, w: .685413897}
+      scale: {x: .999999762, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-upper_arm.02.L
+      position: {x: 1.44354999e-07, y: .663248062, z: -7.4505806e-09}
+      rotation: {x: 1.21071926e-08, y: -1.14552662e-07, z: -1.10507237e-07, w: 1}
+      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-upper_arm_smth.02.L
+      position: {x: 2.79396772e-09, y: .663248181, z: -3.7252903e-08}
+      rotation: {x: .394325882, y: 5.88606554e-06, z: 3.1827592e-06, w: .918970704}
+      scale: {x: 1, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-forearm.junc.L
+      position: {x: 2.2072345e-07, y: 1.32649529, z: -7.4505806e-09}
+      rotation: {x: .394325554, y: 6.22354037e-06, z: 3.6400736e-06, w: .918970823}
+      scale: {x: 1.00000012, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-forearm.L
+      position: {x: 2.2072345e-07, y: 1.32649529, z: -7.4505806e-09}
+      rotation: {x: .0258909184, y: .00901198667, z: -.0209855661, w: .999403834}
+      scale: {x: 1.00000012, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-forearm.02.L
+      position: {x: 1.34110451e-06, y: .652365088, z: 1.1920929e-07}
+      rotation: {x: 4.54596396e-08, y: -.675318837, z: 2.02042585e-07, w: .737526}
+      scale: {x: .99999994, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-forearm.01.L
+      position: {x: 9.0803951e-07, y: -1.63912773e-07, z: 2.71946192e-07}
+      rotation: {x: 3.35276127e-08, y: -5.55068254e-07, z: -1.88127174e-07, w: 1}
+      scale: {x: 1, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-forearm_smth.01.L
+      position: {x: -7.15721399e-06, y: -.456987023, z: .480686784}
+      rotation: {x: -.394325852, y: -5.88403873e-06, z: -3.19232345e-06, w: .918970704}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-forearm.01.L
+      position: {x: -7.28294253e-07, y: .663247943, z: 6.70552254e-08}
+      rotation: {x: .394325882, y: 5.86680972e-06, z: 3.17876902e-06, w: .918970704}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-hand.L
+      position: {x: 8.19563866e-07, y: 1.30472994, z: 1.78813934e-07}
+      rotation: {x: .123462714, y: -.668405771, z: .0715919659, w: .729976237}
+      scale: {x: .99999994, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-hand.L
+      position: {x: -1.1920929e-07, y: 1.78813934e-07, z: -3.61353159e-07}
+      rotation: {x: 7.45057971e-09, y: -1.65436044e-24, z: 5.58793456e-09, w: 1}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-palm.01.L
+      position: {x: .0555743575, y: .171573877, z: -.000633306801}
+      rotation: {x: -.066834636, y: -.188739434, z: -.0884625986, w: .97574842}
+      scale: {x: 1.00000024, y: 1.00000024, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_index.01.L.01
+      position: {x: -1.78813934e-07, y: .3969616, z: 4.47034836e-08}
+      rotation: {x: .0933000445, y: -.00771683408, z: .00699472195, w: .995583594}
+      scale: {x: .99999994, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-palm.01.L
+      position: {x: 1.1920929e-07, y: -2.98023224e-08, z: 2.38418579e-07}
+      rotation: {x: -3.72529074e-09, y: 1.75088644e-07, z: 3.72529207e-09, w: 1}
+      scale: {x: 1, y: .99999994, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-thumb.01.L.01
+      position: {x: .0622684956, y: .0516612828, z: -.0217695683}
+      rotation: {x: .15526852, y: -.349060655, z: -.436564058, w: .814530671}
+      scale: {x: .999999762, y: .999999881, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|f_index.L
+      position: {x: -1.78813934e-07, y: .3969616, z: 4.47034836e-08}
+      rotation: {x: .0932995304, y: -.0077194958, z: .00699515641, w: .995583594}
+      scale: {x: .999999881, y: .99999994, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_index.01.L
+      position: {x: -1.78813934e-07, y: .3969616, z: 4.47034836e-08}
+      rotation: {x: .0933000445, y: -.00771683408, z: .00699472195, w: .995583594}
+      scale: {x: .99999994, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|f_index.01.L
+      position: {x: -2.98023224e-07, y: -3.27825546e-07, z: 1.1920929e-07}
+      rotation: {x: -.100694329, y: -2.73434193e-06, z: .144434541, w: .984377623}
+      scale: {x: 1, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_index.02.L
+      position: {x: 4.76837158e-07, y: .144878387, z: 2.38418579e-07}
+      rotation: {x: .100213557, y: -.00401274348, z: .00164510019, w: .994956493}
+      scale: {x: .99999994, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|f_index.02.L
+      position: {x: -5.96046448e-08, y: 6.33299351e-08, z: 5.96046448e-08}
+      rotation: {x: -6.33648654e-07, y: -2.45124102e-06, z: 6.35976903e-07, w: 1}
+      scale: {x: 1, y: .99999994, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_index.03.L
+      position: {x: -0, y: .130089968, z: -4.76837158e-07}
+      rotation: {x: .0162486564, y: .00764605356, z: -.00394979306, w: .999830961}
+      scale: {x: 1.00000012, y: 1.00000024, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|f_index.03.L
+      position: {x: 1.1920929e-07, y: 1.2665987e-07, z: 1.1920929e-07}
+      rotation: {x: -7.91624188e-09, y: -3.7252903e-09, z: -5.82076565e-09, w: 1}
+      scale: {x: 1, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thumb.01.L
+      position: {x: .0622684956, y: .0516612828, z: -.0217695683}
+      rotation: {x: .155268237, y: -.349060625, z: -.436563939, w: .81453079}
+      scale: {x: .999999881, y: 1.00000012, z: .999999762}
+      transformModified: 1
+    - name: Thug_Base.001|thumb.01.L
+      position: {x: 3.57627869e-07, y: 1.1920929e-07, z: 6.85453415e-07}
+      rotation: {x: -1.14925206e-06, y: 2.84705311e-06, z: -4.86150384e-07, w: 1}
+      scale: {x: .99999994, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thumb.02.L
+      position: {x: -0, y: .171372294, z: -7.4505806e-07}
+      rotation: {x: .0432057939, y: -.138008028, z: .189628154, w: .971147895}
+      scale: {x: 1, y: 1, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|thumb.02.L
+      position: {x: 5.96046448e-08, y: -5.96046448e-08, z: 2.38418579e-07}
+      rotation: {x: 2.92435288e-07, y: -1.37649477e-06, z: 4.00468736e-07, w: 1}
+      scale: {x: 1, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thumb.03.L
+      position: {x: 5.96046448e-08, y: .206395745, z: 1.28149986e-06}
+      rotation: {x: .0363700911, y: .009781342, z: -.00352458749, w: .999284327}
+      scale: {x: .99999994, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|thumb.03.L
+      position: {x: -1.1920929e-07, y: 5.96046448e-08, z: 5.36441803e-07}
+      rotation: {x: 1.21630728e-06, y: -3.46451998e-07, z: -1.16229057e-06, w: 1}
+      scale: {x: 1, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_index.01.L
+      position: {x: -1.78813934e-07, y: .3969616, z: 4.47034836e-08}
+      rotation: {x: .0932995975, y: -.00771952653, z: .0069952542, w: .995583594}
+      scale: {x: .99999994, y: .999999762, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_index.01.L.02
+      position: {x: 1.1920929e-07, y: .0724393427, z: -1.78813934e-07}
+      rotation: {x: -4.43309574e-07, y: -2.63750576e-06, z: 8.17701277e-07, w: 1}
+      scale: {x: .99999994, y: 1, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_index.01.L.tip
+      position: {x: 1.1920929e-07, y: .144878536, z: -1.78813934e-07}
+      rotation: {x: -.196232572, y: .65382719, z: -.624418259, w: -.379611343}
+      scale: {x: 1, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_index.02.L
+      position: {x: 1.1920929e-07, y: .144878536, z: -1.78813934e-07}
+      rotation: {x: .100212961, y: -.00401519984, z: .00164552149, w: .994956553}
+      scale: {x: .999999762, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_index.02.L
+      position: {x: 2.38418579e-07, y: 1.86264515e-08, z: -3.57627869e-07}
+      rotation: {x: -3.37604433e-08, y: -7.4505806e-09, z: 4.77302908e-09, w: 1}
+      scale: {x: 1, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_index.03.L
+      position: {x: 1.1920929e-07, y: .130089566, z: -3.57627869e-07}
+      rotation: {x: .0162486564, y: .00764607359, z: -.00394980051, w: .999830961}
+      scale: {x: .99999994, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_index.03.L
+      position: {x: 2.38418579e-07, y: -1.00582838e-07, z: -5.96046448e-08}
+      rotation: {x: 1.39698386e-09, y: -3.7252903e-09, z: 4.88944352e-09, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-thumb.01.L
+      position: {x: .0622684956, y: .0516612828, z: -.0217695683}
+      rotation: {x: .155268714, y: -.349057704, z: -.436564267, w: .814531744}
+      scale: {x: .999999762, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-thumb.01.L.02
+      position: {x: -2.38418579e-07, y: .0856858492, z: 2.38418579e-07}
+      rotation: {x: -1.40909106e-06, y: 2.87685566e-06, z: -5.21540642e-08, w: 1}
+      scale: {x: 1, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thumb.01.L.tip
+      position: {x: -5.96046448e-08, y: .171372116, z: 1.34110451e-07}
+      rotation: {x: -.572333097, y: .292744428, z: .704541564, w: .300593883}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-thumb.02.L
+      position: {x: -5.96046448e-08, y: .171372116, z: 1.34110451e-07}
+      rotation: {x: .0432062633, y: -.138009369, z: .189628571, w: .971147597}
+      scale: {x: 1.00000012, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-thumb.02.L
+      position: {x: 5.96046448e-08, y: -5.36441803e-07, z: 0}
+      rotation: {x: 5.58793545e-09, y: 1.67638063e-08, z: 1.49011612e-08, w: 1}
+      scale: {x: .99999994, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-thumb.03.L
+      position: {x: -0, y: .206395686, z: 2.98023224e-08}
+      rotation: {x: .0363713168, y: .00978102442, z: -.0035257414, w: .999284267}
+      scale: {x: .999999821, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-thumb.03.L
+      position: {x: 5.96046448e-08, y: 0, z: 5.96046448e-08}
+      rotation: {x: 2.23517382e-08, y: 1.11758691e-08, z: -8.8817842e-16, w: 1}
+      scale: {x: 1, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|thumb.L
+      position: {x: .0622684956, y: .0516612828, z: -.0217695683}
+      rotation: {x: .15526861, y: -.349057764, z: -.436564267, w: .814531744}
+      scale: {x: .999999821, y: .999999762, z: .999999762}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-palm.02.L
+      position: {x: -.00572484732, y: .181212306, z: -.0206419453}
+      rotation: {x: -.0452933088, y: .00985917822, z: .000623561267, w: .998924911}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_middle.01.L.01
+      position: {x: -3.57627869e-07, y: .370677352, z: 7.4505806e-09}
+      rotation: {x: .0308237243, y: .0141086737, z: .0769997239, w: .996454656}
+      scale: {x: .999999821, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-palm.02.L
+      position: {x: -2.38418579e-07, y: -1.1920929e-07, z: 6.70552254e-08}
+      rotation: {x: -5.82076609e-08, y: -5.12227505e-09, z: 3.72529119e-09, w: 1}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|f_middle.L
+      position: {x: -3.57627869e-07, y: .370677352, z: 7.4505806e-09}
+      rotation: {x: .0308241602, y: .0141098956, z: .0769992322, w: .996454656}
+      scale: {x: .99999994, y: .99999994, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_middle.01.L
+      position: {x: -3.57627869e-07, y: .370677352, z: 7.4505806e-09}
+      rotation: {x: .0308237243, y: .0141086737, z: .0769997239, w: .996454656}
+      scale: {x: .999999821, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|f_middle.01.L
+      position: {x: -2.98023224e-07, y: 0, z: -6.66128471e-07}
+      rotation: {x: -.0938907862, y: 1.47393359e-06, z: -.0202891491, w: .995375752}
+      scale: {x: .99999994, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_middle.02.L
+      position: {x: 1.1920929e-07, y: .183280349, z: 2.4959445e-07}
+      rotation: {x: .0996583179, y: .00291811558, z: -.00584383588, w: .995000303}
+      scale: {x: 1.00000012, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|f_middle.02.L
+      position: {x: -1.1920929e-07, y: -8.94069672e-08, z: -4.32133675e-07}
+      rotation: {x: 7.7672297e-07, y: 1.71922136e-06, z: -2.37487228e-07, w: 1}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_middle.03.L
+      position: {x: -5.96046448e-08, y: .143665552, z: 0}
+      rotation: {x: -.00316170673, y: -.00452712085, z: .0123375868, w: .999908686}
+      scale: {x: .99999994, y: 1, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|f_middle.03.L
+      position: {x: -2.38418579e-07, y: 4.17232513e-07, z: 8.49366188e-07}
+      rotation: {x: -7.84173722e-07, y: -1.75833725e-06, z: 2.55182414e-07, w: 1}
+      scale: {x: .99999994, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_middle.01.L
+      position: {x: -3.57627869e-07, y: .370677352, z: 7.4505806e-09}
+      rotation: {x: .0308242049, y: .0141100269, z: .0769993067, w: .996454656}
+      scale: {x: .999999821, y: .99999994, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_middle.01.L.02
+      position: {x: -2.98023224e-07, y: .091639936, z: -1.80676579e-07}
+      rotation: {x: 5.53554855e-07, y: 1.31205877e-06, z: -3.96743388e-07, w: 1}
+      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_middle.01.L.tip
+      position: {x: -1.78813934e-07, y: .18328011, z: -1.55996531e-07}
+      rotation: {x: -.262165606, y: -.580162287, z: .517602921, w: .571636498}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_middle.02.L
+      position: {x: -1.78813934e-07, y: .18328011, z: -1.55996531e-07}
+      rotation: {x: .0996591002, y: .00291982363, z: -.00584391272, w: .995000184}
+      scale: {x: 1.00000012, y: .99999994, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_middle.02.L
+      position: {x: -0, y: -1.49011612e-07, z: -2.23517418e-07}
+      rotation: {x: 7.4505806e-09, y: -5.58793545e-09, z: -1.76951289e-08, w: 1}
+      scale: {x: 1.00000012, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_middle.03.L
+      position: {x: 1.78813934e-07, y: .143665403, z: -2.68220901e-07}
+      rotation: {x: -.00316249277, y: -.00452891598, z: .0123378308, w: .999908626}
+      scale: {x: .99999994, y: .999999821, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_middle.03.L
+      position: {x: 1.1920929e-07, y: -2.98023224e-08, z: 1.34110451e-07}
+      rotation: {x: 1.86264426e-09, y: -1.86264504e-09, z: 3.63215804e-08, w: 1}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-palm.03.L
+      position: {x: -.0672317743, y: .184946597, z: -.0223896727}
+      rotation: {x: -.0833381712, y: -.0123672951, z: .0681299046, w: .99411273}
+      scale: {x: 1.00000024, y: 1.00000012, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_ring.01.L.01
+      position: {x: -2.98023224e-07, y: .331613004, z: 1.63912773e-07}
+      rotation: {x: .0526051857, y: .0219986998, z: .0896452144, w: .994340241}
+      scale: {x: 1, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-palm.03.L
+      position: {x: -1.1920929e-07, y: 0, z: 1.04308128e-07}
+      rotation: {x: 1.95577705e-08, y: -1.58324838e-08, z: 3.72528994e-08, w: 1}
+      scale: {x: 1, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|f_ring.L
+      position: {x: -2.98023224e-07, y: .331613004, z: 1.63912773e-07}
+      rotation: {x: .0526062623, y: .0220012348, z: .0896458849, w: .994340062}
+      scale: {x: .99999994, y: .999999821, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_ring.01.L
+      position: {x: -2.98023224e-07, y: .331613004, z: 1.63912773e-07}
+      rotation: {x: .0526051857, y: .0219986998, z: .0896452144, w: .994340241}
+      scale: {x: 1, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|f_ring.01.L
+      position: {x: -1.78813934e-07, y: 2.38418579e-07, z: 1.15483999e-07}
+      rotation: {x: 1.33900903e-06, y: 2.51084566e-06, z: 5.49480319e-07, w: 1}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_ring.02.L
+      position: {x: -4.76837158e-07, y: .161791444, z: 2.34693289e-07}
+      rotation: {x: .108804636, y: .00414456194, z: -.0126783233, w: .993973672}
+      scale: {x: .999999821, y: 1.00000024, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|f_ring.02.L
+      position: {x: 2.98023224e-07, y: -5.36441803e-07, z: 4.02331352e-07}
+      rotation: {x: -1.36531889e-06, y: -2.44192779e-06, z: -6.45406544e-07, w: 1}
+      scale: {x: 1, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_ring.03.L
+      position: {x: -1.78813934e-07, y: .136255383, z: -8.94069672e-08}
+      rotation: {x: -.00840654224, y: -.00505241053, z: .0257207602, w: .999621093}
+      scale: {x: .999999821, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|f_ring.03.L
+      position: {x: 1.1920929e-07, y: 2.38418579e-07, z: -5.96046448e-08}
+      rotation: {x: 1.3532117e-06, y: 2.2277236e-06, z: 5.569309e-07, w: 1}
+      scale: {x: 1.00000012, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_ring.01.L
+      position: {x: -2.98023224e-07, y: .331613004, z: 1.63912773e-07}
+      rotation: {x: .0445303097, y: .025160376, z: .0179296136, w: .998530209}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_ring.01.L.02
+      position: {x: 1.1920929e-07, y: .0808953047, z: 7.26431608e-08}
+      rotation: {x: 1.37649477e-06, y: 2.50618905e-06, z: 5.14090061e-07, w: 1}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_ring.01.L.tip
+      position: {x: 1.1920929e-07, y: .161791325, z: 1.65775418e-07}
+      rotation: {x: -.307813019, y: -.542447686, z: .4483729, w: .640283823}
+      scale: {x: .99999994, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_ring.02.L
+      position: {x: 1.1920929e-07, y: .161791325, z: 1.65775418e-07}
+      rotation: {x: .0378683768, y: .00416429108, z: -.00441271486, w: .9992643}
+      scale: {x: .99999994, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_ring.02.L
+      position: {x: 1.1920929e-07, y: -1.1920929e-07, z: -1.63912773e-07}
+      rotation: {x: 9.31322131e-10, y: -2.42143852e-08, z: 3.35276127e-08, w: 1}
+      scale: {x: 1.00000012, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_ring.03.L
+      position: {x: -0, y: .136255443, z: -2.38418579e-07}
+      rotation: {x: -.00840526633, y: -.00505018374, z: .0257213414, w: .999621093}
+      scale: {x: 1, y: .999999821, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_ring.03.L
+      position: {x: 3.57627869e-07, y: 2.98023224e-07, z: -5.96046448e-08}
+      rotation: {x: 9.31322575e-10, y: -3.7252903e-09, z: 5.58793545e-09, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-palm.04.L
+      position: {x: -.111245096, y: .195847571, z: -.0265774988}
+      rotation: {x: -.0759136677, y: -.116345093, z: .195340887, w: .970846474}
+      scale: {x: 1, y: 1.00000024, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_pinky.01.L.01
+      position: {x: -0, y: .283344209, z: -3.87430191e-07}
+      rotation: {x: .14792715, y: .00176168559, z: -.017222669, w: .988846719}
+      scale: {x: .99999994, y: 1, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-palm.04.L
+      position: {x: 1.78813934e-07, y: -2.98023224e-07, z: -3.7252903e-07}
+      rotation: {x: 3.35276127e-08, y: 3.7252903e-09, z: -1.11758709e-08, w: 1}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|f_pinky.L
+      position: {x: -0, y: .283344209, z: -3.87430191e-07}
+      rotation: {x: .147928089, y: .00176303671, z: -.0172225069, w: .9888466}
+      scale: {x: .999999821, y: .999999881, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_pinky.01.L
+      position: {x: -0, y: .283344209, z: -3.87430191e-07}
+      rotation: {x: .14792715, y: .00176168559, z: -.017222669, w: .988846719}
+      scale: {x: .99999994, y: 1, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|f_pinky.01.L
+      position: {x: 1.1920929e-07, y: -2.38418579e-07, z: -2.98023224e-08}
+      rotation: {x: -.189802617, y: 1.69874511e-06, z: -.0882475376, w: .977848291}
+      scale: {x: 1, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_pinky.02.L
+      position: {x: 1.1920929e-07, y: .123673499, z: 1.1920929e-07}
+      rotation: {x: .0675310493, y: .00439556921, z: -.00663638674, w: .997685432}
+      scale: {x: .999999821, y: .999999821, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|f_pinky.02.L
+      position: {x: -2.38418579e-07, y: 2.68220901e-07, z: 5.96046448e-08}
+      rotation: {x: 2.38418579e-07, y: 3.91155481e-08, z: 6.16535544e-07, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_pinky.03.L
+      position: {x: -0, y: .0817513764, z: 1.78813934e-07}
+      rotation: {x: .0137048224, y: -.00694276532, z: .012310558, w: .999806225}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|f_pinky.03.L
+      position: {x: -1.1920929e-07, y: -1.49011612e-07, z: -1.49011612e-07}
+      rotation: {x: -1.03935599e-06, y: -1.71177089e-06, z: 4.71249194e-07, w: 1}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_pinky.01.L
+      position: {x: -0, y: .283344209, z: -3.87430191e-07}
+      rotation: {x: .147928149, y: .00176311529, z: -.0172224864, w: .9888466}
+      scale: {x: .999999821, y: .999999881, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_pinky.01.L.02
+      position: {x: 2.38418579e-07, y: .0618371964, z: -8.94069672e-08}
+      rotation: {x: 9.49949026e-07, y: 1.48266554e-06, z: 7.4505806e-09, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_pinky.01.L.tip
+      position: {x: 2.38418579e-07, y: .123673737, z: -2.08616257e-07}
+      rotation: {x: -.185351327, y: -.570708871, z: .568110466, w: .563193381}
+      scale: {x: 1.00000024, y: .999999821, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_pinky.02.L
+      position: {x: 2.38418579e-07, y: .123673737, z: -2.08616257e-07}
+      rotation: {x: .0675313175, y: .00439554453, z: -.00663572922, w: .997685432}
+      scale: {x: .99999994, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_pinky.02.L
+      position: {x: -0, y: 5.96046448e-08, z: -2.38418579e-07}
+      rotation: {x: -1.86264533e-08, y: 1.11758727e-08, z: 2.23517453e-08, w: 1}
+      scale: {x: .999999881, y: .999999881, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_pinky.03.L
+      position: {x: 1.1920929e-07, y: .0817517638, z: -1.78813934e-07}
+      rotation: {x: .0137038482, y: -.00694446126, z: .0123110451, w: .999806225}
+      scale: {x: .99999994, y: .999999821, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_pinky.03.L
+      position: {x: -1.1920929e-07, y: -8.94069672e-08, z: -2.98023224e-08}
+      rotation: {x: -1.86264515e-08, y: -1.49011594e-08, z: 1.67638028e-08, w: 1}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|palm.L
+      position: {x: -.111245096, y: .195847571, z: -.0265774988}
+      rotation: {x: -.0759136677, y: -.116345093, z: .195340887, w: .970846474}
+      scale: {x: 1, y: 1.00000024, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-shoulder.R
+      position: {x: .128414497, y: 1.56483114, z: .648774803}
+      rotation: {x: -.573556125, y: -.417671502, z: -.481689602, w: .514353037}
+      scale: {x: 1, y: 1, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-shoulder.R
+      position: {x: -1.13621354e-07, y: 6.33299351e-08, z: 4.89875674e-07}
+      rotation: {x: -4.19095159e-09, y: 3.77185643e-08, z: 4.19095159e-09, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-scapula.R
+      position: {x: -.419709206, y: .820816934, z: .09176597}
+      rotation: {x: -.291174382, y: -.351059139, z: .858026803, w: .236146152}
+      scale: {x: 1, y: 1.00000048, z: 1.00000048}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shoulder_fk_ns_intr.R
+      position: {x: -6.70552254e-08, y: 1.03745234, z: 5.6065619e-07}
+      rotation: {x: -4.83822078e-07, y: -3.74391675e-07, z: 9.45292413e-08, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shoulder_ik_ns_intr.R
+      position: {x: -6.70552254e-08, y: 1.03745234, z: 5.6065619e-07}
+      rotation: {x: -4.83822078e-07, y: -3.74391675e-07, z: 9.45292413e-08, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shoulder_rh_ns_intr.R
+      position: {x: -6.70552254e-08, y: 1.03745234, z: 5.6065619e-07}
+      rotation: {x: -4.83822078e-07, y: -3.74391675e-07, z: 9.45292413e-08, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-upper_arm.R
+      position: {x: -6.70552254e-08, y: 1.03745234, z: 5.6065619e-07}
+      rotation: {x: .0932246596, y: .72136265, z: -.0338292122, w: .685420156}
+      scale: {x: 1.00000024, y: 1.00000024, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-upper_arm.02.R
+      position: {x: 2.76602805e-07, y: .66335845, z: -2.23517418e-08}
+      rotation: {x: 2.56113664e-09, y: -1.02445469e-07, z: -1.8189894e-09, w: 1}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-upper_arm_smth.02.R
+      position: {x: -2.38418579e-07, y: .66335845, z: 2.98023224e-08}
+      rotation: {x: .394462883, y: 3.21788116e-06, z: 5.09787151e-06, w: .918911874}
+      scale: {x: 1, y: 1, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-forearm.junc.R
+      position: {x: -1.35041773e-07, y: 1.32671726, z: 7.4505806e-09}
+      rotation: {x: .394462734, y: 2.91686956e-06, z: 4.89052945e-06, w: .918911934}
+      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-forearm.R
+      position: {x: -1.35041773e-07, y: 1.32671726, z: 7.4505806e-09}
+      rotation: {x: .0258835927, y: -.00900583155, z: .0209867489, w: .999404132}
+      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-forearm.02.R
+      position: {x: 1.04308128e-07, y: .652178168, z: 4.17232513e-07}
+      rotation: {x: 5.55710145e-08, y: .675453544, z: -1.86920616e-07, w: .737402558}
+      scale: {x: .99999994, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-forearm.01.R
+      position: {x: 2.17929482e-07, y: 5.58793545e-08, z: 2.34693289e-07}
+      rotation: {x: 1.1920929e-07, y: 6.14672899e-07, z: 1.76951289e-07, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-forearm_smth.01.R
+      position: {x: -7.91158527e-06, y: -.456920564, z: .480904132}
+      rotation: {x: -.394462824, y: -3.28375882e-06, z: -5.04782929e-06, w: .918911934}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-forearm.01.R
+      position: {x: 1.03376806e-07, y: .663358033, z: 2.23517418e-08}
+      rotation: {x: .394462883, y: 3.24828625e-06, z: 5.11033431e-06, w: .918911874}
+      scale: {x: 1, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-hand.R
+      position: {x: 3.35276127e-07, y: 1.30435586, z: 2.98023224e-07}
+      rotation: {x: .123158351, y: .668557823, z: -.0717342421, w: .729874432}
+      scale: {x: 1.00000012, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-hand.R
+      position: {x: 1.1920929e-07, y: 2.38418579e-07, z: -1.08033419e-07}
+      rotation: {x: 1.86264515e-09, y: 9.31322575e-08, z: -1.86264515e-09, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-palm.01.R
+      position: {x: -.0554097295, y: .171733201, z: -.000746920705}
+      rotation: {x: -.0667792335, y: .188549474, z: .088656798, w: .975771308}
+      scale: {x: .999999762, y: .99999994, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_index.01.R.01
+      position: {x: 3.57627869e-07, y: .396961659, z: 2.5331974e-07}
+      rotation: {x: .0933000073, y: .00771675911, z: -.00699473033, w: .995583594}
+      scale: {x: .999999881, y: .999999821, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-palm.01.R
+      position: {x: 1.78813934e-07, y: -2.98023224e-08, z: 2.5331974e-07}
+      rotation: {x: -3.72529074e-09, y: -2.23517432e-07, z: -1.4901163e-08, w: 1}
+      scale: {x: 1, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-thumb.01.R.01
+      position: {x: -.0622682571, y: .0516615212, z: -.0217695683}
+      rotation: {x: .155512974, y: .348604381, z: .436477125, w: .814725995}
+      scale: {x: .999999821, y: .999999881, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|f_index.R
+      position: {x: 3.57627869e-07, y: .396961659, z: 2.5331974e-07}
+      rotation: {x: .0932995528, y: .00771942222, z: -.00699517922, w: .995583594}
+      scale: {x: .999999821, y: .999999881, z: .999999762}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_index.01.R
+      position: {x: 3.57627869e-07, y: .396961659, z: 2.5331974e-07}
+      rotation: {x: .0933000073, y: .00771675911, z: -.00699473033, w: .995583594}
+      scale: {x: .999999881, y: .999999821, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|f_index.01.R
+      position: {x: 3.57627869e-07, y: 2.98023224e-08, z: 1.78813934e-07}
+      rotation: {x: -.100721754, y: 3.31127194e-06, z: -.144289464, w: .9843961}
+      scale: {x: 1, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_index.02.R
+      position: {x: 4.76837158e-07, y: .144878298, z: 1.1920929e-07}
+      rotation: {x: .100213565, y: .00401266897, z: -.0016450939, w: .994956493}
+      scale: {x: 1, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|f_index.02.R
+      position: {x: -1.1920929e-07, y: -1.9185245e-07, z: -4.17232513e-07}
+      rotation: {x: -6.38887229e-07, y: 2.45496608e-06, z: -6.25150221e-07, w: 1}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_index.03.R
+      position: {x: 1.1920929e-07, y: .130089626, z: 2.98023224e-07}
+      rotation: {x: .0162486676, y: -.00764606148, z: .00394979818, w: .999830961}
+      scale: {x: 1.00000012, y: 1.00000036, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|f_index.03.R
+      position: {x: -5.96046448e-08, y: -8.19563866e-08, z: 5.96046448e-08}
+      rotation: {x: -2.09547535e-09, y: 7.45057971e-09, z: -3.25962946e-09, w: 1}
+      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thumb.01.R
+      position: {x: -.0622682571, y: .0516615212, z: -.0217695683}
+      rotation: {x: .155512735, y: .348604321, z: .436476916, w: .814726174}
+      scale: {x: 1, y: 1.00000024, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|thumb.01.R
+      position: {x: -0, y: -5.96046448e-08, z: -4.17232513e-07}
+      rotation: {x: -1.13248825e-06, y: -2.8684733e-06, z: 5.19677997e-07, w: 1}
+      scale: {x: 1.00000012, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thumb.02.R
+      position: {x: 2.38418579e-07, y: .171372294, z: -1.49011612e-07}
+      rotation: {x: .0430663638, y: .138381928, z: -.189659938, w: .971094668}
+      scale: {x: .99999994, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|thumb.02.R
+      position: {x: -3.57627869e-07, y: -5.96046448e-08, z: -2.38418579e-07}
+      rotation: {x: 3.12924357e-07, y: 1.39139581e-06, z: -3.65078392e-07, w: 1}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thumb.03.R
+      position: {x: -5.96046448e-08, y: .206395924, z: 0}
+      rotation: {x: .0363712162, y: -.00975141674, z: .00351295341, w: .999284625}
+      scale: {x: .999999762, y: .999999821, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|thumb.03.R
+      position: {x: 3.57627869e-07, y: 1.1920929e-07, z: 1.78813934e-07}
+      rotation: {x: 1.27777457e-06, y: 3.42726707e-07, z: 1.10268593e-06, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_index.01.R
+      position: {x: 3.57627869e-07, y: .396961659, z: 2.5331974e-07}
+      rotation: {x: .0932995901, y: .00771946041, z: -.00699527003, w: .995583594}
+      scale: {x: 1, y: .999999762, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_index.01.R.02
+      position: {x: -0, y: .0724391639, z: -2.98023224e-07}
+      rotation: {x: -4.47034836e-07, y: 2.63378024e-06, z: -8.15838575e-07, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_index.01.R.tip
+      position: {x: 2.38418579e-07, y: .144878358, z: -2.98023224e-07}
+      rotation: {x: -.581148505, y: .653827071, z: .483591825, w: -.03025789}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_index.02.R
+      position: {x: 2.38418579e-07, y: .144878358, z: -2.98023224e-07}
+      rotation: {x: .100212954, y: .00401516585, z: -.00164553046, w: .994956553}
+      scale: {x: .999999821, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_index.02.R
+      position: {x: 5.96046448e-08, y: -4.3772161e-07, z: -4.76837158e-07}
+      rotation: {x: -4.38885763e-08, y: 1.11758709e-08, z: 6.98491931e-10, w: 1}
+      scale: {x: .99999994, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_index.03.R
+      position: {x: 5.96046448e-08, y: .130089343, z: -4.17232513e-07}
+      rotation: {x: .0162486471, y: -.00764602888, z: .00394979864, w: .999830961}
+      scale: {x: .99999994, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_index.03.R
+      position: {x: -5.96046448e-08, y: 2.23517418e-08, z: 3.57627869e-07}
+      rotation: {x: -1.00117177e-08, y: 4.34269822e-24, z: 1.35041782e-08, w: 1}
+      scale: {x: .99999994, y: 1, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-thumb.01.R
+      position: {x: -.0622682571, y: .0516615212, z: -.0217695683}
+      rotation: {x: .155513212, y: .348601401, z: .436477274, w: .814727187}
+      scale: {x: .999999881, y: 1, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-thumb.01.R.02
+      position: {x: -0, y: .0856858492, z: 1.1920929e-07}
+      rotation: {x: -1.38394546e-06, y: -2.93646053e-06, z: 2.60770356e-08, w: 1}
+      scale: {x: .999999881, y: .999999881, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thumb.01.R.tip
+      position: {x: 1.1920929e-07, y: .171372056, z: 5.96046448e-08}
+      rotation: {x: .0995556638, y: -.292744607, z: .407608569, w: .859211564}
+      scale: {x: .999999881, y: .99999994, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-thumb.02.R
+      position: {x: 1.1920929e-07, y: .171372056, z: 5.96046448e-08}
+      rotation: {x: .043066889, y: .138383269, z: -.189660281, w: .97109437}
+      scale: {x: .999999821, y: .999999821, z: .999999642}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-thumb.02.R
+      position: {x: 1.1920929e-07, y: -4.76837158e-07, z: 4.47034836e-07}
+      rotation: {x: -2.42143905e-08, y: -7.45058149e-09, z: -1.67638081e-08, w: 1}
+      scale: {x: .99999994, y: .999999881, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-thumb.03.R
+      position: {x: 2.98023224e-07, y: .206395447, z: 7.15255737e-07}
+      rotation: {x: .0363724083, y: -.00975111127, z: .00351409824, w: .999284565}
+      scale: {x: .999999881, y: .999999881, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-thumb.03.R
+      position: {x: 5.96046448e-08, y: 5.96046448e-08, z: 1.01327896e-06}
+      rotation: {x: -5.58793634e-09, y: 1.4901163e-08, z: 1.86264533e-08, w: 1}
+      scale: {x: .99999994, y: .99999994, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|thumb.R
+      position: {x: -.0622682571, y: .0516615212, z: -.0217695683}
+      rotation: {x: .155513138, y: .348601341, z: .436477214, w: .814727187}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-palm.02.R
+      position: {x: .00589239597, y: .181399345, z: -.0207323208}
+      rotation: {x: -.0451823846, y: -.0100393929, z: -.00044289761, w: .998928249}
+      scale: {x: .999999821, y: .999999821, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_middle.01.R.01
+      position: {x: 1.78813934e-07, y: .370677412, z: -3.50177288e-07}
+      rotation: {x: .0308237318, y: -.0141086876, z: -.0769997239, w: .996454656}
+      scale: {x: .999999881, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-palm.02.R
+      position: {x: 1.78813934e-07, y: -4.17232513e-07, z: -2.71946192e-07}
+      rotation: {x: -5.49480248e-08, y: -1.9092111e-08, z: -7.45057971e-09, w: 1}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|f_middle.R
+      position: {x: 1.78813934e-07, y: .370677412, z: -3.50177288e-07}
+      rotation: {x: .0308241509, y: -.0141098853, z: -.0769992173, w: .996454656}
+      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_middle.01.R
+      position: {x: 1.78813934e-07, y: .370677412, z: -3.50177288e-07}
+      rotation: {x: .0308237318, y: -.0141086876, z: -.0769997239, w: .996454656}
+      scale: {x: .999999881, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|f_middle.01.R
+      position: {x: 1.78813934e-07, y: 2.98023224e-07, z: -1.01048499e-07}
+      rotation: {x: -.0938760787, y: -1.46197556e-06, z: .0204018112, w: .995374858}
+      scale: {x: 1, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_middle.02.R
+      position: {x: -1.78813934e-07, y: .183280289, z: 6.33299351e-08}
+      rotation: {x: .0996583104, y: -.00291812886, z: .00584383402, w: .995000303}
+      scale: {x: .999999821, y: .999999821, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|f_middle.02.R
+      position: {x: -4.17232513e-07, y: -2.38418579e-07, z: -3.42726707e-07}
+      rotation: {x: 7.69272447e-07, y: -1.70245767e-06, z: 2.60770321e-07, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_middle.03.R
+      position: {x: 4.17232513e-07, y: .143665612, z: -1.63912773e-07}
+      rotation: {x: -.00316170789, y: .00452714879, z: -.0123375878, w: .999908686}
+      scale: {x: .99999994, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|f_middle.03.R
+      position: {x: -0, y: 2.98023224e-08, z: -2.83122063e-07}
+      rotation: {x: -7.84173665e-07, y: 1.76578783e-06, z: -2.54251063e-07, w: 1}
+      scale: {x: .999999881, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_middle.01.R
+      position: {x: 1.78813934e-07, y: .370677412, z: -3.50177288e-07}
+      rotation: {x: .0308242179, y: -.0141100185, z: -.0769993216, w: .996454656}
+      scale: {x: .99999994, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_middle.01.R.02
+      position: {x: 2.38418579e-07, y: .0916399956, z: -5.98374754e-07}
+      rotation: {x: 5.48869139e-07, y: -1.32570858e-06, z: 4.09781961e-07, w: 1}
+      scale: {x: 1, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_middle.01.R.tip
+      position: {x: 2.38418579e-07, y: .18328017, z: -5.81145287e-07}
+      rotation: {x: -.257744044, y: .580162168, z: .772608876, w: -.0074438653}
+      scale: {x: .999999881, y: .999999642, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_middle.02.R
+      position: {x: 2.38418579e-07, y: .18328017, z: -5.81145287e-07}
+      rotation: {x: .0996591151, y: -.00291987811, z: .00584392622, w: .995000184}
+      scale: {x: .99999994, y: .999999821, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_middle.02.R
+      position: {x: -0, y: -3.27825546e-07, z: -1.63912773e-07}
+      rotation: {x: 1.4901163e-08, y: 9.31322752e-09, z: 1.95577758e-08, w: 1}
+      scale: {x: .99999994, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_middle.03.R
+      position: {x: -0, y: .143665224, z: -2.08616257e-07}
+      rotation: {x: -.00316247973, y: .00452891132, z: -.0123378141, w: .999908626}
+      scale: {x: .999999821, y: .999999821, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_middle.03.R
+      position: {x: -1.1920929e-07, y: -2.68220901e-07, z: 1.49011612e-07}
+      rotation: {x: 7.45058149e-09, y: 1.30385178e-08, z: -4.19095194e-08, w: 1}
+      scale: {x: 1, y: .99999994, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-palm.03.R
+      position: {x: .0832477212, y: .186020792, z: -.0189148113}
+      rotation: {x: -.0888457671, y: .0233390462, z: -.0452109128, w: .994745076}
+      scale: {x: .999999881, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_ring.01.R.01
+      position: {x: 1.78813934e-07, y: .329645336, z: 2.75671482e-07}
+      rotation: {x: .0593989082, y: -.0313919, z: -.112674251, w: .991358101}
+      scale: {x: .999999821, y: 1, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-palm.03.R
+      position: {x: 1.78813934e-07, y: 0, z: 3.6880374e-07}
+      rotation: {x: 1.3038516e-08, y: -3.0733645e-08, z: 1.49011612e-08, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|f_ring.R
+      position: {x: 1.78813934e-07, y: .329645336, z: 2.75671482e-07}
+      rotation: {x: .0593999475, y: -.0313944556, z: -.112674952, w: .991357863}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_ring.01.R
+      position: {x: 1.78813934e-07, y: .329645336, z: 2.75671482e-07}
+      rotation: {x: .0593989082, y: -.0313919, z: -.112674251, w: .991358101}
+      scale: {x: .999999821, y: 1, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|f_ring.01.R
+      position: {x: 4.76837158e-07, y: -1.1920929e-07, z: 4.09781933e-08}
+      rotation: {x: 1.32969581e-06, y: -2.47964635e-06, z: -5.569309e-07, w: 1}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_ring.02.R
+      position: {x: 5.96046448e-08, y: .161791027, z: 1.11758709e-07}
+      rotation: {x: .108804651, y: -.0041446113, z: .0126783131, w: .993973672}
+      scale: {x: .999999881, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|f_ring.02.R
+      position: {x: -3.57627869e-07, y: 2.38418579e-07, z: -1.04308128e-07}
+      rotation: {x: -1.35600567e-06, y: 2.44751573e-06, z: 6.51925802e-07, w: 1}
+      scale: {x: 1, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_ring.03.R
+      position: {x: 5.96046448e-07, y: .136255801, z: 4.32133675e-07}
+      rotation: {x: -.00840654038, y: .00505241938, z: -.0257207826, w: .999621093}
+      scale: {x: 1, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|f_ring.03.R
+      position: {x: 5.96046448e-08, y: 3.57627869e-07, z: -1.1920929e-07}
+      rotation: {x: 1.35879975e-06, y: -2.22586095e-06, z: -5.79282641e-07, w: 1}
+      scale: {x: 1, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_ring.01.R
+      position: {x: 1.78813934e-07, y: .329645336, z: 2.75671482e-07}
+      rotation: {x: .0506146662, y: -.0348544642, z: -.0413806625, w: .997251749}
+      scale: {x: .99999994, y: .99999994, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_ring.01.R.02
+      position: {x: -2.98023224e-07, y: .0808953643, z: -2.51457095e-07}
+      rotation: {x: 1.36531901e-06, y: -2.5094489e-06, z: -5.14090118e-07, w: 1}
+      scale: {x: .999999881, y: .999999881, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_ring.01.R.tip
+      position: {x: -1.78813934e-07, y: .161791444, z: 8.00937414e-08}
+      rotation: {x: -.278648555, y: .542448044, z: .791560173, w: -.0392120555}
+      scale: {x: .999999881, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_ring.02.R
+      position: {x: -1.78813934e-07, y: .161791444, z: 8.00937414e-08}
+      rotation: {x: .0378648639, y: -.00416423799, z: .00441336259, w: .999264479}
+      scale: {x: .999999821, y: .999999881, z: .999999702}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_ring.02.R
+      position: {x: 2.98023224e-07, y: -5.96046448e-07, z: 8.94069672e-08}
+      rotation: {x: -5.58793545e-09, y: -1.86264515e-09, z: -2.04890966e-08, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_ring.03.R
+      position: {x: 2.38418579e-07, y: .136254966, z: 1.1920929e-07}
+      rotation: {x: -.00840526912, y: .00505016651, z: -.0257213451, w: .999621093}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_ring.03.R
+      position: {x: 5.96046448e-08, y: -1.78813934e-07, z: 1.49011612e-08}
+      rotation: {x: -6.51925891e-09, y: -5.58793634e-09, z: 1.67638099e-08, w: 1}
+      scale: {x: .99999994, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-palm.04.R
+      position: {x: .125700891, y: .196452618, z: -.0223556273}
+      rotation: {x: -.0878337249, y: .115057498, z: -.172395378, w: .974334061}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_pinky.01.R.01
+      position: {x: -0, y: .279019356, z: -1.49011612e-07}
+      rotation: {x: .161633402, y: .000356698816, z: -.00467709498, w: .986839712}
+      scale: {x: 1.00000012, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-palm.04.R
+      position: {x: 5.96046448e-08, y: 4.76837158e-07, z: -1.34110451e-07}
+      rotation: {x: 4.47034871e-08, y: -1.4901163e-08, z: 1.77635684e-15, w: 1}
+      scale: {x: 1, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|f_pinky.R
+      position: {x: -0, y: .279019356, z: -1.49011612e-07}
+      rotation: {x: .161634311, y: .000355322874, z: -.00467727147, w: .986839592}
+      scale: {x: 1.00000012, y: .999999762, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_pinky.01.R
+      position: {x: -0, y: .279019356, z: -1.49011612e-07}
+      rotation: {x: .161633402, y: .000356698816, z: -.00467709498, w: .986839712}
+      scale: {x: 1.00000012, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|f_pinky.01.R
+      position: {x: -1.1920929e-07, y: -2.98023224e-07, z: 4.47034836e-07}
+      rotation: {x: -.189830974, y: -1.98812677e-06, z: .088390857, w: .977829874}
+      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_pinky.02.R
+      position: {x: -1.1920929e-07, y: .123673439, z: -8.94069672e-08}
+      rotation: {x: .0675310418, y: -.00439560646, z: .00663637137, w: .997685432}
+      scale: {x: 1, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|f_pinky.02.R
+      position: {x: -0, y: 1.1920929e-07, z: -1.78813934e-07}
+      rotation: {x: 2.42143898e-07, y: -5.58793545e-09, z: -6.40749931e-07, w: 1}
+      scale: {x: 1, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_pinky.03.R
+      position: {x: -0, y: .0817522407, z: -4.47034836e-07}
+      rotation: {x: .0137048308, y: .00694276392, z: -.0123105794, w: .999806225}
+      scale: {x: .99999994, y: .99999994, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|f_pinky.03.R
+      position: {x: -1.1920929e-07, y: 8.94069672e-08, z: 6.2584877e-07}
+      rotation: {x: -1.0319053e-06, y: 1.71549607e-06, z: -4.67523904e-07, w: 1}
+      scale: {x: 1, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_pinky.01.R
+      position: {x: -0, y: .279019356, z: -1.49011612e-07}
+      rotation: {x: .161634326, y: .000355273747, z: -.00467731664, w: .986839592}
+      scale: {x: 1.00000012, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_pinky.01.R.02
+      position: {x: -1.1920929e-07, y: .0618364811, z: -9.53674316e-07}
+      rotation: {x: 9.49949083e-07, y: -1.47148967e-06, z: -2.04890966e-08, w: 1}
+      scale: {x: 1, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-f_pinky.01.R.tip
+      position: {x: -2.38418579e-07, y: .123673499, z: -8.64267349e-07}
+      rotation: {x: -.554955423, y: .570708871, z: .578722656, w: -.177189529}
+      scale: {x: .999999881, y: .999999762, z: .999999762}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_pinky.02.R
+      position: {x: -2.38418579e-07, y: .123673499, z: -8.64267349e-07}
+      rotation: {x: .0675312951, y: -.00439557666, z: .00663572224, w: .997685432}
+      scale: {x: .999999881, y: .99999994, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_pinky.02.R
+      position: {x: -0, y: 5.96046448e-07, z: 1.1920929e-07}
+      rotation: {x: -1.11758727e-08, y: 1.11758718e-08, z: -1.67638063e-08, w: 1}
+      scale: {x: 1, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-f_pinky.03.R
+      position: {x: -0, y: .0817522705, z: 1.78813934e-07}
+      rotation: {x: .0137038548, y: .00694449153, z: -.0123110497, w: .999806225}
+      scale: {x: .99999994, y: .999999821, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-f_pinky.03.R
+      position: {x: -1.1920929e-07, y: -4.76837158e-07, z: -1.1920929e-07}
+      rotation: {x: -7.4505806e-09, y: -1.11758727e-08, z: -2.98023224e-08, w: 1}
+      scale: {x: .99999994, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|palm.R
+      position: {x: .125700891, y: .196452618, z: -.0223556273}
+      rotation: {x: -.0878337249, y: .115057498, z: -.172395378, w: .974334061}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|shoulder.L
+      position: {x: -.128414497, y: 1.56483114, z: .648774803}
+      rotation: {x: -.573556125, y: .417671502, z: .481689602, w: .514353037}
+      scale: {x: 1, y: 1, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|shoulder.R
+      position: {x: .128414497, y: 1.56483114, z: .648774803}
+      rotation: {x: -.573556125, y: -.417671502, z: -.481689602, w: .514353037}
+      scale: {x: 1, y: 1, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-thigh.L
+      position: {x: -.558290005, y: -.0648466647, z: -.0647648498}
+      rotation: {x: .97791779, y: -.0290956944, z: -.200552955, w: -.0510760993}
+      scale: {x: 1.00000274, y: 1, z: 1.00000358}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-thigh.02.L
+      position: {x: -1.28522515e-07, y: 1.02952337, z: 1.49011612e-08}
+      rotation: {x: -3.7252903e-09, y: 2.35741027e-08, z: -1.62981451e-08, w: 1}
+      scale: {x: 1, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thigh_smth.02.L
+      position: {x: -6.33299351e-08, y: 1.02952456, z: -3.35276127e-08}
+      rotation: {x: .0544726476, y: -1.62057938e-06, z: 1.10012854e-06, w: .998515308}
+      scale: {x: .99999994, y: .999999821, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shin.junc.L
+      position: {x: -1.00582838e-07, y: 2.05904818, z: 2.23517418e-08}
+      rotation: {x: .0544726476, y: -1.60670504e-06, z: 1.07751021e-06, w: .998515248}
+      scale: {x: 1, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-shin.L
+      position: {x: -1.00582838e-07, y: 2.05904818, z: 2.23517418e-08}
+      rotation: {x: .0544726476, y: -1.59149045e-06, z: 1.07284677e-06, w: .998515308}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-shin.02.L
+      position: {x: -4.09781933e-08, y: 1.06444144, z: 3.7252903e-08}
+      rotation: {x: 3.80941545e-09, y: .208996087, z: -1.88536315e-08, w: .977916479}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shin.01.L
+      position: {x: -1.49011612e-08, y: -1.16880983e-07, z: 4.47034836e-08}
+      rotation: {x: 4.65661287e-09, y: -1.03609628e-08, z: 1.83936191e-08, w: 1}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shin_smth.01.L
+      position: {x: -2.12527812e-06, y: -1.02341533, z: .111995339}
+      rotation: {x: -.0544726662, y: 1.62728281e-06, z: -1.10129429e-06, w: .998515248}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-shin.01.L
+      position: {x: 1.00582838e-07, y: 1.02952409, z: -2.98023224e-08}
+      rotation: {x: .0544726476, y: -1.63614391e-06, z: 1.10315989e-06, w: .998515308}
+      scale: {x: 1, y: .999999821, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-soleus.L
+      position: {x: .04248292, y: .234948218, z: .169737414}
+      rotation: {x: .0126344562, y: .968010128, z: .00741123315, w: -.250483245}
+      scale: {x: .99999994, y: 1.00000024, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-foot.L
+      position: {x: 3.7252903e-08, y: 2.12888336, z: 3.16649675e-08}
+      rotation: {x: -.530296385, y: .176399231, z: .0800002739, w: .82539022}
+      scale: {x: 1.00000024, y: 1.00000024, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-foot.L
+      position: {x: -3.08500603e-09, y: -2.38418579e-07, z: 5.21540642e-08}
+      rotation: {x: -2.35449988e-08, y: 1.7927961e-07, z: -3.49246021e-10, w: 1}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-sole.L
+      position: {x: 4.14438546e-08, y: .700792432, z: 7.4505806e-09}
+      rotation: {x: .970006168, y: -.00294801127, z: -.0323054604, w: .240906149}
+      scale: {x: .999999821, y: .999999821, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-toe.L.socket2
+      position: {x: 3.3993274e-08, y: .700792193, z: 3.35276127e-08}
+      rotation: {x: -.851289988, y: .0349783152, z: .00449505635, w: .523509026}
+      scale: {x: 1, y: .99999994, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-toe.L
+      position: {x: 3.3993274e-08, y: .700792193, z: 3.35276127e-08}
+      rotation: {x: -.231466189, y: 5.67592622e-07, z: -5.27475606e-07, w: .972842991}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-toe.L
+      position: {x: -3.42261046e-08, y: -9.34396098e-08, z: -9.89530236e-09}
+      rotation: {x: 5.13011942e-12, y: -8.43556336e-09, z: -3.27382177e-10, w: 1}
+      scale: {x: .99999994, y: .999999821, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-heel.L
+      position: {x: 3.7252903e-08, y: 2.12888336, z: 3.16649675e-08}
+      rotation: {x: .112750828, y: .920508385, z: .343265891, w: -.148728222}
+      scale: {x: 1.00000012, y: 1.00000024, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-heel.02.L
+      position: {x: -.150696769, y: .0522492677, z: .415301383}
+      rotation: {x: .638527334, y: .661896229, z: -.27764672, w: .277648211}
+      scale: {x: .999999762, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-thigh.R
+      position: {x: .558290005, y: -.0648466647, z: -.0647648498}
+      rotation: {x: .977917731, y: .0290959813, z: .20055306, w: -.0510766022}
+      scale: {x: 1.00000274, y: 1, z: 1.00000358}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-thigh.02.R
+      position: {x: 1.28522515e-07, y: 1.02952337, z: 1.49011612e-08}
+      rotation: {x: -3.7252903e-09, y: -2.35741027e-08, z: 1.62981451e-08, w: 1}
+      scale: {x: 1, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-thigh_smth.02.R
+      position: {x: 6.33299351e-08, y: 1.02952456, z: -3.35276127e-08}
+      rotation: {x: .0544726476, y: 1.62057938e-06, z: -1.10012854e-06, w: .998515308}
+      scale: {x: .99999994, y: .999999821, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shin.junc.R
+      position: {x: 1.00582838e-07, y: 2.05904818, z: 2.23517418e-08}
+      rotation: {x: .0544726476, y: 1.60670504e-06, z: -1.07751021e-06, w: .998515248}
+      scale: {x: 1, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-shin.R
+      position: {x: 1.00582838e-07, y: 2.05904818, z: 2.23517418e-08}
+      rotation: {x: .0544726476, y: 1.59149045e-06, z: -1.07284677e-06, w: .998515308}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-shin.02.R
+      position: {x: 4.09781933e-08, y: 1.06444144, z: 3.7252903e-08}
+      rotation: {x: 3.80941545e-09, y: -.208996087, z: 1.88536315e-08, w: .977916479}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shin.01.R
+      position: {x: 1.49011612e-08, y: -1.16880983e-07, z: 4.47034836e-08}
+      rotation: {x: 4.65661287e-09, y: 1.03609628e-08, z: -1.83936191e-08, w: 1}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-shin_smth.01.R
+      position: {x: 2.12527812e-06, y: -1.02341533, z: .111995339}
+      rotation: {x: -.0544726662, y: -1.62728281e-06, z: 1.10129429e-06, w: .998515248}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-shin.01.R
+      position: {x: -1.00582838e-07, y: 1.02952409, z: -2.98023224e-08}
+      rotation: {x: .0544726476, y: 1.63614391e-06, z: -1.10315989e-06, w: .998515308}
+      scale: {x: 1, y: .999999821, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-soleus.R
+      position: {x: -.04248292, y: .234948218, z: .169737414}
+      rotation: {x: -.0126344562, y: .968010128, z: .00741123315, w: .250483245}
+      scale: {x: .99999994, y: 1.00000024, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-foot.R
+      position: {x: -3.7252903e-08, y: 2.12888336, z: 3.16649675e-08}
+      rotation: {x: -.530296385, y: -.176399231, z: -.0800002739, w: .82539022}
+      scale: {x: 1.00000024, y: 1.00000024, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-foot.R
+      position: {x: 3.08500603e-09, y: -2.38418579e-07, z: 5.21540642e-08}
+      rotation: {x: -2.35449988e-08, y: -1.7927961e-07, z: 3.49246021e-10, w: 1}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-sole.R
+      position: {x: -4.14438546e-08, y: .700792432, z: 7.4505806e-09}
+      rotation: {x: .970006168, y: .00294801127, z: .0323054604, w: .240906149}
+      scale: {x: .999999821, y: .999999821, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-toe.R.socket2
+      position: {x: -3.3993274e-08, y: .700792193, z: 3.35276127e-08}
+      rotation: {x: -.851289988, y: -.0349783152, z: -.00449505635, w: .523509026}
+      scale: {x: 1, y: .99999994, z: 1.00000012}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-toe.R
+      position: {x: -3.3993274e-08, y: .700792193, z: 3.35276127e-08}
+      rotation: {x: -.231466189, y: -5.67592622e-07, z: 5.27475606e-07, w: .972842991}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|DEF-toe.R
+      position: {x: 3.42261046e-08, y: -9.34396098e-08, z: -9.89530236e-09}
+      rotation: {x: 5.13011942e-12, y: 8.43556336e-09, z: 3.27382177e-10, w: 1}
+      scale: {x: .99999994, y: .999999821, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-heel.R
+      position: {x: -3.7252903e-08, y: 2.12888336, z: 3.16649675e-08}
+      rotation: {x: -.112751767, y: .920508802, z: .343265563, w: .148725659}
+      scale: {x: 1, y: 1.00000036, z: 1.00000024}
+      transformModified: 1
+    - name: Thug_Base.001|ORG-heel.02.R
+      position: {x: .150694758, y: .0522492826, z: .415302217}
+      rotation: {x: -.638526559, y: .661897004, z: -.27764836, w: -.277646512}
+      scale: {x: 1.00000012, y: 1.00000036, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|torso
+      position: {x: -0, y: .0766665041, z: 5.30705023}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|chest
+      position: {x: -0, y: -5.96046448e-08, z: 0}
+      rotation: {x: .655116141, y: 5.76619929e-17, z: 7.54079688e-10, w: .755528271}
+      scale: {x: 1, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-sub_chest
+      position: {x: -1.89443385e-18, y: 4.65661287e-09, z: 1.49011612e-08}
+      rotation: {x: -.655116141, y: 8.84542478e-17, z: -7.54079799e-10, w: .755528271}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|hips
+      position: {x: -0, y: -5.96046448e-08, z: 0}
+      rotation: {x: .647349358, y: -8.70023605e-18, z: -1.05182932e-10, w: .762193501}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hips.flex_s
+      position: {x: -5.20417043e-18, y: -.726056755, z: 8.56816769e-08}
+      rotation: {x: -.647349119, y: -9.26968042e-18, z: 1.05182918e-10, w: .76219362}
+      scale: {x: 1, y: 1, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hips.flex
+      position: {x: 4.31741379e-18, y: -7.58291208e-10, z: 1.64417084e-08}
+      rotation: {x: .647349358, y: -1.68871222e-17, z: -1.05182953e-10, w: .762193501}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-hips.reverse
+      position: {x: -7.02563008e-17, y: .72605598, z: -8.19563866e-08}
+      rotation: {x: 1, y: -2.25480171e-15, z: 4.37113883e-08, w: 4.37113883e-08}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-spine.flex_s
+      position: {x: -7.02563008e-17, y: .72605598, z: -8.19563866e-08}
+      rotation: {x: -.647349238, y: 9.12732677e-18, z: 1.05182932e-10, w: .762193561}
+      scale: {x: 1, y: .999999881, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-spine.flex
+      position: {x: -0, y: 1.57581326e-09, z: -3.08452321e-08}
+      rotation: {x: .60232538, y: 3.17681262e-17, z: 2.39708521e-17, w: .798250675}
+      scale: {x: 1, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-spine-1.flex_s
+      position: {x: 1.46824559e-23, y: .134981215, z: -2.98023224e-08}
+      rotation: {x: -.60232538, y: -9.40981226e-18, z: 7.10023548e-18, w: .798250675}
+      scale: {x: 1, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-spine-1.flex
+      position: {x: -1.55856827e-25, y: 3.60910235e-09, z: -4.74419295e-08}
+      rotation: {x: .60236609, y: 2.58210797e-18, z: 1.94855318e-18, w: .798220038}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-chest.flex_s
+      position: {x: 8.65954704e-25, y: .135029197, z: 0}
+      rotation: {x: -.60236603, y: -7.08299301e-19, z: 5.34507206e-19, w: .798220038}
+      scale: {x: 1, y: .999999881, z: .999999881}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-chest.flex
+      position: {x: 3.53925527e-25, y: -9.86460691e-10, z: -5.84036286e-08}
+      rotation: {x: .655116141, y: 2.81433499e-16, z: 7.54079854e-10, w: .755528271}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-chest.reverse
+      position: {x: -1.64013514e-09, y: -1.26095438, z: .0879706144}
+      rotation: {x: 1, y: -1.32849293e-15, z: -4.37113883e-08, w: -7.54979013e-08}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-spine-1.reverse
+      position: {x: -1.16415502e-10, y: -.991200447, z: -.0834863856}
+      rotation: {x: 1, y: -1.40127106e-15, z: 4.37113883e-08, w: -7.54979013e-08}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-spine.reverse
+      position: {x: -1.16415502e-10, y: -.721228778, z: -.0835873783}
+      rotation: {x: 1, y: 1.31680113e-15, z: 4.37113883e-08, w: 1.94707184e-07}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-sub_hips
+      position: {x: -5.36291698e-17, y: -4.00468707e-08, z: 5.96046448e-08}
+      rotation: {x: -.647349358, y: 2.67421536e-18, z: 1.05182953e-10, w: .762193501}
+      scale: {x: 1, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-par_spine
+      position: {x: -0, y: -5.96046448e-08, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|spine
+      position: {x: -0, y: 2.23517418e-08, z: 0}
+      rotation: {x: .60232532, y: 0, z: -0, w: .798250735}
+      scale: {x: 1, y: .999999821, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-sub_spine
+      position: {x: -0, y: -1.32247806e-07, z: -5.21540642e-08}
+      rotation: {x: -.60232532, y: 0, z: -0, w: .798250735}
+      scale: {x: 1, y: .99999994, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-par_spine-1
+      position: {x: -0, y: -5.96046448e-08, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|spine-1
+      position: {x: -0, y: 3.7252903e-08, z: 0}
+      rotation: {x: .60236609, y: 0, z: -0, w: .798220038}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|MCH-sub_spine-1
+      position: {x: -0, y: -7.4505806e-09, z: 5.21540642e-08}
+      rotation: {x: -.60236609, y: 0, z: -0, w: .798220038}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|VIS-foot.ik.L
+      position: {x: -.971379995, y: -.0818715096, z: .35590449}
+      rotation: {x: .706993401, y: .0126638915, z: .0126638906, w: .706993341}
+      scale: {x: .999999821, y: 1, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|VIS-foot.ik.R
+      position: {x: .971379995, y: -.0818715096, z: .35590449}
+      rotation: {x: .706993401, y: -.0126638915, z: -.0126638906, w: .706993341}
+      scale: {x: .999999821, y: 1, z: .999999821}
+      transformModified: 1
+    - name: Thug_Base.001|VIS-hand.ik.L
+      position: {x: -2.67825508, y: -1.01718998, z: 5.43340015}
+      rotation: {x: .414560944, y: .572834492, z: .572834432, w: .414560884}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|VIS-hand.ik.R
+      position: {x: 2.67800498, y: -1.01718998, z: 5.43359995}
+      rotation: {x: -.414460719, y: .572906911, z: .572906971, w: -.414460748}
+      scale: {x: 1, y: .99999994, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|VIS-thigh_pole.ik.L
+      position: {x: -.717544973, y: -.139124036, z: 2.4688251}
+      rotation: {x: .700440526, y: -.096866481, z: -.0968664736, w: .700440466}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|VIS-thigh_pole.ik.R
+      position: {x: .717544973, y: -.139124036, z: 2.4688251}
+      rotation: {x: .700440526, y: .096866481, z: .0968664736, w: .700440466}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|VIS-upper_arm_pole.ik.L
+      position: {x: -2.0137651, y: -.0835689902, z: 6.05719995}
+      rotation: {x: -.323878288, y: .628572047, z: .628572106, w: -.323878318}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thug_Base.001|VIS-upper_arm_pole.ik.R
+      position: {x: 2.01387501, y: -.0835689902, z: 6.05700016}
+      rotation: {x: .32390976, y: .628555834, z: .628555894, w: .323909789}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  additionalBone: 0
+  userData: 

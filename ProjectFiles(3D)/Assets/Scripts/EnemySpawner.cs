@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour
 		randomLocations[4] = new Vector3(-3.0f , 0 , -3.0f);
 		randomLocations[5] = new Vector3(-0.2f , 0 , -3.0f);
 		randomLocations[6] = new Vector3(2.5f , 0 , -3.0f);
-		randomLocations[7] = new Vector3(5.5f , 0 , -3.0f);
+		randomLocations[7] = new Vector3(4.1f , 0 , -3.0f);
 		
 		StartCoroutine("EnemySpawnTimer");
 		StartCoroutine("SpawnLocationTimer");
@@ -27,7 +27,6 @@ public class EnemySpawner : MonoBehaviour
 	
 	public void EnemySpawn()
 	{
-		
 		Instantiate (enemyObj , randomLocations[i] , Quaternion.identity);
 		enemies++;
 		i++;
