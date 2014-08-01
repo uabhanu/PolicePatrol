@@ -12,14 +12,14 @@ public class EnemySpawner : MonoBehaviour
 	{	
 		i = enemies;
 		
-		randomLocations[0] = new Vector3(-3.3f , 0 , 3.0f);
-		randomLocations[1] = new Vector3(-0.1f , 0 , 3.0f);
-		randomLocations[2] = new Vector3(2.1f , 0 , 3.0f);
-		randomLocations[3] = new Vector3(4.3f , 0 , 3.0f);
-		randomLocations[4] = new Vector3(-3.0f , 0 , -3.0f);
-		randomLocations[5] = new Vector3(-0.2f , 0 , -3.0f);
-		randomLocations[6] = new Vector3(2.5f , 0 , -3.0f);
-		randomLocations[7] = new Vector3(4.1f , 0 , -3.0f);
+		randomLocations[0] = new Vector3(-32.0f , 2 , 37.0f);
+		randomLocations[1] = new Vector3(-11.0f , 2 , 37.0f);
+		randomLocations[2] = new Vector3(11.0f , 2 , 37.0f);
+		randomLocations[3] = new Vector3(31.0f , 2 , 37.0f);
+		randomLocations[4] = new Vector3(-38.0f , 2 , -24.0f);
+		randomLocations[5] = new Vector3(-13.0f , 2 , -24.0f);
+		randomLocations[6] = new Vector3(13.0f , 2 , -24.0f);
+		randomLocations[7] = new Vector3(38.0f , 2 , -24.0f);
 		
 		StartCoroutine("EnemySpawnTimer");
 		StartCoroutine("SpawnLocationTimer");

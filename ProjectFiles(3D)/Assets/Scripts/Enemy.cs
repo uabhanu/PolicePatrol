@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 	public GameObject enemySpawnerObj , iguiObj;
 	public InGameUI iguiScript;
 	public int hitpoints;
-	public NavMeshAgent brain;
+	public NavMeshAgent agent;
 	public Transform target;
 
 	public enum State
@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
 
 		if(this.gameObject != null)
 		{
-			brain = this.gameObject.GetComponent<NavMeshAgent>();
+			agent = this.gameObject.GetComponent<NavMeshAgent>();
 
 			if(transform.position.x < 0)
 			{
@@ -102,7 +102,7 @@ public class Enemy : MonoBehaviour
 
 	void Walk()
 	{
-		brain.destination = target.position;
+		agent.SetDestination(target.position);
 	}
 
 	void Update () 
