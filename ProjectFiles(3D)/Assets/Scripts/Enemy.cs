@@ -111,11 +111,11 @@ public class Enemy : MonoBehaviour
 		{
 			return;
 		}
-		Walk();
+
 		switch(currentState)
 		{
 			case State.Walk :
-				//Walk();
+				Walk();
 			break;
 
 			case State.Hit :
