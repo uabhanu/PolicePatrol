@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour 
 {
+	public Animator anim;
 	public EnemySpawner enemySpawnerScript;
 	public float speed;
 	public GameObject enemySpawnerObj , iguiObj;
@@ -33,6 +34,7 @@ public class Enemy : MonoBehaviour
 		if(this.gameObject != null)
 		{
 			agent = this.gameObject.GetComponent<NavMeshAgent>();
+			anim = this.gameObject.GetComponent<Animator>();
 
 			if(transform.position.x < 0)
 			{
@@ -42,6 +44,11 @@ public class Enemy : MonoBehaviour
 			else if(transform.position.x > 0)
 			{
 				target = GameObject.FindGameObjectWithTag("Right").transform;
+			}
+
+			if(transform.position.z > 0)
+			{
+				this.gameObject.transform.Rotate(0 , 180 , 0);
 			}
 		}
 
@@ -102,6 +109,7 @@ public class Enemy : MonoBehaviour
 
 	void Walk()
 	{
+		anim.SetInteger("AnimIndex" , 0);
 		agent.SetDestination(target.position);
 	}
 
