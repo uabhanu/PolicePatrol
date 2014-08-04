@@ -21,7 +21,11 @@ public class Player : MonoBehaviour
 	
 	void Start () 
 	{
-	
+		if(this.gameObject != null)
+		{
+			agent = this.gameObject.GetComponent<NavMeshAgent>();
+			anim = this.gameObject.GetComponent<Animator>();
+		}
 	}
 
 	public void DeductHitPoints(int val)
