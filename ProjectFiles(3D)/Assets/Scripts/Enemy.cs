@@ -4,6 +4,7 @@ using System.Collections;
 public class Enemy : MonoBehaviour 
 {
 	public Animator anim;
+	public bool collidedPlayer;
 	public EnemySpawner enemySpawnerScript;
 	public float speed;
 	public GameObject enemySpawnerObj , iguiObj , playerObj;
@@ -105,6 +106,12 @@ public class Enemy : MonoBehaviour
 			DeductHitPoints(hitpoints);
 			enemySpawnerScript.enemies--;
 		}
+
+		if(col.gameObject.tag.Equals("Player"))
+		{
+			Debug.Log("Collision with Player");
+			collidedPlayer = true;
+		}
 	}
 
 	void OnMouseDown()
@@ -123,8 +130,9 @@ public class Enemy : MonoBehaviour
 	{
 		agent.SetDestination(target.position);
 
-		if(playerScript.currentState == Player.State.Attack)
+		if(collidedPlayer && playerScript.currentState == Player.State.Attack)
 		{
+			agent.speed = 0;
 			SetState(1);
 		}
 	}
