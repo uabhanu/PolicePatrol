@@ -6,10 +6,11 @@ public class Enemy : MonoBehaviour
 	public Animator anim;
 	public EnemySpawner enemySpawnerScript;
 	public float speed;
-	public GameObject enemySpawnerObj , iguiObj;
+	public GameObject enemySpawnerObj , iguiObj , playerObj;
 	public InGameUI iguiScript;
 	public int hitpoints;
 	public NavMeshAgent agent;
+	public Player playerScript;
 	public Transform target;
 
 	public enum State
@@ -59,6 +60,13 @@ public class Enemy : MonoBehaviour
 			iguiScript = iguiObj.GetComponent<InGameUI>();
 		}
 
+		playerObj = GameObject.FindGameObjectWithTag("Player");
+
+		if(playerObj != null)
+		{
+			playerScript = playerObj.GetComponent<Player>();
+		}
+
 		SetState(0);
 	}
 
@@ -99,6 +107,12 @@ public class Enemy : MonoBehaviour
 			DeductHitPoints(hitpoints);
 			enemySpawnerScript.enemies--;
 		}
+	}
+
+	void OnMouseDown()
+	{
+		playerScript.target = this.gameObject.transform;
+		playerScript.SetState(1);
 	}
 
 	public void SetState(int newState)
