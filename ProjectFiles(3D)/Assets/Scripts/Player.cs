@@ -42,6 +42,15 @@ public class Player : MonoBehaviour
 		}	
 	}
 
+	void OnCollisionEnter(Collision col)
+	{
+		if(col.gameObject.tag.Equals("Enemy"))
+		{
+			Debug.Log("Collision with Enemy");
+			SetState(2);
+		}
+	}
+
 	public void SetState(int newState)
 	{
 		previousState = currentState;
@@ -72,7 +81,7 @@ public class Player : MonoBehaviour
 			break;
 				
 			case State.Attack :
-				
+				anim.SetInteger("AnimIndex" , 2);
 			break;
 		}
 	}

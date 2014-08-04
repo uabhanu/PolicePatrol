@@ -66,8 +66,6 @@ public class Enemy : MonoBehaviour
 		{
 			playerScript = playerObj.GetComponent<Player>();
 		}
-
-		SetState(0);
 	}
 
 	public void DeductHitPoints(int val)
@@ -123,8 +121,12 @@ public class Enemy : MonoBehaviour
 
 	void Walk()
 	{
-		anim.SetInteger("AnimIndex" , 0);
 		agent.SetDestination(target.position);
+
+		if(playerScript.currentState == Player.State.Attack)
+		{
+			SetState(1);
+		}
 	}
 
 	void Update () 
@@ -141,11 +143,11 @@ public class Enemy : MonoBehaviour
 			break;
 
 			case State.Hit :
-
+				anim.SetInteger("AnimIndex" , 1);
 			break;
 
 			case State.KO :
-
+				anim.SetInteger("AnimIndex" , 2);
 			break;
 		}
 	}
