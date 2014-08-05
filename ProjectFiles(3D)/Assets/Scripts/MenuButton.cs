@@ -4,12 +4,18 @@ using System.Collections;
 public class MenuButton : MonoBehaviour 
 {
 	public InGameUI iguiScript;
-	public GameObject iguiObj;
+	public GameObject iguiObj , selectionObj;
+	public Selection selectionScript;
 	public string buttonName , level , relativePath;
 	
 	void Start () 
 	{
+		selectionObj = GameObject.FindGameObjectWithTag("Select");
 
+		if(selectionObj != null)
+		{
+			selectionScript = selectionObj.GetComponent<Selection>();
+		}
 	}
 
 	void ButtonClick(string buttonName)
@@ -17,91 +23,201 @@ public class MenuButton : MonoBehaviour
 		switch(buttonName)
 		{
 			case "Level1" :
-				Application.LoadLevel("Level1");
+				
+				if(selectionScript.buttonSprites[0].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level1");
+				}
+
 			break;
 
 			case "Level2" :
-				Application.LoadLevel("Level2");
+
+				if(selectionScript.buttonSprites[1].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level2");
+				}
+
 			break;
 
 			case "Level3" :
-				Application.LoadLevel("Level3");
+
+				if(selectionScript.buttonSprites[2].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level3");
+				}
+
 			break;
 
 			case "Level4" :
-				Application.LoadLevel("Level4");
+
+				if(selectionScript.buttonSprites[3].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level4");
+				}
+
 			break;
 
 			case "Level5" :
-				Application.LoadLevel("Level5");
+
+				if(selectionScript.buttonSprites[4].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level5");
+				}
+
 			break;
 
 			case "Level6" :
-				Application.LoadLevel("Level6");
+
+				if(selectionScript.buttonSprites[5].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level6");
+				}
+
 			break;
 
 			case "Level7" :
-				Application.LoadLevel("Level7");
+
+				if(selectionScript.buttonSprites[6].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level7");
+				}
+
 			break;
 
 			case "Level8" :
-				Application.LoadLevel("Level8");
+
+				if(selectionScript.buttonSprites[7].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level8");
+				}
+
 			break;
 
 			case "Level9" :
-				Application.LoadLevel("Level9");
+
+				if(selectionScript.buttonSprites[8].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level9");
+				}
+
 			break;
 
 			case "Level10" :
-				Application.LoadLevel("Level10");
+
+				if(selectionScript.buttonSprites[9].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level10");
+				}
+
 			break;
 
 			case "Level11" :
-				Application.LoadLevel("Level11");
+
+				if(selectionScript.buttonSprites[10].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level11");
+				}
+
 			break;
 
 			case "Level12" :
-				Application.LoadLevel("Level12");
+
+				if(selectionScript.buttonSprites[11].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level12");
+				}
+
 			break;
 
 			case "Level13" :
-				Application.LoadLevel("Level13");
+
+				if(selectionScript.buttonSprites[12].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level13");
+				}
+
 			break;
 
 			case "Level14" :
-				Application.LoadLevel("Level14");
+
+				if(selectionScript.buttonSprites[13].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level14");
+				}
+
 			break;
 
 			case "Level15" :
-				Application.LoadLevel("Level15");
+
+				if(selectionScript.buttonSprites[14].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level15");
+				}
+
 			break;
 
 			case "Level16" :
-				Application.LoadLevel("Level16");
+
+				if(selectionScript.buttonSprites[15].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level16");
+				}
+
 			break;
 
 			case "Level17" :
-				Application.LoadLevel("Level17");
+
+				if(selectionScript.buttonSprites[16].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level17");
+				}
+
 			break;
 
 			case "Level18" :
-				Application.LoadLevel("Level18");
+
+				if(selectionScript.buttonSprites[17].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level18");
+				}
+
 			break;
 
 			case "Level19" :
-				Application.LoadLevel("Level19");
+
+				if(selectionScript.buttonSprites[18].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level19");
+				}
+
 			break;
 
 			case "Level20" :
-				Application.LoadLevel("Level20");
+
+				if(selectionScript.buttonSprites[19].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level20");
+				}
+
 			break;
 
 			case "Level21" :
-				Application.LoadLevel("Level21");
+
+				if(selectionScript.buttonSprites[20].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level21");
+				}
+
 			break;
 
 			case "Level22" :
-				Application.LoadLevel("Level22");
+
+				if(selectionScript.buttonSprites[21].guiTexture.color == Color.green)
+				{
+					Application.LoadLevel("Level22");
+				}
+
 			break;
 
 			case "Pause" :
