@@ -7,6 +7,12 @@ public class InGameUI : MonoBehaviour
 	public GUITexture[] buttonSprites;
 	public int truckLeftScoreValue , truckRightScoreValue;
 
+	void Awake()
+	{
+		QualitySettings.vSyncCount = 0;
+		Application.targetFrameRate = 30;
+	}
+
 	void Start () 
 	{
 		Inactive("QuitButton");

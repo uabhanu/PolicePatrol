@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\InGameUI.cs" />
      <Compile Include="Assets\Scripts\MenuButton.cs" />
+     <Compile Include="Assets\Scripts\Persistent.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Selection.cs" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Bump_Rim_OneLight.shader" />

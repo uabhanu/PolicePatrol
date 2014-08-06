@@ -3,7 +3,9 @@ using System.Collections;
 
 public class Selection : MonoBehaviour 
 {
+	public GameObject persistentObj , persistentPrefab;
 	public GUITexture[] buttonSprites;
+	public Persistent persistentScript;
 	
 	void Start () 
 	{
@@ -29,6 +31,12 @@ public class Selection : MonoBehaviour
 		Lock("Level20");
 		Lock("Level21");
 		Lock("Level22");
+
+		if(persistentObj == null)
+		{
+			persistentObj = Instantiate(persistentPrefab , new Vector3 (0 , 0 , 0) , Quaternion.identity) as GameObject;
+			persistentScript = persistentObj.GetComponent<Persistent>();
+		}
 	}
 
 	public void Lock(string name)
