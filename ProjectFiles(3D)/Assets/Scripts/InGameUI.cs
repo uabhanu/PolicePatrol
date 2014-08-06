@@ -3,7 +3,6 @@ using System.Collections;
 
 public class InGameUI : MonoBehaviour 
 {
-	public CircleCollider2D[] buttonColliders;
 	public GUIText truckLeftScoreLabel , truckRightScoreLabel;
 	public GUITexture[] buttonSprites;
 	public int truckLeftScoreValue , truckRightScoreValue;
@@ -20,17 +19,14 @@ public class InGameUI : MonoBehaviour
 		{
 			case "PauseButton" :
 				buttonSprites[0].gameObject.SetActive(true);
-				buttonColliders[0].gameObject.SetActive(true);
 			break;
 
 			case "QuitButton" :
 				buttonSprites[1].gameObject.SetActive(true);
-				buttonColliders[1].gameObject.SetActive(true);
 			break;
 
 			case "ResumeButton" :
 				buttonSprites[2].gameObject.SetActive(true);
-				buttonColliders[2].gameObject.SetActive(true);
 			break;
 		}
 	}
@@ -41,17 +37,14 @@ public class InGameUI : MonoBehaviour
 		{
 			case "PauseButton" :
 				buttonSprites[0].gameObject.SetActive(false);
-				buttonColliders[0].gameObject.SetActive(false);
 			break;
 
 			case "QuitButton" :
 				buttonSprites[1].gameObject.SetActive(false);
-				buttonColliders[1].gameObject.SetActive(false);
 			break;
 			
 			case "ResumeButton" :
 				buttonSprites[2].gameObject.SetActive(false);
-				buttonColliders[2].gameObject.SetActive(false);
 			break;
 		}
 	}
