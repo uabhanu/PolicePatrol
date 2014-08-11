@@ -70,6 +70,14 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
+	public void Death()
+	{
+		if(this.gameObject != null)
+		{
+			Destroy (this.gameObject);
+		}
+	}
+
 	public void DeductHitPoints(int val)
 	{
 		if(hitpoints > 0)
@@ -80,7 +88,7 @@ public class Enemy : MonoBehaviour
 		if (hitpoints <= 0)
 		{
 			//Debug.Log("Enemy Died");
-			Destroy(this.gameObject);
+			SetState(2);
 			playerScript.SetState(0);
 		}	
 	}
@@ -94,7 +102,7 @@ public class Enemy : MonoBehaviour
 				iguiScript.truckLeftScoreValue++;
 			}
 			
-			DeductHitPoints(hitpoints);
+			Death();
 			enemySpawnerScript.enemies--;
 		}
 		
@@ -105,7 +113,7 @@ public class Enemy : MonoBehaviour
 				iguiScript.truckRightScoreValue++;
 			}
 			
-			DeductHitPoints(hitpoints);
+			Death();
 			enemySpawnerScript.enemies--;
 		}
 

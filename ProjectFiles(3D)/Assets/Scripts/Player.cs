@@ -88,7 +88,7 @@ public class Player : MonoBehaviour
 		switch(currentState)
 		{
 			case State.Idle :
-				anim.SetInteger("AnimIndex" , 1);
+				anim.SetInteger("AnimIndex" , 0);
 			break;
 				
 			case State.Run :
