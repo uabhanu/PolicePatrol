@@ -4,8 +4,10 @@ using System.Collections;
 public class Player : MonoBehaviour 
 {
 	public Animator anim;
+	public Enemy enemyScript;
 	public float speed;
-	public int hitpoints;
+	public GameObject enemyObj;
+	public int attack , hitpoints;
 	public NavMeshAgent agent;
 	public Transform target;
 
@@ -25,6 +27,19 @@ public class Player : MonoBehaviour
 		{
 			agent = this.gameObject.GetComponent<NavMeshAgent>();
 			anim = this.gameObject.GetComponent<Animator>();
+		}
+	}
+
+	public void Attack()
+	{
+		if(enemyObj != null)
+		{
+			enemyScript.DeductHitPoints(attack);
+
+			if(enemyScript.hitpoints == 0)
+			{
+				SetState(0);
+			}
 		}
 	}
 
@@ -73,7 +88,7 @@ public class Player : MonoBehaviour
 		switch(currentState)
 		{
 			case State.Idle :
-
+				anim.SetInteger("AnimIndex" , 1);
 			break;
 				
 			case State.Run :

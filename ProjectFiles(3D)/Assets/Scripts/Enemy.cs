@@ -123,6 +123,13 @@ public class Enemy : MonoBehaviour
 
 		if(playerScript.currentState != Player.State.Attack)
 		{
+			playerScript.enemyObj = this.gameObject;
+
+			if(playerScript.enemyObj != null)
+			{
+				playerScript.enemyScript = playerScript.enemyObj.GetComponent<Enemy>();
+			}
+
 			playerScript.target = this.gameObject.transform;
 			playerScript.SetState(1);
 		}
