@@ -81,6 +81,7 @@ public class Enemy : MonoBehaviour
 		{
 			//Debug.Log("Enemy Died");
 			Destroy(this.gameObject);
+			playerScript.SetState(0);
 		}	
 	}
 
@@ -151,7 +152,10 @@ public class Enemy : MonoBehaviour
 
 	public void Sweat()
 	{
-		sweatParticles.Play();
+		if(sweatObj != null)
+		{
+			sweatParticles.Play();
+		}
 	}
 
 	void Walk()
