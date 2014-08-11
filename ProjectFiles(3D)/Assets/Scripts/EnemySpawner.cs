@@ -4,6 +4,7 @@ using System.Collections;
 public class EnemySpawner : MonoBehaviour 
 {
 	//[HideInInspector]
+	public bool firstEnemy;
 	public GameObject enemyObj;
 	public int enemies , i , maxEnemies;
 	public Vector3[] randomLocations;
@@ -38,6 +39,16 @@ public class EnemySpawner : MonoBehaviour
 		{
 			yield return new WaitForSeconds(4);
 			EnemySpawn();
+
+			yield return new WaitForSeconds(1);
+
+			if(!firstEnemy)
+			{
+				Debug.Log("1st enemy spawned");
+				Time.timeScale = 0;
+				firstEnemy = true;
+			}
+
 			StartCoroutine("EnemySpawnTimer");
 		}
 	}

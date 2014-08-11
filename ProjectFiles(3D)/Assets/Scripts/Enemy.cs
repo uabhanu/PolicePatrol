@@ -119,6 +119,8 @@ public class Enemy : MonoBehaviour
 
 	void OnMouseDown()
 	{
+		Time.timeScale = 1;
+
 		if(playerScript.currentState != Player.State.Attack)
 		{
 			playerScript.target = this.gameObject.transform;
