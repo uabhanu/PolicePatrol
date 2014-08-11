@@ -247,7 +247,7 @@ ModelImporter:
     4300010: thug_maskMesh
     4300012: pCube1
     4300014: proxy741Mesh
-    7400000: ThugWalk
+    7400000: EnemyWalk
     9500000: //RootNode
     13700000: baniyan.001Mesh
     13700002: high-polyMesh
@@ -273,7 +273,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: ThugWalk
+      name: EnemyWalk
       takeName: Take 001
       firstFrame: 0
       lastFrame: 23
@@ -366,65 +366,69 @@ ModelImporter:
         weight: 1
       - path: python
         weight: 1
-      - path: python/hips
+      - path: Root
         weight: 1
-      - path: python/hips/spine
+      - path: Root/transform1
         weight: 1
-      - path: python/hips/spine/chest
+      - path: Root/transform1/hips
         weight: 1
-      - path: python/hips/spine/chest/clavicle.L
+      - path: Root/transform1/hips/spine
         weight: 1
-      - path: python/hips/spine/chest/clavicle.L/upper_arm.L
+      - path: Root/transform1/hips/spine/chest
         weight: 1
-      - path: python/hips/spine/chest/clavicle.L/upper_arm.L/forearm.L
+      - path: Root/transform1/hips/spine/chest/clavicle.L
         weight: 1
-      - path: python/hips/spine/chest/clavicle.L/upper_arm.L/forearm.L/hand.L
+      - path: Root/transform1/hips/spine/chest/clavicle.L/upper_arm.L
         weight: 1
-      - path: python/hips/spine/chest/clavicle.L/upper_arm.L/forearm.L/hand.L/f_index.01.L
+      - path: Root/transform1/hips/spine/chest/clavicle.L/upper_arm.L/forearm.L
         weight: 1
-      - path: python/hips/spine/chest/clavicle.L/upper_arm.L/forearm.L/hand.L/f_ring.01.L
+      - path: Root/transform1/hips/spine/chest/clavicle.L/upper_arm.L/forearm.L/hand.L
         weight: 1
-      - path: python/hips/spine/chest/clavicle.L/upper_arm.L/forearm.L/hand.L/thumb.02.L
+      - path: Root/transform1/hips/spine/chest/clavicle.L/upper_arm.L/forearm.L/hand.L/f_index.01.L
         weight: 1
-      - path: python/hips/spine/chest/clavicle.L/upper_arm.L/forearm.L/hand.L/thumb.02.L/thumb.03.L
+      - path: Root/transform1/hips/spine/chest/clavicle.L/upper_arm.L/forearm.L/hand.L/f_ring.01.L
         weight: 1
-      - path: python/hips/spine/chest/clavicle.R
+      - path: Root/transform1/hips/spine/chest/clavicle.L/upper_arm.L/forearm.L/hand.L/thumb.02.L
         weight: 1
-      - path: python/hips/spine/chest/clavicle.R/upper_arm.R
+      - path: Root/transform1/hips/spine/chest/clavicle.L/upper_arm.L/forearm.L/hand.L/thumb.02.L/thumb.03.L
         weight: 1
-      - path: python/hips/spine/chest/clavicle.R/upper_arm.R/forearm.R
+      - path: Root/transform1/hips/spine/chest/clavicle.R
         weight: 1
-      - path: python/hips/spine/chest/clavicle.R/upper_arm.R/forearm.R/hand.R
+      - path: Root/transform1/hips/spine/chest/clavicle.R/upper_arm.R
         weight: 1
-      - path: python/hips/spine/chest/clavicle.R/upper_arm.R/forearm.R/hand.R/f_index.01.R
+      - path: Root/transform1/hips/spine/chest/clavicle.R/upper_arm.R/forearm.R
         weight: 1
-      - path: python/hips/spine/chest/clavicle.R/upper_arm.R/forearm.R/hand.R/f_ring.01.R
+      - path: Root/transform1/hips/spine/chest/clavicle.R/upper_arm.R/forearm.R/hand.R
         weight: 1
-      - path: python/hips/spine/chest/clavicle.R/upper_arm.R/forearm.R/hand.R/thumb.02.R
+      - path: Root/transform1/hips/spine/chest/clavicle.R/upper_arm.R/forearm.R/hand.R/f_index.01.R
         weight: 1
-      - path: python/hips/spine/chest/clavicle.R/upper_arm.R/forearm.R/hand.R/thumb.02.R/thumb.03.R
+      - path: Root/transform1/hips/spine/chest/clavicle.R/upper_arm.R/forearm.R/hand.R/f_ring.01.R
         weight: 1
-      - path: python/hips/spine/chest/neck
+      - path: Root/transform1/hips/spine/chest/clavicle.R/upper_arm.R/forearm.R/hand.R/thumb.02.R
         weight: 1
-      - path: python/hips/spine/chest/neck/head
+      - path: Root/transform1/hips/spine/chest/clavicle.R/upper_arm.R/forearm.R/hand.R/thumb.02.R/thumb.03.R
         weight: 1
-      - path: python/hips/spine/chest/neck/head/jaw
+      - path: Root/transform1/hips/spine/chest/neck
         weight: 1
-      - path: python/hips/thigh.L
+      - path: Root/transform1/hips/spine/chest/neck/head
         weight: 1
-      - path: python/hips/thigh.L/shin.L
+      - path: Root/transform1/hips/spine/chest/neck/head/jaw
         weight: 1
-      - path: python/hips/thigh.L/shin.L/foot.L
+      - path: Root/transform1/hips/thigh.L
         weight: 1
-      - path: python/hips/thigh.L/shin.L/foot.L/toe.L
+      - path: Root/transform1/hips/thigh.L/shin.L
         weight: 1
-      - path: python/hips/thigh.R
+      - path: Root/transform1/hips/thigh.L/shin.L/foot.L
         weight: 1
-      - path: python/hips/thigh.R/shin.R
+      - path: Root/transform1/hips/thigh.L/shin.L/foot.L/toe.L
         weight: 1
-      - path: python/hips/thigh.R/shin.R/foot.R
+      - path: Root/transform1/hips/thigh.R
         weight: 1
-      - path: python/hips/thigh.R/shin.R/foot.R/toe.R
+      - path: Root/transform1/hips/thigh.R/shin.R
+        weight: 1
+      - path: Root/transform1/hips/thigh.R/shin.R/foot.R
+        weight: 1
+      - path: Root/transform1/hips/thigh.R/shin.R/foot.R/toe.R
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}

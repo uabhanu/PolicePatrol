@@ -109,8 +109,11 @@ public class Enemy : MonoBehaviour
 
 		if(col.gameObject.tag.Equals("Player"))
 		{
-			Debug.Log("Collision with Player");
-			collidedPlayer = true;
+			if(playerScript.currentState != Player.State.Attack)
+			{
+				Debug.Log("Collision with Player");
+				collidedPlayer = true;
+			}
 		}
 	}
 
