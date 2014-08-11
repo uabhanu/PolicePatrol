@@ -179,7 +179,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .106382981
+        functionName: Sweat
+        data: 
+        objectReferenceParameter: {fileID: 100000, guid: 0cbdfea5f27ae7f43af5cf0291ef56ef,
+          type: 2}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
