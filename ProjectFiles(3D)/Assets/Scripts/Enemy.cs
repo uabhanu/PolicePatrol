@@ -175,7 +175,11 @@ public class Enemy : MonoBehaviour
 		if(collidedPlayer && playerScript.currentState == Player.State.Attack)
 		{
 			agent.speed = 0;
-			SetState(1);
+
+			if(this.gameObject.tag.Equals("Target"))
+			{
+				SetState(1);
+			}
 		}
 	}
 

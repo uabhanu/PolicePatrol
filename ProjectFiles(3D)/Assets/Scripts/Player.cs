@@ -84,6 +84,7 @@ public class Player : MonoBehaviour
 
 		if(target != null)
 		{
+			agent.speed = 7;
 			agent.SetDestination(target.position);
 		}
 	}
@@ -99,6 +100,7 @@ public class Player : MonoBehaviour
 		{
 			case State.Idle :
 				anim.SetInteger("AnimIndex" , 0);
+				agent.speed = 0;
 			break;
 				
 			case State.Run :
