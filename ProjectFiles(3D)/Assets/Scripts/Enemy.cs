@@ -5,14 +5,14 @@ public class Enemy : MonoBehaviour
 {
 	public Animator anim;
 	public bool collidedPlayer;
-	public EnemySpawner enemySpawnerScript;
 	public float speed;
-	public GameObject enemySpawnerObj , iguiObj , playerObj , sweatObj;
+	public GameObject iguiObj , playerObj , sAgentObj , sweatObj;
 	public InGameUI iguiScript;
 	public int hitpoints;
 	public NavMeshAgent agent;
 	public ParticleSystem sweatParticles;
 	public Player playerScript;
+	public SpawnerAgent sAgentScript;
 	public Transform target;
 
 	public enum State
@@ -27,13 +27,6 @@ public class Enemy : MonoBehaviour
 	
 	void Start () 
 	{
-		enemySpawnerObj = GameObject.FindGameObjectWithTag("ESpawn");
-
-		if(enemySpawnerObj != null)
-		{
-			enemySpawnerScript = enemySpawnerObj.GetComponent<EnemySpawner>();
-		}
-
 		if(this.gameObject != null)
 		{
 			agent = this.gameObject.GetComponent<NavMeshAgent>();
@@ -68,6 +61,13 @@ public class Enemy : MonoBehaviour
 		{
 			playerScript = playerObj.GetComponent<Player>();
 		}
+
+		sAgentObj = GameObject.FindGameObjectWithTag("SAgent");
+		
+		if(sAgentObj != null)
+		{
+			sAgentScript = sAgentObj.GetComponent<SpawnerAgent>();
+		}
 	}
 
 	public void Death()
@@ -77,6 +77,7 @@ public class Enemy : MonoBehaviour
 			Debug.Log("Enemy Death");
 			Destroy (this.gameObject);
 			playerScript.SetState(0);
+			sAgentScript.enemies--;
 		}
 	}
 
@@ -128,6 +129,8 @@ public class Enemy : MonoBehaviour
 
 	void OnMouseDown()
 	{
+		this.gameObject.tag = "Target";
+
 		Time.timeScale = 1;
 
 		if(playerScript.currentState != Player.State.Attack)

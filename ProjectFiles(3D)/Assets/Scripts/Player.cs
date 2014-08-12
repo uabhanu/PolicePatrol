@@ -59,7 +59,7 @@ public class Player : MonoBehaviour
 
 	void OnCollisionEnter(Collision col)
 	{
-		if(col.gameObject.tag.Equals("Enemy"))
+		if(col.gameObject.tag.Equals("Target"))
 		{
 			//Debug.Log("Collision with Enemy");
 			SetState(2);

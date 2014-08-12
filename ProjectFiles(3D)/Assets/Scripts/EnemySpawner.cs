@@ -6,7 +6,8 @@ public class EnemySpawner : MonoBehaviour
 	//[HideInInspector]
 	public Enemy enemyScript;
 	public float spawnTimer;
-	public GameObject enemyObj;
+	public GameObject enemyObj , sAgentObj;
+	public SpawnerAgent sAgentScript;
 	
 	void Start () 
 	{
@@ -15,13 +16,19 @@ public class EnemySpawner : MonoBehaviour
 			enemyScript = enemyObj.GetComponent<Enemy>();
 		}
 
+		sAgentScript = sAgentObj.GetComponent<SpawnerAgent>();
+
 		StartCoroutine("EnemySpawnTimer");
 	}
 	
 	public void EnemySpawn()
 	{
-		Debug.Log("Enemy Spawner");
-		Instantiate (enemyObj , transform.position , Quaternion.identity);
+		if(sAgentScript.enemies < sAgentScript.maxEnemies)
+		{
+			Debug.Log("Enemy Spawner");
+			Instantiate (enemyObj , transform.position , Quaternion.identity);
+			sAgentScript.enemies++;
+		}
 	}
 	
 	IEnumerator EnemySpawnTimer()
@@ -33,6 +40,6 @@ public class EnemySpawner : MonoBehaviour
 
 	void Update () 
 	{
-	
+
 	}
 }
