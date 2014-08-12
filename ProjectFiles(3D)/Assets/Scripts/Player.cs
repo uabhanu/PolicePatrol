@@ -61,8 +61,14 @@ public class Player : MonoBehaviour
 	{
 		if(col.gameObject.tag.Equals("Enemy"))
 		{
-			Debug.Log("Collision with Enemy");
+			//Debug.Log("Collision with Enemy");
 			SetState(2);
+		}
+
+		if(col.gameObject.tag.Equals("Left") || col.gameObject.tag.Equals("Right"))
+		{
+			//Debug.Log("Collision with Truck");
+			SetState(0);
 		}
 	}
 
@@ -75,7 +81,11 @@ public class Player : MonoBehaviour
 	void Run()
 	{
 		anim.SetInteger("AnimIndex" , 1);
-		agent.SetDestination(target.position);
+
+		if(target != null)
+		{
+			agent.SetDestination(target.position);
+		}
 	}
 
 	void Update () 

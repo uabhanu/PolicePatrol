@@ -74,7 +74,9 @@ public class Enemy : MonoBehaviour
 	{
 		if(this.gameObject != null)
 		{
+			Debug.Log("Enemy Death");
 			Destroy (this.gameObject);
+			playerScript.SetState(0);
 		}
 	}
 
@@ -89,7 +91,6 @@ public class Enemy : MonoBehaviour
 		{
 			//Debug.Log("Enemy Died");
 			SetState(2);
-			playerScript.SetState(0);
 		}	
 	}
 
@@ -103,7 +104,6 @@ public class Enemy : MonoBehaviour
 			}
 			
 			Death();
-			enemySpawnerScript.enemies--;
 		}
 		
 		if(col.gameObject.tag.Equals("Right"))
@@ -114,14 +114,13 @@ public class Enemy : MonoBehaviour
 			}
 			
 			Death();
-			enemySpawnerScript.enemies--;
 		}
 
 		if(col.gameObject.tag.Equals("Player"))
 		{
 			if(playerScript.currentState != Player.State.Attack)
 			{
-				Debug.Log("Collision with Player");
+				//Debug.Log("Collision with Player");
 				collidedPlayer = true;
 			}
 		}
