@@ -38,9 +38,11 @@ ModelImporter:
     400030: transform4
     400032: transform5
     4300000: Cargo_Doors1
-    7400000: Take 001
+    4300002: Cargo_Doors
+    7400000: Doors
     9500000: //RootNode
     13700000: Cargo_Doors1
+    13700002: Cargo_Doors
   materials:
     importMaterials: 0
     materialName: 0
@@ -56,7 +58,47 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Doors
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cargo_Doors1
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/LeftDoor_Hinge
+        weight: 1
+      - path: Root/LeftDoor_Hinge/LeftDoor_HingeEnd
+        weight: 1
+      - path: Root/RightDoor_Hinge
+        weight: 1
+      - path: Root/RightDoor_Hinge/RightDoor_HingeEnd
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
