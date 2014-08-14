@@ -4,10 +4,11 @@ using System.Collections;
 public class Enemy : MonoBehaviour 
 {
 	public Animator anim;
-	public bool collidedPlayer;
+	public bool collidedPlayer , selected;
 	public EnemySpawnCheck escScript;
 	public float speed , tagTimer;
 	public GameObject escObj , iguiObj , playerObj , sAgentObj , sweatObj;
+	public GameObject[] enemies;
 	public InGameUI iguiScript;
 	public int hitpoints;
 	public NavMeshAgent agent;
@@ -76,6 +77,8 @@ public class Enemy : MonoBehaviour
 		{
 			sAgentScript = sAgentObj.GetComponent<SpawnerAgent>();
 		}
+
+		selected = false;
 	}
 
 	IEnumerator TagTimer()
@@ -156,7 +159,11 @@ public class Enemy : MonoBehaviour
 	{
 		Debug.Log("Enemy Selected");
 
+		selected = true;
+
 		Time.timeScale = 1;
+
+		enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
 		if(playerScript.currentState != Player.State.Attack)
 		{
@@ -175,7 +182,25 @@ public class Enemy : MonoBehaviour
 			}
 
 			playerScript.target = this.gameObject.transform;
-			playerScript.target.gameObject.tag = "Target";
+
+			foreach(GameObject enemy in enemies)
+			{
+				if(selected && this.gameObject.tag.Equals("Target"))
+				{
+					selected = false;
+				}
+			}
+
+			if(selected && this.gameObject.tag.Equals("Enemy"))
+			{
+				this.gameObject.tag = "Target";
+			}
+			
+			else if(!selected && this.gameObject.tag.Equals("Target"))
+			{
+				this.gameObject.tag = "Enemy";
+			}
+
 			playerScript.SetState(1);
 		}
 	}
