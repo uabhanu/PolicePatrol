@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 	public Animator anim;
 	public bool collidedPlayer;
 	public EnemySpawnCheck escScript;
-	public float speed;
+	public float speed , tagTimer;
 	public GameObject escObj , iguiObj , playerObj , sAgentObj , sweatObj;
 	public InGameUI iguiScript;
 	public int hitpoints;
@@ -78,13 +78,23 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
+	IEnumerator TagTimer()
+	{
+		yield return new WaitForSeconds(tagTimer);
+
+		if(currentState != State.Hit)
+		{
+			tag = "Enemy";
+		}
+	}
+
 	public void Death()
 	{
 		if(this.gameObject != null)
 		{
 			Debug.Log("Enemy Death");
 
-			if(currentState == State.Hit)
+			if(this.gameObject.tag.Equals("Target") && currentState == State.Hit)
 			{
 				playerScript.SetState(0);
 			}
@@ -143,9 +153,11 @@ public class Enemy : MonoBehaviour
 
 	void OnMouseDown()
 	{
-		this.gameObject.tag = "Target";
+		Debug.Log("Enemy Selected");
 
 		Time.timeScale = 1;
+
+		StartCoroutine("TagTimer");
 
 		if(playerScript.currentState != Player.State.Attack)
 		{
@@ -164,7 +176,17 @@ public class Enemy : MonoBehaviour
 			}
 
 			playerScript.target = this.gameObject.transform;
+			playerScript.target.gameObject.tag = "Target";
 			playerScript.SetState(1);
+		}
+	}
+
+	void OnTriggerEnter(Collider col)
+	{
+		if(col.gameObject.tag.Equals("SCheck"))
+		{
+			Debug.Log("Spawn Check");
+			escScript.enemySpawned = true;
 		}
 	}
 
@@ -179,15 +201,6 @@ public class Enemy : MonoBehaviour
 		if(sweatObj != null)
 		{
 			sweatParticles.Play();
-		}
-	}
-
-	void OnTriggerEnter(Collider col)
-	{
-		if(col.gameObject.tag.Equals("SCheck"))
-		{
-			Debug.Log("Spawn Check");
-			escScript.enemySpawned = true;
 		}
 	}
 
