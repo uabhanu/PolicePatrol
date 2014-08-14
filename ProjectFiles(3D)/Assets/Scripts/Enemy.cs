@@ -134,12 +134,6 @@ public class Enemy : MonoBehaviour
 				collidedPlayer = true;
 			}
 		}
-
-		if(col.gameObject.tag.Equals("SCheck"))
-		{
-			Debug.Log("Spawn Check");
-			escScript.enemySpawned = true;
-		}
 	}
 
 	void OnMouseDown()
@@ -180,6 +174,15 @@ public class Enemy : MonoBehaviour
 		if(sweatObj != null)
 		{
 			sweatParticles.Play();
+		}
+	}
+
+	void OnTriggerEnter(Collider col)
+	{
+		if(col.gameObject.tag.Equals("SCheck"))
+		{
+			Debug.Log("Spawn Check");
+			escScript.enemySpawned = true;
 		}
 	}
 
