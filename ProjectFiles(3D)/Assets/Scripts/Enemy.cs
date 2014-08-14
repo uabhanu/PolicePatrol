@@ -83,10 +83,15 @@ public class Enemy : MonoBehaviour
 		if(this.gameObject != null)
 		{
 			Debug.Log("Enemy Death");
-			Destroy (this.gameObject);
-			playerScript.SetState(0);
+
+			if(currentState == State.Hit)
+			{
+				playerScript.SetState(0);
+			}
+
 			sAgentScript.enemies--;
 			escScript.enemySpawned = false;
+			Destroy (this.gameObject);
 		}
 	}
 
