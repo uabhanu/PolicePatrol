@@ -5,8 +5,9 @@ public class Enemy : MonoBehaviour
 {
 	public Animator anim;
 	public bool collidedPlayer;
+	public EnemySpawnCheck escScript;
 	public float speed;
-	public GameObject iguiObj , playerObj , sAgentObj , sweatObj;
+	public GameObject escObj , iguiObj , playerObj , sAgentObj , sweatObj;
 	public InGameUI iguiScript;
 	public int hitpoints;
 	public NavMeshAgent agent;
@@ -31,6 +32,13 @@ public class Enemy : MonoBehaviour
 		{
 			agent = this.gameObject.GetComponent<NavMeshAgent>();
 			anim = this.gameObject.GetComponent<Animator>();
+
+			escObj = GameObject.FindGameObjectWithTag("SCheck");
+
+			if(escObj != null)
+			{
+				escScript = escObj.GetComponent<EnemySpawnCheck>();
+			}
 
 			if(transform.position.x < 0)
 			{
@@ -78,6 +86,7 @@ public class Enemy : MonoBehaviour
 			Destroy (this.gameObject);
 			playerScript.SetState(0);
 			sAgentScript.enemies--;
+			escScript.enemySpawned = false;
 		}
 	}
 
@@ -124,6 +133,12 @@ public class Enemy : MonoBehaviour
 				//Debug.Log("Collision with Player");
 				collidedPlayer = true;
 			}
+		}
+
+		if(col.gameObject.tag.Equals("SCheck"))
+		{
+			Debug.Log("Spawn Check");
+			escScript.enemySpawned = true;
 		}
 	}
 
