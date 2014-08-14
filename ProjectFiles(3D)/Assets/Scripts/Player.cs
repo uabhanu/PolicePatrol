@@ -35,11 +35,6 @@ public class Player : MonoBehaviour
 		if(enemyObj != null)
 		{
 			enemyScript.DeductHitPoints(attack);
-
-			if(enemyScript.hitpoints == 0)
-			{
-				SetState(0);
-			}
 		}
 	}
 

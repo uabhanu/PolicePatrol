@@ -94,7 +94,7 @@ public class Enemy : MonoBehaviour
 		{
 			Debug.Log("Enemy Death");
 
-			if(this.gameObject.tag.Equals("Target") && currentState == State.Hit)
+			if(currentState == State.KO)
 			{
 				playerScript.SetState(0);
 			}
@@ -143,7 +143,7 @@ public class Enemy : MonoBehaviour
 
 		if(col.gameObject.tag.Equals("Player"))
 		{
-			if(playerScript.currentState != Player.State.Attack)
+			if(playerScript.currentState != Player.State.Attack && playerScript.currentState != Player.State.Idle)
 			{
 				//Debug.Log("Collision with Player");
 				collidedPlayer = true;
@@ -157,7 +157,7 @@ public class Enemy : MonoBehaviour
 
 		Time.timeScale = 1;
 
-		StartCoroutine("TagTimer");
+		//StartCoroutine("TagTimer");
 
 		if(playerScript.currentState != Player.State.Attack)
 		{
@@ -168,7 +168,7 @@ public class Enemy : MonoBehaviour
 				playerScript.enemyScript = playerScript.enemyObj.GetComponent<Enemy>();
 
 				sweatObj = GameObject.FindGameObjectWithTag("Sweat");
-				
+
 				if(sweatObj != null)
 				{
 					sweatParticles = sweatObj.GetComponent<ParticleSystem>();
@@ -198,8 +198,9 @@ public class Enemy : MonoBehaviour
 
 	public void Sweat()
 	{
-		if(sweatObj != null)
+		if(sweatObj != null && currentState == State.Hit)
 		{
+			Debug.Log("Enemy Sweat");
 			sweatParticles.Play();
 		}
 	}
