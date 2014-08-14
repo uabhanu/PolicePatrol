@@ -102,6 +102,7 @@ public class Enemy : MonoBehaviour
 			sAgentScript.enemies--;
 			escScript.enemySpawned = false;
 			Destroy (this.gameObject);
+			playerScript.target = null;
 		}
 	}
 
@@ -157,8 +158,6 @@ public class Enemy : MonoBehaviour
 
 		Time.timeScale = 1;
 
-		//StartCoroutine("TagTimer");
-
 		if(playerScript.currentState != Player.State.Attack)
 		{
 			playerScript.enemyObj = this.gameObject;
@@ -179,6 +178,11 @@ public class Enemy : MonoBehaviour
 			playerScript.target.gameObject.tag = "Target";
 			playerScript.SetState(1);
 		}
+	}
+
+	void OnMouseUpAsButton()
+	{
+
 	}
 
 	void OnTriggerEnter(Collider col)
