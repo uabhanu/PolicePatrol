@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 	public bool collidedPlayer , selected;
 	public EnemySpawnCheck escScript;
 	public float speed , tagTimer;
-	public GameObject escObj , iguiObj , playerObj , sAgentObj , sweatObj;
+	public GameObject escObj , iguiObj , playerObj , sAgentObj;
 	public GameObject[] enemies;
 	public InGameUI iguiScript;
 	public int hitpoints;
@@ -172,13 +172,6 @@ public class Enemy : MonoBehaviour
 			if(playerScript.enemyObj != null)
 			{
 				playerScript.enemyScript = playerScript.enemyObj.GetComponent<Enemy>();
-
-				sweatObj = GameObject.FindGameObjectWithTag("Sweat");
-
-				if(sweatObj != null)
-				{
-					sweatParticles = sweatObj.GetComponent<ParticleSystem>();
-				}
 			}
 
 			playerScript.target = this.gameObject.transform;
@@ -194,6 +187,7 @@ public class Enemy : MonoBehaviour
 			if(selected && this.gameObject.tag.Equals("Enemy"))
 			{
 				this.gameObject.tag = "Target";
+				sweatParticles = this.gameObject.GetComponentInChildren<ParticleSystem>();
 			}
 			
 			else if(!selected && this.gameObject.tag.Equals("Target"))
@@ -227,7 +221,7 @@ public class Enemy : MonoBehaviour
 
 	public void Sweat()
 	{
-		if(sweatObj != null && currentState == State.Hit)
+		if(currentState == State.Hit)
 		{
 			Debug.Log("Enemy Sweat");
 			sweatParticles.Play();
