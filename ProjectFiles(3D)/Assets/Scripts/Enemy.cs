@@ -4,7 +4,7 @@ using System.Collections;
 public class Enemy : MonoBehaviour 
 {
 	public Animator anim;
-	public bool collidedPlayer , selected;
+	public bool collidedPlayer;
 	public EnemySpawnCheck escScript;
 	public float speed , tagTimer;
 	public GameObject escObj , iguiObj , playerObj , sAgentObj;
@@ -76,9 +76,7 @@ public class Enemy : MonoBehaviour
 		if(sAgentObj != null)
 		{
 			sAgentScript = sAgentObj.GetComponent<SpawnerAgent>();
-		}
-
-		selected = false;
+		}		
 	}
 
 	IEnumerator TagTimer()
@@ -147,11 +145,19 @@ public class Enemy : MonoBehaviour
 
 		if(col.gameObject.tag.Equals("Player"))
 		{
-			if(playerScript.currentState != Player.State.Attack && playerScript.currentState != Player.State.Idle)
+			if(playerScript.currentState == Player.State.Run)
 			{
 				//Debug.Log("Collision with Player");
-				collidedPlayer = true;
+				this.collidedPlayer = true;
 			}
+		}
+	}
+
+	void OnCollisionExit(Collision col)
+	{
+		if(col.gameObject.tag.Equals("Player"))
+		{
+			this.collidedPlayer = false;
 		}
 	}
 
@@ -159,11 +165,10 @@ public class Enemy : MonoBehaviour
 	{
 		Debug.Log("Enemy Selected");
 
-		selected = true;
+		this.gameObject.tag = "Target";
+		sweatParticles = this.gameObject.GetComponentInChildren<ParticleSystem>();
 
 		Time.timeScale = 1;
-
-		enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
 		if(playerScript.currentState != Player.State.Attack)
 		{
@@ -175,26 +180,6 @@ public class Enemy : MonoBehaviour
 			}
 
 			playerScript.target = this.gameObject.transform;
-
-			foreach(GameObject enemy in enemies)
-			{
-				if(selected && this.gameObject.tag.Equals("Target"))
-				{
-					selected = false;
-				}
-			}
-
-			if(selected && this.gameObject.tag.Equals("Enemy"))
-			{
-				this.gameObject.tag = "Target";
-				sweatParticles = this.gameObject.GetComponentInChildren<ParticleSystem>();
-			}
-			
-			else if(!selected && this.gameObject.tag.Equals("Target"))
-			{
-				this.gameObject.tag = "Enemy";
-			}
-
 			playerScript.SetState(1);
 		}
 	}
@@ -232,14 +217,10 @@ public class Enemy : MonoBehaviour
 	{
 		agent.SetDestination(target.position);
 
-		if(collidedPlayer && playerScript.currentState == Player.State.Attack)
+		if(this.collidedPlayer && this.gameObject.tag.Equals("Target") && playerScript.currentState == Player.State.Attack)
 		{
 			agent.speed = 0;
-
-			if(this.gameObject.tag.Equals("Target"))
-			{
-				SetState(1);
-			}
+			SetState(1);
 		}
 	}
 

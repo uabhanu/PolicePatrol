@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
 
 	public void Attack()
 	{
-		if(enemyObj != null)
+		if(enemyObj != null && enemyScript.currentState == Enemy.State.Hit)
 		{
 			enemyScript.DeductHitPoints(attack);
 		}
@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
 
 	void OnCollisionEnter(Collision col)
 	{
-		if(col.gameObject.tag.Equals("Target"))
+		if(col.gameObject.tag.Equals("Target") && enemyScript.collidedPlayer)
 		{
 			//Debug.Log("Collision with Enemy");
 			SetState(2);
