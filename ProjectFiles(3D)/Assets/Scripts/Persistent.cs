@@ -3,13 +3,24 @@ using System.Collections;
 
 public class Persistent : MonoBehaviour 
 {
-	public GameObject splashObj;
+	public GameObject selectionObj , splashObj;
+	public Selection selectionScript;
+	public Texture[] buttonTextures;
 	
 	void Awake () 
 	{
-		QualitySettings.vSyncCount = 0;
-		Application.targetFrameRate = 30;
 		DontDestroyOnLoad(transform.gameObject);
+
+		selectionObj = GameObject.FindGameObjectWithTag("Select");
+
+		if(selectionObj != null)
+		{
+			selectionScript = selectionObj.GetComponent<Selection>();
+		}
+
+		buttonTextures[0] = selectionScript.buttonTextures[0];
+		buttonTextures[1] = selectionScript.buttonTextures[1];
+
 		splashObj = GameObject.FindGameObjectWithTag("Splash");
 	}
 

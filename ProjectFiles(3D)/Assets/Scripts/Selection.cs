@@ -10,6 +10,9 @@ public class Selection : MonoBehaviour
 	
 	void Start () 
 	{
+		QualitySettings.vSyncCount = 0;
+		Application.targetFrameRate = 30;
+
 		Unlock("Level1");
 		Lock("Level2");
 		Lock("Level3");
