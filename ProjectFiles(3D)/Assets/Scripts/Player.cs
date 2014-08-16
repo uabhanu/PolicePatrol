@@ -5,6 +5,7 @@ public class Player : MonoBehaviour
 {
 	public Animator anim;
 	public Enemy enemyScript;
+	[HideInInspector]
 	public float speed;
 	public GameObject enemyObj;
 	public int attack , hitpoints;

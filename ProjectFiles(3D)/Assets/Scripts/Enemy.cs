@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 	public Animator anim;
 	public bool collidedPlayer;
 	public EnemySpawnCheck escScript;
+	[HideInInspector]
 	public float speed , tagTimer;
 	public GameObject escObj , iguiObj , playerObj , sAgentObj;
 	public GameObject[] enemies;
