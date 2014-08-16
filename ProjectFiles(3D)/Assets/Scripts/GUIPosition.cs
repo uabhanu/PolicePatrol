@@ -3,22 +3,26 @@ using System.Collections;
 
 public class GUIPosition : MonoBehaviour 
 {
-	private Rect currentRect;
-	
-	void Start () 
+	public GUISkin guiSkin;
+	private float guiRatio , sWidth;
+	private Vector3 GUIsF;
+
+	void Awake()
 	{
-		currentRect = new Rect(15 , 15 , 150 , 150);
+		sWidth = Screen.width;
+		guiRatio = sWidth / 1920;
+		GUIsF = new Vector3(guiRatio , guiRatio , 1);
 	}
 
-	void OnGUI()
+	void OnGUI() 
 	{
-		//Debug.Log("OnGUI()");
-		currentRect.x = (Screen.width * 0.5f) - (currentRect.width * 0.5f);
-		currentRect.y = (Screen.height * 0.5f) - (currentRect.height * 0.5f);
-	}
-
-	void Update () 
-	{
-	
+		GUI.matrix = Matrix4x4.TRS(new Vector3(GUIsF.x , GUIsF.y , 0) , Quaternion.identity , GUIsF);
+		GUI.Label(new Rect(20 , 20 , 258 , 89) , "" , guiSkin.customStyles[0]);
+		GUI.matrix = Matrix4x4.TRS(new Vector3(Screen.width - 258 * GUIsF.x , Screen.height - 89 * GUIsF.y , 0) , Quaternion.identity , GUIsF);
+		GUI.Label(new Rect(-20 , -20 , 258 , 89) , "" , guiSkin.customStyles[0]);
+		GUI.matrix = Matrix4x4.TRS(new Vector3(GUIsF.x , Screen.height - 89 * GUIsF.y , 0) , Quaternion.identity , GUIsF);
+		GUI.Label(new Rect(20 , -20 , 258 , 89) , "" , guiSkin.customStyles[0]);
+		GUI.matrix = Matrix4x4.TRS(new Vector3(Screen.width - 258 * GUIsF.x , GUIsF.y , 0) , Quaternion.identity , GUIsF);
+		GUI.Label(new Rect(-20 , 20 , 258 , 89) , "" , guiSkin.customStyles[0]);
 	}
 }
