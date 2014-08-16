@@ -3,6 +3,8 @@ using System.Collections;
 
 public class InGameUI : MonoBehaviour 
 {
+	public bool levelCompleted;
+	public GameObject[] tempObjs;
 	public GUIText timeLabel , truckLeftScoreLabel , truckRightScoreLabel;
 	public GUITexture[] buttonSprites;
 	public int timeValue , truckLeftScoreValue , truckRightScoreValue;
@@ -15,8 +17,13 @@ public class InGameUI : MonoBehaviour
 
 	void Start () 
 	{
+		Inactive("LoseCard");
+		Inactive("LoseCardText");
 		Inactive("QuitButton");
 		Inactive("ResumeButton");
+		Inactive("WinCard");
+		Inactive("WinCardText");
+
 		StartCoroutine("GameTimer");
 	}
 
@@ -36,6 +43,14 @@ public class InGameUI : MonoBehaviour
 	{
 		switch(name)
 		{
+			case "LoseCard" :
+				tempObjs[0].gameObject.SetActive(true);
+			break;
+
+			case "LoseCardText" :
+				tempObjs[1].gameObject.SetActive(true);
+			break;
+
 			case "PauseButton" :
 				buttonSprites[0].gameObject.SetActive(true);
 			break;
@@ -47,6 +62,14 @@ public class InGameUI : MonoBehaviour
 			case "ResumeButton" :
 				buttonSprites[2].gameObject.SetActive(true);
 			break;
+
+			case "WinCard" :
+				tempObjs[2].gameObject.SetActive(true);
+			break;
+
+			case "WinCardText" :
+				tempObjs[3].gameObject.SetActive(true);
+			break;
 		}
 	}
 
@@ -54,6 +77,14 @@ public class InGameUI : MonoBehaviour
 	{
 		switch(name)
 		{
+			case "LoseCard" :
+				tempObjs[0].gameObject.SetActive(false);
+			break;
+			
+			case "LoseCardText" :
+				tempObjs[1].gameObject.SetActive(false);
+			break;
+
 			case "PauseButton" :
 				buttonSprites[0].gameObject.SetActive(false);
 			break;
@@ -64,6 +95,14 @@ public class InGameUI : MonoBehaviour
 			
 			case "ResumeButton" :
 				buttonSprites[2].gameObject.SetActive(false);
+			break;
+
+			case "WinCard" :
+				tempObjs[2].gameObject.SetActive(false);
+			break;
+			
+			case "WinCardText" :
+				tempObjs[3].gameObject.SetActive(false);
 			break;
 		}
 	}
