@@ -3,9 +3,9 @@ using System.Collections;
 
 public class InGameUI : MonoBehaviour 
 {
-	public GUIText truckLeftScoreLabel , truckRightScoreLabel;
+	public GUIText timeLabel , truckLeftScoreLabel , truckRightScoreLabel;
 	public GUITexture[] buttonSprites;
-	public int truckLeftScoreValue , truckRightScoreValue;
+	public int timeValue , truckLeftScoreValue , truckRightScoreValue;
 
 	void Awake()
 	{
@@ -17,6 +17,19 @@ public class InGameUI : MonoBehaviour
 	{
 		Inactive("QuitButton");
 		Inactive("ResumeButton");
+		StartCoroutine("GameTimer");
+	}
+
+	IEnumerator GameTimer()
+	{
+		yield return new WaitForSeconds(1);
+
+		if(timeValue > 0)
+		{
+			timeValue--;
+		}
+
+		StartCoroutine("GameTimer");
 	}
 
 	public void Active(string name)
@@ -62,6 +75,8 @@ public class InGameUI : MonoBehaviour
 			return;
 		}
 		
+		timeLabel.text = timeValue.ToString();
+
 		truckLeftScoreLabel.text = truckLeftScoreValue.ToString();
 		truckRightScoreLabel.text = truckRightScoreValue.ToString();
 	}
