@@ -16,6 +16,9 @@ public class MenuButton : MonoBehaviour
 		{
 			selectionScript = selectionObj.GetComponent<Selection>();
 		}
+
+		//Debug.Log(selectionScript.buttons[0].texture);
+		//Debug.Log(selectionScript.buttonTextures[0]);
 	}
 
 	void ButtonClick(string buttonName)
@@ -24,7 +27,7 @@ public class MenuButton : MonoBehaviour
 		{
 			case "Level1" :
 				
-				if(selectionScript.buttonSprites[0].guiTexture.color == Color.green)
+				if(selectionScript.buttons[0].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level1");
 				}
@@ -33,7 +36,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level2" :
 
-				if(selectionScript.buttonSprites[1].guiTexture.color == Color.green)
+				if(selectionScript.buttons[1].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level2");
 				}
@@ -42,7 +45,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level3" :
 
-				if(selectionScript.buttonSprites[2].guiTexture.color == Color.green)
+				if(selectionScript.buttons[2].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level3");
 				}
@@ -51,7 +54,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level4" :
 
-				if(selectionScript.buttonSprites[3].guiTexture.color == Color.green)
+				if(selectionScript.buttons[3].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level4");
 				}
@@ -60,7 +63,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level5" :
 
-				if(selectionScript.buttonSprites[4].guiTexture.color == Color.green)
+				if(selectionScript.buttons[4].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level5");
 				}
@@ -69,7 +72,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level6" :
 
-				if(selectionScript.buttonSprites[5].guiTexture.color == Color.green)
+				if(selectionScript.buttons[5].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level6");
 				}
@@ -78,7 +81,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level7" :
 
-				if(selectionScript.buttonSprites[6].guiTexture.color == Color.green)
+				if(selectionScript.buttons[6].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level7");
 				}
@@ -87,7 +90,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level8" :
 
-				if(selectionScript.buttonSprites[7].guiTexture.color == Color.green)
+				if(selectionScript.buttons[7].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level8");
 				}
@@ -96,7 +99,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level9" :
 
-				if(selectionScript.buttonSprites[8].guiTexture.color == Color.green)
+				if(selectionScript.buttons[8].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level9");
 				}
@@ -105,7 +108,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level10" :
 
-				if(selectionScript.buttonSprites[9].guiTexture.color == Color.green)
+				if(selectionScript.buttons[9].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level10");
 				}
@@ -114,7 +117,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level11" :
 
-				if(selectionScript.buttonSprites[10].guiTexture.color == Color.green)
+				if(selectionScript.buttons[10].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level11");
 				}
@@ -123,7 +126,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level12" :
 
-				if(selectionScript.buttonSprites[11].guiTexture.color == Color.green)
+				if(selectionScript.buttons[11].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level12");
 				}
@@ -132,7 +135,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level13" :
 
-				if(selectionScript.buttonSprites[12].guiTexture.color == Color.green)
+				if(selectionScript.buttons[12].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level13");
 				}
@@ -141,7 +144,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level14" :
 
-				if(selectionScript.buttonSprites[13].guiTexture.color == Color.green)
+				if(selectionScript.buttons[13].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level14");
 				}
@@ -150,7 +153,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level15" :
 
-				if(selectionScript.buttonSprites[14].guiTexture.color == Color.green)
+				if(selectionScript.buttons[14].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level15");
 				}
@@ -159,7 +162,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level16" :
 
-				if(selectionScript.buttonSprites[15].guiTexture.color == Color.green)
+				if(selectionScript.buttons[15].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level16");
 				}
@@ -168,7 +171,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level17" :
 
-				if(selectionScript.buttonSprites[16].guiTexture.color == Color.green)
+				if(selectionScript.buttons[16].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level17");
 				}
@@ -177,7 +180,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level18" :
 
-				if(selectionScript.buttonSprites[17].guiTexture.color == Color.green)
+				if(selectionScript.buttons[17].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level18");
 				}
@@ -186,7 +189,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level19" :
 
-				if(selectionScript.buttonSprites[18].guiTexture.color == Color.green)
+				if(selectionScript.buttons[18].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level19");
 				}
@@ -195,7 +198,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level20" :
 
-				if(selectionScript.buttonSprites[19].guiTexture.color == Color.green)
+				if(selectionScript.buttons[19].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level20");
 				}
@@ -204,7 +207,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level21" :
 
-				if(selectionScript.buttonSprites[20].guiTexture.color == Color.green)
+				if(selectionScript.buttons[20].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level21");
 				}
@@ -213,7 +216,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level22" :
 
-				if(selectionScript.buttonSprites[21].guiTexture.color == Color.green)
+				if(selectionScript.buttons[21].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level22");
 				}

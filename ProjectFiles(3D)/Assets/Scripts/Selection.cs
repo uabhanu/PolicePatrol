@@ -4,8 +4,9 @@ using System.Collections;
 public class Selection : MonoBehaviour 
 {
 	public GameObject persistentObj , persistentPrefab;
-	public GUITexture[] buttonSprites;
+	public GUITexture[] buttons;
 	public Persistent persistentScript;
+	public Texture[] buttonTextures;
 	
 	void Start () 
 	{
@@ -44,91 +45,91 @@ public class Selection : MonoBehaviour
 		switch(name)
 		{
 			case "Level1" :
-				buttonSprites[0].guiTexture.color = Color.red;
+				buttons[0].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level2" :
-				buttonSprites[1].guiTexture.color = Color.red;
+				buttons[1].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level3" :
-				buttonSprites[2].guiTexture.color = Color.red;
+				buttons[2].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level4" :
-				buttonSprites[3].guiTexture.color = Color.red;
+				buttons[3].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level5" :
-				buttonSprites[4].guiTexture.color = Color.red;
+				buttons[4].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level6" :
-				buttonSprites[5].guiTexture.color = Color.red;
+				buttons[5].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level7" :
-				buttonSprites[6].guiTexture.color = Color.red;
+				buttons[6].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level8" :
-				buttonSprites[7].guiTexture.color = Color.red;
+				buttons[7].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level9" :
-				buttonSprites[8].guiTexture.color = Color.red;
+				buttons[8].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level10" :
-				buttonSprites[9].guiTexture.color = Color.red;
+				buttons[9].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level11" :
-				buttonSprites[10].guiTexture.color = Color.red;
+				buttons[10].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level12" :
-				buttonSprites[11].guiTexture.color = Color.red;
+				buttons[11].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level13" :
-				buttonSprites[12].guiTexture.color = Color.red;
+				buttons[12].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level14" :
-				buttonSprites[13].guiTexture.color = Color.red;
+				buttons[13].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level15" :
-				buttonSprites[14].guiTexture.color = Color.red;
+				buttons[14].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level16" :
-				buttonSprites[15].guiTexture.color = Color.red;
+				buttons[15].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level17" :
-				buttonSprites[16].guiTexture.color = Color.red;
+				buttons[16].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level18" :
-				buttonSprites[17].guiTexture.color = Color.red;
+				buttons[17].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level19" :
-				buttonSprites[18].guiTexture.color = Color.red;
+				buttons[18].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level20" :
-				buttonSprites[19].guiTexture.color = Color.red;
+				buttons[19].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level21" :
-				buttonSprites[20].guiTexture.color = Color.red;
+				buttons[20].guiTexture.texture = buttonTextures[1];
 			break;
 
 			case "Level22" :
-				buttonSprites[21].guiTexture.color = Color.red;
+				buttons[21].guiTexture.texture = buttonTextures[1];
 			break;
 		}
 	}
@@ -138,91 +139,91 @@ public class Selection : MonoBehaviour
 		switch(name)
 		{
 			case "Level1" :
-				buttonSprites[0].guiTexture.color = Color.green;
+				buttons[0].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level2" :
-				buttonSprites[1].guiTexture.color = Color.green;
+				buttons[1].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level3" :
-				buttonSprites[2].guiTexture.color = Color.green;
+				buttons[2].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level4" :
-				buttonSprites[3].guiTexture.color = Color.green;
+				buttons[3].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level5" :
-				buttonSprites[4].guiTexture.color = Color.green;
+				buttons[4].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level6" :
-				buttonSprites[5].guiTexture.color = Color.green;
+				buttons[5].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level7" :
-				buttonSprites[6].guiTexture.color = Color.green;
+				buttons[6].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level8" :
-				buttonSprites[7].guiTexture.color = Color.green;
+				buttons[7].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level9" :
-				buttonSprites[8].guiTexture.color = Color.green;
+				buttons[8].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level10" :
-				buttonSprites[9].guiTexture.color = Color.green;
+				buttons[9].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level11" :
-				buttonSprites[10].guiTexture.color = Color.green;
+				buttons[10].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level12" :
-				buttonSprites[11].guiTexture.color = Color.green;
+				buttons[11].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level13" :
-				buttonSprites[12].guiTexture.color = Color.green;
+				buttons[12].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level14" :
-				buttonSprites[13].guiTexture.color = Color.green;
+				buttons[13].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level15" :
-				buttonSprites[14].guiTexture.color = Color.green;
+				buttons[14].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level16" :
-				buttonSprites[15].guiTexture.color = Color.green;
+				buttons[15].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level17" :
-				buttonSprites[16].guiTexture.color = Color.green;
+				buttons[16].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level18" :
-				buttonSprites[17].guiTexture.color = Color.green;
+				buttons[17].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level19" :
-				buttonSprites[18].guiTexture.color = Color.green;
+				buttons[18].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level20" :
-				buttonSprites[19].guiTexture.color = Color.green;
+				buttons[19].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level21" :
-				buttonSprites[20].guiTexture.color = Color.green;
+				buttons[20].guiTexture.texture = buttonTextures[0];
 			break;
 			
 			case "Level22" :
-				buttonSprites[21].guiTexture.color = Color.green;
+				buttons[21].guiTexture.texture = buttonTextures[0];
 			break;
 		}
 	}
