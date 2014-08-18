@@ -41,7 +41,7 @@ public class Persistent : MonoBehaviour
 		{
 			iguiScript = iguiObj.GetComponent<InGameUI>();
 
-			if(iguiScript.timeValue > 0 && iguiScript.truckLeftScoreValue == 5 && iguiScript.truckRightScoreValue == 5)
+			if(iguiScript.timeValue > 0 && iguiScript.truckLeftScoreValue == 5 && iguiScript.truckRightScoreValue == 5) //This part works only if game started from Level Selection Screen which is correct
 			{
 				iguiScript.Active("LoseCard");
 				iguiScript.Active("LoseCardText");
@@ -63,6 +63,6 @@ public class Persistent : MonoBehaviour
 
 	void Update () 
 	{
-		
+
 	}
 }
