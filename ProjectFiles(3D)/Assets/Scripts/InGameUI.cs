@@ -17,10 +17,12 @@ public class InGameUI : MonoBehaviour
 
 	void Start () 
 	{
+		Inactive("ContinueButton");
 		Inactive("LoseCard");
 		Inactive("LoseCardText");
 		Inactive("QuitButton");
 		Inactive("ResumeButton");
+		Inactive("RetryButton");
 		Inactive("WinCard");
 		Inactive("WinCardText");
 
@@ -66,6 +68,10 @@ public class InGameUI : MonoBehaviour
 	{
 		switch(name)
 		{
+			case "ContinueButton" :
+				buttonSprites[3].gameObject.SetActive(true);
+			break;
+
 			case "LoseCard" :
 				tempObjs[0].gameObject.SetActive(true);
 			break;
@@ -86,6 +92,10 @@ public class InGameUI : MonoBehaviour
 				buttonSprites[2].gameObject.SetActive(true);
 			break;
 
+			case "RetryButton" :
+				buttonSprites[4].gameObject.SetActive(true);
+			break;
+
 			case "WinCard" :
 				tempObjs[2].gameObject.SetActive(true);
 			break;
@@ -100,6 +110,10 @@ public class InGameUI : MonoBehaviour
 	{
 		switch(name)
 		{
+			case "ContinueButton" :
+				buttonSprites[3].gameObject.SetActive(false);
+			break;
+
 			case "LoseCard" :
 				tempObjs[0].gameObject.SetActive(false);
 			break;
@@ -118,6 +132,10 @@ public class InGameUI : MonoBehaviour
 			
 			case "ResumeButton" :
 				buttonSprites[2].gameObject.SetActive(false);
+			break;
+
+			case "RetryButton" :
+				buttonSprites[4].gameObject.SetActive(false);
 			break;
 
 			case "WinCard" :

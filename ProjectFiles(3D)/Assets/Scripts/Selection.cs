@@ -41,6 +41,26 @@ public class Selection : MonoBehaviour
 			persistentObj = Instantiate(persistentPrefab , new Vector3 (0 , 0 , 0) , Quaternion.identity) as GameObject;
 			persistentScript = persistentObj.GetComponent<Persistent>();
 		}
+
+		StartCoroutine("LevelSelection");
+	}
+
+	IEnumerator LevelSelection()
+	{
+		yield return new WaitForSeconds(0.1f);
+
+		//Debug.Log("Level Selection Coroutine");
+
+		if(persistentScript.levelProgress)
+		{
+			if(buttons[1].guiTexture.texture.Equals("Spr_Lock"))
+			{
+				buttons[1].texture = buttonTextures[0];
+				persistentScript.levelProgress = false;
+			}
+		}
+
+		StartCoroutine("LevelSelection");
 	}
 
 	public void Lock(string name)

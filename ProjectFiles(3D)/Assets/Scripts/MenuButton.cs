@@ -25,11 +25,16 @@ public class MenuButton : MonoBehaviour
 	{
 		switch(buttonName)
 		{
+			case "Continue" :
+				Application.LoadLevel(0);
+			break;
+
 			case "Level1" :
 				
 				if(selectionScript.buttons[0].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level1");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -39,6 +44,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[1].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level2");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -48,6 +54,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[2].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level3");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -57,6 +64,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[3].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level4");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -66,6 +74,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[4].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level5");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -75,6 +84,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[5].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level6");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -84,6 +94,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[6].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level7");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -93,6 +104,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[7].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level8");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -102,6 +114,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[8].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level9");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -111,6 +124,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[9].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level10");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -120,6 +134,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[10].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level11");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -129,6 +144,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[11].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level12");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -138,6 +154,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[12].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level13");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -147,6 +164,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[13].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level14");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -156,6 +174,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[14].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level15");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -165,6 +184,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[15].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level16");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -174,6 +194,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[16].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level17");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -183,6 +204,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[17].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level18");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -192,6 +214,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[18].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level19");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -201,6 +224,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[19].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level20");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -210,6 +234,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[20].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level21");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -219,6 +244,7 @@ public class MenuButton : MonoBehaviour
 				if(selectionScript.buttons[21].guiTexture.texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level22");
+					Time.timeScale = 1;
 				}
 
 			break;
@@ -243,11 +269,20 @@ public class MenuButton : MonoBehaviour
 				iguiScript.Inactive("QuitButton");
 				iguiScript.Inactive("ResumeButton");
 			break;
+
+			case "Retry" :
+				Application.LoadLevel(Application.loadedLevel);
+			break;
 		}
 	}
 
 	void OnMouseDown()
 	{
+		if(buttonName == "Continue")
+		{
+			ButtonClick("Continue");
+		}
+
 		if(buttonName == "Level1")
 		{
 			ButtonClick("Level1");
@@ -371,6 +406,11 @@ public class MenuButton : MonoBehaviour
 		if(buttonName == "Resume")
 		{
 			ButtonClick("Resume");
+		}
+
+		if(buttonName == "Retry")
+		{
+			ButtonClick("Retry");
 		}
 	}
 

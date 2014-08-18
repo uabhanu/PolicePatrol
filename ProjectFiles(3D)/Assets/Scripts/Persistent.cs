@@ -45,6 +45,8 @@ public class Persistent : MonoBehaviour
 			{
 				iguiScript.Active("LoseCard");
 				iguiScript.Active("LoseCardText");
+				iguiScript.Inactive("PauseButton");
+				iguiScript.Active("RetryButton");
 				Time.timeScale = 0;
 			}
 
@@ -52,6 +54,8 @@ public class Persistent : MonoBehaviour
 			{
 				iguiScript.Active("WinCard");
 				iguiScript.Active("WinCardText");
+				iguiScript.Inactive("PauseButton");
+				iguiScript.Active("ContinueButton");
 				Time.timeScale = 0;
 				iguiScript.levelCompleted = true;
 				levelProgress = iguiScript.levelCompleted;
