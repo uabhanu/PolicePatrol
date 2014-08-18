@@ -5,7 +5,7 @@ public class InGameUI : MonoBehaviour
 {
 	public bool levelCompleted;
 	public GameObject[] tempObjs;
-	public GUIText timeLabel , truckLeftScoreLabel , truckLeftScoreDisplayLabel , truckRightScoreLabel , truckRightScoreDisplayLabel;
+	public GUIText timeLabel , timeDisplayLabel , truckLeftScoreLabel , truckLeftScoreDisplayLabel , truckRightScoreLabel , truckRightScoreDisplayLabel;
 	public GUITexture[] buttonSprites;
 	public int timeValue , truckLeftScoreValue , truckRightScoreValue;
 
@@ -37,27 +37,23 @@ public class InGameUI : MonoBehaviour
 		}
 
 		timeLabel.text = timeValue.ToString();
+
+		if(timeValue <= 5)
+		{
+			timeLabel.color = Color.green;
+			timeDisplayLabel.color = Color.green;
+		}
 		
 		truckLeftScoreLabel.text = truckLeftScoreValue.ToString();
 		truckRightScoreLabel.text = truckRightScoreValue.ToString();
 
-		if(truckLeftScoreValue <= 3)
-		{
-			truckLeftScoreLabel.color = Color.green;
-			truckLeftScoreDisplayLabel.color = Color.green;
-		}
-		else
+		if(truckLeftScoreValue > 3)
 		{
 			truckLeftScoreLabel.color = Color.red;
 			truckLeftScoreDisplayLabel.color = Color.red;
 		}
 
-		if(truckRightScoreValue <= 3)
-		{
-			truckRightScoreLabel.color = Color.green;
-			truckRightScoreDisplayLabel.color = Color.green;
-		}
-		else
+		if(truckRightScoreValue > 3)
 		{
 			truckRightScoreLabel.color = Color.red;
 			truckRightScoreDisplayLabel.color = Color.red;
