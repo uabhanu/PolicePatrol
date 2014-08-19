@@ -5,9 +5,10 @@ public class Enemy : MonoBehaviour
 {
 	public Animator anim;
 	public bool collidedPlayer;
+	public EnemySpawner eSpawnScript;
 	[HideInInspector]
 	public float speed , tagTimer;
-	public GameObject iguiObj , playerObj , sAgentObj;
+	public GameObject eSpawnObj , iguiObj , playerObj , sAgentObj;
 	public GameObject[] enemies;
 	public InGameUI iguiScript;
 	public int hitpoints;
@@ -33,6 +34,13 @@ public class Enemy : MonoBehaviour
 		{
 			agent = this.gameObject.GetComponent<NavMeshAgent>();
 			anim = this.gameObject.GetComponent<Animator>();
+
+			eSpawnObj = GameObject.FindGameObjectWithTag("ESpawn");
+
+			if(eSpawnObj != null)
+			{
+				eSpawnScript = eSpawnObj.GetComponent<EnemySpawner>();
+			}
 
 			if(transform.position.x < 0)
 			{
@@ -94,6 +102,7 @@ public class Enemy : MonoBehaviour
 			}
 
 			sAgentScript.enemies--;
+			eSpawnScript.enemySpawned = false;
 			Destroy (this.gameObject);
 			playerScript.target = null;
 		}
