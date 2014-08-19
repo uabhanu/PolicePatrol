@@ -8,14 +8,13 @@ public class Enemy : MonoBehaviour
 	public EnemySpawner eSpawnScript;
 	[HideInInspector]
 	public float speed , tagTimer;
-	public GameObject eSpawnObj , iguiObj , playerObj , sAgentObj;
+	public GameObject eSpawnObj , iguiObj , playerObj;
 	public GameObject[] enemies;
 	public InGameUI iguiScript;
 	public int hitpoints;
 	public NavMeshAgent agent;
 	public ParticleSystem sweatParticles;
 	public Player playerScript;
-	public SpawnerAgent sAgentScript;
 	public Transform target;
 
 	public enum State
@@ -71,13 +70,6 @@ public class Enemy : MonoBehaviour
 		{
 			playerScript = playerObj.GetComponent<Player>();
 		}
-
-		sAgentObj = GameObject.FindGameObjectWithTag("SAgent");
-		
-		if(sAgentObj != null)
-		{
-			sAgentScript = sAgentObj.GetComponent<SpawnerAgent>();
-		}		
 	}
 
 	IEnumerator TagTimer()
@@ -101,7 +93,12 @@ public class Enemy : MonoBehaviour
 				playerScript.SetState(0);
 			}
 
-			sAgentScript.enemies--;
+
+			if(iguiScript.enemyCount > 0)
+			{
+				iguiScript.enemyCount--;
+			}
+	
 			eSpawnScript.enemySpawned = false;
 			Destroy (this.gameObject);
 			playerScript.target = null;

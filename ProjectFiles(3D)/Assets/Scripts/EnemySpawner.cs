@@ -6,9 +6,9 @@ public class EnemySpawner : MonoBehaviour
 	//[HideInInspector]
 	public bool enemySpawned;
 	public Enemy enemyScript;
+	public InGameUI iguiScript;
 	public float spawnTimer;
-	public GameObject enemyObj , sAgentObj;
-	public SpawnerAgent sAgentScript;
+	public GameObject enemyObj , iguiObj;
 	
 	void Start () 
 	{
@@ -17,27 +17,32 @@ public class EnemySpawner : MonoBehaviour
 			enemyScript = enemyObj.GetComponent<Enemy>();
 		}
 
-		sAgentScript = sAgentObj.GetComponent<SpawnerAgent>();
+		iguiObj = GameObject.FindGameObjectWithTag("IGUI");
+
+		if(iguiObj != null)
+		{
+			iguiScript = iguiObj.GetComponent<InGameUI>();
+		}
 
 		StartCoroutine("EnemySpawnTimer");
 	}
 	
 	public void EnemySpawn()
 	{
-		if(!enemySpawned && sAgentScript.enemies < sAgentScript.maxEnemies)
+		if(!enemySpawned && iguiScript.enemyCount < iguiScript.maxEnemyCount)
 		{
 			if(transform.position.z > 0)
 			{
 				Debug.Log("Enemy Spawner");
 				Instantiate (enemyObj , new Vector3(transform.position.x , transform.position.y , transform.position.z + 10.0f) , Quaternion.identity);
-				sAgentScript.enemies++;
+				iguiScript.enemyCount++;
 			}
 
 			else if(transform.position.z < 0)
 			{
 				Debug.Log("Enemy Spawner");
 				Instantiate (enemyObj , new Vector3(transform.position.x , transform.position.y , transform.position.z - 10.0f) , Quaternion.identity);
-				sAgentScript.enemies++;
+				iguiScript.enemyCount++;
 			}
 		}
 	}

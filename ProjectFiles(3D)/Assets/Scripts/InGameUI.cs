@@ -7,7 +7,7 @@ public class InGameUI : MonoBehaviour
 	public GameObject[] tempObjs;
 	public GUIText timeLabel , timeDisplayLabel , truckLeftScoreLabel , truckLeftScoreDisplayLabel , truckRightScoreLabel , truckRightScoreDisplayLabel;
 	public GUITexture[] buttonSprites;
-	public int timeValue , truckLeftScoreValue , truckRightScoreValue;
+	public int enemyCount , maxEnemyCount , timeValue , truckLeftScoreValue , truckRightScoreValue;
 
 	void Awake()
 	{
