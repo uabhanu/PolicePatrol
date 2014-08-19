@@ -105,6 +105,7 @@ public class Player : MonoBehaviour
 				
 			case State.Attack :
 				anim.SetInteger("AnimIndex" , 2);
+				agent.speed = 0;
 			break;
 		}
 	}

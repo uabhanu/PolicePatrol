@@ -27,6 +27,8 @@ public class InGameUI : MonoBehaviour
 		Inactive("WinCardText");
 
 		StartCoroutine("GameTimer");
+
+		timeLabel.text = timeValue.ToString();
 	}
 
 	IEnumerator GameTimer()
@@ -40,7 +42,7 @@ public class InGameUI : MonoBehaviour
 
 		timeLabel.text = timeValue.ToString();
 
-		if(timeValue <= 5)
+		if(timeValue < 10)
 		{
 			timeLabel.color = Color.green;
 			timeDisplayLabel.color = Color.green;

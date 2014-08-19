@@ -123,22 +123,28 @@ public class Enemy : MonoBehaviour
 	{
 		if(col.gameObject.tag.Equals("Left"))
 		{
-			if(iguiScript.truckLeftScoreValue < 5)
+			if(currentState != State.Hit)
 			{
-				iguiScript.truckLeftScoreValue++;
+				if(iguiScript.truckLeftScoreValue < 5)
+				{
+					iguiScript.truckLeftScoreValue++;
+				}
+				
+				Death();
 			}
-			
-			Death();
 		}
 		
 		if(col.gameObject.tag.Equals("Right"))
 		{
-			if(iguiScript.truckRightScoreValue < 5)
+			if(currentState != State.Hit)
 			{
-				iguiScript.truckRightScoreValue++;
+				if(iguiScript.truckRightScoreValue < 5)
+				{
+					iguiScript.truckRightScoreValue++;
+				}
+				
+				Death();
 			}
-			
-			Death();
 		}
 
 		if(col.gameObject.tag.Equals("Player"))
@@ -228,6 +234,7 @@ public class Enemy : MonoBehaviour
 
 			case State.Hit :
 				anim.SetInteger("AnimIndex" , 1);
+				agent.speed = 0;
 			break;
 
 			case State.KO :
