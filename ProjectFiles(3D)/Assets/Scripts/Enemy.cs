@@ -190,15 +190,6 @@ public class Enemy : MonoBehaviour
 
 	}
 
-	void OnTriggerEnter(Collider col)
-	{
-		if(col.gameObject.tag.Equals("SCheck"))
-		{
-			Debug.Log("Spawn Check");
-			escScript.enemySpawned = true;
-		}
-	}
-
 	public void SetState(int newState)
 	{
 		previousState = currentState;
