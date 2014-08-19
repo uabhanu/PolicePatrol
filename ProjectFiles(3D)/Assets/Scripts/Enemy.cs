@@ -5,10 +5,9 @@ public class Enemy : MonoBehaviour
 {
 	public Animator anim;
 	public bool collidedPlayer;
-	public EnemySpawnCheck escScript;
 	[HideInInspector]
 	public float speed , tagTimer;
-	public GameObject escObj , iguiObj , playerObj , sAgentObj;
+	public GameObject iguiObj , playerObj , sAgentObj;
 	public GameObject[] enemies;
 	public InGameUI iguiScript;
 	public int hitpoints;
@@ -34,13 +33,6 @@ public class Enemy : MonoBehaviour
 		{
 			agent = this.gameObject.GetComponent<NavMeshAgent>();
 			anim = this.gameObject.GetComponent<Animator>();
-
-			escObj = GameObject.FindGameObjectWithTag("SCheck");
-
-			if(escObj != null)
-			{
-				escScript = escObj.GetComponent<EnemySpawnCheck>();
-			}
 
 			if(transform.position.x < 0)
 			{
@@ -102,7 +94,6 @@ public class Enemy : MonoBehaviour
 			}
 
 			sAgentScript.enemies--;
-			escScript.enemySpawned = false;
 			Destroy (this.gameObject);
 			playerScript.target = null;
 		}
