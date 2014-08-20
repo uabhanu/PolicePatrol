@@ -1,46 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Persistent : MonoBehaviour 
+public class LevelProgress : MonoBehaviour 
 {
 	public bool levelProgress;
-	public GameObject iguiObj , selectionObj , splashObj;
+	public GameObject iguiObj;
 	public InGameUI iguiScript;
-	public Selection selectionScript;
-	public Texture[] buttonTextures;
 	
-	void Awake () 
+	void Start () 
 	{
-		DontDestroyOnLoad(transform.gameObject);
-
-		selectionObj = GameObject.FindGameObjectWithTag("Select");
-
-		if(selectionObj != null)
-		{
-			selectionScript = selectionObj.GetComponent<Selection>();
-		}
-
-		buttonTextures[0] = selectionScript.buttonTextures[0];
-		buttonTextures[1] = selectionScript.buttonTextures[1];
-
-		splashObj = GameObject.FindGameObjectWithTag("Splash");
-
+		DontDestroyOnLoad(this.gameObject);
 		StartCoroutine("GameTimer");
 	}
 
 	IEnumerator GameTimer()
 	{
 		yield return new WaitForSeconds(0.4f);
-
+		
 		if(iguiObj == null)
 		{
 			iguiObj = GameObject.FindGameObjectWithTag("IGUI");
 		}
-
+		
 		if(iguiObj != null)
 		{
 			iguiScript = iguiObj.GetComponent<InGameUI>();
-
+			
 			if(iguiScript.timeValue > 0 && iguiScript.truckLeftScoreValue == 5 && iguiScript.truckRightScoreValue == 5) //This part works only if game started from Level Selection Screen which is correct
 			{
 				Debug.Log("Both Trucks 5/5");
@@ -50,7 +35,7 @@ public class Persistent : MonoBehaviour
 				iguiScript.Active("RetryButton");
 				Time.timeScale = 0;
 			}
-
+			
 			else if(iguiScript.timeValue == 0)
 			{
 				Debug.Log("Back up arrived in Time");
@@ -59,16 +44,15 @@ public class Persistent : MonoBehaviour
 				iguiScript.Inactive("PauseButton");
 				iguiScript.Active("ContinueButton");
 				Time.timeScale = 0;
-				iguiScript.levelCompleted = true;
-				levelProgress = iguiScript.levelCompleted;
+				levelProgress = true;
 			}
 		}
-
+		
 		StartCoroutine("GameTimer");
 	}
 
 	void Update () 
 	{
-
+	
 	}
 }

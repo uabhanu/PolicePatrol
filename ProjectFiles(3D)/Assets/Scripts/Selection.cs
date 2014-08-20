@@ -3,9 +3,11 @@ using System.Collections;
 
 public class Selection : MonoBehaviour 
 {
-	public GameObject persistentObj , persistentPrefab;
+	public bool levelProgress;
+	public GameObject iguiObj , progressObj;
 	public GUITexture[] buttons;
-	public Persistent persistentScript;
+	public InGameUI iguiScript;
+	public LevelProgress progressScript;
 	public Texture[] buttonTextures;
 	
 	void Start () 
@@ -36,31 +38,141 @@ public class Selection : MonoBehaviour
 		Lock("Level21");
 		Lock("Level22");
 
-		if(persistentObj == null)
+		progressObj = GameObject.FindGameObjectWithTag("Progress");
+
+		if(progressObj != null)
 		{
-			persistentObj = Instantiate(persistentPrefab , new Vector3 (0 , 0 , 0) , Quaternion.identity) as GameObject;
-			persistentScript = persistentObj.GetComponent<Persistent>();
+			progressScript = progressObj.GetComponent<LevelProgress>();
 		}
 
-		StartCoroutine("LevelSelection");
-	}
-
-	IEnumerator LevelSelection()
-	{
-		yield return new WaitForSeconds(0.1f);
-
-		//Debug.Log("Level Selection Coroutine");
-
-		if(persistentScript.levelProgress)
+		if(progressScript.levelProgress)
 		{
-			if(buttons[1].guiTexture.texture.Equals("Spr_Lock"))
+			if(buttons[1].guiTexture.texture == buttonTextures[1])
 			{
-				buttons[1].texture = buttonTextures[0];
-				persistentScript.levelProgress = false;
+				Unlock("Level2");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[2].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level3");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[3].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level4");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[4].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level5");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[5].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level6");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[6].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level7");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[7].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level8");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[8].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level9");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[9].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level10");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[10].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level11");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[11].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level12");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[12].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level13");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[13].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level14");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[14].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level15");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[15].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level16");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[16].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level17");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[17].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level18");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[18].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level19");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[19].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level20");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[20].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level21");
+				progressScript.levelProgress = false;
+			}
+
+			else if(buttons[21].guiTexture.texture == buttonTextures[1])
+			{
+				Unlock("Level22");
+				progressScript.levelProgress = false;
 			}
 		}
-
-		StartCoroutine("LevelSelection");
 	}
 
 	public void Lock(string name)
