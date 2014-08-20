@@ -272,6 +272,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Retry" :
 				Application.LoadLevel(Application.loadedLevel);
+				Time.timeScale = 1;
 			break;
 		}
 	}
