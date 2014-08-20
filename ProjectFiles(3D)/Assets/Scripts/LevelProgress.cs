@@ -26,25 +26,28 @@ public class LevelProgress : MonoBehaviour
 		{
 			iguiScript = iguiObj.GetComponent<InGameUI>();
 			
-			if(iguiScript.timeValue > 0 && iguiScript.truckLeftScoreValue == 5 && iguiScript.truckRightScoreValue == 5) //This part works only if game started from Level Selection Screen which is correct
+			if(iguiScript != null)
 			{
-				Debug.Log("Both Trucks 5/5");
-				iguiScript.Active("LoseCard");
-				iguiScript.Active("LoseCardText");
-				iguiScript.Inactive("PauseButton");
-				iguiScript.Active("RetryButton");
-				Time.timeScale = 0;
-			}
-			
-			else if(iguiScript.timeValue == 0)
-			{
-				Debug.Log("Back up arrived in Time");
-				iguiScript.Active("WinCard");
-				iguiScript.Active("WinCardText");
-				iguiScript.Inactive("PauseButton");
-				iguiScript.Active("ContinueButton");
-				Time.timeScale = 0;
-				levelProgress = true;
+				if(iguiScript.timeValue > 0 && iguiScript.truckLeftScoreValue == 5 && iguiScript.truckRightScoreValue == 5) //This part works only if game started from Level Selection Screen which is correct
+				{
+					Debug.Log("Both Trucks 5/5");
+					iguiScript.Active("LoseCard");
+					iguiScript.Active("LoseCardText");
+					iguiScript.Inactive("PauseButton");
+					iguiScript.Active("RetryButton");
+					Time.timeScale = 0;
+				}
+				
+				else if(iguiScript.timeValue == 0)
+				{
+					Debug.Log("Back up arrived in Time");
+					iguiScript.Active("WinCard");
+					iguiScript.Active("WinCardText");
+					iguiScript.Inactive("PauseButton");
+					iguiScript.Active("ContinueButton");
+					Time.timeScale = 0;
+					levelProgress = true;
+				}
 			}
 		}
 		

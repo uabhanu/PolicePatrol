@@ -29,20 +29,23 @@ public class EnemySpawner : MonoBehaviour
 	
 	public void EnemySpawn()
 	{
-		if(!enemySpawned && iguiScript.enemyCount < iguiScript.maxEnemyCount)
+		if(iguiScript != null)
 		{
-			if(transform.position.z > 0)
+			if(!enemySpawned && iguiScript.enemyCount < iguiScript.maxEnemyCount)
 			{
-				Debug.Log("Enemy Spawner");
-				Instantiate (enemyObj , new Vector3(transform.position.x , transform.position.y , transform.position.z + 10.0f) , Quaternion.identity);
-				iguiScript.enemyCount++;
-			}
-
-			else if(transform.position.z < 0)
-			{
-				Debug.Log("Enemy Spawner");
-				Instantiate (enemyObj , new Vector3(transform.position.x , transform.position.y , transform.position.z - 10.0f) , Quaternion.identity);
-				iguiScript.enemyCount++;
+				if(transform.position.z > 0)
+				{
+					Debug.Log("Enemy Spawner");
+					Instantiate (enemyObj , new Vector3(transform.position.x , transform.position.y , transform.position.z + 10.0f) , Quaternion.identity);
+					iguiScript.enemyCount++;
+				}
+				
+				else if(transform.position.z < 0)
+				{
+					Debug.Log("Enemy Spawner");
+					Instantiate (enemyObj , new Vector3(transform.position.x , transform.position.y , transform.position.z - 10.0f) , Quaternion.identity);
+					iguiScript.enemyCount++;
+				}
 			}
 		}
 	}
