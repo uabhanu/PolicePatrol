@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
 		if(enemyObj != null && enemyScript.currentState == Enemy.State.Hit)
 		{
 			enemyScript.DeductHitPoints(attack);
+			enemyScript.Hit();
 		}
 	}
 

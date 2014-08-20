@@ -119,6 +119,12 @@ public class Enemy : MonoBehaviour
 		}	
 	}
 
+	public void Hit()
+	{
+		Debug.Log("Enemy Hit Animation");
+		anim.SetInteger("AnimIndex" , 1);
+	}
+
 	void OnCollisionEnter(Collision col)
 	{
 		if(col.gameObject.tag.Equals("Left"))
@@ -233,7 +239,6 @@ public class Enemy : MonoBehaviour
 			break;
 
 			case State.Hit :
-				anim.SetInteger("AnimIndex" , 1);
 				agent.speed = 0;
 			break;
 
