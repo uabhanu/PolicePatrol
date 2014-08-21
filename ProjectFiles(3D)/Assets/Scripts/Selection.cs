@@ -16,6 +16,7 @@ public class Selection : MonoBehaviour
 		Application.targetFrameRate = 30;
 
 		Unlock("Level1");
+
 		Lock("Level2");
 		Lock("Level3");
 		Lock("Level4");

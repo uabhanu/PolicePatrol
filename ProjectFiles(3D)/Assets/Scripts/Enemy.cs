@@ -99,9 +99,17 @@ public class Enemy : MonoBehaviour
 				iguiScript.enemyCount--;
 			}
 	
-			eSpawnScript.enemySpawned = false;
+			if(eSpawnScript != null)
+			{
+				eSpawnScript.enemySpawned = false;
+			}
+
 			Destroy (this.gameObject);
-			playerScript.target = null;
+
+			if(playerScript != null)
+			{
+				playerScript.target = null;
+			}
 		}
 	}
 
@@ -153,7 +161,7 @@ public class Enemy : MonoBehaviour
 			}
 		}
 
-		if(col.gameObject.tag.Equals("Player"))
+		if(col.gameObject.tag.Equals("Player") && playerScript != null)
 		{
 			if(playerScript.currentState == Player.State.Run)
 			{
@@ -175,7 +183,6 @@ public class Enemy : MonoBehaviour
 	{
 		Debug.Log("Enemy Selected");
 
-		this.gameObject.tag = "Target";
 		sweatParticles = this.gameObject.GetComponentInChildren<ParticleSystem>();
 
 		Time.timeScale = 1;
@@ -218,7 +225,7 @@ public class Enemy : MonoBehaviour
 	{
 		agent.SetDestination(target.position);
 
-		if(this.collidedPlayer && this.gameObject.tag.Equals("Target") && playerScript.currentState == Player.State.Attack)
+		if(this.collidedPlayer && playerScript.currentState == Player.State.Attack)
 		{
 			agent.speed = 0;
 			SetState(1);

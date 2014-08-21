@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
 
 	public void Attack()
 	{
-		if(enemyObj != null && enemyScript.currentState == Enemy.State.Hit)
+		if(enemyScript != null && enemyScript.currentState == Enemy.State.Hit)
 		{
 			enemyScript.DeductHitPoints(attack);
 			enemyScript.Hit();
@@ -56,10 +56,13 @@ public class Player : MonoBehaviour
 
 	void OnCollisionEnter(Collision col)
 	{
-		if(col.gameObject.tag.Equals("Target") && enemyScript.collidedPlayer)
+		if(enemyScript != null)
 		{
-			//Debug.Log("Collision with Enemy");
-			SetState(2);
+			if(col.gameObject.tag.Equals("Enemy") && enemyScript.collidedPlayer)
+			{
+				//Debug.Log("Collision with Enemy");
+				SetState(2);
+			}
 		}
 
 		if(col.gameObject.tag.Equals("Left") || col.gameObject.tag.Equals("Right"))
