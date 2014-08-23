@@ -48,127 +48,127 @@ public class Selection : MonoBehaviour
 
 		if(progressScript.levelProgress)
 		{
-			if(buttons[1].guiTexture.texture == buttonTextures[1])
+			if(buttons[1].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level2");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[2].guiTexture.texture == buttonTextures[1])
+			else if(buttons[2].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level3");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[3].guiTexture.texture == buttonTextures[1])
+			else if(buttons[3].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level4");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[4].guiTexture.texture == buttonTextures[1])
+			else if(buttons[4].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level5");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[5].guiTexture.texture == buttonTextures[1])
+			else if(buttons[5].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level6");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[6].guiTexture.texture == buttonTextures[1])
+			else if(buttons[6].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level7");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[7].guiTexture.texture == buttonTextures[1])
+			else if(buttons[7].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level8");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[8].guiTexture.texture == buttonTextures[1])
+			else if(buttons[8].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level9");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[9].guiTexture.texture == buttonTextures[1])
+			else if(buttons[9].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level10");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[10].guiTexture.texture == buttonTextures[1])
+			else if(buttons[10].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level11");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[11].guiTexture.texture == buttonTextures[1])
+			else if(buttons[11].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level12");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[12].guiTexture.texture == buttonTextures[1])
+			else if(buttons[12].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level13");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[13].guiTexture.texture == buttonTextures[1])
+			else if(buttons[13].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level14");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[14].guiTexture.texture == buttonTextures[1])
+			else if(buttons[14].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level15");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[15].guiTexture.texture == buttonTextures[1])
+			else if(buttons[15].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level16");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[16].guiTexture.texture == buttonTextures[1])
+			else if(buttons[16].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level17");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[17].guiTexture.texture == buttonTextures[1])
+			else if(buttons[17].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level18");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[18].guiTexture.texture == buttonTextures[1])
+			else if(buttons[18].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level19");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[19].guiTexture.texture == buttonTextures[1])
+			else if(buttons[19].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level20");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[20].guiTexture.texture == buttonTextures[1])
+			else if(buttons[20].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level21");
 				progressScript.levelProgress = false;
 			}
 
-			else if(buttons[21].guiTexture.texture == buttonTextures[1])
+			else if(buttons[21].GetComponent<GUITexture>().texture == buttonTextures[1])
 			{
 				Unlock("Level22");
 				progressScript.levelProgress = false;
@@ -181,91 +181,91 @@ public class Selection : MonoBehaviour
 		switch(name)
 		{
 			case "Level1" :
-				buttons[0].guiTexture.texture = buttonTextures[1];
+				buttons[0].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level2" :
-				buttons[1].guiTexture.texture = buttonTextures[1];
+				buttons[1].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level3" :
-				buttons[2].guiTexture.texture = buttonTextures[1];
+				buttons[2].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level4" :
-				buttons[3].guiTexture.texture = buttonTextures[1];
+				buttons[3].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level5" :
-				buttons[4].guiTexture.texture = buttonTextures[1];
+				buttons[4].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level6" :
-				buttons[5].guiTexture.texture = buttonTextures[1];
+				buttons[5].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level7" :
-				buttons[6].guiTexture.texture = buttonTextures[1];
+				buttons[6].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level8" :
-				buttons[7].guiTexture.texture = buttonTextures[1];
+				buttons[7].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level9" :
-				buttons[8].guiTexture.texture = buttonTextures[1];
+				buttons[8].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level10" :
-				buttons[9].guiTexture.texture = buttonTextures[1];
+				buttons[9].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level11" :
-				buttons[10].guiTexture.texture = buttonTextures[1];
+				buttons[10].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level12" :
-				buttons[11].guiTexture.texture = buttonTextures[1];
+				buttons[11].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level13" :
-				buttons[12].guiTexture.texture = buttonTextures[1];
+				buttons[12].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level14" :
-				buttons[13].guiTexture.texture = buttonTextures[1];
+				buttons[13].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level15" :
-				buttons[14].guiTexture.texture = buttonTextures[1];
+				buttons[14].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level16" :
-				buttons[15].guiTexture.texture = buttonTextures[1];
+				buttons[15].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level17" :
-				buttons[16].guiTexture.texture = buttonTextures[1];
+				buttons[16].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level18" :
-				buttons[17].guiTexture.texture = buttonTextures[1];
+				buttons[17].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level19" :
-				buttons[18].guiTexture.texture = buttonTextures[1];
+				buttons[18].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level20" :
-				buttons[19].guiTexture.texture = buttonTextures[1];
+				buttons[19].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level21" :
-				buttons[20].guiTexture.texture = buttonTextures[1];
+				buttons[20].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 
 			case "Level22" :
-				buttons[21].guiTexture.texture = buttonTextures[1];
+				buttons[21].GetComponent<GUITexture>().texture = buttonTextures[1];
 			break;
 		}
 	}
@@ -275,91 +275,91 @@ public class Selection : MonoBehaviour
 		switch(name)
 		{
 			case "Level1" :
-				buttons[0].guiTexture.texture = buttonTextures[0];
+				buttons[0].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level2" :
-				buttons[1].guiTexture.texture = buttonTextures[0];
+				buttons[1].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level3" :
-				buttons[2].guiTexture.texture = buttonTextures[0];
+				buttons[2].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level4" :
-				buttons[3].guiTexture.texture = buttonTextures[0];
+				buttons[3].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level5" :
-				buttons[4].guiTexture.texture = buttonTextures[0];
+				buttons[4].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level6" :
-				buttons[5].guiTexture.texture = buttonTextures[0];
+				buttons[5].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level7" :
-				buttons[6].guiTexture.texture = buttonTextures[0];
+				buttons[6].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level8" :
-				buttons[7].guiTexture.texture = buttonTextures[0];
+				buttons[7].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level9" :
-				buttons[8].guiTexture.texture = buttonTextures[0];
+				buttons[8].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level10" :
-				buttons[9].guiTexture.texture = buttonTextures[0];
+				buttons[9].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level11" :
-				buttons[10].guiTexture.texture = buttonTextures[0];
+				buttons[10].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level12" :
-				buttons[11].guiTexture.texture = buttonTextures[0];
+				buttons[11].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level13" :
-				buttons[12].guiTexture.texture = buttonTextures[0];
+				buttons[12].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level14" :
-				buttons[13].guiTexture.texture = buttonTextures[0];
+				buttons[13].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level15" :
-				buttons[14].guiTexture.texture = buttonTextures[0];
+				buttons[14].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level16" :
-				buttons[15].guiTexture.texture = buttonTextures[0];
+				buttons[15].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level17" :
-				buttons[16].guiTexture.texture = buttonTextures[0];
+				buttons[16].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level18" :
-				buttons[17].guiTexture.texture = buttonTextures[0];
+				buttons[17].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level19" :
-				buttons[18].guiTexture.texture = buttonTextures[0];
+				buttons[18].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level20" :
-				buttons[19].guiTexture.texture = buttonTextures[0];
+				buttons[19].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level21" :
-				buttons[20].guiTexture.texture = buttonTextures[0];
+				buttons[20].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 			
 			case "Level22" :
-				buttons[21].guiTexture.texture = buttonTextures[0];
+				buttons[21].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 		}
 	}

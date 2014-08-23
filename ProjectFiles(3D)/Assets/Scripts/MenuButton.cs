@@ -31,7 +31,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level1" :
 				
-				if(selectionScript.buttons[0].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[0].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level1");
 					Time.timeScale = 1;
@@ -41,7 +41,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level2" :
 
-				if(selectionScript.buttons[1].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[1].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level2");
 					Time.timeScale = 1;
@@ -51,7 +51,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level3" :
 
-				if(selectionScript.buttons[2].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[2].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level3");
 					Time.timeScale = 1;
@@ -61,7 +61,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level4" :
 
-				if(selectionScript.buttons[3].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[3].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level4");
 					Time.timeScale = 1;
@@ -71,7 +71,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level5" :
 
-				if(selectionScript.buttons[4].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[4].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level5");
 					Time.timeScale = 1;
@@ -81,7 +81,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level6" :
 
-				if(selectionScript.buttons[5].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[5].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level6");
 					Time.timeScale = 1;
@@ -91,7 +91,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level7" :
 
-				if(selectionScript.buttons[6].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[6].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level7");
 					Time.timeScale = 1;
@@ -101,7 +101,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level8" :
 
-				if(selectionScript.buttons[7].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[7].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level8");
 					Time.timeScale = 1;
@@ -111,7 +111,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level9" :
 
-				if(selectionScript.buttons[8].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[8].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level9");
 					Time.timeScale = 1;
@@ -121,7 +121,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level10" :
 
-				if(selectionScript.buttons[9].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[9].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level10");
 					Time.timeScale = 1;
@@ -131,7 +131,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level11" :
 
-				if(selectionScript.buttons[10].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[10].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level11");
 					Time.timeScale = 1;
@@ -141,7 +141,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level12" :
 
-				if(selectionScript.buttons[11].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[11].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level12");
 					Time.timeScale = 1;
@@ -151,7 +151,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level13" :
 
-				if(selectionScript.buttons[12].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[12].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level13");
 					Time.timeScale = 1;
@@ -161,7 +161,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level14" :
 
-				if(selectionScript.buttons[13].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[13].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level14");
 					Time.timeScale = 1;
@@ -171,7 +171,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level15" :
 
-				if(selectionScript.buttons[14].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[14].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level15");
 					Time.timeScale = 1;
@@ -181,7 +181,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level16" :
 
-				if(selectionScript.buttons[15].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[15].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level16");
 					Time.timeScale = 1;
@@ -191,7 +191,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level17" :
 
-				if(selectionScript.buttons[16].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[16].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level17");
 					Time.timeScale = 1;
@@ -201,7 +201,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level18" :
 
-				if(selectionScript.buttons[17].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[17].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level18");
 					Time.timeScale = 1;
@@ -211,7 +211,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level19" :
 
-				if(selectionScript.buttons[18].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[18].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level19");
 					Time.timeScale = 1;
@@ -221,7 +221,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level20" :
 
-				if(selectionScript.buttons[19].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[19].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level20");
 					Time.timeScale = 1;
@@ -231,7 +231,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level21" :
 
-				if(selectionScript.buttons[20].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[20].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level21");
 					Time.timeScale = 1;
@@ -241,7 +241,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level22" :
 
-				if(selectionScript.buttons[21].guiTexture.texture == selectionScript.buttonTextures[0])
+				if(selectionScript.buttons[21].GetComponent<GUITexture>().texture == selectionScript.buttonTextures[0])
 				{
 					Application.LoadLevel("Level22");
 					Time.timeScale = 1;
