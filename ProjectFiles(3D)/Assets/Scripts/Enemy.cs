@@ -131,6 +131,7 @@ public class Enemy : MonoBehaviour
 	{
 		Debug.Log("Enemy Hit Animation");
 		anim.SetInteger("AnimIndex" , 1);
+		anim.Play(0);
 	}
 
 	void OnCollisionEnter(Collision col)
