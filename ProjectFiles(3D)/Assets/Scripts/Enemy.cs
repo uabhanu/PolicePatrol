@@ -212,10 +212,13 @@ public class Enemy : MonoBehaviour
 
 	public void Sweat()
 	{
-		if(currentState == State.Hit)
+		if(sweatParticles != null)
 		{
-			Debug.Log("Enemy Sweat");
-			sweatParticles.Play();
+			if(currentState == State.Hit)
+			{
+				Debug.Log("Enemy Sweat");
+				sweatParticles.Play();
+			}
 		}
 	}
 
