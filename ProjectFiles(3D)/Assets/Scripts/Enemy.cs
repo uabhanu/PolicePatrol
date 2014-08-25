@@ -4,7 +4,7 @@ using System.Collections;
 public class Enemy : MonoBehaviour 
 {
 	public Animator anim;
-	public bool collidedPlayer;
+	public bool collidedPlayer , selected;
 	public EnemySpawner eSpawnScript;
 	[HideInInspector]
 	public float speed , tagTimer;
@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
 	public ParticleSystem sweatParticles;
 	public Player playerScript;
 	public Transform target;
+	static public Enemy current;
 
 	public enum State
 	{
@@ -69,16 +70,6 @@ public class Enemy : MonoBehaviour
 		if(playerObj != null)
 		{
 			playerScript = playerObj.GetComponent<Player>();
-		}
-	}
-
-	IEnumerator TagTimer()
-	{
-		yield return new WaitForSeconds(tagTimer);
-
-		if(currentState != State.Hit)
-		{
-			tag = "Enemy";
 		}
 	}
 
@@ -184,6 +175,14 @@ public class Enemy : MonoBehaviour
 	{
 		Debug.Log("Enemy Selected");
 
+		if(current != null)
+		{
+			current.selected = false;
+		}
+
+		selected = true;
+		current = this;
+
 		sweatParticles = this.gameObject.GetComponentInChildren<ParticleSystem>();
 
 		if(Time.timeScale == 0)
@@ -205,11 +204,6 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
-	void OnMouseUpAsButton()
-	{
-
-	}
-
 	public void SetState(int newState)
 	{
 		previousState = currentState;
@@ -229,7 +223,7 @@ public class Enemy : MonoBehaviour
 	{
 		agent.SetDestination(target.position);
 
-		if(this.collidedPlayer && playerScript.currentState == Player.State.Attack)
+		if(this.collidedPlayer && selected && playerScript.currentState == Player.State.Attack)
 		{
 			agent.speed = 0;
 			SetState(1);
