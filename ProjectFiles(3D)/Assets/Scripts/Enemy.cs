@@ -186,7 +186,10 @@ public class Enemy : MonoBehaviour
 
 		sweatParticles = this.gameObject.GetComponentInChildren<ParticleSystem>();
 
-		Time.timeScale = 1;
+		if(Time.timeScale == 0)
+		{
+			Time.timeScale = 1;
+		}
 
 		if(playerScript.currentState != Player.State.Attack)
 		{
