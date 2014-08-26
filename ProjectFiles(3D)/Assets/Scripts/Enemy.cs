@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
 	public NavMeshAgent agent;
 	public ParticleSystem sweatParticles;
 	public Player playerScript;
+	public Rigidbody boxBody;
 	public Transform target;
 	static public Enemy current;
 
@@ -248,6 +249,12 @@ public class Enemy : MonoBehaviour
 
 			case State.Hit :
 				agent.speed = 0;
+
+				if(boxBody != null)
+				{
+					boxBody.useGravity = true;
+				}
+
 			break;
 
 			case State.KO :
