@@ -8,11 +8,18 @@ public class Box : MonoBehaviour
 
 	}
 
-	void OnTriggerEnter(Collider col)
+	IEnumerator DestroyTimer()
+	{
+		yield return new WaitForSeconds(3);
+		Destroy(this.gameObject);
+	}
+
+	void OnCollisionEnter(Collision col)
 	{
 		if(col.gameObject.tag.Equals("Floor"))
 		{
-			Destroy(this.gameObject);
+			//Debug.Log("Box on the Floor");
+			StartCoroutine("DestroyTimer");
 		}
 	}
 

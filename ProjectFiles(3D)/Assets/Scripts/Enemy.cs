@@ -16,8 +16,9 @@ public class Enemy : MonoBehaviour
 	public ParticleSystem sweatParticles;
 	public Player playerScript;
 	public Rigidbody boxBody;
+	public static Enemy current;
 	public Transform target;
-	static public Enemy current;
+	//static public Enemy current;
 
 	public enum State
 	{
@@ -253,6 +254,7 @@ public class Enemy : MonoBehaviour
 				if(boxBody != null)
 				{
 					boxBody.useGravity = true;
+					boxBody.transform.parent = null;
 				}
 
 			break;
