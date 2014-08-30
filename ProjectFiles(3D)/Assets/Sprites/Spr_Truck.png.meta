@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 0f62191ae1cba164abeca4325d59e67d
+guid: 5b9cc0df04664834c8f5b51075c9b1ec
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Spr_RightTruck
+    21300000: Spr_Truck
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
