@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: dc9be1d27e3f4ef4f980c7396e5be42c
 ModelImporter:
-  serializedVersion: 18
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: baniyan.001Mesh
     100002: chest
@@ -119,46 +119,6 @@ ModelImporter:
     100226: Character1_Ctrl_RightWristEffector
     100228: Character1_Ctrl_Spine
     100230: transform1
-    100232: Head
-    100234: Hips
-    100236: LeftArm
-    100238: LeftFoot
-    100240: LeftForeArm
-    100242: LeftHand
-    100244: LeftHandMiddle1
-    100246: LeftHandMiddle2
-    100248: LeftHandMiddle3
-    100250: LeftHandThumb1
-    100252: LeftHandThumb2
-    100254: LeftHandThumb3
-    100256: LeftInHandMiddle
-    100258: LeftLeg
-    100260: LeftShoulder
-    100262: LeftShoulderExtra
-    100264: LeftToeBase
-    100266: LeftUpLeg
-    100268: Neck
-    100270: proxy741Mesh1
-    100272: RightArm
-    100274: RightFoot
-    100276: RightForeArm
-    100278: RightHand
-    100280: RightHandMiddle1
-    100282: RightHandMiddle2
-    100284: RightHandMiddle3
-    100286: RightHandThumb1
-    100288: RightHandThumb2
-    100290: RightHandThumb3
-    100292: RightInHandMiddle
-    100294: RightLeg
-    100296: RightShoulder
-    100298: RightShoulderExtra
-    100300: RightToeBase
-    100302: RightUpLeg
-    100304: Spine
-    100306: Spine1
-    100308: Spine2
-    100310: Spine3
     400000: baniyan.001Mesh
     400002: chest
     400004: chest-1
@@ -275,46 +235,6 @@ ModelImporter:
     400226: Character1_Ctrl_RightWristEffector
     400228: Character1_Ctrl_Spine
     400230: transform1
-    400232: Head
-    400234: Hips
-    400236: LeftArm
-    400238: LeftFoot
-    400240: LeftForeArm
-    400242: LeftHand
-    400244: LeftHandMiddle1
-    400246: LeftHandMiddle2
-    400248: LeftHandMiddle3
-    400250: LeftHandThumb1
-    400252: LeftHandThumb2
-    400254: LeftHandThumb3
-    400256: LeftInHandMiddle
-    400258: LeftLeg
-    400260: LeftShoulder
-    400262: LeftShoulderExtra
-    400264: LeftToeBase
-    400266: LeftUpLeg
-    400268: Neck
-    400270: proxy741Mesh1
-    400272: RightArm
-    400274: RightFoot
-    400276: RightForeArm
-    400278: RightHand
-    400280: RightHandMiddle1
-    400282: RightHandMiddle2
-    400284: RightHandMiddle3
-    400286: RightHandThumb1
-    400288: RightHandThumb2
-    400290: RightHandThumb3
-    400292: RightInHandMiddle
-    400294: RightLeg
-    400296: RightShoulder
-    400298: RightShoulderExtra
-    400300: RightToeBase
-    400302: RightUpLeg
-    400304: Spine
-    400306: Spine1
-    400308: Spine2
-    400310: Spine3
     2300000: proxy741Mesh
     3300000: proxy741Mesh
     4300000: pythonMesh
@@ -324,7 +244,6 @@ ModelImporter:
     4300008: shoes02Mesh
     4300010: thug_maskMesh
     4300012: proxy741Mesh
-    4300014: proxy741Mesh1
     7400000: Take 001
     9500000: //RootNode
     11100000: //RootNode
@@ -335,7 +254,6 @@ ModelImporter:
     13700008: shoes02Mesh
     13700010: thug_maskMesh
     13700012: proxy741Mesh
-    13700014: proxy741Mesh1
   materials:
     importMaterials: 0
     materialName: 0
@@ -345,7 +263,6 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 1
     motionNodeName: 
-    pivotNodeName: 
     animationCompression: 3
     animationRotationError: .5
     animationPositionError: .5
@@ -369,7 +286,6 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 0
@@ -797,4 +713,3 @@ ModelImporter:
   animationType: 3
   additionalBone: 0
   userData: 
-  assetBundleName: 

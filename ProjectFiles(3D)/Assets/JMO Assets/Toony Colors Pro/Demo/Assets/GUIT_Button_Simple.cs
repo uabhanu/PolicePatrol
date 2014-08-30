@@ -20,7 +20,7 @@ public class GUIT_Button_Simple : MonoBehaviour
 	
 	void Update ()
 	{
-		if(this.GetComponent<GUITexture>().GetScreenRect().Contains(Input.mousePosition))
+		if(this.guiTexture.GetScreenRect().Contains(Input.mousePosition))
 		{
 			if(!over)
 			{
@@ -59,8 +59,8 @@ public class GUIT_Button_Simple : MonoBehaviour
 	void UpdateImage()
 	{
 		if(over)
-			this.GetComponent<GUITexture>().texture = text_over;
+			this.guiTexture.texture = text_over;
 		else
-			this.GetComponent<GUITexture>().texture = text;
+			this.guiTexture.texture = text;
 	}
 }
