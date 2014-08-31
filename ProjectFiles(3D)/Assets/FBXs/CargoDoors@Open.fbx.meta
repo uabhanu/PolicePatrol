@@ -39,7 +39,7 @@ ModelImporter:
     400032: transform5
     4300000: Cargo_Doors1
     4300002: Cargo_Doors
-    7400000: Doors
+    7400000: Open
     9500000: //RootNode
     13700000: Cargo_Doors1
     13700002: Cargo_Doors
@@ -60,7 +60,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Doors
+      name: Open
       takeName: Take 001
       firstFrame: 1
       lastFrame: 25
