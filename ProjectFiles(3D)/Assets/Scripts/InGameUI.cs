@@ -7,7 +7,7 @@ public class InGameUI : MonoBehaviour
 	public bool levelCompleted;
 	public GameObject[] tempObjs;
 	public GUIText timeLabel , timeDisplayLabel , truckLeftScoreLabel , truckLeftScoreDisplayLabel , truckRightScoreLabel , truckRightScoreDisplayLabel;
-	//public Text timeLabel , timeDisplayLabel , truckLeftScoreLabel , truckLeftScoreDisplayLabel , truckRightScoreLabel , truckRightScoreDisplayLabel;
+	//public Text timeLabel , timeDisplayLabel , truckLeftScoreLabel , truckLeftScoreDisplayLabel , truckRightScoreLabel , truckRightScoreDisplayLabel; This will be for Unity 4.6 (Not Beta) onwards
 	public GUITexture[] buttonSprites;
 	public int enemyCount , maxEnemyCount , timeValue , truckLeftScoreValue , truckRightScoreValue;
 
@@ -46,8 +46,8 @@ public class InGameUI : MonoBehaviour
 
 		if(timeValue < 10)
 		{
-			timeLabel.color = Color.green;
-			timeDisplayLabel.color = Color.green;
+			timeLabel.color = Color.blue;
+			timeDisplayLabel.color = Color.blue;
 		}
 		
 		truckLeftScoreLabel.text = truckLeftScoreValue.ToString();
@@ -58,11 +58,21 @@ public class InGameUI : MonoBehaviour
 			truckLeftScoreLabel.color = Color.red;
 			truckLeftScoreDisplayLabel.color = Color.red;
 		}
+		else
+		{
+			truckLeftScoreLabel.color = Color.blue;
+			truckLeftScoreDisplayLabel.color = Color.blue;
+		}
 
 		if(truckRightScoreValue > 3)
 		{
 			truckRightScoreLabel.color = Color.red;
 			truckRightScoreDisplayLabel.color = Color.red;
+		}
+		else
+		{
+			truckRightScoreLabel.color = Color.blue;
+			truckRightScoreDisplayLabel.color = Color.blue;
 		}
 
 		StartCoroutine("GameTimer");
