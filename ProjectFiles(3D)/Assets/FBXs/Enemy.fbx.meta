@@ -119,6 +119,7 @@ ModelImporter:
     100226: Character1_Ctrl_RightWristEffector
     100228: Character1_Ctrl_Spine
     100230: transform1
+    100232: proxy741Mesh1
     400000: baniyan.001Mesh
     400002: chest
     400004: chest-1
@@ -235,6 +236,7 @@ ModelImporter:
     400226: Character1_Ctrl_RightWristEffector
     400228: Character1_Ctrl_Spine
     400230: transform1
+    400232: proxy741Mesh1
     2300000: proxy741Mesh
     3300000: proxy741Mesh
     4300000: pythonMesh
@@ -244,6 +246,7 @@ ModelImporter:
     4300008: shoes02Mesh
     4300010: thug_maskMesh
     4300012: proxy741Mesh
+    4300014: proxy741Mesh1
     7400000: Take 001
     9500000: //RootNode
     11100000: //RootNode
@@ -254,6 +257,7 @@ ModelImporter:
     13700008: shoes02Mesh
     13700010: thug_maskMesh
     13700012: proxy741Mesh
+    13700014: proxy741Mesh1
   materials:
     importMaterials: 0
     materialName: 0

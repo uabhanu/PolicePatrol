@@ -70,6 +70,7 @@ ModelImporter:
     100128: transform1
     100130: upper_arm.L
     100132: upper_arm.R
+    100134: proxy741Mesh1
     400000: Character1_Ctrl_ChestEndEffector
     400002: Character1_Ctrl_ChestOriginEffector
     400004: Character1_Ctrl_Head
@@ -137,10 +138,13 @@ ModelImporter:
     400128: transform1
     400130: upper_arm.L
     400132: upper_arm.R
+    400134: proxy741Mesh1
     4300000: proxy741Mesh
+    4300002: proxy741Mesh1
     7400000: EnemyKO
     9500000: //RootNode
     13700000: proxy741Mesh
+    13700002: proxy741Mesh1
   materials:
     importMaterials: 0
     materialName: 0
@@ -188,141 +192,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Character1_Ctrl_Reference
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_ChestEndEffector
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_ChestOriginEffector
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_HeadEffector
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_Hips
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_Hips/Character1_Ctrl_LeftUpLeg
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_Hips/Character1_Ctrl_LeftUpLeg/Character1_Ctrl_LeftLeg
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_Hips/Character1_Ctrl_LeftUpLeg/Character1_Ctrl_LeftLeg/Character1_Ctrl_LeftFoot
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_Hips/Character1_Ctrl_RightUpLeg
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_Hips/Character1_Ctrl_RightUpLeg/Character1_Ctrl_RightLeg
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_Hips/Character1_Ctrl_RightUpLeg/Character1_Ctrl_RightLeg/Character1_Ctrl_RightFoot
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_Hips/Character1_Ctrl_Spine
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_Hips/Character1_Ctrl_Spine/Character1_Ctrl_Head
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_Hips/Character1_Ctrl_Spine/Character1_Ctrl_LeftArm
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_Hips/Character1_Ctrl_Spine/Character1_Ctrl_LeftArm/Character1_Ctrl_LeftForeArm
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_Hips/Character1_Ctrl_Spine/Character1_Ctrl_LeftArm/Character1_Ctrl_LeftForeArm/Character1_Ctrl_LeftHand
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_Hips/Character1_Ctrl_Spine/Character1_Ctrl_RightArm
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_Hips/Character1_Ctrl_Spine/Character1_Ctrl_RightArm/Character1_Ctrl_RightForeArm
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_Hips/Character1_Ctrl_Spine/Character1_Ctrl_RightArm/Character1_Ctrl_RightForeArm/Character1_Ctrl_RightHand
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_HipsEffector
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_LeftAnkleEffector
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_LeftElbowEffector
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_LeftHipEffector
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_LeftKneeEffector
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_LeftShoulderEffector
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_LeftWristEffector
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_RightAnkleEffector
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_RightElbowEffector
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_RightHipEffector
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_RightKneeEffector
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_RightShoulderEffector
-        weight: 0
-      - path: Character1_Ctrl_Reference/Character1_Ctrl_RightWristEffector
-        weight: 0
-      - path: proxy741Mesh
-        weight: 0
-      - path: python
-        weight: 0
-      - path: Root
-        weight: 1
-      - path: Root/transform1
-        weight: 1
-      - path: Root/transform1/hips
-        weight: 1
-      - path: Root/transform1/hips/spine
-        weight: 1
-      - path: Root/transform1/hips/spine/chest
-        weight: 1
-      - path: Root/transform1/hips/spine/chest/clavicle.L
-        weight: 1
-      - path: Root/transform1/hips/spine/chest/clavicle.L/upper_arm.L
-        weight: 1
-      - path: Root/transform1/hips/spine/chest/clavicle.L/upper_arm.L/forearm.L
-        weight: 1
-      - path: Root/transform1/hips/spine/chest/clavicle.L/upper_arm.L/forearm.L/hand.L
-        weight: 1
-      - path: Root/transform1/hips/spine/chest/clavicle.L/upper_arm.L/forearm.L/hand.L/f_index.01.L
-        weight: 1
-      - path: Root/transform1/hips/spine/chest/clavicle.L/upper_arm.L/forearm.L/hand.L/f_ring.01.L
-        weight: 1
-      - path: Root/transform1/hips/spine/chest/clavicle.L/upper_arm.L/forearm.L/hand.L/thumb.02.L
-        weight: 1
-      - path: Root/transform1/hips/spine/chest/clavicle.L/upper_arm.L/forearm.L/hand.L/thumb.02.L/thumb.03.L
-        weight: 1
-      - path: Root/transform1/hips/spine/chest/clavicle.R
-        weight: 1
-      - path: Root/transform1/hips/spine/chest/clavicle.R/upper_arm.R
-        weight: 1
-      - path: Root/transform1/hips/spine/chest/clavicle.R/upper_arm.R/forearm.R
-        weight: 1
-      - path: Root/transform1/hips/spine/chest/clavicle.R/upper_arm.R/forearm.R/hand.R
-        weight: 1
-      - path: Root/transform1/hips/spine/chest/clavicle.R/upper_arm.R/forearm.R/hand.R/f_index.01.R
-        weight: 1
-      - path: Root/transform1/hips/spine/chest/clavicle.R/upper_arm.R/forearm.R/hand.R/f_ring.01.R
-        weight: 1
-      - path: Root/transform1/hips/spine/chest/clavicle.R/upper_arm.R/forearm.R/hand.R/thumb.02.R
-        weight: 1
-      - path: Root/transform1/hips/spine/chest/clavicle.R/upper_arm.R/forearm.R/hand.R/thumb.02.R/thumb.03.R
-        weight: 1
-      - path: Root/transform1/hips/spine/chest/neck
-        weight: 1
-      - path: Root/transform1/hips/spine/chest/neck/head
-        weight: 1
-      - path: Root/transform1/hips/spine/chest/neck/head/jaw
-        weight: 1
-      - path: Root/transform1/hips/thigh.L
-        weight: 1
-      - path: Root/transform1/hips/thigh.L/shin.L
-        weight: 1
-      - path: Root/transform1/hips/thigh.L/shin.L/foot.L
-        weight: 1
-      - path: Root/transform1/hips/thigh.L/shin.L/foot.L/toe.L
-        weight: 1
-      - path: Root/transform1/hips/thigh.R
-        weight: 1
-      - path: Root/transform1/hips/thigh.R/shin.R
-        weight: 1
-      - path: Root/transform1/hips/thigh.R/shin.R/foot.R
-        weight: 1
-      - path: Root/transform1/hips/thigh.R/shin.R/foot.R/toe.R
-        weight: 1
+      transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
     isReadable: 1
