@@ -5,8 +5,6 @@ public class Player : MonoBehaviour
 {
 	public Animator anim;
 	public Enemy enemyScript;
-	[HideInInspector]
-	public float speed;
 	public GameObject enemyObj;
 	public int attack , hitpoints;
 	public NavMeshAgent agent;
@@ -54,6 +52,11 @@ public class Player : MonoBehaviour
 		}	
 	}
 
+	public void Idle()
+	{
+		anim.SetInteger("AnimIndex" , 0);
+	}
+
 	void OnCollisionEnter(Collision col)
 	{
 		if(enemyScript != null)
@@ -95,12 +98,12 @@ public class Player : MonoBehaviour
 		{
 			return;
 		}
-		
+
 		switch(currentState)
 		{
 			case State.Idle :
-				anim.SetInteger("AnimIndex" , 0);
 				agent.speed = 0;
+				anim.SetInteger("AnimIndex" , 0);
 			break;
 				
 			case State.Run :
@@ -108,8 +111,8 @@ public class Player : MonoBehaviour
 			break;
 				
 			case State.Attack :
-				anim.SetInteger("AnimIndex" , 2);
 				agent.speed = 0;
+				anim.SetInteger("AnimIndex" , 2);
 			break;
 		}
 	}

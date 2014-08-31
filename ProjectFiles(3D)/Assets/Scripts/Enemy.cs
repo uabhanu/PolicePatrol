@@ -165,6 +165,12 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
+	void IdlePlayer()
+	{
+		Debug.Log("Player Idle Again");
+		playerScript.Idle();
+	}
+
 	void OnCollisionExit(Collision col)
 	{
 		if(col.gameObject.tag.Equals("Player"))
@@ -230,7 +236,6 @@ public class Enemy : MonoBehaviour
 
 		if(this.collidedPlayer && selected && playerScript.currentState == Player.State.Attack)
 		{
-			agent.speed = 0;
 			SetState(1);
 		}
 	}
@@ -261,6 +266,7 @@ public class Enemy : MonoBehaviour
 
 			case State.KO :
 				anim.SetInteger("AnimIndex" , 2);
+				IdlePlayer();
 			break;
 		}
 	}
