@@ -78,7 +78,7 @@ public class Enemy : MonoBehaviour
 	{
 		if(this.gameObject != null)
 		{
-			Debug.Log("Enemy Death");
+			//Debug.Log("Enemy Death");
 
 			if(currentState == State.KO)
 			{
@@ -121,7 +121,7 @@ public class Enemy : MonoBehaviour
 
 	public void Hit()
 	{
-		Debug.Log("Enemy Hit Animation");
+		//Debug.Log("Enemy Hit Animation");
 		anim.SetInteger("AnimIndex" , 1);
 		anim.Play(0);
 	}
@@ -166,7 +166,7 @@ public class Enemy : MonoBehaviour
 
 	void IdlePlayer()
 	{
-		Debug.Log("Player Idle Again");
+		//Debug.Log("Player Idle Again");
 		playerScript.Idle();
 	}
 
@@ -180,7 +180,7 @@ public class Enemy : MonoBehaviour
 
 	void OnMouseDown()
 	{
-		Debug.Log("Enemy Selected");
+		//Debug.Log("Enemy Selected");
 
 		if(current != null)
 		{

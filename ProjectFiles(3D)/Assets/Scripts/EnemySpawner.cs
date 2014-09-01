@@ -35,14 +35,14 @@ public class EnemySpawner : MonoBehaviour
 			{
 				if(transform.position.z > 0)
 				{
-					Debug.Log("Enemy Spawner");
+					//Debug.Log("Enemy Spawner");
 					Instantiate (enemyObj , new Vector3(transform.position.x , transform.position.y , transform.position.z + 10.0f) , Quaternion.identity);
 					iguiScript.enemyCount++;
 				}
 				
 				else if(transform.position.z < 0)
 				{
-					Debug.Log("Enemy Spawner");
+					//Debug.Log("Enemy Spawner");
 					Instantiate (enemyObj , new Vector3(transform.position.x , transform.position.y , transform.position.z - 10.0f) , Quaternion.identity);
 					iguiScript.enemyCount++;
 				}
