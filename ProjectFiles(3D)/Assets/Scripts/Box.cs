@@ -10,7 +10,7 @@ public class Box : MonoBehaviour
 
 	IEnumerator DestroyTimer()
 	{
-		yield return new WaitForSeconds(3);
+		yield return new WaitForSeconds(10);
 		Destroy(this.gameObject);
 	}
 
