@@ -18,7 +18,6 @@ public class Enemy : MonoBehaviour
 	public Rigidbody boxBody;
 	public static Enemy current;
 	public Transform target;
-	//static public Enemy current;
 
 	public enum State
 	{
