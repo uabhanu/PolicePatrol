@@ -4,8 +4,9 @@ using System.Collections;
 public class EDSpawner : MonoBehaviour 
 {
 	float xPosition;
+	public Animator openClose;
 	public float[] positionValues;
-	public GameObject PF_EnergyDrink;
+	public GameObject cargoDoorObj , PF_EnergyDrink;
 	public int count , i;
 
 	void Start () 
@@ -19,20 +20,62 @@ public class EDSpawner : MonoBehaviour
 
 		xPosition = positionValues[i];
 
+		Doors();
+		Instantiate();
+
+		StartCoroutine("SpawnTimer");
+	}
+
+	public void Doors()
+	{
+		if(i == 0)
+		{
+			cargoDoorObj = GameObject.FindGameObjectWithTag("Doors1");
+		}
+		
+		else if(i == 1)
+		{
+			cargoDoorObj = GameObject.FindGameObjectWithTag("Doors2");
+		}
+		
+		else if(i == 2)
+		{
+			cargoDoorObj = GameObject.FindGameObjectWithTag("Doors3");
+		}
+		
+		else if(i == 3)
+		{
+			cargoDoorObj = GameObject.FindGameObjectWithTag("Doors4");
+		}
+		
+		else if(i == 4)
+		{
+			cargoDoorObj = GameObject.FindGameObjectWithTag("Doors5");
+		}
+		
+		
+		if(cargoDoorObj != null)
+		{
+			openClose = cargoDoorObj.GetComponent<Animator>();
+		}
+
+		openClose.Play(0);
+	}
+
+	public void Instantiate()
+	{
 		if(count < 1)
 		{
 			Debug.Log("Energy Drink Ready");
 			Instantiate (PF_EnergyDrink , new Vector3(xPosition , 4.6f , 11.0f) , Quaternion.identity);
-
+			
 			if(i < 5)
 			{
 				i++;
 			}
-
+			
 			count++;
 		}
-
-		StartCoroutine("SpawnTimer");
 	}
 
 	void Update () 

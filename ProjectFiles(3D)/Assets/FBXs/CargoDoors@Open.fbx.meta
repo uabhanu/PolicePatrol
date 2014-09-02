@@ -41,6 +41,7 @@ ModelImporter:
     4300002: Cargo_Doors
     7400000: Open
     9500000: //RootNode
+    11100000: //RootNode
     13700000: Cargo_Doors1
     13700002: Cargo_Doors
   materials:
@@ -52,11 +53,11 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 1
     motionNodeName: 
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
-    animationWrapMode: 0
+    animationWrapMode: 2
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
@@ -64,7 +65,7 @@ ModelImporter:
       takeName: Take 001
       firstFrame: 1
       lastFrame: 25
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
