@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class EDSpawner : MonoBehaviour 
@@ -6,7 +6,7 @@ public class EDSpawner : MonoBehaviour
 	float xPosition;
 	public float[] positionValues;
 	public GameObject PF_EnergyDrink;
-	public int count;
+	public int count , i;
 
 	void Start () 
 	{
@@ -15,14 +15,20 @@ public class EDSpawner : MonoBehaviour
 
 	IEnumerator SpawnTimer()
 	{
-		yield return new WaitForSeconds(5);
+		yield return new WaitForSeconds(25);
 
-		xPosition = Random.Range(positionValues[0] , positionValues[4]);
+		xPosition = positionValues[i];
 
-		if(count < 5)
+		if(count < 1)
 		{
 			Debug.Log("Energy Drink Ready");
 			Instantiate (PF_EnergyDrink , new Vector3(xPosition , 4.6f , 11.0f) , Quaternion.identity);
+
+			if(i < 5)
+			{
+				i++;
+			}
+
 			count++;
 		}
 
