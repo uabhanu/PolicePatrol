@@ -58,8 +58,6 @@ public class EDSpawner : MonoBehaviour
 		{
 			openClose = cargoDoorObj.GetComponent<Animator>();
 		}
-
-		openClose.Play(0);
 	}
 
 	public void Instantiate()
@@ -67,8 +65,9 @@ public class EDSpawner : MonoBehaviour
 		if(count < 1)
 		{
 			Debug.Log("Energy Drink Ready");
-			Instantiate (PF_EnergyDrink , new Vector3(xPosition , 4.6f , 11.0f) , Quaternion.identity);
-			
+			Instantiate (PF_EnergyDrink , new Vector3(xPosition , 4.6f , 16.0f) , Quaternion.identity);
+			openClose.Play(0);
+
 			if(i < 5)
 			{
 				i++;

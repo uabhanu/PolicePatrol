@@ -20,7 +20,7 @@ public class EnergyDrink : MonoBehaviour
 
 	IEnumerator ExistenceTimer()
 	{
-		yield return new WaitForSeconds(3);
+		yield return new WaitForSeconds(10);
 		edSpawnScript.count--;
 
 		if(edSpawnScript.count == 0 && edSpawnScript.i == 5)
@@ -35,6 +35,14 @@ public class EnergyDrink : MonoBehaviour
 
 	void Update () 
 	{
-	
+		if(Time.timeScale == 0)
+		{
+			return;
+		}
+
+		if(transform.position.z > 10)
+		{
+			transform.position = new Vector3(transform.position.x , transform.position.y , transform.position.z - 1.0f);
+		}
 	}
 }
