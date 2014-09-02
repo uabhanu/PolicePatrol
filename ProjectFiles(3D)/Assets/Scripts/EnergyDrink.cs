@@ -30,25 +30,8 @@ public class EnergyDrink : MonoBehaviour
 	{
 		yield return new WaitForSeconds(10);
 		edSpawnScript.count--;
-
-		if(edSpawnScript.count == 0 && edSpawnScript.i == 5)
-		{
-			edSpawnScript.count = 0;
-			edSpawnScript.i = 0;
-		}
-
 		Destroy(this.gameObject);
 		StartCoroutine("ExistenceTimer");
-	}
-
-	void OnCollisionEnter(Collision col)
-	{
-		if(col.gameObject.tag.Equals("Player"))
-		{
-			Debug.Log("Player Collided");
-			edSpawnScript.count--;
-			Destroy(this.gameObject);
-		}
 	}
 
 	void OnMouseDown()
@@ -59,6 +42,16 @@ public class EnergyDrink : MonoBehaviour
 		{	
 			playerScript.target = this.gameObject.transform;
 			playerScript.SetState(1);
+		}
+	}
+
+	void OnTriggerEnter(Collider col)
+	{
+		if(col.gameObject.tag.Equals("Player"))
+		{
+			Debug.Log("Player Collided");
+			edSpawnScript.count--;
+			Destroy(this.gameObject);
 		}
 	}
 

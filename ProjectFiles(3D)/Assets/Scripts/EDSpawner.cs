@@ -71,6 +71,11 @@ public class EDSpawner : MonoBehaviour
 			if(i < 5)
 			{
 				i++;
+
+				if(i == 5 && count == 0)
+				{
+					i = 0;
+				}
 			}
 			
 			count++;

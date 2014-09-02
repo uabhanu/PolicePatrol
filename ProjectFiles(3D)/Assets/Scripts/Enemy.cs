@@ -96,9 +96,9 @@ public class Enemy : MonoBehaviour
 				eSpawnScript.enemySpawned = false;
 			}
 
-			Destroy (this.gameObject);
+			Destroy(this.gameObject);
 
-			if(playerScript != null)
+			if(playerScript != null && playerScript.target == current.gameObject)
 			{
 				playerScript.target = null;
 			}
