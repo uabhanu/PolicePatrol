@@ -90,6 +90,11 @@ public class Player : MonoBehaviour
 			agent.speed = 7;
 			agent.SetDestination(target.position);
 		}
+
+		else if(target == null)
+		{
+			SetState(0);
+		}
 	}
 
 	void Update () 
