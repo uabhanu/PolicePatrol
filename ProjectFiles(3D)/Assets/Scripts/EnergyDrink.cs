@@ -4,7 +4,8 @@ using System.Collections;
 public class EnergyDrink : MonoBehaviour 
 {
 	public EDSpawner edSpawnScript;
-	public GameObject edSpawnObj;
+	public GameObject edSpawnObj , playerObj;
+	public Player playerScript;
 
 	void Start () 
 	{
@@ -13,6 +14,13 @@ public class EnergyDrink : MonoBehaviour
 		if(edSpawnObj != null)
 		{
 			edSpawnScript = edSpawnObj.GetComponent<EDSpawner>();
+		}
+
+		playerObj = GameObject.FindGameObjectWithTag("Player");
+
+		if(playerObj != null)
+		{
+			playerScript = playerObj.GetComponent<Player>();
 		}
 
 		StartCoroutine("ExistenceTimer");
@@ -31,6 +39,27 @@ public class EnergyDrink : MonoBehaviour
 
 		Destroy(this.gameObject);
 		StartCoroutine("ExistenceTimer");
+	}
+
+	void OnCollisionEnter(Collision col)
+	{
+		if(col.gameObject.tag.Equals("Player"))
+		{
+			Debug.Log("Player Collided");
+			edSpawnScript.count--;
+			Destroy(this.gameObject);
+		}
+	}
+
+	void OnMouseDown()
+	{
+		//Debug.Log("Energy Drink Selected");
+		
+		if(playerScript.currentState != Player.State.Attack)
+		{	
+			playerScript.target = this.gameObject.transform;
+			playerScript.SetState(1);
+		}
 	}
 
 	void Update () 
