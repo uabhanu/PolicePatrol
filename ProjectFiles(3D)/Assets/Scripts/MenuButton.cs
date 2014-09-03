@@ -4,7 +4,7 @@ using System.Collections;
 public class MenuButton : MonoBehaviour 
 {
 	public InGameUI iguiScript;
-	public GameObject iguiObj , selectionObj;
+	public GameObject selectionObj;
 	public Selection selectionScript;
 	public string buttonName , level , relativePath;
 	
