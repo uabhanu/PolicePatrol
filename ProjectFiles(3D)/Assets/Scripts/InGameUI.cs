@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
-using UnityEngine.UI; //This will be for Unity 4.6 onwards
+//using UnityEngine.UI;
 using System.Collections;
 
 public class InGameUI : MonoBehaviour 
 {
 	public bool levelCompleted;
 	public GameObject[] tempObjs;
-	public GUIText /*timeLabel , timeDisplayLabel , */truckLeftScoreLabel , truckLeftScoreDisplayLabel , truckRightScoreLabel , truckRightScoreDisplayLabel;
-	public Text timeLabel , timeDisplayLabel/* , truckLeftScoreLabel , truckLeftScoreDisplayLabel , truckRightScoreLabel , truckRightScoreDisplayLabel*/; //This will be for Unity 4.6 onwards
+	public GUIText timeLabel , timeDisplayLabel , truckLeftScoreLabel , truckLeftScoreDisplayLabel , truckRightScoreLabel , truckRightScoreDisplayLabel;
+	//public Text timeLabel , timeDisplayLabel , truckLeftScoreLabel , truckLeftScoreDisplayLabel , truckRightScoreLabel , truckRightScoreDisplayLabel; This will be for Unity 4.6 (Not Beta) onwards
 	public GUITexture[] buttonSprites;
 	public int enemyCount , maxEnemyCount , timeValue , truckLeftScoreValue , truckRightScoreValue;
 
