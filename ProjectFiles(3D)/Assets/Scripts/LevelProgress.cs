@@ -7,7 +7,7 @@ public class LevelProgress : MonoBehaviour
 	public Enemy enemyScript;
 	public GameObject enemyObj , iguiObj , truckLeftObj , truckRightObj;
 	public InGameUI iguiScript;
-	public int leftScore , rightScore;
+	public int leftScore , levelNo , rightScore;
 	public Truck truckScript;
 	
 	void Start () 
@@ -51,6 +51,8 @@ public class LevelProgress : MonoBehaviour
 
 			if(iguiScript != null)
 			{
+				levelNo = iguiScript.levelNo;
+
 				if(iguiScript.timeValue > 0) //This part works only if game started from Level Selection Screen which is correct
 				{
 					if(leftScore == 5 && truckLeftObj == null && rightScore == 5 && truckRightObj == null)
