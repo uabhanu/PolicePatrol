@@ -7,6 +7,7 @@ public class LevelProgress : MonoBehaviour
 	public Enemy enemyScript;
 	public GameObject enemyObj , iguiObj , truckLeftObj , truckRightObj;
 	public InGameUI iguiScript;
+	public int leftScore , rightScore;
 	public Truck truckScript;
 	
 	void Start () 
@@ -34,15 +35,25 @@ public class LevelProgress : MonoBehaviour
 			truckRightObj = GameObject.FindGameObjectWithTag("Right");
 		}
 		
-		if(iguiObj != null && truckLeftObj != null && truckRightObj != null)
+		if(iguiObj != null)
 		{
 			iguiScript = iguiObj.GetComponent<InGameUI>();
-			
+
+			if(truckLeftObj != null)
+			{
+				leftScore = iguiScript.truckLeftScoreValue;
+			}
+
+			if(truckRightObj != null)
+			{
+				rightScore = iguiScript.truckRightScoreValue;
+			}
+
 			if(iguiScript != null)
 			{
 				if(iguiScript.timeValue > 0) //This part works only if game started from Level Selection Screen which is correct
 				{
-					if(iguiScript.truckLeftScoreValue == 5 && truckLeftObj == null && iguiScript.truckRightScoreValue == 5 && truckRightObj == null)
+					if(leftScore == 5 && truckLeftObj == null && rightScore == 5 && truckRightObj == null)
 					{
 						Debug.Log("Both Trucks 5/5");
 						iguiScript.Active("LoseCard");
