@@ -50,29 +50,38 @@ public class InGameUI : MonoBehaviour
 			timeDisplayLabel.color = Color.blue;
 		}
 		
-		truckLeftScoreLabel.text = truckLeftScoreValue.ToString();
-		truckRightScoreLabel.text = truckRightScoreValue.ToString();
+		if(truckLeftScoreLabel != null)
+		{
+			truckLeftScoreLabel.text = truckLeftScoreValue.ToString();
 
-		if(truckLeftScoreValue > 3)
-		{
-			truckLeftScoreLabel.color = Color.red;
-			truckLeftScoreDisplayLabel.color = Color.red;
-		}
-		else
-		{
-			truckLeftScoreLabel.color = Color.blue;
-			truckLeftScoreDisplayLabel.color = Color.blue;
+			if(truckLeftScoreValue > 3)
+			{
+				truckLeftScoreLabel.color = Color.red;
+				truckLeftScoreDisplayLabel.color = Color.red;
+			}
+			else
+			{
+				truckLeftScoreLabel.color = Color.blue;
+				truckLeftScoreDisplayLabel.color = Color.blue;
+			}
 		}
 
-		if(truckRightScoreValue > 3)
+		if(truckRightScoreLabel != null)
 		{
-			truckRightScoreLabel.color = Color.red;
-			truckRightScoreDisplayLabel.color = Color.red;
-		}
-		else
-		{
-			truckRightScoreLabel.color = Color.blue;
-			truckRightScoreDisplayLabel.color = Color.blue;
+			truckRightScoreLabel.text = truckRightScoreValue.ToString();
+			
+			
+			
+			if(truckRightScoreValue > 3)
+			{
+				truckRightScoreLabel.color = Color.red;
+				truckRightScoreDisplayLabel.color = Color.red;
+			}
+			else
+			{
+				truckRightScoreLabel.color = Color.blue;
+				truckRightScoreDisplayLabel.color = Color.blue;
+			}
 		}
 
 		StartCoroutine("GameTimer");

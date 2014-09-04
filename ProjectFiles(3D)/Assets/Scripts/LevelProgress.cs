@@ -4,8 +4,10 @@ using System.Collections;
 public class LevelProgress : MonoBehaviour 
 {
 	public bool levelProgress;
-	public GameObject iguiObj;
+	public Enemy enemyScript;
+	public GameObject enemyObj , iguiObj , truckLeftObj , truckRightObj;
 	public InGameUI iguiScript;
+	public Truck truckScript;
 	
 	void Start () 
 	{
@@ -21,21 +23,34 @@ public class LevelProgress : MonoBehaviour
 		{
 			iguiObj = GameObject.FindGameObjectWithTag("IGUI");
 		}
+
+		if(truckLeftObj == null)
+		{
+			truckLeftObj = GameObject.FindGameObjectWithTag("Left");
+		}
+
+		if(truckRightObj == null)
+		{
+			truckRightObj = GameObject.FindGameObjectWithTag("Right");
+		}
 		
-		if(iguiObj != null)
+		if(iguiObj != null && truckLeftObj != null && truckRightObj != null)
 		{
 			iguiScript = iguiObj.GetComponent<InGameUI>();
 			
 			if(iguiScript != null)
 			{
-				if(iguiScript.timeValue > 0 && iguiScript.truckLeftScoreValue == 5 && iguiScript.truckRightScoreValue == 5) //This part works only if game started from Level Selection Screen which is correct
+				if(iguiScript.timeValue > 0) //This part works only if game started from Level Selection Screen which is correct
 				{
-					Debug.Log("Both Trucks 5/5");
-					iguiScript.Active("LoseCard");
-					iguiScript.Active("LoseCardText");
-					iguiScript.Inactive("PauseButton");
-					iguiScript.Active("RetryButton");
-					Time.timeScale = 0;
+					if(iguiScript.truckLeftScoreValue == 5 && truckLeftObj == null && iguiScript.truckRightScoreValue == 5 && truckRightObj == null)
+					{
+						Debug.Log("Both Trucks 5/5");
+						iguiScript.Active("LoseCard");
+						iguiScript.Active("LoseCardText");
+						iguiScript.Inactive("PauseButton");
+						iguiScript.Active("RetryButton");
+						Time.timeScale = 0;
+					}
 				}
 				
 				else if(iguiScript.timeValue == 0)

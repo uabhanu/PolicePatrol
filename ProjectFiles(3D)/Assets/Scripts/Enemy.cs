@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 	public EnemySpawner eSpawnScript;
 	[HideInInspector]
 	public float speed , tagTimer;
-	public GameObject eSpawnObj , iguiObj , playerObj;
+	public GameObject eSpawnObj , iguiObj , playerObj , truckLeft , truckRight;
 	public GameObject[] enemies;
 	public InGameUI iguiScript;
 	public int hitpoints;
@@ -36,6 +36,9 @@ public class Enemy : MonoBehaviour
 			agent = this.gameObject.GetComponent<NavMeshAgent>();
 			anim = this.gameObject.GetComponent<Animator>();
 
+			truckLeft = GameObject.FindGameObjectWithTag("Left");
+			truckRight = GameObject.FindGameObjectWithTag("Right");
+
 			eSpawnObj = GameObject.FindGameObjectWithTag("ESpawn");
 
 			if(eSpawnObj != null)
@@ -45,12 +48,28 @@ public class Enemy : MonoBehaviour
 
 			if(transform.position.x < 0)
 			{
-				target = GameObject.FindGameObjectWithTag("Left").transform;
+				if(truckLeft != null)
+				{
+					target = truckLeft.transform;
+				}
+
+				else if(truckRight != null)
+				{
+					target = truckRight.transform;
+				}
 			}
 
 			else if(transform.position.x > 0)
 			{
-				target = GameObject.FindGameObjectWithTag("Right").transform;
+				if(truckRight != null)
+				{
+					target = truckRight.transform;
+				}
+
+				else if(truckLeft != null)
+				{
+					target = truckLeft.transform;
+				}
 			}
 
 			if(transform.position.z > 0)
@@ -98,7 +117,7 @@ public class Enemy : MonoBehaviour
 
 			Destroy(this.gameObject);
 
-			if(playerScript != null && playerScript.target == current.gameObject)
+			if(current != null && playerScript != null && playerScript.target == current.gameObject)
 			{
 				playerScript.target = null;
 			}
@@ -231,7 +250,30 @@ public class Enemy : MonoBehaviour
 
 	void Walk()
 	{
-		agent.SetDestination(target.position);
+		if(truckLeft == null && truckRight != null)
+		{
+			target = truckRight.transform;
+		}
+
+		else if(truckRight == null && truckLeft != null)
+		{
+			target = truckLeft.transform;
+		}
+
+		else if(truckLeft == null && truckRight == null)
+		{
+			target = null;
+		}
+
+		if(target != null)
+		{
+			agent.SetDestination(target.position);
+		}
+
+		else if(target == null)
+		{
+			agent.speed = 0;
+		}
 
 		if(this.collidedPlayer && selected && playerScript.currentState == Player.State.Attack)
 		{
@@ -253,6 +295,7 @@ public class Enemy : MonoBehaviour
 			break;
 
 			case State.Hit :
+
 				agent.speed = 0;
 
 				if(boxBody != null)
