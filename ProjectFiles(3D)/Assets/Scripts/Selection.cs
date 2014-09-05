@@ -9,7 +9,7 @@ public class Selection : MonoBehaviour
 	public InGameUI iguiScript;
 	public LevelProgress progressScript;
 	public Texture[] buttonTextures;
-	
+
 	void Start () 
 	{
 		QualitySettings.vSyncCount = 0;
@@ -46,6 +46,7 @@ public class Selection : MonoBehaviour
 			progressScript = progressObj.GetComponent<LevelProgress>();
 		}
 
+		#region Selection
 		if(progressScript.levelProgress)
 		{
 			if(buttons[1].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 1)
@@ -384,8 +385,10 @@ public class Selection : MonoBehaviour
 				progressScript.levelProgress = false;
 			}
 		}
+		#endregion
 	}
 
+	#region Lock Method
 	public void Lock(string name)
 	{
 		switch(name)
@@ -479,7 +482,9 @@ public class Selection : MonoBehaviour
 			break;
 		}
 	}
+	#endregion
 
+	#region Unlock Method
 	public void Unlock(string name)
 	{
 		switch(name)
@@ -573,6 +578,7 @@ public class Selection : MonoBehaviour
 			break;
 		}
 	}
+	#endregion
 
 	void Update () 
 	{
