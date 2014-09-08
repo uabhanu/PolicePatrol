@@ -16,7 +16,7 @@ public class EDSpawner : MonoBehaviour
 
 	IEnumerator SpawnTimer()
 	{
-		yield return new WaitForSeconds(5);
+		yield return new WaitForSeconds(24);
 
 		xPosition = positionValues[i];
 
