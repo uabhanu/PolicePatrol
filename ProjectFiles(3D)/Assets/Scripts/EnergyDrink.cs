@@ -1,10 +1,16 @@
-﻿using UnityEngine;
+﻿using GooglePlayGames;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class EnergyDrink : MonoBehaviour 
 {
+	private string fiveDrinks = "CgkIz8X_7JkXEAIQAg";
+	private string tenDrinks = "CgkIz8X_7JkXEAIQAw";
+
 	public EDSpawner edSpawnScript;
 	public GameObject edSpawnObj , policeObj;
+	public int incrementCount = 1;
 	public Police policeScript;
 
 	void Start () 
@@ -33,6 +39,21 @@ public class EnergyDrink : MonoBehaviour
 		StartCoroutine("ExistenceTimer");
 	}
 
+	void FiveDrinks()
+	{
+		if (Social.localUser.authenticated)
+		{
+			((PlayGamesPlatform)Social.Active).IncrementAchievement(fiveDrinks , incrementCount , (bool success) =>
+        	{
+				if(incrementCount < 2)
+				{
+					incrementCount++;
+					Social.ShowAchievementsUI();
+				}
+			});
+		}
+	}
+
 	void OnMouseDown()
 	{
 		//Debug.Log("Energy Drink Selected");
@@ -48,8 +69,27 @@ public class EnergyDrink : MonoBehaviour
 	{
 		if(col.gameObject.tag.Equals("Player"))
 		{
-			Debug.Log("Player Collided");
+			Debug.Log("Player had a Drink");
+
+			FiveDrinks();
+			TenDrinks();
+
 			Destroy(this.gameObject);
+		}
+	}
+
+	void TenDrinks()
+	{
+		if (Social.localUser.authenticated)
+		{
+			((PlayGamesPlatform)Social.Active).IncrementAchievement(tenDrinks , incrementCount , (bool success) =>
+        	{
+				if(incrementCount < 5)
+				{
+					incrementCount++;
+					Social.ShowAchievementsUI();
+				}
+			});
 		}
 	}
 
