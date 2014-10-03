@@ -5,23 +5,23 @@ public class EnemySpawner : MonoBehaviour
 {
 	//[HideInInspector]
 	public bool enemySpawned;
-	public Enemy enemyScript;
 	public InGameUI iguiScript;
 	public float spawnTimer;
-	public GameObject enemyObj , iguiObj;
+	public GameObject iguiObj , thugObj;
+	public Thug thugScript;
 	
 	void Start () 
 	{
-		if(enemyObj != null)
-		{
-			enemyScript = enemyObj.GetComponent<Enemy>();
-		}
-
 		iguiObj = GameObject.FindGameObjectWithTag("IGUI");
 
 		if(iguiObj != null)
 		{
 			iguiScript = iguiObj.GetComponent<InGameUI>();
+		}
+
+		if(thugObj != null)
+		{
+			thugScript = thugObj.GetComponent<Thug>();
 		}
 
 		StartCoroutine("EnemySpawnTimer");
@@ -31,20 +31,20 @@ public class EnemySpawner : MonoBehaviour
 	{
 		if(iguiScript != null)
 		{
-			if(!enemySpawned && iguiScript.enemyCount < iguiScript.maxEnemyCount)
+			if(!enemySpawned && iguiScript.thugCount < iguiScript.maxThugCount)
 			{
 				if(transform.position.z > 0)
 				{
 					//Debug.Log("Enemy Spawner");
-					Instantiate (enemyObj , new Vector3(transform.position.x , transform.position.y , transform.position.z + 10.0f) , Quaternion.identity);
-					iguiScript.enemyCount++;
+					Instantiate (thugObj , new Vector3(transform.position.x , transform.position.y , transform.position.z + 10.0f) , Quaternion.identity);
+					iguiScript.thugCount++;
 				}
 				
 				else if(transform.position.z < 0)
 				{
 					//Debug.Log("Enemy Spawner");
-					Instantiate (enemyObj , new Vector3(transform.position.x , transform.position.y , transform.position.z - 10.0f) , Quaternion.identity);
-					iguiScript.enemyCount++;
+					Instantiate (thugObj , new Vector3(transform.position.x , transform.position.y , transform.position.z - 10.0f) , Quaternion.identity);
+					iguiScript.thugCount++;
 				}
 			}
 		}

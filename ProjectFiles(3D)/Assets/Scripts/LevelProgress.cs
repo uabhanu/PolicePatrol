@@ -4,10 +4,10 @@ using System.Collections;
 public class LevelProgress : MonoBehaviour 
 {
 	public bool levelProgress;
-	public Enemy enemyScript;
-	public GameObject enemyObj , iguiObj , truckLeftObj , truckRightObj;
+	public GameObject iguiObj , truckLeftObj , truckRightObj;
 	public InGameUI iguiScript;
 	public int leftScore , levelNo , rightScore;
+	public Thug thugScript;
 	public Truck truckScript;
 	
 	void Start () 

@@ -4,8 +4,8 @@ using System.Collections;
 public class EnergyDrink : MonoBehaviour 
 {
 	public EDSpawner edSpawnScript;
-	public GameObject edSpawnObj , playerObj;
-	public Player playerScript;
+	public GameObject edSpawnObj , policeObj;
+	public Police policeScript;
 
 	void Start () 
 	{
@@ -16,11 +16,11 @@ public class EnergyDrink : MonoBehaviour
 			edSpawnScript = edSpawnObj.GetComponent<EDSpawner>();
 		}
 
-		playerObj = GameObject.FindGameObjectWithTag("Player");
+		policeObj = GameObject.FindGameObjectWithTag("Player");
 
-		if(playerObj != null)
+		if(policeObj != null)
 		{
-			playerScript = playerObj.GetComponent<Player>();
+			policeScript = policeObj.GetComponent<Police>();
 		}
 
 		StartCoroutine("ExistenceTimer");
@@ -38,10 +38,10 @@ public class EnergyDrink : MonoBehaviour
 	{
 		//Debug.Log("Energy Drink Selected");
 		
-		if(playerScript.currentState != Player.State.Attack)
+		if(policeScript.currentState != Police.State.Attack)
 		{	
-			playerScript.target = this.gameObject.transform;
-			playerScript.SetState(1);
+			policeScript.target = this.gameObject.transform;
+			policeScript.SetState(1);
 		}
 	}
 

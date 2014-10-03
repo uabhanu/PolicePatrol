@@ -9,7 +9,7 @@ public class InGameUI : MonoBehaviour
 	public GUIText timeLabel , timeDisplayLabel , truckLeftScoreLabel , truckLeftScoreDisplayLabel , truckRightScoreLabel , truckRightScoreDisplayLabel;
 	//public Text timeLabel , timeDisplayLabel , truckLeftScoreLabel , truckLeftScoreDisplayLabel , truckRightScoreLabel , truckRightScoreDisplayLabel; This will be for Unity 4.6 (Not Beta) onwards
 	public GUITexture[] buttonSprites;
-	public int enemyCount , levelNo , maxEnemyCount , timeValue , truckLeftScoreValue , truckRightScoreValue;
+	public int  levelNo , maxThugCount , timeValue , thugCount , truckLeftScoreValue , truckRightScoreValue;
 
 	void Awake()
 	{

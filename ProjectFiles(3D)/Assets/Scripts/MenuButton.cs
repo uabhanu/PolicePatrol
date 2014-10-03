@@ -5,7 +5,7 @@ public class MenuButton : MonoBehaviour
 {
 	public InGameUI iguiScript;
 	public GameObject iguiObj , selectionObj;
-	public Selection selectionScript;
+	public LevelSelection selectionScript;
 	public string buttonName , level , relativePath;
 	
 	void Start () 
@@ -14,7 +14,7 @@ public class MenuButton : MonoBehaviour
 
 		if(selectionObj != null)
 		{
-			selectionScript = selectionObj.GetComponent<Selection>();
+			selectionScript = selectionObj.GetComponent<LevelSelection>();
 		}
 
 		//Debug.Log(selectionScript.buttons[0].texture);
