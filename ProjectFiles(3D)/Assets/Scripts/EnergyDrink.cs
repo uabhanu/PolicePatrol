@@ -29,7 +29,6 @@ public class EnergyDrink : MonoBehaviour
 	IEnumerator ExistenceTimer()
 	{
 		yield return new WaitForSeconds(10);
-		edSpawnScript.count--;
 		Destroy(this.gameObject);
 		StartCoroutine("ExistenceTimer");
 	}
@@ -50,7 +49,6 @@ public class EnergyDrink : MonoBehaviour
 		if(col.gameObject.tag.Equals("Player"))
 		{
 			Debug.Log("Player Collided");
-			edSpawnScript.count--;
 			Destroy(this.gameObject);
 		}
 	}
