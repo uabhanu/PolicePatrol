@@ -32,7 +32,7 @@ public class InGameUI : MonoBehaviour
 
 		StartCoroutine("GameTimer");
 
-		timeLabel.text = timeValue.ToString();
+		timeLabel.text = timeValue.ToString() + " Seconds";
 	}
 
 	IEnumerator GameTimer()
@@ -44,7 +44,7 @@ public class InGameUI : MonoBehaviour
 			timeValue--;
 		}
 
-		timeLabel.text = timeValue.ToString();
+		timeLabel.text = timeValue.ToString() + " Seconds";
 
 		if(timeValue < 10)
 		{

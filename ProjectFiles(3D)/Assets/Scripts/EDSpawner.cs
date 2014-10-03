@@ -17,53 +17,50 @@ public class EDSpawner : MonoBehaviour
 	{
 		yield return new WaitForSeconds(24);
 
-		xPosition = positionValues[(int)Random.Range(1 , 5)];
-
-		Doors();
-		Instantiate();
-
-		StartCoroutine("SpawnTimer");
-	}
-
-	public void Doors()
-	{
 		if((int)Random.Range(1 , 5) == 1)
 		{
+			xPosition = positionValues[0];
 			cargoDoorObj = GameObject.FindGameObjectWithTag("Doors1");
 		}
-		
-		else if((int)Random.Range(1 , 5) == 2)
+
+		if((int)Random.Range(1 , 5) == 2)
 		{
+			xPosition = positionValues[1];
 			cargoDoorObj = GameObject.FindGameObjectWithTag("Doors2");
 		}
-		
-		else if((int)Random.Range(1 , 5) == 3)
+
+		if((int)Random.Range(1 , 5) == 3)
 		{
+			xPosition = positionValues[2];
 			cargoDoorObj = GameObject.FindGameObjectWithTag("Doors3");
 		}
-		
-		else if((int)Random.Range(1 , 5) == 4)
+
+		if((int)Random.Range(1 , 5) == 4)
 		{
+			xPosition = positionValues[3];
 			cargoDoorObj = GameObject.FindGameObjectWithTag("Doors4");
 		}
-		
-		else if((int)Random.Range(1 , 5) == 5)
+
+		if((int)Random.Range(1 , 5) == 5)
 		{
+			xPosition = positionValues[4];
 			cargoDoorObj = GameObject.FindGameObjectWithTag("Doors5");
 		}
-		
-		
+
 		if(cargoDoorObj != null)
 		{
 			openClose = cargoDoorObj.GetComponent<Animator>();
 		}
+
+		openClose.Play(0);
+		Instantiate();
+		StartCoroutine("SpawnTimer");
 	}
 
 	public void Instantiate()
 	{
 		Debug.Log("Energy Drink Ready");
-		Instantiate (PF_EnergyDrink , new Vector3(xPosition , 4.6f , 16.0f) , Quaternion.identity);
-		openClose.Play(0);
+		Instantiate(PF_EnergyDrink , new Vector3(xPosition , 4.6f , 16.0f) , Quaternion.identity);
 	}
 
 	void Update () 
