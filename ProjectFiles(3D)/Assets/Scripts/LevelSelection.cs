@@ -4,7 +4,7 @@ using System.Collections;
 public class LevelSelection : MonoBehaviour 
 {
 	public bool levelProgress;
-	public GameObject iguiObj , progressObj;
+	public GameObject iguiObj , PF_LevelProgress , progressObj;
 	public GUITexture[] buttons;
 	public InGameUI iguiScript;
 	public LevelProgress progressScript;
@@ -39,15 +39,17 @@ public class LevelSelection : MonoBehaviour
 		Lock("Level21");
 		Lock("Level22");
 
+		//progressObj = GameObject.Find("PF_LevelProgress(Clone)");
 		progressObj = GameObject.FindGameObjectWithTag("Progress");
 
 		if(progressObj != null)
 		{
+			//progressObj = Instantiate(PF_LevelProgress , Vector3.zero , Quaternion.identity) as GameObject;
 			progressScript = progressObj.GetComponent<LevelProgress>();
 		}
 
 		#region Selection
-		if(progressScript.levelProgress)
+		if(progressScript != null && progressScript.levelProgress)
 		{
 			if(buttons[1].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 1)
 			{

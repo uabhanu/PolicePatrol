@@ -259,7 +259,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Quit" :
 				Debug.Log("QuitButton");
-				Application.Quit();
+				Application.LoadLevel(0);
 			break;
 				
 			case "Resume" :

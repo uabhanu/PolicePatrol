@@ -7,8 +7,6 @@ public class LevelProgress : MonoBehaviour
 	public GameObject iguiObj , truckLeftObj , truckRightObj;
 	public InGameUI iguiScript;
 	public int leftScore , levelNo , rightScore;
-	public Thug thugScript;
-	public Truck truckScript;
 	
 	void Start () 
 	{
