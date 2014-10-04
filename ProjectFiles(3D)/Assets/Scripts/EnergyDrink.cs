@@ -5,9 +5,10 @@ using UnityEngine.SocialPlatforms;
 
 public class EnergyDrink : MonoBehaviour 
 {
-	private string fiveDrinks = "CgkIz8X_7JkXEAIQAg";
-	private string tenDrinks = "CgkIz8X_7JkXEAIQAw";
+	private string twoDrinks = "CgkI86253N8QEAIQAQ";
+	private string fourDrinks = "CgkI86253N8QEAIQAg";
 
+	public bool achievement1 = false , achievement2 = false;
 	public EDSpawner edSpawnScript;
 	public GameObject edSpawnObj , policeObj;
 	public int incrementCount = 1;
@@ -41,16 +42,21 @@ public class EnergyDrink : MonoBehaviour
 
 	void FiveDrinks()
 	{
-		if (Social.localUser.authenticated)
+		if(achievement1)
 		{
-			((PlayGamesPlatform)Social.Active).IncrementAchievement(fiveDrinks , incrementCount , (bool success) =>
-        	{
-				if(incrementCount < 2)
-				{
-					incrementCount++;
-					Social.ShowAchievementsUI();
-				}
-			});
+			incrementCount = 0;
+
+			if (Social.localUser.authenticated)
+			{
+				((PlayGamesPlatform)Social.Active).IncrementAchievement(fourDrinks , incrementCount , (bool success) =>
+                {
+					if(incrementCount < 4)
+					{
+						incrementCount++;
+						Social.ShowAchievementsUI();
+					}
+				});
+			}
 		}
 	}
 
@@ -72,24 +78,29 @@ public class EnergyDrink : MonoBehaviour
 			Debug.Log("Player had a Drink");
 
 			FiveDrinks();
-			TenDrinks();
+			TwoDrinks();
 
 			Destroy(this.gameObject);
 		}
 	}
 
-	void TenDrinks()
+	void TwoDrinks()
 	{
 		if (Social.localUser.authenticated)
 		{
-			((PlayGamesPlatform)Social.Active).IncrementAchievement(tenDrinks , incrementCount , (bool success) =>
+			((PlayGamesPlatform)Social.Active).IncrementAchievement(twoDrinks , incrementCount , (bool success) =>
         	{
-				if(incrementCount < 5)
+				if(incrementCount < 2)
 				{
 					incrementCount++;
 					Social.ShowAchievementsUI();
 				}
 			});
+		}
+
+		if(incrementCount == 2)
+		{
+			achievement1 = true;
 		}
 	}
 
