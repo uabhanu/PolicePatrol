@@ -53,7 +53,7 @@ public class LevelProgress : MonoBehaviour
 
 				if(iguiScript.timeValue > 0) //This part works only if game started from Level Selection Screen which is correct
 				{
-					if(leftScore == 5 && truckLeftObj == null && rightScore == 5 && truckRightObj == null)
+					if(leftScore == 5 && truckLeftObj == null || rightScore == 5 && truckRightObj == null)
 					{
 						Debug.Log("Both Trucks 5/5");
 						iguiScript.Active("LoseCard");
