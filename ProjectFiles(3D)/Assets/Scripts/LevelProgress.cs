@@ -3,15 +3,16 @@ using System.Collections;
 
 public class LevelProgress : MonoBehaviour 
 {
-	public bool levelProgress;
 	public GameObject iguiObj , truckLeftObj , truckRightObj;
 	public InGameUI iguiScript;
-	public int leftScore , levelNo , rightScore;
+	public int leftScore , levelNo , levelProgress , rightScore;
 	
 	void Start () 
 	{
 		DontDestroyOnLoad(this.gameObject);
 		StartCoroutine("GameTimer");
+
+		PlayerPrefs.GetInt("levelProgress");
 	}
 
 	IEnumerator GameTimer()
@@ -55,7 +56,7 @@ public class LevelProgress : MonoBehaviour
 				{
 					if(leftScore == 5 && truckLeftObj == null || rightScore == 5 && truckRightObj == null)
 					{
-						Debug.Log("Both Trucks 5/5");
+						Debug.Log("Truck 5/5");
 						iguiScript.Active("LoseCard");
 						iguiScript.Active("LoseCardText");
 						iguiScript.Inactive("PauseButton");
@@ -66,13 +67,14 @@ public class LevelProgress : MonoBehaviour
 				
 				else if(iguiScript.timeValue == 0)
 				{
-					Debug.Log("Back up arrived in Time");
+					Debug.Log("Back up arrived on Time");
 					iguiScript.Active("WinCard");
 					iguiScript.Active("WinCardText");
 					iguiScript.Inactive("PauseButton");
 					iguiScript.Active("ContinueButton");
 					Time.timeScale = 0;
-					levelProgress = true;
+					levelProgress++;
+					PlayerPrefs.SetInt("levelProgress" , 1);
 				}
 			}
 		}

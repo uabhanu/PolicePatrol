@@ -32,355 +32,37 @@ public class LevelSelection : MonoBehaviour
 			}
 		});
 	
-		//progressObj = GameObject.Find("PF_LevelProgress(Clone)");
 		progressObj = GameObject.FindGameObjectWithTag("Progress");
 
-		Unlock("Level1");
+		if(progressObj == null)
+		{
+			progressObj = Instantiate(PF_LevelProgress , Vector3.zero , Quaternion.identity) as GameObject;
+		}		
 
 		if(progressObj != null)
 		{
-			//progressObj = Instantiate(PF_LevelProgress , Vector3.zero , Quaternion.identity) as GameObject;
 			progressScript = progressObj.GetComponent<LevelProgress>();
 		}
 
+		Unlock("Level1");
+
 		#region Selection
-		if(progressScript != null && progressScript.levelProgress)
+		if(progressScript != null)
 		{
-			if(buttons[1].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 1)
+			if(buttons[1].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelProgress == 1 && progressScript.levelNo >= 1)
 			{
 				Unlock("Level2");
-				progressScript.levelProgress = false;
 			}
 
-			if(buttons[2].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 2)
+			if(buttons[1].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelProgress == 1 && progressScript.levelNo >= 2)
 			{
-				Unlock("Level2");
 				Unlock("Level3");
-				progressScript.levelProgress = false;
 			}
 
-			if(buttons[3].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 3)
+			if(buttons[1].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelProgress == 1 && progressScript.levelNo >= 3)
 			{
-				Unlock("Level2");
-				Unlock("Level3");
 				Unlock("Level4");
-				progressScript.levelProgress = false;
 			}
-
-			if(buttons[4].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 4)
-			{
-				Unlock("Level2");
-				Unlock("Level3");
-				Unlock("Level4");
-				Unlock("Level5");
-				progressScript.levelProgress = false;
-			}
-
-//			if(buttons[5].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 5)
-//			{
-//				Unlock("Level2");
-//				Unlock("Level3");
-//				Unlock("Level4");
-//				Unlock("Level5");
-//				Unlock("Level6");
-//				progressScript.levelProgress = false;
-//			}
-//
-//			if(buttons[6].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 6)
-//			{
-//				Unlock("Level2");
-//				Unlock("Level3");
-//				Unlock("Level4");
-//				Unlock("Level5");
-//				Unlock("Level6");
-//				Unlock("Level7");
-//				progressScript.levelProgress = false;
-//			}
-//
-//			if(buttons[7].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 7)
-//			{
-//				Unlock("Level2");
-//				Unlock("Level3");
-//				Unlock("Level4");
-//				Unlock("Level5");
-//				Unlock("Level6");
-//				Unlock("Level7");
-//				Unlock("Level8");
-//				progressScript.levelProgress = false;
-//			}
-//
-//			if(buttons[8].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 8)
-//			{
-//				Unlock("Level2");
-//				Unlock("Level3");
-//				Unlock("Level4");
-//				Unlock("Level5");
-//				Unlock("Level6");
-//				Unlock("Level7");
-//				Unlock("Level8");
-//				Unlock("Level9");
-//				progressScript.levelProgress = false;
-//			}
-//
-//			if(buttons[9].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 9)
-//			{
-//				Unlock("Level2");
-//				Unlock("Level3");
-//				Unlock("Level4");
-//				Unlock("Level5");
-//				Unlock("Level6");
-//				Unlock("Level7");
-//				Unlock("Level8");
-//				Unlock("Level9");
-//				Unlock("Level10");
-//				progressScript.levelProgress = false;
-//			}
-//
-//			if(buttons[10].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 10)
-//			{
-//				Unlock("Level2");
-//				Unlock("Level3");
-//				Unlock("Level4");
-//				Unlock("Level5");
-//				Unlock("Level6");
-//				Unlock("Level7");
-//				Unlock("Level8");
-//				Unlock("Level9");
-//				Unlock("Level10");
-//				Unlock("Level11");
-//				progressScript.levelProgress = false;
-//			}
-//
-//			if(buttons[11].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 11)
-//			{
-//				Unlock("Level2");
-//				Unlock("Level3");
-//				Unlock("Level4");
-//				Unlock("Level5");
-//				Unlock("Level6");
-//				Unlock("Level7");
-//				Unlock("Level8");
-//				Unlock("Level9");
-//				Unlock("Level10");
-//				Unlock("Level11");
-//				Unlock("Level12");
-//				progressScript.levelProgress = false;
-//			}
-//
-//			if(buttons[12].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 12)
-//			{
-//				Unlock("Level2");
-//				Unlock("Level3");
-//				Unlock("Level4");
-//				Unlock("Level5");
-//				Unlock("Level6");
-//				Unlock("Level7");
-//				Unlock("Level8");
-//				Unlock("Level9");
-//				Unlock("Level10");
-//				Unlock("Level11");
-//				Unlock("Level12");
-//				Unlock("Level13");
-//				progressScript.levelProgress = false;
-//			}
-//
-//			if(buttons[13].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 13)
-//			{
-//				Unlock("Level2");
-//				Unlock("Level3");
-//				Unlock("Level4");
-//				Unlock("Level5");
-//				Unlock("Level6");
-//				Unlock("Level7");
-//				Unlock("Level8");
-//				Unlock("Level9");
-//				Unlock("Level10");
-//				Unlock("Level11");
-//				Unlock("Level12");
-//				Unlock("Level13");
-//				Unlock("Level14");
-//				progressScript.levelProgress = false;
-//			}
-//
-//			if(buttons[14].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 14)
-//			{
-//				Unlock("Level2");
-//				Unlock("Level3");
-//				Unlock("Level4");
-//				Unlock("Level5");
-//				Unlock("Level6");
-//				Unlock("Level7");
-//				Unlock("Level8");
-//				Unlock("Level9");
-//				Unlock("Level10");
-//				Unlock("Level11");
-//				Unlock("Level12");
-//				Unlock("Level13");
-//				Unlock("Level14");
-//				Unlock("Level15");
-//				progressScript.levelProgress = false;
-//			}
-//
-//			if(buttons[15].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 15)
-//			{
-//				Unlock("Level2");
-//				Unlock("Level3");
-//				Unlock("Level4");
-//				Unlock("Level5");
-//				Unlock("Level6");
-//				Unlock("Level7");
-//				Unlock("Level8");
-//				Unlock("Level9");
-//				Unlock("Level10");
-//				Unlock("Level11");
-//				Unlock("Level12");
-//				Unlock("Level13");
-//				Unlock("Level14");
-//				Unlock("Level15");
-//				Unlock("Level16");
-//				progressScript.levelProgress = false;
-//			}
-//
-//			if(buttons[16].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 16)
-//			{
-//				Unlock("Level2");
-//				Unlock("Level3");
-//				Unlock("Level4");
-//				Unlock("Level5");
-//				Unlock("Level6");
-//				Unlock("Level7");
-//				Unlock("Level8");
-//				Unlock("Level9");
-//				Unlock("Level10");
-//				Unlock("Level11");
-//				Unlock("Level12");
-//				Unlock("Level13");
-//				Unlock("Level14");
-//				Unlock("Level15");
-//				Unlock("Level16");
-//				Unlock("Level17");
-//				progressScript.levelProgress = false;
-//			}
-//
-//			if(buttons[17].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 17)
-//			{
-//				Unlock("Level2");
-//				Unlock("Level3");
-//				Unlock("Level4");
-//				Unlock("Level5");
-//				Unlock("Level6");
-//				Unlock("Level7");
-//				Unlock("Level8");
-//				Unlock("Level9");
-//				Unlock("Level10");
-//				Unlock("Level11");
-//				Unlock("Level12");
-//				Unlock("Level13");
-//				Unlock("Level14");
-//				Unlock("Level15");
-//				Unlock("Level16");
-//				Unlock("Level17");
-//				Unlock("Level18");
-//				progressScript.levelProgress = false;
-//			}
-//
-//			if(buttons[18].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 18)
-//			{
-//				Unlock("Level2");
-//				Unlock("Level3");
-//				Unlock("Level4");
-//				Unlock("Level5");
-//				Unlock("Level6");
-//				Unlock("Level7");
-//				Unlock("Level8");
-//				Unlock("Level9");
-//				Unlock("Level10");
-//				Unlock("Level11");
-//				Unlock("Level12");
-//				Unlock("Level13");
-//				Unlock("Level14");
-//				Unlock("Level15");
-//				Unlock("Level16");
-//				Unlock("Level17");
-//				Unlock("Level18");
-//				Unlock("Level19");
-//				progressScript.levelProgress = false;
-//			}
-//
-//			if(buttons[19].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 19)
-//			{
-//				Unlock("Level2");
-//				Unlock("Level3");
-//				Unlock("Level4");
-//				Unlock("Level5");
-//				Unlock("Level6");
-//				Unlock("Level7");
-//				Unlock("Level8");
-//				Unlock("Level9");
-//				Unlock("Level10");
-//				Unlock("Level11");
-//				Unlock("Level12");
-//				Unlock("Level13");
-//				Unlock("Level14");
-//				Unlock("Level15");
-//				Unlock("Level16");
-//				Unlock("Level17");
-//				Unlock("Level18");
-//				Unlock("Level19");
-//				Unlock("Level20");
-//				progressScript.levelProgress = false;
-//			}
-//
-//			if(buttons[20].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 20)
-//			{
-//				Unlock("Level2");
-//				Unlock("Level3");
-//				Unlock("Level4");
-//				Unlock("Level5");
-//				Unlock("Level6");
-//				Unlock("Level7");
-//				Unlock("Level8");
-//				Unlock("Level9");
-//				Unlock("Level10");
-//				Unlock("Level11");
-//				Unlock("Level12");
-//				Unlock("Level13");
-//				Unlock("Level14");
-//				Unlock("Level15");
-//				Unlock("Level16");
-//				Unlock("Level17");
-//				Unlock("Level18");
-//				Unlock("Level19");
-//				Unlock("Level20");
-//				Unlock("Level21");
-//				progressScript.levelProgress = false;
-//			}
-//
-//			if(buttons[21].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelNo == 21)
-//			{
-//				Unlock("Level2");
-//				Unlock("Level3");
-//				Unlock("Level4");
-//				Unlock("Level5");
-//				Unlock("Level6");
-//				Unlock("Level7");
-//				Unlock("Level8");
-//				Unlock("Level9");
-//				Unlock("Level10");
-//				Unlock("Level11");
-//				Unlock("Level12");
-//				Unlock("Level13");
-//				Unlock("Level14");
-//				Unlock("Level15");
-//				Unlock("Level16");
-//				Unlock("Level17");
-//				Unlock("Level18");
-//				Unlock("Level19");
-//				Unlock("Level20");
-//				Unlock("Level21");
-//				Unlock("Level22");
-//				progressScript.levelProgress = false;
-//			}
 		}
 		#endregion
 	}
