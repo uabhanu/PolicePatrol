@@ -6,8 +6,10 @@ public class EnemySpawner : MonoBehaviour
 	//[HideInInspector]
 	public bool enemySpawned;
 	public InGameUI iguiScript;
-	public float spawnTimer;
+	public float spawnTimer , spawnLocationX , spawnLocationZ;
+	public float[] xPositions , zPositions;
 	public GameObject iguiObj , thugObj;
+	public int randomPos;
 	public Thug thugScript;
 	
 	void Start () 
@@ -23,49 +25,61 @@ public class EnemySpawner : MonoBehaviour
 		{
 			thugScript = thugObj.GetComponent<Thug>();
 		}
-
+				
+		StartCoroutine("EnemySpawnFalse");
 		StartCoroutine("EnemySpawnTimer");
 	}
 	
 	public void EnemySpawn()
 	{
+		if(randomPos == 1)
+		{
+			spawnLocationX = xPositions[0];
+			spawnLocationZ = zPositions[0];
+		}
+		
+		if(randomPos == 2)
+		{
+			spawnLocationX = xPositions[1];
+			spawnLocationZ = zPositions[0];
+		}
+		
+		if(randomPos == 3)
+		{
+			spawnLocationX = xPositions[2];
+			spawnLocationZ = zPositions[1];
+		}
+		
+		if(randomPos == 4)
+		{
+			spawnLocationX = xPositions[3];
+			spawnLocationZ = zPositions[1];
+		}
+
 		if(iguiScript != null)
 		{
 			if(!enemySpawned && iguiScript.thugCount < iguiScript.maxThugCount)
 			{
-				if(transform.position.z > 0)
-				{
-					//Debug.Log("Enemy Spawner");
-					Instantiate (thugObj , new Vector3(transform.position.x , transform.position.y , transform.position.z + 10.0f) , Quaternion.identity);
-					iguiScript.thugCount++;
-				}
-				
-				else if(transform.position.z < 0)
-				{
-					//Debug.Log("Enemy Spawner");
-					Instantiate (thugObj , new Vector3(transform.position.x , transform.position.y , transform.position.z - 10.0f) , Quaternion.identity);
-					iguiScript.thugCount++;
-				}
+				//Debug.Log("Enemy Spawner");
+				Instantiate (thugObj , new Vector3(spawnLocationX , 0 , spawnLocationZ) , Quaternion.identity);
+				iguiScript.thugCount++;
+				enemySpawned = true;				
 			}
 		}
 	}
 
-	void OnTriggerEnter(Collider col)
+	IEnumerator EnemySpawnFalse()
 	{
-		if(col.gameObject.tag.Equals("Enemy") || col.gameObject.tag.Equals("Target"))
-		{
-			enemySpawned = true;
-		}
-	}
+		yield return new WaitForSeconds(15);
 
-	void OnTriggerExit(Collider col)
-	{
-		if(col.gameObject.tag.Equals("Enemy") || col.gameObject.tag.Equals("Target"))
+		if(enemySpawned)
 		{
 			enemySpawned = false;
 		}
+
+		StartCoroutine("EnemySpawnFalse");
 	}
-	
+
 	IEnumerator EnemySpawnTimer()
 	{
 		yield return new WaitForSeconds(spawnTimer);
@@ -75,6 +89,6 @@ public class EnemySpawner : MonoBehaviour
 
 	void Update () 
 	{
-
+		randomPos = (int)Random.Range(0 , 4);
 	}
 }
