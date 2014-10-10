@@ -4,7 +4,8 @@ using System.Collections;
 public class Police : MonoBehaviour 
 {
 	public Animator anim;
-	public GameObject thugObj;
+	public EnergyDrink energyDrinkScript;
+	public GameObject energyDrinkObj , thugObj;
 	public int attack , hitpoints;
 	public NavMeshAgent agent;
 	public Thug thugScript;
@@ -27,6 +28,22 @@ public class Police : MonoBehaviour
 			agent = this.gameObject.GetComponent<NavMeshAgent>();
 			anim = this.gameObject.GetComponent<Animator>();
 		}
+
+		//StartCoroutine("ResetPolice");
+	}
+
+	IEnumerator ResetPolice()
+	{
+		yield return new WaitForSeconds(15);
+
+		if(agent.acceleration > 8 && attack > 1)
+		{
+			//Debug.Log("Normal Police");
+			agent.acceleration = 8;
+			attack = 1;
+		}
+
+		StartCoroutine("ResetPolice");
 	}
 
 	public void Attack()

@@ -50,9 +50,9 @@ public class EDSpawner : MonoBehaviour
 		if(cargoDoorObj != null)
 		{
 			openClose = cargoDoorObj.GetComponent<Animator>();
+			openClose.Play(0);
 		}
-
-		openClose.Play(0);
+		
 		Instantiate();
 		StartCoroutine("SpawnTimer");
 	}

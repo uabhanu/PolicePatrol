@@ -10,9 +10,10 @@ public class EnergyDrink : MonoBehaviour
 
 	public bool achievement1 = false , achievement2 = false;
 	public EDSpawner edSpawnScript;
-	public GameObject edSpawnObj , policeObj;
+	public GameObject edSpawnObj , policeObj , thugObj;
 	public int incrementCount = 1;
 	public Police policeScript;
+	public Thug thugScript;
 
 	void Start () 
 	{
@@ -30,12 +31,19 @@ public class EnergyDrink : MonoBehaviour
 			policeScript = policeObj.GetComponent<Police>();
 		}
 
+		thugObj = GameObject.FindGameObjectWithTag("Enemy");
+
+		if(thugObj != null)
+		{
+			thugScript = thugObj.GetComponent<Thug>();
+		}
+
 		StartCoroutine("ExistenceTimer");
 	}
 
 	IEnumerator ExistenceTimer()
 	{
-		yield return new WaitForSeconds(10);
+		yield return new WaitForSeconds(15);
 		Destroy(this.gameObject);
 		StartCoroutine("ExistenceTimer");
 	}
@@ -76,6 +84,10 @@ public class EnergyDrink : MonoBehaviour
 		if(col.gameObject.tag.Equals("Player"))
 		{
 			Debug.Log("Player had a Drink");
+
+			policeScript.attack = 6;
+			policeScript.agent.acceleration = 800;
+			policeScript.StartCoroutine("ResetPolice");
 
 			FiveDrinks();
 			TwoDrinks();
