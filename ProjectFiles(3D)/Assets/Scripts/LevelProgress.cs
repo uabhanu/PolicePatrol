@@ -5,20 +5,23 @@ public class LevelProgress : MonoBehaviour
 {
 	public GameObject iguiObj , truckLeftObj , truckRightObj;
 	public InGameUI iguiScript;
-	public int leftScore , levelNo , levelProgress , rightScore;
+	public int leftScore , levelNo , level1Progress , level2Progress , level3Progress , rightScore;
 	
 	void Start () 
 	{
 		DontDestroyOnLoad(this.gameObject);
-		StartCoroutine("GameTimer");
 
-		PlayerPrefs.GetInt("levelProgress");
+		level1Progress = PlayerPrefs.GetInt("level1Progress");
+		level2Progress = PlayerPrefs.GetInt("level2Progress");
+		level3Progress = PlayerPrefs.GetInt("level3Progress");
+
+		StartCoroutine("GameTimer");
 	}
 
 	IEnumerator GameTimer()
 	{
-		yield return new WaitForSeconds(0.4f);
-		
+		yield return new WaitForSeconds(0.4f);		
+
 		if(iguiObj == null)
 		{
 			iguiObj = GameObject.FindGameObjectWithTag("IGUI");
@@ -73,11 +76,29 @@ public class LevelProgress : MonoBehaviour
 					iguiScript.Inactive("PauseButton");
 					iguiScript.Active("ContinueButton");
 					Time.timeScale = 0;
-					levelProgress++;
-					PlayerPrefs.SetInt("levelProgress" , 1);
+
+					if(levelNo == 1)
+					{
+						level1Progress++;
+						PlayerPrefs.SetInt("level1Progress" , level1Progress);
+					}
+
+					if(levelNo == 2)
+					{
+						level2Progress++;
+						PlayerPrefs.SetInt("level2Progress" , level2Progress);
+					}
+
+					if(levelNo == 3)
+					{
+						level3Progress++;
+						PlayerPrefs.SetInt("level3Progress" , level3Progress);
+					}
 				}
 			}
 		}
+
+		PlayerPrefs.GetInt("levelProgress");
 		
 		StartCoroutine("GameTimer");
 	}

@@ -6,7 +6,6 @@ using UnityEngine.SocialPlatforms;
 
 public class LevelSelection : MonoBehaviour 
 {
-	public bool levelProgress;
 	public GameObject iguiObj , PF_LevelProgress , progressObj;
 	public GUITexture[] buttons;
 	public InGameUI iguiScript;
@@ -44,27 +43,7 @@ public class LevelSelection : MonoBehaviour
 			progressScript = progressObj.GetComponent<LevelProgress>();
 		}
 
-		Unlock("Level1");
-
-		#region Selection
-		if(progressScript != null)
-		{
-			if(buttons[1].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelProgress == 1 && progressScript.levelNo >= 1)
-			{
-				Unlock("Level2");
-			}
-
-			if(buttons[1].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelProgress == 1 && progressScript.levelNo >= 2)
-			{
-				Unlock("Level3");
-			}
-
-			if(buttons[1].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.levelProgress == 1 && progressScript.levelNo >= 3)
-			{
-				Unlock("Level4");
-			}
-		}
-		#endregion
+		Unlock("Level1");		
 	}
 
 	#region Lock Method
@@ -261,6 +240,24 @@ public class LevelSelection : MonoBehaviour
 
 	void Update () 
 	{
-
+		#region Selection
+		if(progressScript != null)
+		{
+			if(buttons[1].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.level1Progress == 1)
+			{
+				Unlock("Level2");
+			}
+			
+			if(buttons[1].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.level2Progress == 1)
+			{
+				Unlock("Level3");
+			}
+			
+			if(buttons[1].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.level3Progress == 1)
+			{
+				Unlock("Level4");
+			}
+		}
+		#endregion
 	}	
 }
