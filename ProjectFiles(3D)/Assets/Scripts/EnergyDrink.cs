@@ -86,7 +86,7 @@ public class EnergyDrink : MonoBehaviour
 			Debug.Log("Player had a Drink");
 
 			policeScript.attack = 6;
-			policeScript.agent.acceleration = 800;
+			policeScript.agent.speed = 28;
 			policeScript.StartCoroutine("ResetPolice");
 
 			FiveDrinks();

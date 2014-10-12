@@ -36,10 +36,10 @@ public class Police : MonoBehaviour
 	{
 		yield return new WaitForSeconds(15);
 
-		if(agent.acceleration > 8 && attack > 1)
+		if(agent.speed > 7 && attack > 1)
 		{
 			//Debug.Log("Normal Police");
-			agent.acceleration = 8;
+			agent.speed = 7;
 			attack = 1;
 		}
 
@@ -104,7 +104,16 @@ public class Police : MonoBehaviour
 
 		if(target != null)
 		{
-			agent.speed = 7;
+			if(attack == 1)
+			{
+				agent.speed = 7;
+			}
+
+			else if(attack > 1)
+			{
+				agent.speed = 28;
+			}
+
 			agent.SetDestination(target.position);
 		}
 
