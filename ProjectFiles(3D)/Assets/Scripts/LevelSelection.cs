@@ -1,4 +1,5 @@
-﻿using GooglePlayGames;
+﻿using Facebook;
+using GooglePlayGames;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Advertisements;
@@ -16,6 +17,8 @@ public class LevelSelection : MonoBehaviour
 	{
 		QualitySettings.vSyncCount = 0;
 		Application.targetFrameRate = 30;
+
+		FB.Init(SetInit , OnHideUnity);
 
 		PlayGamesPlatform.Activate();
 
@@ -142,6 +145,20 @@ public class LevelSelection : MonoBehaviour
 	}
 	#endregion
 
+	#region OnHideUnity Method
+	private void OnHideUnity(bool isGameShown)
+	{
+		if(!isGameShown)
+		{
+			Time.timeScale = 0;
+		}
+		else
+		{
+			Time.timeScale = 1;
+		}
+	}
+	#endregion
+
 	#region Unlock Method
 	public void Unlock(string name)
 	{
@@ -235,6 +252,13 @@ public class LevelSelection : MonoBehaviour
 				buttons[21].GetComponent<GUITexture>().texture = buttonTextures[0];
 			break;
 		}
+	}
+	#endregion
+
+	#region SetInit Method
+	private void SetInit()
+	{
+		enabled = true;
 	}
 	#endregion
 
