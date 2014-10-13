@@ -20,6 +20,11 @@ public class LevelSelection : MonoBehaviour
 
 		FB.Init(SetInit , OnHideUnity);
 
+//		if(!FB.IsLoggedIn)
+//		{
+//			FB.Login();
+//		}
+
 		PlayGamesPlatform.Activate();
 
 		Social.localUser.Authenticate((bool success) =>
