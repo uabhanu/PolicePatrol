@@ -6,7 +6,8 @@ public class Police : MonoBehaviour
 	public Animator anim;
 	public EnergyDrink energyDrinkScript;
 	public GameObject energyDrinkObj , thugObj;
-	public int attack , hitpoints;
+	public GUIText energyExpireTimerLabel;
+	public int attack , energyExpireTimer , hitpoints;
 	public NavMeshAgent agent;
 	public Thug thugScript;
 	public Transform target;
@@ -29,21 +30,19 @@ public class Police : MonoBehaviour
 			anim = this.gameObject.GetComponent<Animator>();
 		}
 
-		//StartCoroutine("ResetPolice");
+		StartCoroutine("EnergyTimer");
 	}
 
-	IEnumerator ResetPolice()
+	IEnumerator EnergyTimer()
 	{
-		yield return new WaitForSeconds(15);
-
-		if(agent.speed > 7 && attack > 1)
+		yield return new WaitForSeconds(1);
+		
+		if(energyExpireTimer > 0)
 		{
-			//Debug.Log("Normal Police");
-			agent.speed = 7;
-			attack = 1;
+			energyExpireTimer--;
 		}
 
-		StartCoroutine("ResetPolice");
+		StartCoroutine("EnergyTimer");
 	}
 
 	public void Attack()
@@ -72,6 +71,19 @@ public class Police : MonoBehaviour
 	public void Idle()
 	{
 		anim.SetInteger("AnimIndex" , 0);
+	}
+
+	public void ResetPolice()
+	{
+		if(energyExpireTimer == 0)
+		{
+			if(agent.speed > 7 && attack > 1)
+			{
+				//Debug.Log("Normal Police");
+				agent.speed = 7;
+				attack = 1;
+			}
+		}		
 	}
 
 	void OnCollisionEnter(Collision col)
@@ -146,5 +158,9 @@ public class Police : MonoBehaviour
 				anim.SetInteger("AnimIndex" , 2);
 			break;
 		}
+
+		energyExpireTimerLabel.text = energyExpireTimer.ToString();
+
+		ResetPolice();
 	}
 }

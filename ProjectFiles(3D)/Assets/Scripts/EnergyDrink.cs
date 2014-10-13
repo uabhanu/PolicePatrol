@@ -87,7 +87,7 @@ public class EnergyDrink : MonoBehaviour
 
 			policeScript.attack = 6;
 			policeScript.agent.speed = 28;
-			policeScript.StartCoroutine("ResetPolice");
+			policeScript.energyExpireTimer = 15;
 
 			FiveDrinks();
 			TwoDrinks();
