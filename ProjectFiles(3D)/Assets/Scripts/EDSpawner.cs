@@ -15,7 +15,7 @@ public class EDSpawner : MonoBehaviour
 
 	IEnumerator SpawnTimer()
 	{
-		yield return new WaitForSeconds(24);
+		yield return new WaitForSeconds(18);
 
 		if((int)Random.Range(1 , 5) == 1)
 		{

@@ -31,13 +31,6 @@ public class EnergyDrink : MonoBehaviour
 			policeScript = policeObj.GetComponent<Police>();
 		}
 
-		thugObj = GameObject.FindGameObjectWithTag("Enemy");
-
-		if(thugObj != null)
-		{
-			thugScript = thugObj.GetComponent<Thug>();
-		}
-
 		StartCoroutine("ExistenceTimer");
 	}
 
@@ -85,7 +78,11 @@ public class EnergyDrink : MonoBehaviour
 		{
 			Debug.Log("Player had a Drink");
 
-			policeScript.attack = 6;
+			if(thugScript != null && thugScript.hitpoints > 0)
+			{
+				policeScript.attack = thugScript.hitpoints;
+			}
+
 			policeScript.agent.speed = 28;
 			policeScript.energyExpireTimer = 15;
 
@@ -123,9 +120,16 @@ public class EnergyDrink : MonoBehaviour
 			return;
 		}
 
+		thugObj = GameObject.FindGameObjectWithTag("Enemy");
+		
+		if(thugObj != null)
+		{
+			thugScript = thugObj.GetComponent<Thug>();
+		}
+
 		if(transform.position.z > 10)
 		{
 			transform.position = new Vector3(transform.position.x , transform.position.y , transform.position.z - 1.0f);
-		}
+		}		
 	}
 }
