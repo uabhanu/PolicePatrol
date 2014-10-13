@@ -243,17 +243,17 @@ public class LevelSelection : MonoBehaviour
 		#region Selection
 		if(progressScript != null)
 		{
-			if(buttons[1].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.level1Progress == 1)
+			if(buttons[1].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.level1Progress >= 1)
 			{
 				Unlock("Level2");
 			}
 			
-			if(buttons[1].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.level2Progress == 1)
+			if(buttons[1].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.level2Progress >= 1)
 			{
 				Unlock("Level3");
 			}
 			
-			if(buttons[1].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.level3Progress == 1)
+			if(buttons[1].GetComponent<GUITexture>().texture == buttonTextures[1] && progressScript.level3Progress >= 1)
 			{
 				Unlock("Level4");
 			}

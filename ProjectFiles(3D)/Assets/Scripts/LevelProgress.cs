@@ -77,19 +77,19 @@ public class LevelProgress : MonoBehaviour
 					iguiScript.Active("ContinueButton");
 					Time.timeScale = 0;
 
-					if(levelNo == 1)
+					if(levelNo == 1 && level1Progress < 1)
 					{
 						level1Progress++;
 						PlayerPrefs.SetInt("level1Progress" , level1Progress);
 					}
 
-					if(levelNo == 2)
+					if(levelNo == 2 && level2Progress < 1)
 					{
 						level2Progress++;
 						PlayerPrefs.SetInt("level2Progress" , level2Progress);
 					}
 
-					if(levelNo == 3)
+					if(levelNo == 3 && level3Progress < 1)
 					{
 						level3Progress++;
 						PlayerPrefs.SetInt("level3Progress" , level3Progress);
