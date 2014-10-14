@@ -17,27 +17,25 @@ public class LevelSelection : MonoBehaviour
 	{
 		QualitySettings.vSyncCount = 0;
 		Application.targetFrameRate = 30;
-
+		
+		enabled = false;
 		FB.Init(SetInit , OnHideUnity);
-
-//		if(!FB.IsLoggedIn)
-//		{
-//			FB.Login();
-//		}
+		StartCoroutine("FacebookLogin");
+		StartCoroutine("FacebookLogout");
 
 		PlayGamesPlatform.Activate();
 
-		Social.localUser.Authenticate((bool success) =>
-      	{
-			if(success)
-			{
-				Debug.Log("You've successfully logged in");
-			}
-			else
-			{
-				Debug.Log("Login failed for some reason");				
-			}
-		});
+//		Social.localUser.Authenticate((bool success) =>
+//      	{
+//			if(success)
+//			{
+//				Debug.Log("You've successfully logged in");
+//			}
+//			else
+//			{
+//				Debug.Log("Login failed for some reason");				
+//			}
+//		});
 	
 		progressObj = GameObject.FindGameObjectWithTag("Progress");
 
@@ -52,6 +50,42 @@ public class LevelSelection : MonoBehaviour
 		}
 
 		Unlock("Level1");		
+	}
+
+	IEnumerator FacebookLogin()
+	{
+		yield return new WaitForSeconds(1);
+
+		if(!FB.IsLoggedIn)
+		{
+			FB.Login("email , publish_actions" , AuthCallback);
+		}
+
+		StartCoroutine("FacebookLogin");
+	}
+
+	IEnumerator FacebookLogout()
+	{
+		yield return new WaitForSeconds(5);
+
+		if(FB.IsLoggedIn)
+		{
+			FB.Logout();
+		}
+
+		StartCoroutine("FacebookLogout");
+	}
+
+	private void AuthCallback(FBResult result) 
+	{
+		if(FB.IsLoggedIn) 
+		{
+			Debug.Log(FB.UserId);
+		} 
+		else 
+		{
+			Debug.Log("User cancelled login");
+		}
 	}
 
 	#region Lock Method
