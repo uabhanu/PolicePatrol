@@ -52,6 +52,7 @@ public class LevelSelection : MonoBehaviour
 		Unlock("Level1");		
 	}
 
+	#region IEnumerator FaceBookLogin
 	IEnumerator FacebookLogin()
 	{
 		yield return new WaitForSeconds(1);
@@ -63,7 +64,9 @@ public class LevelSelection : MonoBehaviour
 
 		StartCoroutine("FacebookLogin");
 	}
+	#endregion
 
+	#region IEnumerator Facebook Logout
 	IEnumerator FacebookLogout()
 	{
 		yield return new WaitForSeconds(5);
@@ -75,7 +78,9 @@ public class LevelSelection : MonoBehaviour
 
 		StartCoroutine("FacebookLogout");
 	}
+	#endregion
 
+	#region AuthCallback Method
 	private void AuthCallback(FBResult result) 
 	{
 		if(FB.IsLoggedIn) 
@@ -87,6 +92,7 @@ public class LevelSelection : MonoBehaviour
 			Debug.Log("User cancelled login");
 		}
 	}
+	#endregion
 
 	#region Lock Method
 	public void Lock(string name)
