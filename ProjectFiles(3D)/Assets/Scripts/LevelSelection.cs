@@ -18,10 +18,10 @@ public class LevelSelection : MonoBehaviour
 		QualitySettings.vSyncCount = 0;
 		Application.targetFrameRate = 30;
 		
-		enabled = false;
-		FB.Init(SetInit , OnHideUnity);
-		StartCoroutine("FacebookLogin");
-		StartCoroutine("FacebookLogout");
+		//enabled = false;
+		//FB.Init(SetInit , OnHideUnity);
+		//StartCoroutine("FacebookLogin");
+		//StartCoroutine("FacebookLogout");
 
 		PlayGamesPlatform.Activate();
 
