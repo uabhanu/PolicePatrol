@@ -5,10 +5,9 @@ public class Thug : MonoBehaviour
 {
 	public Animator anim;
 	public bool collidedPlayer , selected;
-	public EnemySpawner eSpawnScript;
 	[HideInInspector]
 	public float speed , tagTimer;
-	public GameObject eSpawnObj , iguiObj , policeObj , truckLeft , truckRight;
+	public GameObject iguiObj , policeObj , truckLeft , truckRight;
 	public GameObject[] enemies;
 	public InGameUI iguiScript;
 	public int hitpoints;
@@ -38,13 +37,6 @@ public class Thug : MonoBehaviour
 
 			truckLeft = GameObject.FindGameObjectWithTag("Left");
 			truckRight = GameObject.FindGameObjectWithTag("Right");
-
-			eSpawnObj = GameObject.FindGameObjectWithTag("ESpawn");
-
-			if(eSpawnObj != null)
-			{
-				eSpawnScript = eSpawnObj.GetComponent<EnemySpawner>();
-			}
 
 			if(transform.position.x < 0)
 			{
@@ -108,11 +100,6 @@ public class Thug : MonoBehaviour
 			if(iguiScript.thugCount > 0)
 			{
 				iguiScript.thugCount--;
-			}
-	
-			if(eSpawnScript != null)
-			{
-				eSpawnScript.enemySpawned = false;
 			}
 
 			Destroy(this.gameObject);

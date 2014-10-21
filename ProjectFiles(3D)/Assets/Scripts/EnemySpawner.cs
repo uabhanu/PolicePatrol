@@ -4,12 +4,12 @@ using System.Collections;
 public class EnemySpawner : MonoBehaviour 
 {
 	//[HideInInspector]
-	public bool enemySpawned;
 	public InGameUI iguiScript;
 	public float spawnTimer , spawnLocationX , spawnLocationZ;
 	public float[] xPositions , zPositions;
 	public GameObject iguiObj , thugObj;
 	public int randomPos;
+	public SpawnCheck sCheckScript;
 	public Thug thugScript;
 	
 	void Start () 
@@ -34,47 +34,59 @@ public class EnemySpawner : MonoBehaviour
 	{
 		if(randomPos == 1)
 		{
-			spawnLocationX = xPositions[0];
-			spawnLocationZ = zPositions[0];
+			if(sCheckScript != null && !sCheckScript.spawned)
+			{
+				spawnLocationX = xPositions[0];
+				spawnLocationZ = zPositions[0];
+			}
 		}
 		
 		if(randomPos == 2)
 		{
-			spawnLocationX = xPositions[1];
-			spawnLocationZ = zPositions[0];
+			if(sCheckScript != null && !sCheckScript.spawned)
+			{
+				spawnLocationX = xPositions[1];
+				spawnLocationZ = zPositions[0];
+			}
 		}
 		
 		if(randomPos == 3)
 		{
-			spawnLocationX = xPositions[2];
-			spawnLocationZ = zPositions[1];
+			if(sCheckScript != null && !sCheckScript.spawned)
+			{
+				spawnLocationX = xPositions[2];
+				spawnLocationZ = zPositions[1];
+			}
 		}
 		
 		if(randomPos == 4)
 		{
-			spawnLocationX = xPositions[3];
-			spawnLocationZ = zPositions[1];
+			if(sCheckScript != null && !sCheckScript.spawned)
+			{
+				spawnLocationX = xPositions[3];
+				spawnLocationZ = zPositions[1];
+			}
 		}
 
 		if(iguiScript != null)
 		{
-			if(!enemySpawned && iguiScript.thugCount < iguiScript.maxThugCount)
+			if(sCheckScript != null && !sCheckScript.spawned && iguiScript.thugCount < iguiScript.maxThugCount)
 			{
 				//Debug.Log("Enemy Spawner");
 				Instantiate (thugObj , new Vector3(spawnLocationX , 0 , spawnLocationZ) , Quaternion.identity);
 				iguiScript.thugCount++;
-				enemySpawned = true;				
+				sCheckScript.spawned = true;				
 			}
 		}
 	}
 
 	IEnumerator EnemySpawnFalse()
 	{
-		yield return new WaitForSeconds(15);
+		yield return new WaitForSeconds(8);
 
-		if(enemySpawned)
+		if(sCheckScript.spawned)
 		{
-			enemySpawned = false;
+			sCheckScript.spawned = false;
 		}
 
 		StartCoroutine("EnemySpawnFalse");
