@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Thug : MonoBehaviour 
 {
@@ -15,7 +15,7 @@ public class Thug : MonoBehaviour
 	public ParticleSystem sweatParticles;
 	public Police policeScript;
 	public Rigidbody boxBody;
-	public static Thug current;
+	public static Thug currentThug;
 	public Transform target;
 
 	public enum State
@@ -104,7 +104,7 @@ public class Thug : MonoBehaviour
 
 			Destroy(this.gameObject);
 
-			if(current != null && policeScript != null && policeScript.target == current.gameObject)
+			if(currentThug != null && policeScript != null && policeScript.target == currentThug.gameObject)
 			{
 				policeScript.target = null;
 			}
@@ -163,7 +163,7 @@ public class Thug : MonoBehaviour
 		if(col.gameObject.tag.Equals("Player") && selected)
 		{
 			//Debug.Log("Collision with Player");
-			current.collidedPlayer = true;
+			currentThug.collidedPlayer = true;
 		}
 	}
 
@@ -177,7 +177,7 @@ public class Thug : MonoBehaviour
 	{
 		if(col.gameObject.tag.Equals("Player"))
 		{
-			current.collidedPlayer = false;
+			currentThug.collidedPlayer = false;
 		}
 	}
 
@@ -185,13 +185,13 @@ public class Thug : MonoBehaviour
 	{
 		//Debug.Log("Enemy Selected");
 
-		if(current != null)
+		if(currentThug != null)
 		{
-			current.selected = false;
+			currentThug.selected = false;
 		}
 
 		selected = true;
-		current = this;
+		currentThug = this;
 
 		sweatParticles = this.gameObject.GetComponentInChildren<ParticleSystem>();
 

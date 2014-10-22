@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour 
 {
@@ -8,6 +8,7 @@ public class EnemySpawner : MonoBehaviour
 	public float spawnTimer , spawnLocationX , spawnLocationZ;
 	public float[] xPositions , zPositions;
 	public GameObject iguiObj , thugObj;
+	public GameObject[] spawnChecks;
 	public int randomPos;
 	public SpawnCheck sCheckScript;
 	public Thug thugScript;
@@ -21,51 +22,46 @@ public class EnemySpawner : MonoBehaviour
 			iguiScript = iguiObj.GetComponent<InGameUI>();
 		}
 
+		spawnChecks = GameObject.FindGameObjectsWithTag("SCheck");
+
 		if(thugObj != null)
 		{
 			thugScript = thugObj.GetComponent<Thug>();
 		}
 				
-		StartCoroutine("EnemySpawnFalse");
+		//StartCoroutine("EnemySpawnFalse");
 		StartCoroutine("EnemySpawnTimer");
 	}
 	
 	public void EnemySpawn()
 	{
+		if(randomPos == 0)
+		{
+			randomPos++;
+		}
+
 		if(randomPos == 1)
 		{
-			if(sCheckScript != null && !sCheckScript.spawned)
-			{
-				spawnLocationX = xPositions[0];
-				spawnLocationZ = zPositions[0];
-			}
+			spawnLocationX = xPositions[0];
+			spawnLocationZ = zPositions[0];
 		}
 		
 		if(randomPos == 2)
 		{
-			if(sCheckScript != null && !sCheckScript.spawned)
-			{
-				spawnLocationX = xPositions[1];
-				spawnLocationZ = zPositions[0];
-			}
+			spawnLocationX = xPositions[1];
+			spawnLocationZ = zPositions[0];
 		}
 		
 		if(randomPos == 3)
 		{
-			if(sCheckScript != null && !sCheckScript.spawned)
-			{
-				spawnLocationX = xPositions[2];
-				spawnLocationZ = zPositions[1];
-			}
+			spawnLocationX = xPositions[2];
+			spawnLocationZ = zPositions[1];
 		}
 		
 		if(randomPos == 4)
 		{
-			if(sCheckScript != null && !sCheckScript.spawned)
-			{
-				spawnLocationX = xPositions[3];
-				spawnLocationZ = zPositions[1];
-			}
+			spawnLocationX = xPositions[3];
+			spawnLocationZ = zPositions[1];
 		}
 
 		if(iguiScript != null)
@@ -75,14 +71,13 @@ public class EnemySpawner : MonoBehaviour
 				//Debug.Log("Enemy Spawner");
 				Instantiate (thugObj , new Vector3(spawnLocationX , 0 , spawnLocationZ) , Quaternion.identity);
 				iguiScript.thugCount++;
-				sCheckScript.spawned = true;				
 			}
 		}
 	}
 
 	IEnumerator EnemySpawnFalse()
 	{
-		yield return new WaitForSeconds(8);
+		yield return new WaitForSeconds(10);
 
 		if(sCheckScript.spawned)
 		{
