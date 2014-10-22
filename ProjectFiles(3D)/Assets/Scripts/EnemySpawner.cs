@@ -29,7 +29,7 @@ public class EnemySpawner : MonoBehaviour
 			thugScript = thugObj.GetComponent<Thug>();
 		}
 				
-		//StartCoroutine("EnemySpawnFalse");
+		StartCoroutine("EnemySpawnFalse");
 		StartCoroutine("EnemySpawnTimer");
 	}
 	
