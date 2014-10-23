@@ -8,9 +8,7 @@ public class EnemySpawner : MonoBehaviour
 	public float spawnTimer , spawnLocationX , spawnLocationZ;
 	public float[] xPositions , zPositions;
 	public GameObject iguiObj , thugObj;
-	public GameObject[] spawnChecks;
 	public int randomPos;
-	public SpawnCheck sCheckScript;
 	public Thug thugScript;
 	
 	void Start () 
@@ -22,14 +20,11 @@ public class EnemySpawner : MonoBehaviour
 			iguiScript = iguiObj.GetComponent<InGameUI>();
 		}
 
-		spawnChecks = GameObject.FindGameObjectsWithTag("SCheck");
-
 		if(thugObj != null)
 		{
 			thugScript = thugObj.GetComponent<Thug>();
 		}
 				
-		StartCoroutine("EnemySpawnFalse");
 		StartCoroutine("EnemySpawnTimer");
 	}
 	
@@ -66,25 +61,13 @@ public class EnemySpawner : MonoBehaviour
 
 		if(iguiScript != null)
 		{
-			if(sCheckScript != null && !sCheckScript.spawned && iguiScript.thugCount < iguiScript.maxThugCount)
+			if(iguiScript.thugCount < iguiScript.maxThugCount)
 			{
 				//Debug.Log("Enemy Spawner");
 				Instantiate (thugObj , new Vector3(spawnLocationX , 0 , spawnLocationZ) , Quaternion.identity);
 				iguiScript.thugCount++;
 			}
 		}
-	}
-
-	IEnumerator EnemySpawnFalse()
-	{
-		yield return new WaitForSeconds(10);
-
-		if(sCheckScript.spawned)
-		{
-			sCheckScript.spawned = false;
-		}
-
-		StartCoroutine("EnemySpawnFalse");
 	}
 
 	IEnumerator EnemySpawnTimer()
