@@ -3,8 +3,10 @@ using UnityEngine;
 
 public class EDSpawner : MonoBehaviour 
 {
-	float xPosition;
+	private float xPosition;
+
 	public Animator openClose;
+	public float energyDrinkSpawnTime;
 	public float[] positionValues;
 	public GameObject cargoDoorObj , PF_EnergyDrink;
 
@@ -15,7 +17,7 @@ public class EDSpawner : MonoBehaviour
 
 	IEnumerator SpawnTimer()
 	{
-		yield return new WaitForSeconds(18);
+		yield return new WaitForSeconds(energyDrinkSpawnTime);
 
 		if((int)Random.Range(1 , 5) == 1)
 		{
