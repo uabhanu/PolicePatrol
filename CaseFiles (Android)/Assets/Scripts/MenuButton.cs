@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class MenuButton : MonoBehaviour 
 {
-	public float xPosition;
+	public float xScale;
+	public LevelMenu2D levelMenu2DScript;
 	public string buttonname , imageName;
 
 	void Start () 
@@ -20,7 +21,7 @@ public class MenuButton : MonoBehaviour
 		{
 			case "Level 1" :
 
-				if(imageName == "Spr_Unlock" && xPosition >= -65)
+				if(imageName == "Spr_Unlock" && xScale > 5)
 				{
 					Application.LoadLevel(1);
 				}
@@ -29,7 +30,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level 2" :
 				
-				if(imageName == "Spr_Unlock" && xPosition >= -65)
+				if(imageName == "Spr_Unlock" && xScale > 5)
 				{
 					Application.LoadLevel(2);
 				}
@@ -38,7 +39,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level 3" :
 				
-				if(imageName == "Spr_Unlock" && xPosition >= -65)
+				if(imageName == "Spr_Unlock" && xScale > 5)
 				{
 					Application.LoadLevel(3);
 				}
@@ -47,7 +48,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level 4" :
 				
-				if(imageName == "Spr_Unlock" && xPosition >= -65)
+				if(imageName == "Spr_Unlock" && xScale > 5)
 				{
 					Application.LoadLevel(4);
 				}
@@ -56,7 +57,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level 5" :
 				
-				if(imageName == "Spr_Unlock" && xPosition >= -65)
+				if(imageName == "Spr_Unlock" && xScale > 5)
 				{
 					Application.LoadLevel(5);
 				}
@@ -65,7 +66,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level 6" :
 				
-				if(imageName == "Spr_Unlock" && xPosition >= -65)
+				if(imageName == "Spr_Unlock" && xScale > 5)
 				{
 					Application.LoadLevel(6);
 				}
@@ -109,6 +110,6 @@ public class MenuButton : MonoBehaviour
 
 	void Update () 
 	{
-		xPosition = transform.position.x;
+		xScale = transform.localScale.x;
 	}
 }
