@@ -6,39 +6,109 @@ using UnityEngine.UI;
 
 public class MenuButton : MonoBehaviour 
 {
-	public Button button;
-	public ColorBlock cb;
-	public int levelToLoad;
-	public string imageName;
+	public float xPosition;
+	public string buttonname , imageName;
 
 	void Start () 
 	{
-		button = this.gameObject.GetComponent<Button>();
-		cb = button.colors;
 
-		if(imageName.Equals("Spr_Unlock"))
+	}
+
+	public void ButtonClick(string buttonName)
+	{
+		switch(buttonname)
 		{
-			cb.pressedColor = Color.green;
-			button.colors = cb;
-		}
-		
-		if(imageName.Equals("Spr_Lock"))
-		{
-			cb.pressedColor = Color.red;
-			button.colors = cb;
+			case "Level 1" :
+
+				if(imageName == "Spr_Unlock" && xPosition >= -65)
+				{
+					Application.LoadLevel(1);
+				}
+	
+			break;
+
+			case "Level 2" :
+				
+				if(imageName == "Spr_Unlock" && xPosition >= -65)
+				{
+					Application.LoadLevel(2);
+				}
+			
+			break;
+
+			case "Level 3" :
+				
+				if(imageName == "Spr_Unlock" && xPosition >= -65)
+				{
+					Application.LoadLevel(3);
+				}
+			
+			break;
+
+			case "Level 4" :
+				
+				if(imageName == "Spr_Unlock" && xPosition >= -65)
+				{
+					Application.LoadLevel(4);
+				}
+			
+			break;
+
+			case "Level 5" :
+				
+				if(imageName == "Spr_Unlock" && xPosition >= -65)
+				{
+					Application.LoadLevel(5);
+				}
+			
+			break;
+
+			case "Level 6" :
+				
+				if(imageName == "Spr_Unlock" && xPosition >= -65)
+				{
+					Application.LoadLevel(6);
+				}
+			
+			break;
 		}
 	}
 
-	public void ButtonClick(int levelToLoad)
+	void OnMouseDown()
 	{
-		if(imageName.Equals("Spr_Unlock"))
+		if(buttonname == "Level 1")
 		{
-			Application.LoadLevel(levelToLoad);
+			ButtonClick("Level 1");
+		}
+
+		if(buttonname == "Level 2")
+		{
+			ButtonClick("Level 2");
+		}
+
+		if(buttonname == "Level 3")
+		{
+			ButtonClick("Level 3");
+		}
+
+		if(buttonname == "Level 4")
+		{
+			ButtonClick("Level 4");
+		}
+
+		if(buttonname == "Level 5")
+		{
+			ButtonClick("Level 5");
+		}
+
+		if(buttonname == "Level 6")
+		{
+			ButtonClick("Level 6");
 		}
 	}
 
 	void Update () 
 	{
-	
+		xPosition = transform.position.x;
 	}
 }
