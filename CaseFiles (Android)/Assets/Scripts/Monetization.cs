@@ -6,6 +6,7 @@ using UnityEngine.Advertisements;
 public class Monetization : MonoBehaviour 
 {
 	public bool unityAdShown;
+	public int levelNo;
 
 	void Start () 
 	{
@@ -23,6 +24,8 @@ public class Monetization : MonoBehaviour
 		CBExternal.hasRewardedVideo(CBLocation.Default);
 		CBExternal.showRewardedVideo(CBLocation.Default);
 
+		levelNo = Application.loadedLevel;
+
 		StartCoroutine("UnityAds");
 
 		unityAdShown = false;
@@ -32,7 +35,7 @@ public class Monetization : MonoBehaviour
 	{
 		yield return new WaitForSeconds(1);
 
-		if(Advertisement.isReady() && !unityAdShown)
+		if(Advertisement.isReady() && levelNo == 0 && !unityAdShown)
 		{
 			Advertisement.Show();
 			unityAdShown = true;
