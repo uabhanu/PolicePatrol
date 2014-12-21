@@ -1,7 +1,4 @@
 ﻿using ChartboostSDK;
-using Soomla;
-using Soomla.Highway;
-using Soomla.Store;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Advertisements;
@@ -28,9 +25,6 @@ public class Monetization : MonoBehaviour
 		CBExternal.showRewardedVideo(CBLocation.Default);
 
 		levelNo = Application.loadedLevel;
-
-		//SoomlaHighway.Initialize();
-		//SoomlaStore.Initialize(new VirtualGood("no_ads"));
 
 		StartCoroutine("UnityAds");
 
