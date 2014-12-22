@@ -1,4 +1,4 @@
-﻿//using ChartboostSDK;
+﻿using ChartboostSDK;
 //using Soomla;
 //using Soomla.Highway;
 //using Soomla.Levelup;
@@ -19,17 +19,17 @@ public class Monetization : MonoBehaviour
 	{
 //		Advertisement.Initialize("21734");
 //
-//		CBExternal.init();
-//
-//		CBExternal.cacheInterstitial(CBLocation.Default);
-//		CBExternal.hasInterstitial(CBLocation.Default);
-//		CBExternal.showInterstitial(CBLocation.Default);
-//		CBExternal.cacheMoreApps(CBLocation.Default);
-//		CBExternal.hasMoreApps(CBLocation.Default);
-//		CBExternal.showMoreApps(CBLocation.Default);
-//		CBExternal.cacheRewardedVideo(CBLocation.Default);
-//		CBExternal.hasRewardedVideo(CBLocation.Default);
-//		CBExternal.showRewardedVideo(CBLocation.Default);
+		CBExternal.init();
+
+		CBExternal.cacheInterstitial(CBLocation.Default);
+		CBExternal.hasInterstitial(CBLocation.Default);
+		CBExternal.showInterstitial(CBLocation.Default);
+		CBExternal.cacheMoreApps(CBLocation.Default);
+		CBExternal.hasMoreApps(CBLocation.Default);
+		CBExternal.showMoreApps(CBLocation.Default);
+		CBExternal.cacheRewardedVideo(CBLocation.Default);
+		CBExternal.hasRewardedVideo(CBLocation.Default);
+		CBExternal.showRewardedVideo(CBLocation.Default);
 
 		levelNo = Application.loadedLevel;
 
@@ -57,20 +57,20 @@ public class Monetization : MonoBehaviour
 		StartCoroutine("UnityAds");
 	}
 
-//	public static bool hasInterstitial(CBLocation location) 
-//	{
-//		return CBExternal.hasInterstitial(location);
-//	}
-//
-//	public static bool hasMoreApps(CBLocation location) 
-//	{
-//		return CBExternal.hasMoreApps(location);
-//	}
-//
-//	public static bool hasRewardedVideo(CBLocation location) 
-//	{
-//		return CBExternal.hasRewardedVideo(location);
-//	}
+	public static bool hasInterstitial(CBLocation location) 
+	{
+		return CBExternal.hasInterstitial(location);
+	}
+
+	public static bool hasMoreApps(CBLocation location) 
+	{
+		return CBExternal.hasMoreApps(location);
+	}
+
+	public static bool hasRewardedVideo(CBLocation location) 
+	{
+		return CBExternal.hasRewardedVideo(location);
+	}
 
 //	public void OnMarketPurchase(PurchasableVirtualItem pvi , string payload , Dictionary<string , string> extra) 
 //	{
