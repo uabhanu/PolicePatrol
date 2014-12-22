@@ -1,10 +1,10 @@
 ﻿//using ChartboostSDK;
-//using Soomla;
-//using Soomla.Highway;
-//using Soomla.Levelup;
-//using Soomla.Profile;
-//using Soomla.Store;
-//using Soomla.Store.PolicePatrol;
+using Soomla;
+using Soomla.Highway;
+using Soomla.Levelup;
+using Soomla.Profile;
+using Soomla.Store;
+using Soomla.Store.PolicePatrol;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,14 +35,14 @@ public class Monetization : MonoBehaviour
 
 		StartCoroutine("UnityAds");
 
-		//StoreEvents.OnSoomlaStoreInitialized += OnSoomlaStoreInitialized;
+		StoreEvents.OnSoomlaStoreInitialized += OnSoomlaStoreInitialized;
 
-		//SoomlaProfile.Initialize();
+		SoomlaProfile.Initialize();
 		//SoomlaProfileAndroid.Login(Provider.FACEBOOK , "" , null);
 
 		//SoomlaStore.Initialize(new InAppPurchases());
 
-		//StoreEvents.OnMarketPurchase += OnMarketPurchase;
+		StoreEvents.OnMarketPurchase += OnMarketPurchase;
 
 		unityAdShown = false;
 	}
@@ -75,19 +75,19 @@ public class Monetization : MonoBehaviour
 //		return CBExternal.hasRewardedVideo(location);
 //	}
 
-//	public void OnMarketPurchase(PurchasableVirtualItem pvi , string payload , Dictionary<string , string> extra) 
-//	{
-//		// pvi is the PurchasableVirtualItem that was just purchased
-//		// payload is a text that you can give when you initiate the purchase operation and you want to receive back upon completion
-//		// extra will contain platform specific information about the market purchase.
-//		//      Android: The "extra" dictionary will contain "orderId" and "purchaseToken".
-//		//      iOS: The "extra" dictionary will contain "receipt" and "token".
-//		
-//		//if(persistentScript != null)
-//		//{
-//			//persistentScript.noAds = true;
-//		//}
-//	}
+	public void OnMarketPurchase(PurchasableVirtualItem pvi , string payload , Dictionary<string , string> extra) 
+	{
+		// pvi is the PurchasableVirtualItem that was just purchased
+		// payload is a text that you can give when you initiate the purchase operation and you want to receive back upon completion
+		// extra will contain platform specific information about the market purchase.
+		//      Android: The "extra" dictionary will contain "orderId" and "purchaseToken".
+		//      iOS: The "extra" dictionary will contain "receipt" and "token".
+		
+		//if(persistentScript != null)
+		//{
+			//persistentScript.noAds = true;
+		//}
+	}
 	
 	public void OnSoomlaStoreInitialized()
 	{
