@@ -1,5 +1,5 @@
-﻿//using ChartboostSDK;
-using GameThrivePush;
+﻿using ChartboostSDK;
+//using GameThrivePush;
 //using Soomla;
 //using Soomla.Highway;
 //using Soomla.Levelup;
@@ -20,17 +20,17 @@ public class Monetization : MonoBehaviour
 	{
 //		Advertisement.Initialize("21734");
 //
-//		CBExternal.init();
-//
-//		CBExternal.cacheInterstitial(CBLocation.Default);
-//		CBExternal.hasInterstitial(CBLocation.Default);
-//		CBExternal.showInterstitial(CBLocation.Default);
-//		CBExternal.cacheMoreApps(CBLocation.Default);
-//		CBExternal.hasMoreApps(CBLocation.Default);
-//		CBExternal.showMoreApps(CBLocation.Default);
-//		CBExternal.cacheRewardedVideo(CBLocation.Default);
-//		CBExternal.hasRewardedVideo(CBLocation.Default);
-//		CBExternal.showRewardedVideo(CBLocation.Default);
+		CBExternal.init();
+
+		CBExternal.cacheInterstitial(CBLocation.Default);
+		CBExternal.hasInterstitial(CBLocation.Default);
+		CBExternal.showInterstitial(CBLocation.Default);
+		CBExternal.cacheMoreApps(CBLocation.Default);
+		CBExternal.hasMoreApps(CBLocation.Default);
+		CBExternal.showMoreApps(CBLocation.Default);
+		CBExternal.cacheRewardedVideo(CBLocation.Default);
+		CBExternal.hasRewardedVideo(CBLocation.Default);
+		CBExternal.showRewardedVideo(CBLocation.Default);
 
 		levelNo = Application.loadedLevel;
 
@@ -49,7 +49,7 @@ public class Monetization : MonoBehaviour
 	IEnumerator Push()
 	{
 		yield return new WaitForSeconds(4);
-		GameThrive.Init("5aba553a-89e1-11e4-bce5-3b48afb5f3a2" , "804055631157" , HandleNotification);
+		//GameThrive.Init("5aba553a-89e1-11e4-bce5-3b48afb5f3a2" , "804055631157" , HandleNotification);
 	}
 
 	IEnumerator UnityAds()
@@ -65,20 +65,20 @@ public class Monetization : MonoBehaviour
 		StartCoroutine("UnityAds");
 	}
 
-//	public static bool hasInterstitial(CBLocation location) 
-//	{
-//		return CBExternal.hasInterstitial(location);
-//	}
-//
-//	public static bool hasMoreApps(CBLocation location) 
-//	{
-//		return CBExternal.hasMoreApps(location);
-//	}
-//
-//	public static bool hasRewardedVideo(CBLocation location) 
-//	{
-//		return CBExternal.hasRewardedVideo(location);
-//	}
+	public static bool hasInterstitial(CBLocation location) 
+	{
+		return CBExternal.hasInterstitial(location);
+	}
+
+	public static bool hasMoreApps(CBLocation location) 
+	{
+		return CBExternal.hasMoreApps(location);
+	}
+
+	public static bool hasRewardedVideo(CBLocation location) 
+	{
+		return CBExternal.hasRewardedVideo(location);
+	}
 
 //	public void OnMarketPurchase(PurchasableVirtualItem pvi , string payload , Dictionary<string , string> extra) 
 //	{
