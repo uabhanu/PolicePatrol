@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Soomla.Store.Chimping 
+namespace Soomla.Store.PolicePatrol 
 {
 	public class InAppPurchases : IStoreAssets 
 	{
@@ -40,7 +40,7 @@ namespace Soomla.Store.Chimping
 		public const string PAVLOVA_ITEM_ID = "pavlova";
 		public const string CHOCLATECAKE_ITEM_ID = "chocolate_cake";
 		public const string CREAMCUP_ITEM_ID = "cream_cup";
-		public const string NO_ADS_LIFETIME_PRODUCT_ID = "no_ads_04";
+		public const string NO_ADS_LIFETIME_PRODUCT_ID = "no_ads_01";
 		
 		public static VirtualCurrency MUFFIN_CURRENCY = new VirtualCurrency
 		(
@@ -131,7 +131,7 @@ namespace Soomla.Store.Chimping
 		(
 			"No Ads", 														// name
 			"No More Ads!",				 									// description
-			"no_ads_04",													// item id
+			"no_ads_01",													// item id
 			new PurchaseWithMarket(NO_ADS_LIFETIME_PRODUCT_ID, 0.99)
 		);
 	}
