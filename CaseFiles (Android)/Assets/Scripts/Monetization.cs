@@ -1,5 +1,5 @@
 ﻿using ChartboostSDK;
-//using GameThrivePush;
+using GameThrivePush;
 //using Soomla;
 //using Soomla.Highway;
 //using Soomla.Levelup;
@@ -49,7 +49,7 @@ public class Monetization : MonoBehaviour
 	IEnumerator Push()
 	{
 		yield return new WaitForSeconds(4);
-		//GameThrive.Init("5aba553a-89e1-11e4-bce5-3b48afb5f3a2" , "804055631157" , HandleNotification);
+		GameThrive.Init("5aba553a-89e1-11e4-bce5-3b48afb5f3a2" , "804055631157" , HandleNotification);
 	}
 
 	IEnumerator UnityAds()
