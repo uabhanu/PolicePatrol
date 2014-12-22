@@ -9,7 +9,7 @@ using GameThrivePush;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.Advertisements;
+using UnityEngine.Advertisements;
 
 public class Monetization : MonoBehaviour 
 {
@@ -18,8 +18,8 @@ public class Monetization : MonoBehaviour
 
 	void Start () 
 	{
-//		Advertisement.Initialize("21734");
-//
+		Advertisement.Initialize("21734");
+
 		CBExternal.init();
 
 		CBExternal.cacheInterstitial(CBLocation.Default);
@@ -56,11 +56,11 @@ public class Monetization : MonoBehaviour
 	{
 		yield return new WaitForSeconds(1);
 
-//		if(Advertisement.isReady() && levelNo == 0 && !unityAdShown)
-//		{
-//			Advertisement.Show();
-//			unityAdShown = true;
-//		}
+		if(Advertisement.isReady() && levelNo == 0 && !unityAdShown)
+		{
+			Advertisement.Show();
+			unityAdShown = true;
+		}
 
 		StartCoroutine("UnityAds");
 	}
