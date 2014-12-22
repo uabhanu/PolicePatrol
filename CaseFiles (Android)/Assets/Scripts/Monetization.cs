@@ -37,6 +37,9 @@ public class Monetization : MonoBehaviour
 
 		StoreEvents.OnSoomlaStoreInitialized += OnSoomlaStoreInitialized;
 
+		SoomlaProfile.Initialize();
+		//SoomlaProfileAndroid.Login(Provider.FACEBOOK , "" , null);
+
 		SoomlaStore.Initialize(new InAppPurchases());
 
 		StoreEvents.OnMarketPurchase += OnMarketPurchase;

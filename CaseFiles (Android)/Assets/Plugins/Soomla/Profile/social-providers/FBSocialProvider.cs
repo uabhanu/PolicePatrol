@@ -16,7 +16,9 @@
 
 using System;
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
+using Facebook;
 using Facebook.MiniJSON;
 using System.Text.RegularExpressions;
 using System.Linq;
