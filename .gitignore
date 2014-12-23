@@ -43,3 +43,4 @@ Thumbs.db
 !*.*.meta 
 /CaseFiles (Android)/*.sln
 /CaseFiles (Android)/Temp/UnityLockfile
+/CaseFiles (Android)/Temp
