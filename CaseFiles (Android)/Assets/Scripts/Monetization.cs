@@ -13,8 +13,9 @@ using UnityEngine.Advertisements;
 
 public class Monetization : MonoBehaviour 
 {
-	public bool unityAdShown;
-	public int levelNo;
+	public bool m_unityAdShown;
+	private string m_levelName;
+    public string m_adLevelName = "LevelSelection";
 
 	void Start () 
 	{
@@ -32,7 +33,7 @@ public class Monetization : MonoBehaviour
 		CBExternal.hasRewardedVideo(CBLocation.Default);
 		CBExternal.showRewardedVideo(CBLocation.Default);
 
-		levelNo = Application.loadedLevel;
+		m_levelName = Application.loadedLevelName;
 
 		StartCoroutine("Push");
 		StartCoroutine("UnityAds");
@@ -43,7 +44,7 @@ public class Monetization : MonoBehaviour
 		//SoomlaStore.Initialize(new InAppPurchases());
 		//StoreEvents.OnMarketPurchase += OnMarketPurchase;
 
-		unityAdShown = false;
+		m_unityAdShown = false;
 	}
 
 	IEnumerator Push()
@@ -56,10 +57,10 @@ public class Monetization : MonoBehaviour
 	{
 		yield return new WaitForSeconds(1);
 
-		if(Advertisement.isReady() && levelNo == 0 && !unityAdShown)
+		if(Advertisement.isReady() && m_levelName == m_adLevelName && !m_unityAdShown)
 		{
 			Advertisement.Show();
-			unityAdShown = true;
+			m_unityAdShown = true;
 		}
 
 		StartCoroutine("UnityAds");
