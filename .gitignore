@@ -17,3 +17,6 @@ Cargos.fbm
 *.userprefs
 ProjectSettings
 ProjectSettings.asset
+/CaseFiles (Android)/Assets/Plugins/GameThriveSDK.dll.meta
+
+!*.*.meta
