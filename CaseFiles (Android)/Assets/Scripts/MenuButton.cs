@@ -21,7 +21,7 @@ public class MenuButton : MonoBehaviour
 		{
 			case "Level 1" :
 
-				if(imageName == "Spr_Unlock" && xScale > 5)
+				if(imageName == "Spr_Unlock" && xScale >= 5)
 				{
 					Application.LoadLevel("Level 1");
 				}
@@ -30,7 +30,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level 2" :
 				
-				if(imageName == "Spr_Unlock" && xScale > 5)
+				if(imageName == "Spr_Unlock" && xScale >= 5)
 				{
 					Application.LoadLevel("Level 2");
 				}
@@ -39,7 +39,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level 3" :
 				
-				if(imageName == "Spr_Unlock" && xScale > 5)
+				if(imageName == "Spr_Unlock" && xScale >= 5)
 				{
 					Application.LoadLevel("Level 3");
 				}
@@ -48,7 +48,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level 4" :
 				
-				if(imageName == "Spr_Unlock" && xScale > 5)
+				if(imageName == "Spr_Unlock" && xScale >= 5)
 				{
 					Application.LoadLevel("Level 4");
 				}
@@ -57,7 +57,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level 5" :
 				
-				if(imageName == "Spr_Unlock" && xScale > 5)
+				if(imageName == "Spr_Unlock" && xScale >= 5)
 				{
 					Application.LoadLevel("Level 5");
 				}
@@ -66,7 +66,7 @@ public class MenuButton : MonoBehaviour
 
 			case "Level 6" :
 				
-				if(imageName == "Spr_Unlock" && xScale > 5)
+				if(imageName == "Spr_Unlock" && xScale >= 5)
 				{
 					Application.LoadLevel("Level 6");
 				}
