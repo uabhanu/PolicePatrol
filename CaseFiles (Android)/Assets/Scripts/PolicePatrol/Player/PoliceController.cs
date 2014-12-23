@@ -35,13 +35,13 @@ public class PoliceController : MonoBehaviour
     private LayerMask m_groundLayerMask;
     private float     m_radiusToCheckGround = 0.15f;
     public bool       m_isGrounded = false;
-    public float      m_groundCheckOffSet = 0.75f;
+    public float      m_groundCheckOffSet = 1f;
     //---------------------------------------------------------------------------------------------------
     private float xInput = 0f;
     private float yInput = 0f;
     //---------------------------------------------------------------------------------------------------
 
-    //---------------------------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------------------------------
     public AudioSource  m_myAudioSource;
     public AudioClip    m_jumpSound;
     public AudioClip    m_thighSlapSound;
@@ -86,7 +86,10 @@ public class PoliceController : MonoBehaviour
     //---------------------------------------------------------------------------------------------------
     private void CheckIfGrounded()
     {
-        m_isGrounded = Physics2D.OverlapCircle(m_groundCheckTransform.position, m_radiusToCheckGround, m_groundLayerMask);
+        if(!m_isGoingUp || !m_isGoingDown)
+        {
+            m_isGrounded = Physics2D.OverlapCircle(m_groundCheckTransform.position, m_radiusToCheckGround, m_groundLayerMask);
+        }
     }
     //---------------------------------------------------------------------------------------------------
 
@@ -118,6 +121,7 @@ public class PoliceController : MonoBehaviour
             else
             {
                 m_isMoving = false;
+                SetState(PlayerState.IDLE);
             }
         }
     }
@@ -250,7 +254,10 @@ public class PoliceController : MonoBehaviour
     //---------------------------------------------------------------------------------------------------
     private void PerformIdle()
     {
-
+        if (rigidbody2D.velocity.x != 0f)
+        {
+            rigidbody2D.velocity = new Vector2(0f, rigidbody2D.velocity.y);
+        }
     }
     //---------------------------------------------------------------------------------------------------
     
