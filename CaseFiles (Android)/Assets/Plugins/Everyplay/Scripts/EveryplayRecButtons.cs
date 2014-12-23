@@ -6,9 +6,9 @@ public class EveryplayRecButtons : MonoBehaviour
 {
     public enum ButtonsOrigin
     {
-        TopLeft = 0,
+        TopLeft,
         TopRight,
-        BottomLeft,
+        BottomLeft = 0,
         BottomRight
     };
 

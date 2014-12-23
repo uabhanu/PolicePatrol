@@ -175,7 +175,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: a7d026623ee7d8b429074590b9ed35ad, type: 2}
       propertyPath: scaleOfCenterItem
-      value: 1.20000005
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a7d026623ee7d8b429074590b9ed35ad, type: 2}
@@ -480,7 +480,7 @@ Transform:
   m_GameObject: {fileID: 459294112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -305, y: -170, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 209285722}
   m_RootOrder: 7
@@ -546,7 +546,7 @@ Transform:
   m_GameObject: {fileID: 484151742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -305, y: -170, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 209285722}
   m_RootOrder: 8
@@ -710,7 +710,7 @@ MonoBehaviour:
   - {fileID: 484151742}
   - {fileID: 1879710992}
   initialItemNumber: 0
-  scaleOfCenterItem: 1.20000005
+  scaleOfCenterItem: 5
   showNextBackButtons: 0
   nextButtonObject: {fileID: 0}
   backButtonObject: {fileID: 0}
@@ -747,7 +747,7 @@ Transform:
   m_GameObject: {fileID: 1008335280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -305, y: -170, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 209285722}
   m_RootOrder: 6
@@ -911,7 +911,7 @@ Transform:
   m_GameObject: {fileID: 1633995197}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -305, y: -170, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 209285722}
   m_RootOrder: 2
@@ -977,7 +977,7 @@ Transform:
   m_GameObject: {fileID: 1879710992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -305, y: -170, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 209285722}
   m_RootOrder: 9
@@ -1043,7 +1043,7 @@ Transform:
   m_GameObject: {fileID: 1885216439}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -305, y: -170, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 209285722}
   m_RootOrder: 5
