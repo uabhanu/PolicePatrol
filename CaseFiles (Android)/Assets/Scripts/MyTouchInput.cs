@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class MyTouchInput : MonoBehaviour
 {
-	private float timeToPress;
+	private float timeToPress;	
+	public int levelNo;
 	
 	private void Awake()
 	{
@@ -16,21 +17,21 @@ public class MyTouchInput : MonoBehaviour
 	{
 		timeToPress = GetComponent<LongPressGesture>().TimeToPress;
 		
-		GetComponent<PressGesture>().Pressed += pressedHandler;
-		GetComponent<ReleaseGesture>().Released += releasedHandler;
-		GetComponent<LongPressGesture>().StateChanged += longPressStateChangedHandler;
+		GetComponent<PressGesture>().Pressed += PressedHandler;
+		GetComponent<ReleaseGesture>().Released += ReleasedHandler;
+		GetComponent<LongPressGesture>().StateChanged += LongPressStateChangedHandler;
 	}
 	
 	private void OnDisable()
 	{
-		GetComponent<PressGesture>().Pressed -= pressedHandler;
-		GetComponent<ReleaseGesture>().Released -= releasedHandler;
-		GetComponent<LongPressGesture>().StateChanged -= longPressStateChangedHandler;
+		GetComponent<PressGesture>().Pressed -= PressedHandler;
+		GetComponent<ReleaseGesture>().Released -= ReleasedHandler;
+		GetComponent<LongPressGesture>().StateChanged -= LongPressStateChangedHandler;
 	}
 	
-	private void longPressStateChangedHandler(object sender, GestureStateChangeEventArgs e)
+	private void LongPressStateChangedHandler(object sender, GestureStateChangeEventArgs e)
 	{
-		switch (e.State)
+		switch(e.State)
 		{
 			case Gesture.GestureState.Recognized:
 			case Gesture.GestureState.Failed:
@@ -39,20 +40,39 @@ public class MyTouchInput : MonoBehaviour
 			break;
 		}
 		
-		if (e.State == Gesture.GestureState.Recognized)
+		if(e.State == Gesture.GestureState.Recognized)
 		{
 			Debug.Log("Touch Held");
-			Application.LoadLevel("LevelSelection");
+
+			if(levelNo == 1)
+			{
+				Application.LoadLevel("LevelSelection");
+			}
+
+			if(levelNo == 0)
+			{
+				Application.Quit();
+			}
 		}
 	}
 	
-	private void pressedHandler(object sender, EventArgs e)
+	private void PressedHandler(object sender, EventArgs e)
 	{
 
 	}
 	
-	private void releasedHandler(object sender, EventArgs e)
+	private void ReleasedHandler(object sender, EventArgs e)
 	{
 
+	}
+
+	void Update()
+	{
+		if(Time.timeScale == 0)
+		{
+			return;
+		}
+
+		levelNo = Application.loadedLevel;
 	}
 }

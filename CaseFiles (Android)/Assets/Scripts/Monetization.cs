@@ -13,25 +13,26 @@ using UnityEngine.Advertisements;
 
 public class Monetization : MonoBehaviour 
 {
-	public bool m_unityAdShown;
 	private string m_levelName;
+
+	public bool m_unityAdShown;
     public string m_adLevelName = "LevelSelection";
 
 	void Start () 
 	{
-		Advertisement.Initialize("21734");
+		//Advertisement.Initialize("21734"); Uncomment before Releasing the game
 
-		CBExternal.init();
-
-		CBExternal.cacheInterstitial(CBLocation.Default);
-		CBExternal.hasInterstitial(CBLocation.Default);
-		CBExternal.showInterstitial(CBLocation.Default);
-		CBExternal.cacheMoreApps(CBLocation.Default);
-		CBExternal.hasMoreApps(CBLocation.Default);
-		CBExternal.showMoreApps(CBLocation.Default);
-		CBExternal.cacheRewardedVideo(CBLocation.Default);
-		CBExternal.hasRewardedVideo(CBLocation.Default);
-		CBExternal.showRewardedVideo(CBLocation.Default);
+//		CBExternal.init(); Uncomment before Releasing the game
+//
+//		CBExternal.cacheInterstitial(CBLocation.Default); Uncomment before Releasing the game
+//		CBExternal.hasInterstitial(CBLocation.Default); Uncomment before Releasing the game
+//		CBExternal.showInterstitial(CBLocation.Default); Uncomment before Releasing the game
+//		CBExternal.cacheMoreApps(CBLocation.Default); Uncomment before Releasing the game
+//		CBExternal.hasMoreApps(CBLocation.Default); Uncomment before Releasing the game
+//		CBExternal.showMoreApps(CBLocation.Default); Uncomment before Releasing the game
+//		CBExternal.cacheRewardedVideo(CBLocation.Default); Uncomment before Releasing the game
+//		CBExternal.hasRewardedVideo(CBLocation.Default); Uncomment before Releasing the game
+//		CBExternal.showRewardedVideo(CBLocation.Default); Uncomment before Releasing the game
 
 		m_levelName = Application.loadedLevelName;
 
