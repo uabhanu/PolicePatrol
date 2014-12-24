@@ -49,7 +49,8 @@ public class MyTouchInput : MonoBehaviour
 		if(e.State == Gesture.GestureState.Recognized)
 		{
 			Debug.Log("Touch Held");
-			Application.LoadLevel("LevelSelection");
+			//Application.LoadLevel("LevelSelection");
+			policeControlScript.PerformMovement();
 		}
 	}
 	
@@ -99,12 +100,13 @@ public class MyTouchInput : MonoBehaviour
 
 				else if((firstFingerPos.y - lastFingerPos.y) < -80 ) // up swipe
 				{
-					Application.LoadLevel("LevelSelection");
+					//Application.LoadLevel("LevelSelection");
+					policeControlScript.PerformJump();
 				}
 
 				else if((firstFingerPos.y - lastFingerPos.y) > 80) //down swipe
 				{
-					Application.Quit();
+					//Application.Quit();
 				}
 			}
 		}

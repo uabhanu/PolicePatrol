@@ -170,7 +170,7 @@ MonoBehaviour:
   m_currentState: 0
   m_previousState: 0
   m_moveSpeed: 3
-  m_jumpHeight: 0
+  m_jumpHeight: 10
   m_groundCheckTransform: {fileID: 496950}
   m_isGrounded: 0
   m_groundCheckOffSet: .5
