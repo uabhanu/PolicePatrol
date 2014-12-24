@@ -33,7 +33,7 @@ public class PoliceController : MonoBehaviour
     private bool  m_isFacingRight = true;
     private bool  m_shouldFlip    = false;
    //---------------------------------------------------------------------------------------------------
-    public Transform  m_groundCheckTransform;
+	public Transform  m_groundCheckTransform;
     private LayerMask m_groundLayerMask;
     private float     m_radiusToCheckGround = 0.15f;
     public bool       m_isGrounded = false;
@@ -241,7 +241,10 @@ public class PoliceController : MonoBehaviour
     //---------------------------------------------------------------------------------------------------
     private void CheckTouchInput()
     {
-        
+//        if(TouchScript.Gestures.LongPressGesture.GestureState.Began)
+//		{
+//			Debug.Log("Touch Held");
+//		}
     }
     //---------------------------------------------------------------------------------------------------
 

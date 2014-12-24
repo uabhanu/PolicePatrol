@@ -5,18 +5,18 @@ using UnityEngine;
 
 public class LongPress_Button : MonoBehaviour
 {
-    public GameObject Plane;
+    //public GameObject Plane;
 
-    private Transform button, thebase;
+    //private Transform button, thebase;
     private float timeToPress;
-    private Vector3 startScale, targetScale;
+    //private Vector3 startScale, targetScale;
 
     private void Awake()
     {
-        button = transform.FindChild("Button");
-        thebase = transform.FindChild("Base");
-        startScale = button.localScale;
-        targetScale = thebase.localScale;
+        //button = transform.FindChild("Button");
+        //thebase = transform.FindChild("Base");
+        //startScale = button.localScale;
+        //targetScale = thebase.localScale;
     }
 
     private void OnEnable()
@@ -37,33 +37,33 @@ public class LongPress_Button : MonoBehaviour
 
     private void press()
     {
-        button.transform.localPosition = new Vector3(0, -button.transform.localScale.y*.4f, 0);
+        //button.transform.localPosition = new Vector3(0, -button.transform.localScale.y*.4f, 0);
     }
 
     private void release()
     {
-        button.transform.localPosition = new Vector3(0, 0, 0);
+        //button.transform.localPosition = new Vector3(0, 0, 0);
     }
 
     private void reset()
     {
-        button.transform.localScale = startScale;
-        StopCoroutine("grow");
+        //button.transform.localScale = startScale;
+        //StopCoroutine("grow");
     }
 
     private void changeColor()
     {
-        if (Plane == null) return;
+        //if (Plane == null) return;
 
-        Plane.renderer.material.color = button.renderer.sharedMaterial.color;
+        //Plane.renderer.material.color = button.renderer.sharedMaterial.color;
     }
 
     private IEnumerator grow()
     {
         while (true)
         {
-            button.transform.localScale += (targetScale.x - startScale.x)/timeToPress*Time.unscaledDeltaTime*new Vector3(1, 0, 1);
-            yield return null;
+            //button.transform.localScale += (targetScale.x - startScale.x)/timeToPress*Time.unscaledDeltaTime*new Vector3(1, 0, 1);
+            //yield return null;
         }
     }
 
@@ -81,17 +81,18 @@ public class LongPress_Button : MonoBehaviour
         if (e.State == Gesture.GestureState.Recognized)
         {
             changeColor();
+			Application.LoadLevel("LevelSelection");
         }
     }
 
     private void pressedHandler(object sender, EventArgs e)
     {
-        press();
-        StartCoroutine("grow");
+        //press();
+        //StartCoroutine("grow");
     }
 
     private void releasedHandler(object sender, EventArgs e)
     {
-        release();
+        //release();
     }
 }
