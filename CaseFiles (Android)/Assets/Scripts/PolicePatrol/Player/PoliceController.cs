@@ -15,6 +15,7 @@ public class PoliceController : MonoBehaviour
         DEAD,
         FALLING
     };
+
     public PlayerState m_currentState;
     public PlayerState m_previousState;
     //---------------------------------------------------------------------------------------------------
@@ -56,7 +57,7 @@ public class PoliceController : MonoBehaviour
     //---------------------------------------------------------------------------------------------------
 	void Start () 
     {
-        m_groundCheckTransform.position = new Vector3(transform.position.x, transform.position.y - m_groundCheckOffSet);
+        m_groundCheckTransform.position = new Vector3(transform.position.x , transform.position.y - m_groundCheckOffSet);
 
         m_currentState = PlayerState.IDLE;
         m_previousState = m_currentState;
@@ -79,7 +80,7 @@ public class PoliceController : MonoBehaviour
     //---------------------------------------------------------------------------------------------------
     void FixedUpdate()
     {
-        m_groundCheckTransform.position = new Vector3(transform.position.x, transform.position.y - m_groundCheckOffSet);
+        m_groundCheckTransform.position = new Vector3(transform.position.x , transform.position.y - m_groundCheckOffSet);
         CheckIfGrounded();
     }
     //---------------------------------------------------------------------------------------------------
@@ -89,7 +90,7 @@ public class PoliceController : MonoBehaviour
     {
         if(!m_isGoingUp || !m_isGoingDown)
         {
-            m_isGrounded = Physics2D.OverlapCircle(m_groundCheckTransform.position, m_radiusToCheckGround, m_groundLayerMask);
+            m_isGrounded = Physics2D.OverlapCircle(m_groundCheckTransform.position , m_radiusToCheckGround , m_groundLayerMask);
         }
     }
     //---------------------------------------------------------------------------------------------------
@@ -135,25 +136,31 @@ public class PoliceController : MonoBehaviour
         {
             case PlayerState.IDLE: 
                 PerformIdle();
-                break;
+        	break;
+
             case PlayerState.MOVING: 
                 PerformMovement();
-                break;
+        	break;
+
             case PlayerState.JUMP: 
                 PerformJump();
-                break;
+        	break;
+
             case PlayerState.FALLING: 
                 PerformFall();
-                break;
+        	break;
+
             case PlayerState.SLAP: 
                 PerformThighSlap();
-                break;
+        	break;
+
             case PlayerState.DYING: 
                 PerformDying();
-                break;
+        	break;
+
             case PlayerState.DEAD: 
                 PerformDeath();
-                break;
+        	break;
         }
     }
     //---------------------------------------------------------------------------------------------------
@@ -181,6 +188,7 @@ public class PoliceController : MonoBehaviour
         {
             return;
         }
+
         m_previousState = m_currentState;
         m_currentState = newState;
     }
@@ -198,25 +206,32 @@ public class PoliceController : MonoBehaviour
     {
         xInput = Input.GetAxis("Horizontal");
         yInput = Input.GetAxis("Vertical");
+
         if (xInput != 0)
         {
             m_isMoving = true;
+
             if (xInput > 0)
             {
                 m_isMovingRight = true;
+
                 if (!m_isFacingRight)
                 {
                     FlipPlayer();
                 }
+
                 m_isMovingLeft = false;
             }
+
             else if (xInput < 0)
             {
                 m_isMovingLeft = true;
+
                 if (m_isFacingRight)
                 {
                     FlipPlayer();
                 }
+
                 m_isMovingRight = false;
             }
         }
@@ -257,7 +272,7 @@ public class PoliceController : MonoBehaviour
     {
         if (rigidbody2D.velocity.x != 0f)
         {
-            rigidbody2D.velocity = new Vector2(0f, rigidbody2D.velocity.y);
+            rigidbody2D.velocity = new Vector2(0f , rigidbody2D.velocity.y);
         }
     }
     //---------------------------------------------------------------------------------------------------
@@ -272,12 +287,14 @@ public class PoliceController : MonoBehaviour
 
         if (m_isMovingRight)
         {
-            rigidbody2D.velocity = new Vector2(m_moveSpeed, rigidbody2D.velocity.y);
+            rigidbody2D.velocity = new Vector2(m_moveSpeed , rigidbody2D.velocity.y);
         }
+
         else if (m_isMovingLeft)
         {
-            rigidbody2D.velocity = new Vector2(-m_moveSpeed, rigidbody2D.velocity.y);
+            rigidbody2D.velocity = new Vector2(-m_moveSpeed , rigidbody2D.velocity.y);
         }
+
         else
         {
             m_isMoving = false;
