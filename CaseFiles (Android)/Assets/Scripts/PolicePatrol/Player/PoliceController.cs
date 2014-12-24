@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using TouchScript;
+using UnityEngine;
 
 public class PoliceController : MonoBehaviour 
 {
