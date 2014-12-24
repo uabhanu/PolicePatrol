@@ -5,12 +5,18 @@ using UnityEngine;
 
 public class MyTouchInput : MonoBehaviour
 {
-	private float timeToPress;	
+	private float timeToPress;
+	private Vector2 firstFingerPos , lastFingerPos , startPos;
+
 	public int levelNo;
+	public float minSwipeDistY;
+	public float minSwipeDistX;
+	public PoliceController policeControlScript;
+	public Transform police;
 	
 	private void Awake()
 	{
-
+		policeControlScript = GameObject.FindGameObjectWithTag ("Player").GetComponent<PoliceController>();
 	}
 	
 	private void OnEnable()
@@ -43,16 +49,7 @@ public class MyTouchInput : MonoBehaviour
 		if(e.State == Gesture.GestureState.Recognized)
 		{
 			Debug.Log("Touch Held");
-
-			if(levelNo == 1)
-			{
-				Application.LoadLevel("LevelSelection");
-			}
-
-			if(levelNo == 0)
-			{
-				Application.Quit();
-			}
+			Application.LoadLevel("LevelSelection");
 		}
 	}
 	
@@ -74,5 +71,42 @@ public class MyTouchInput : MonoBehaviour
 		}
 
 		levelNo = Application.loadedLevel;
+
+		foreach(Touch touch in Input.touches)
+		{
+			if(touch.phase == TouchPhase.Began)
+			{
+				firstFingerPos = touch.position;
+				lastFingerPos = touch.position;
+			}
+
+			if(touch.phase == TouchPhase.Moved)
+			{
+				lastFingerPos = touch.position;
+			}
+
+			if(touch.phase == TouchPhase.Ended)
+			{
+				if((firstFingerPos.x - lastFingerPos.x) > 80) // left swipe
+				{
+
+				}
+
+				else if((firstFingerPos.x - lastFingerPos.x) < -80) // right swipe
+				{
+
+				}
+
+				else if((firstFingerPos.y - lastFingerPos.y) < -80 ) // up swipe
+				{
+					Application.LoadLevel("LevelSelection");
+				}
+
+				else if((firstFingerPos.y - lastFingerPos.y) > 80) //down swipe
+				{
+					Application.Quit();
+				}
+			}
+		}
 	}
 }

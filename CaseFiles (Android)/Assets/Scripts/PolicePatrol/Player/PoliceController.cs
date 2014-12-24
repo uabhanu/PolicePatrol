@@ -306,9 +306,9 @@ public class PoliceController : MonoBehaviour
 
     }
     //---------------------------------------------------------------------------------------------------
-    private void PerformJump()
+    public void PerformJump()
     {
-
+		rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x , m_jumpHeight);
     }
     //---------------------------------------------------------------------------------------------------
 
