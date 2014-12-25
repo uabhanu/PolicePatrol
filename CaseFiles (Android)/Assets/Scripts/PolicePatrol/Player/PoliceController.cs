@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using TouchScript;
+//using TouchScript;
 using UnityEngine;
 
 public class PoliceController : MonoBehaviour 
@@ -24,9 +24,9 @@ public class PoliceController : MonoBehaviour
     public float m_moveSpeed  = 5f;
     public float m_jumpHeight = 10f;
     //---------------------------------------------------------------------------------------------------
-    private bool  m_isMoving      = false;
-    private bool  m_isMovingLeft  = false;
-    private bool  m_isMovingRight = false;
+    public bool  m_isMoving      = false;
+    public bool  m_isMovingLeft  = false;
+    public bool  m_isMovingRight = false;
     private bool  m_isGoingUp     = false;
     private bool  m_isGoingDown   = false;
     //---------------------------------------------------------------------------------------------------
@@ -35,7 +35,7 @@ public class PoliceController : MonoBehaviour
    //---------------------------------------------------------------------------------------------------
 	public Transform  m_groundCheckTransform;
     private LayerMask m_groundLayerMask;
-    private float     m_radiusToCheckGround = 0.15f;
+    public float      m_radiusToCheckGround = 0.02f;
     public bool       m_isGrounded = false;
     public float      m_groundCheckOffSet = 1f;
     //---------------------------------------------------------------------------------------------------
@@ -51,6 +51,10 @@ public class PoliceController : MonoBehaviour
     public AudioClip    m_levelWonSound;
     public AudioClip    m_levelLostSound;
     public AudioClip    m_pickupSound;
+    private bool m_touchHeld;
+    public float m_touchDeadZone;
+    public float debugTouchDistance;
+    public bool m_hasReachedTargetPosition = false;
     //---------------------------------------------------------------------------------------------------
 
 
@@ -69,8 +73,8 @@ public class PoliceController : MonoBehaviour
     //---------------------------------------------------------------------------------------------------
 	void Update () 
     {
-        CheckInput();
-        ProcessInput();
+        //CheckInput();
+        //ProcessInput();
         UpdateStateMachine();
         UpdateAnimations();
         ClearFlags();
@@ -276,6 +280,7 @@ public class PoliceController : MonoBehaviour
         if (rigidbody2D.velocity.x != 0f)
         {
             rigidbody2D.velocity = new Vector2(0f , rigidbody2D.velocity.y);
+            m_isMoving = false;
         }
     }
     //---------------------------------------------------------------------------------------------------
@@ -283,18 +288,27 @@ public class PoliceController : MonoBehaviour
     //---------------------------------------------------------------------------------------------------
     public void PerformMovement()
     {
-        if (!m_isMoving)
+        if (!m_isMoving || m_hasReachedTargetPosition)
         {
+            SetState(PlayerState.IDLE);
             return;
         }
 
         if (m_isMovingRight)
         {
+            if(!m_isFacingRight)
+            {
+                FlipPlayer();
+            }
             rigidbody2D.velocity = new Vector2(m_moveSpeed , rigidbody2D.velocity.y);
         }
 
         else if (m_isMovingLeft)
         {
+            if (m_isFacingRight)
+            {
+                FlipPlayer();
+            }
             rigidbody2D.velocity = new Vector2(-m_moveSpeed , rigidbody2D.velocity.y);
         }
 
@@ -340,4 +354,78 @@ public class PoliceController : MonoBehaviour
     }
     //---------------------------------------------------------------------------------------------------
 
+    //---------------------------------------------------------------------------------------------------
+    public void TouchInput(TouchInfo touchInfo)
+    {
+        SriTouchGestures gesture = touchInfo.touchGesture;
+        switch(gesture)
+        {
+            case SriTouchGestures.SRI_NONE:
+                break;
+            case SriTouchGestures.SRI_SWIPEDLEFT:
+                //SwipedLeft();
+                break;
+            case SriTouchGestures.SRI_SWIPEDRIGHT:
+                //SwipedRight();
+                break;
+            case SriTouchGestures.SRI_SWIPEDUP:
+                m_isGoingUp = true;
+                break;
+            case SriTouchGestures.SRI_SWIPEDDOWN:
+                m_isGoingDown = true;
+                break;
+            case SriTouchGestures.SRI_DOUBLETAPPED:
+                //DoubleTapped();
+                break;
+            case SriTouchGestures.SRI_TAPPED:
+                break;
+            case SriTouchGestures.SRI_TAPHELD:
+                m_touchHeld = true;
+                TouchHeld(touchInfo);
+                break;
+            case SriTouchGestures.SRI_RELEASED:
+                TouchReleased();
+                break;
+        }
+    }
+    //---------------------------------------------------------------------------------------------------
+   
+    //---------------------------------------------------------------------------------------------------
+    public void TouchHeld(TouchInfo touchInfo)
+    {
+        debugTouchDistance = touchInfo.touchPosition.x - transform.position.x;
+        if(m_touchHeld && !m_hasReachedTargetPosition)
+        {
+            m_isMoving = true;
+            if (debugTouchDistance > m_touchDeadZone)
+            {
+                m_isMovingRight = true;
+                m_isMovingLeft = false;
+            }
+            else if (debugTouchDistance < -m_touchDeadZone)
+            {
+                m_isMovingLeft = true;
+                m_isMovingRight = false;
+            }
+            else
+            {
+                m_hasReachedTargetPosition = true;
+            }
+            SetState(PlayerState.MOVING);
+        }
+        
+    }
+    //---------------------------------------------------------------------------------------------------
+
+    //---------------------------------------------------------------------------------------------------
+    public void TouchReleased()
+    {
+        if(m_touchHeld)
+        {
+            m_touchHeld = false;
+            SetState(PlayerState.IDLE);
+            m_hasReachedTargetPosition = false;
+        }
+    }
+    //---------------------------------------------------------------------------------------------------
 }
