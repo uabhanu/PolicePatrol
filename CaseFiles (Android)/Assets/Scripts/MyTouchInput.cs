@@ -35,6 +35,7 @@ public class MyTouchInput : MonoBehaviour
 		GetComponent<LongPressGesture>().StateChanged -= LongPressStateChangedHandler;
 	}
 	
+	#region Touch Held Logic
 	private void LongPressStateChangedHandler(object sender, GestureStateChangeEventArgs e)
 	{
 		switch(e.State)
@@ -53,6 +54,7 @@ public class MyTouchInput : MonoBehaviour
 			policeControlScript.PerformMovement();
 		}
 	}
+	#endregion
 	
 	private void PressedHandler(object sender, EventArgs e)
 	{
@@ -73,6 +75,7 @@ public class MyTouchInput : MonoBehaviour
 
 		levelNo = Application.loadedLevel;
 
+		#region Swipe Logic
 		foreach(Touch touch in Input.touches)
 		{
 			if(touch.phase == TouchPhase.Began)
@@ -110,5 +113,6 @@ public class MyTouchInput : MonoBehaviour
 				}
 			}
 		}
+		#endregion
 	}
 }
