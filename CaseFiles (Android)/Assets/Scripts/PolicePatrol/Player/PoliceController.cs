@@ -55,6 +55,7 @@ public class PoliceController : MonoBehaviour
     public float m_touchDeadZone;
     public float debugTouchDistance;
     public bool m_hasReachedTargetPosition = false;
+	public Animator anim;
     //---------------------------------------------------------------------------------------------------
 
 
@@ -67,6 +68,8 @@ public class PoliceController : MonoBehaviour
         m_previousState = m_currentState;
 
         m_groundLayerMask = 1 << 8;
+
+		anim = GetComponent<Animator>();
 	}
 	//---------------------------------------------------------------------------------------------------
 
@@ -300,6 +303,8 @@ public class PoliceController : MonoBehaviour
             {
                 FlipPlayer();
             }
+
+			anim.SetInteger("AnimIndex" , 2);
             rigidbody2D.velocity = new Vector2(m_moveSpeed , rigidbody2D.velocity.y);
         }
 
@@ -425,6 +430,7 @@ public class PoliceController : MonoBehaviour
             m_touchHeld = false;
             SetState(PlayerState.IDLE);
             m_hasReachedTargetPosition = false;
+			anim.SetInteger("AnimIndex" , 0);
         }
     }
     //---------------------------------------------------------------------------------------------------
