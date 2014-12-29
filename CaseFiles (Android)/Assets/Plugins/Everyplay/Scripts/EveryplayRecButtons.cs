@@ -6,14 +6,13 @@ public class EveryplayRecButtons : MonoBehaviour
 {
     public enum ButtonsOrigin
     {
-        TopLeft,
+        TopLeft = 0,
         TopRight,
         BottomLeft,
         BottomRight
     };
 
-	public int levelNo;
-	public Texture2D atlasTexture;
+    public Texture2D atlasTexture;
     public ButtonsOrigin origin = ButtonsOrigin.TopLeft;
     public Vector2 containerMargin = new Vector2(16, 16);
     private Vector2 containerOffset = Vector2.zero;
@@ -105,8 +104,6 @@ public class EveryplayRecButtons : MonoBehaviour
         // Scale by resolution
         containerScaling = GetScalingByResolution();
 
-		levelNo = Application.loadedLevel;
-
         // Texture atlas sources
         editVideoAtlasSrc = new TextureAtlasSrc(112, 19, 0, 0, containerScaling);
         faceCamAtlasSrc = new TextureAtlasSrc(103, 19, 116, 0, containerScaling);
@@ -145,16 +142,10 @@ public class EveryplayRecButtons : MonoBehaviour
         SetButtonVisible(faceCamToggleButton, true);
 
         // Set initially
-        if(!Everyplay.IsRecordingSupported()) 
-		{
+        if(!Everyplay.IsRecordingSupported()) {
             startRecordingButton.enabled = false;
             stopRecordingButton.enabled = false;
         }
-
-		if(levelNo > 0)
-		{
-			//ButtonsOrigin.TopLeft = 0;
-		}
 
         Everyplay.RecordingStarted += RecordingStarted;
         Everyplay.RecordingStopped += RecordingStopped;
