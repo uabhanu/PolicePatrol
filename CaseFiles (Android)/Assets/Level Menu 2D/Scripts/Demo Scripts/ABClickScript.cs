@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ABClickScript : MonoBehaviour {
 	
-	private Vector3 initialScale;
+	//private Vector3 initialScale;
 
 	void Awake()
 	{
@@ -13,7 +13,7 @@ public class ABClickScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		initialScale = transform.localScale;
+		//initialScale = transform.localScale;
 	}
 	
 	// Update is called once per frame
@@ -25,7 +25,7 @@ public class ABClickScript : MonoBehaviour {
 	void OnItemClicked (int itemIndex, GameObject itemObject)
 	{
 		//Debug.Log("Item Clicked");
-		initialScale = itemObject.transform.localScale;
+		//initialScale = itemObject.transform.localScale;
 		//iTween.ScaleBy(itemObject, new Vector3(2f, 2f, 0f), 0.5f);
 //		if (itemIndex >= 0 && itemIndex <= 2)
 //		{

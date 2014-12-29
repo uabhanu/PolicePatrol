@@ -178,54 +178,74 @@ public class SriTouchInputManager : MonoBehaviour
                     m_touchHeld = false;
                     m_touchInfo.touchGesture = SriTouchGestures.SRI_RELEASED;
                 }
-                else if ((m_firstTouchPosition.x - m_currentTouchPosition.x) > 80) // left swipe
-                {
-                    //m_swipedLeft = true;
-                    //m_swipedRight = false;
-                    //m_swipedUp = false;
-                    //m_swipedDown = false;
-                    m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDLEFT;
-                }
-                else if ((m_firstTouchPosition.x - m_currentTouchPosition.x) < -80) // right swipe
-                {
-                    //m_swipedLeft = false;
-                    //m_swipedRight = true;
-                    //m_swipedUp = false;
-                    //m_swipedDown = false;
-                    m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDRIGHT;
-                }
-
-                else if ((m_firstTouchPosition.y - m_currentTouchPosition.y) < -80) // up swipe
-                {
-                    //m_swipedLeft = false;
-                    //m_swipedRight = false;
-                    //m_swipedUp = true;
-                    //m_swipedDown = false;
-                    m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDUP;
-                }
-
-                else if ((m_firstTouchPosition.y - m_currentTouchPosition.y) > 80) //down swipe
-                {
-                    //m_swipedLeft = false;
-                    //m_swipedRight = false;
-                    //m_swipedUp = false;
-                    //m_swipedDown = true;
-                    m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDDOWN;
-                }
-                else if (m_doubleTapped)
-                {
-                    m_touchInfo.touchGesture = SriTouchGestures.SRI_DOUBLETAPPED;
-                    m_checkedDoubleTap = false;
-                }
-                else if (m_tapped && m_checkedDoubleTap)
-                {
-                    m_touchInfo.touchGesture = SriTouchGestures.SRI_TAPPED;
-                    m_tapped = false;
-                    m_checkedDoubleTap = false;
-                }
                 else
                 {
-                    m_touchInfo.touchGesture = SriTouchGestures.SRI_NONE;
+                    float xDiff = m_firstTouchPosition.x - m_currentTouchPosition.x;
+                    float yDiff = m_firstTouchPosition.y - m_currentTouchPosition.y;
+                    bool horizontalSwipe = false;
+                    bool verticalSwipe   = false;
+
+                    if (xDiff > 0.5f || xDiff < -0.5f) // left swipe
+                    {
+                        horizontalSwipe = true;
+                    }
+                    if (yDiff > 0.5f || yDiff < -0.5f) // up swipe
+                    {
+                        verticalSwipe = true;
+                    }
+
+                    if(horizontalSwipe || verticalSwipe)
+                    {
+                        if(horizontalSwipe && verticalSwipe)
+                        {
+                            if(xDiff * xDiff >= yDiff * yDiff)
+                            {
+                                verticalSwipe = false;
+                            }
+                            else
+                            {
+                                horizontalSwipe = false;
+                            }
+                        }
+                        
+                        if(horizontalSwipe)
+                        {
+                            if(xDiff > 0f)
+                            {
+                                m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDLEFT;
+                            }
+                            else
+                            {
+                                m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDRIGHT;
+                            }
+                        }
+                        else if(verticalSwipe)
+                        {
+                            if (yDiff > 0f)
+                            {
+                                m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDDOWN;
+                            }
+                            else
+                            {
+                                m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDUP;
+                            }
+                        }
+                    }
+                    else if (m_doubleTapped)
+                    {
+                        m_touchInfo.touchGesture = SriTouchGestures.SRI_DOUBLETAPPED;
+                        m_checkedDoubleTap = false;
+                    }
+                    else if (m_tapped && m_checkedDoubleTap)
+                    {
+                        m_touchInfo.touchGesture = SriTouchGestures.SRI_TAPPED;
+                        m_tapped = false;
+                        m_checkedDoubleTap = false;
+                    }
+                    else
+                    {
+                        m_touchInfo.touchGesture = SriTouchGestures.SRI_NONE;
+                    }
                 }
                 
                 m_touchInfo.touchPosition = m_currentTouchPosition;            

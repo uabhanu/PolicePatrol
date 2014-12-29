@@ -31,7 +31,7 @@ public class PoliceController : MonoBehaviour
     private bool  m_isGoingDown   = false;
     //---------------------------------------------------------------------------------------------------
     private bool  m_isFacingRight = true;
-    private bool  m_shouldFlip    = false;
+   // private bool  m_shouldFlip    = false;
    //---------------------------------------------------------------------------------------------------
 	public Transform  m_groundCheckTransform;
     private LayerMask m_groundLayerMask;
@@ -40,7 +40,7 @@ public class PoliceController : MonoBehaviour
     public float      m_groundCheckOffSet = 1f;
     //---------------------------------------------------------------------------------------------------
     private float xInput = 0f;
-    private float yInput = 0f;
+    //private float yInput = 0f;
     //---------------------------------------------------------------------------------------------------
 
     //--------------------------------------------------------------------------------------------------
@@ -209,7 +209,7 @@ public class PoliceController : MonoBehaviour
     private void CheckKeyboardAndControllerInput()
     {
         xInput = Input.GetAxis("Horizontal");
-        yInput = Input.GetAxis("Vertical");
+        //yInput = Input.GetAxis("Vertical");
 
         if (xInput != 0)
         {

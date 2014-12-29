@@ -14,10 +14,7 @@ GameObject:
   - 114: {fileID: 11454708}
   - 50: {fileID: 5062950}
   - 212: {fileID: 21252788}
-  - 114: {fileID: 11436702}
-  - 114: {fileID: 11436704}
-  - 114: {fileID: 11436706}
-  - 114: {fileID: 11436708}
+  - 114: {fileID: 11427750}
   m_Layer: 0
   m_Name: PF_Constable
   m_TagString: Player
@@ -160,7 +157,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &11436702
+--- !u!114 &11427750
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -168,76 +165,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 152788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1088824302, guid: 20c2a163775f09b4cafa29b19d0c9204, type: 3}
+  m_Script: {fileID: 11500000, guid: e09219876a4203647bf0f60df7c5215e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  advancedProps: 0
-  combineTouches: 0
-  combineTouchesInterval: .300000012
-  useSendMessage: 0
-  sendStateChangeMessages: 0
-  sendMessageTarget: {fileID: 0}
-  requireGestureToFail: {fileID: 0}
-  friendlyGestures: []
-  ignoreChildren: 0
---- !u!114 &11436704
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 152788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1088824302, guid: 20c2a163775f09b4cafa29b19d0c9204, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  advancedProps: 0
-  combineTouches: 0
-  combineTouchesInterval: .300000012
-  useSendMessage: 0
-  sendStateChangeMessages: 0
-  sendMessageTarget: {fileID: 0}
-  requireGestureToFail: {fileID: 0}
-  friendlyGestures: []
-  ignoreChildren: 0
---- !u!114 &11436706
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 152788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -109791083, guid: 20c2a163775f09b4cafa29b19d0c9204, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  advancedProps: 0
-  combineTouches: 0
-  combineTouchesInterval: .300000012
-  useSendMessage: 0
-  sendStateChangeMessages: 0
-  sendMessageTarget: {fileID: 0}
-  requireGestureToFail: {fileID: 0}
-  friendlyGestures: []
-  maxTouches: 2147483647
-  timeToPress: 1
-  distanceLimit: Infinity
---- !u!114 &11436708
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 152788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 659e4e10363e53049b4d90371405ddb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  policeControlScript: {fileID: 11454708}
-  police: {fileID: 452788}
-  m_myPressGesture: {fileID: 0}
-  m_myReleaseGesture: {fileID: 0}
-  m_myLongPressGesture: {fileID: 0}
 --- !u!114 &11454708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -253,9 +183,13 @@ MonoBehaviour:
   m_previousState: 0
   m_moveSpeed: 3
   m_jumpHeight: 10
+  m_isMoving: 0
+  m_isMovingLeft: 0
+  m_isMovingRight: 0
   m_groundCheckTransform: {fileID: 496950}
+  m_radiusToCheckGround: .00999999978
   m_isGrounded: 0
-  m_groundCheckOffSet: .5
+  m_groundCheckOffSet: .400000006
   m_myAudioSource: {fileID: 8239056}
   m_jumpSound: {fileID: 0}
   m_thighSlapSound: {fileID: 0}
@@ -263,6 +197,9 @@ MonoBehaviour:
   m_levelWonSound: {fileID: 0}
   m_levelLostSound: {fileID: 0}
   m_pickupSound: {fileID: 0}
+  m_touchDeadZone: 0
+  debugTouchDistance: 0
+  m_hasReachedTargetPosition: 0
 --- !u!212 &21252788
 SpriteRenderer:
   m_ObjectHideFlags: 1
