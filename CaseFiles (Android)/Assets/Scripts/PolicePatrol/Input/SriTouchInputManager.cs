@@ -47,6 +47,7 @@ public class SriTouchInputManager : MonoBehaviour
     public bool m_touchHeld = false;
     public bool m_touchProcessed = false;
     public bool m_checkedDoubleTap = false;
+	public PoliceController policeControlScript;
     //---------------------------------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------------------------------
@@ -185,11 +186,11 @@ public class SriTouchInputManager : MonoBehaviour
                     bool horizontalSwipe = false;
                     bool verticalSwipe   = false;
 
-                    if (xDiff > 0.5f || xDiff < -0.5f) // left swipe
+                    if (xDiff > 0.5f || xDiff < -0.5f)
                     {
                         horizontalSwipe = true;
                     }
-                    if (yDiff > 0.5f || yDiff < -0.5f) // up swipe
+                    if (yDiff > 0.5f || yDiff < -0.5f)
                     {
                         verticalSwipe = true;
                     }
@@ -212,22 +213,24 @@ public class SriTouchInputManager : MonoBehaviour
                         {
                             if(xDiff > 0f)
                             {
-                                m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDLEFT;
+                                m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDLEFT; //Swipe Left
                             }
                             else
                             {
-                                m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDRIGHT;
+                                m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDRIGHT; //Swipe Right
                             }
                         }
                         else if(verticalSwipe)
                         {
                             if (yDiff > 0f)
                             {
-                                m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDDOWN;
+                                m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDDOWN; //Swipe Down
+								policeControlScript.PerformFall();
                             }
                             else
                             {
-                                m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDUP;
+                                m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDUP; //Swipe Up
+								policeControlScript.PerformJump();
                             }
                         }
                     }
