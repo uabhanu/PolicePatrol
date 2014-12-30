@@ -230,7 +230,7 @@ public class SriTouchInputManager : MonoBehaviour
                             else
                             {
                                 m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDUP; //Swipe Up
-								policeControlScript.PerformJump();
+								policeControlScript.PerformClimb();
                             }
                         }
                     }

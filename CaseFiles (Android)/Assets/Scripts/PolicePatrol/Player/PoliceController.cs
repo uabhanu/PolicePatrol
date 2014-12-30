@@ -9,11 +9,12 @@ public class PoliceController : MonoBehaviour
     {
         IDLE,
         MOVING,
-        JUMP,
         SLAP,
         DYING,
         DEAD,
-        FALLING
+        FALLING,
+		MOUNT,
+		CLIMB
     };
 
     public PlayerState m_currentState;
@@ -115,7 +116,7 @@ public class PoliceController : MonoBehaviour
     {
         if (m_isGoingUp)
         {
-            SetState(PlayerState.JUMP);
+            SetState(PlayerState.CLIMB);
         }
         else if (m_isGoingDown)
         {
@@ -149,10 +150,6 @@ public class PoliceController : MonoBehaviour
                 PerformMovement();
         	break;
 
-            case PlayerState.JUMP: 
-                PerformJump();
-        	break;
-
             case PlayerState.FALLING: 
                 PerformFall();
         	break;
@@ -168,6 +165,14 @@ public class PoliceController : MonoBehaviour
             case PlayerState.DEAD: 
                 PerformDeath();
         	break;
+
+			case PlayerState.MOUNT:
+				PerformMount();
+			break;
+
+			case PlayerState.CLIMB:
+				PerformClimb();
+			break;
         }
     }
     //---------------------------------------------------------------------------------------------------
@@ -179,7 +184,7 @@ public class PoliceController : MonoBehaviour
         {
             case PlayerState.IDLE: break;
             case PlayerState.MOVING: break;
-            case PlayerState.JUMP: break;
+            case PlayerState.CLIMB: break;
             case PlayerState.FALLING: break;
             case PlayerState.SLAP: break;
             case PlayerState.DYING: break;
@@ -323,8 +328,14 @@ public class PoliceController : MonoBehaviour
         }
 
     }
-    //---------------------------------------------------------------------------------------------------
-    public void PerformJump()
+   
+	public void PerformMount()
+	{
+		anim.SetInteger("AnimIndex" , 5);
+	}
+
+	//---------------------------------------------------------------------------------------------------
+	public void PerformClimb()
     {
 		rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x , m_jumpHeight);
     }
@@ -435,4 +446,20 @@ public class PoliceController : MonoBehaviour
         }
     }
     //---------------------------------------------------------------------------------------------------
+
+	void OnCollisionEnter2D(Collision2D col2D)
+	{
+		if(col2D.gameObject.tag.Equals("Ladder"))
+		{
+			Debug.Log("Collided with Ladder");
+
+			if(m_touchHeld)
+			{
+				m_touchHeld = false;
+			}
+
+			SetState(PlayerState.MOUNT);
+			//anim.SetInteger("AnimIndex" , 4);
+		}
+	}
 }
