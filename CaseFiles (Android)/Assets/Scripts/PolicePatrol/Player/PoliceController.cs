@@ -304,7 +304,6 @@ public class PoliceController : MonoBehaviour
                 FlipPlayer();
             }
 
-			anim.SetInteger("AnimIndex" , 2);
             rigidbody2D.velocity = new Vector2(m_moveSpeed , rigidbody2D.velocity.y);
         }
 
@@ -416,6 +415,8 @@ public class PoliceController : MonoBehaviour
             {
                 m_hasReachedTargetPosition = true;
             }
+
+			anim.SetInteger("AnimIndex" , 2);
             SetState(PlayerState.MOVING);
         }
         
