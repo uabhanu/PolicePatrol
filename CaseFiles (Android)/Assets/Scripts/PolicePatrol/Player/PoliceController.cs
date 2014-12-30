@@ -72,6 +72,14 @@ public class PoliceController : MonoBehaviour
 
 		anim = GetComponent<Animator>();
 	}
+
+	void OnTriggerEnter2D(Collider2D col2D)
+	{
+		if(col2D.gameObject.tag.Equals("Ladder"))
+		{
+			Debug.Log("Police touched Ladder");
+		}
+	}
 	//---------------------------------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------------------------------
@@ -445,21 +453,5 @@ public class PoliceController : MonoBehaviour
 			anim.SetInteger("AnimIndex" , 0);
         }
     }
-    //---------------------------------------------------------------------------------------------------
-
-	void OnCollisionEnter2D(Collision2D col2D)
-	{
-		if(col2D.gameObject.tag.Equals("Ladder"))
-		{
-			Debug.Log("Collided with Ladder");
-
-			if(m_touchHeld)
-			{
-				m_touchHeld = false;
-			}
-
-			SetState(PlayerState.MOUNT);
-			//anim.SetInteger("AnimIndex" , 4);
-		}
-	}
+    //---------------------------------------------------------------------------------------------------	
 }
