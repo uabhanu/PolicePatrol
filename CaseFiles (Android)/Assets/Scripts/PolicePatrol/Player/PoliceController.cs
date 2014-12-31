@@ -57,6 +57,8 @@ public class PoliceController : MonoBehaviour
     public float debugTouchDistance;
     public bool m_hasReachedTargetPosition = false;
 	public Animator anim;
+	public Sprite policeClimbSprite;
+	public SpriteRenderer policeRenderer;
     //---------------------------------------------------------------------------------------------------
 
 
@@ -71,15 +73,14 @@ public class PoliceController : MonoBehaviour
         m_groundLayerMask = 1 << 8;
 
 		anim = GetComponent<Animator>();
-
-		Debug.Log("Game Started");
 	}
 
 	void OnTriggerEnter2D(Collider2D col2D)
 	{
 		if(col2D.gameObject.tag.Equals("Ladder"))
 		{
-			Debug.Log("Police touched Ladder : From Police Control Script");
+			Debug.Log("Police touched Ladder");
+			SetState(PlayerState.MOUNT);
 		}
 	}
 	//---------------------------------------------------------------------------------------------------
@@ -306,42 +307,41 @@ public class PoliceController : MonoBehaviour
     //---------------------------------------------------------------------------------------------------
     public void PerformMovement()
     {
-        if (!m_isMoving || m_hasReachedTargetPosition)
-        {
-            SetState(PlayerState.IDLE);
-            return;
-        }
-
-        if (m_isMovingRight)
-        {
-            if(!m_isFacingRight)
-            {
-                FlipPlayer();
-            }
-
-            rigidbody2D.velocity = new Vector2(m_moveSpeed , rigidbody2D.velocity.y);
-        }
-
-        else if (m_isMovingLeft)
-        {
-            if (m_isFacingRight)
-            {
-                FlipPlayer();
-            }
-            rigidbody2D.velocity = new Vector2(-m_moveSpeed , rigidbody2D.velocity.y);
-        }
-
-        else
-        {
-            m_isMoving = false;
-            return;
-        }
-
+		if (!m_isMoving || m_hasReachedTargetPosition)
+		{
+			SetState(PlayerState.IDLE);
+			return;
+		}
+		
+		if (m_isMovingRight)
+		{
+			if(!m_isFacingRight)
+			{
+				FlipPlayer();
+			}
+			
+			rigidbody2D.velocity = new Vector2(m_moveSpeed , rigidbody2D.velocity.y);
+		}
+		
+		else if (m_isMovingLeft)
+		{
+			if (m_isFacingRight)
+			{
+				FlipPlayer();
+			}
+			rigidbody2D.velocity = new Vector2(-m_moveSpeed , rigidbody2D.velocity.y);
+		}
+		
+		else
+		{
+			m_isMoving = false;
+			return;
+		}
     }
    
 	public void PerformMount()
 	{
-		anim.SetInteger("AnimIndex" , 5);
+
 	}
 
 	//---------------------------------------------------------------------------------------------------

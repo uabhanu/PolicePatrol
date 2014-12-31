@@ -74,6 +74,8 @@ public class SriTouchInputManager : MonoBehaviour
         }
 
         ProcessTouchInput();
+
+
         if(m_sriTouchListeners.Length == 0)
         {
             m_sriTouchListeners = GameObject.FindObjectsOfType<SriTouchInputListener>();
@@ -153,9 +155,9 @@ public class SriTouchInputManager : MonoBehaviour
 
             if(Time.time - m_firstTouchTime > m_touchHeldTime)
             {
-                m_touchHeld = true;
-                m_touchProcessed = false;
-                m_touchInfo.touchGesture = SriTouchGestures.SRI_TAPHELD;
+				m_touchHeld = true;
+				m_touchProcessed = false;
+				m_touchInfo.touchGesture = SriTouchGestures.SRI_TAPHELD;
             }
         }
 
