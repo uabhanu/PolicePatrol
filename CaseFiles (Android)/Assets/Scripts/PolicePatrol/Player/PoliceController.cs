@@ -71,13 +71,15 @@ public class PoliceController : MonoBehaviour
         m_groundLayerMask = 1 << 8;
 
 		anim = GetComponent<Animator>();
+
+		Debug.Log("Game Started");
 	}
 
 	void OnTriggerEnter2D(Collider2D col2D)
 	{
 		if(col2D.gameObject.tag.Equals("Ladder"))
 		{
-			Debug.Log("Police touched Ladder");
+			Debug.Log("Police touched Ladder : From Police Control Script");
 		}
 	}
 	//---------------------------------------------------------------------------------------------------
