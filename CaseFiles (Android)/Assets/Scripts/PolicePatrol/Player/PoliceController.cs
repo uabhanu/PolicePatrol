@@ -35,7 +35,7 @@ public class PoliceController : MonoBehaviour
    // private bool  m_shouldFlip    = false;
    //---------------------------------------------------------------------------------------------------
 	public Transform  m_groundCheckTransform;
-    private LayerMask m_groundLayerMask;
+    public LayerMask m_groundLayerMask;
     public float      m_radiusToCheckGround = 0.02f;
     public bool       m_isGrounded = false;
     public float      m_groundCheckOffSet = 1f;
@@ -57,11 +57,12 @@ public class PoliceController : MonoBehaviour
     public float debugTouchDistance;
     public bool m_hasReachedTargetPosition = false;
 	public Animator anim;
-	public Sprite policeClimbSprite;
-	public SpriteRenderer policeRenderer;
     //---------------------------------------------------------------------------------------------------
 
-
+    public int dubug_CollisionCount = 0;
+    public bool m_touchReleased;
+    private Vector3 m_mountPosition;
+    private Vector3 m_targetPosition;
     //---------------------------------------------------------------------------------------------------
 	void Start () 
     {
@@ -70,20 +71,34 @@ public class PoliceController : MonoBehaviour
         m_currentState = PlayerState.IDLE;
         m_previousState = m_currentState;
 
-        m_groundLayerMask = 1 << 8;
+        //m_groundLayerMask = 1 << 12;
 
 		anim = GetComponent<Animator>();
 	}
+    //---------------------------------------------------------------------------------------------------
 
+    //---------------------------------------------------------------------------------------------------
 	void OnTriggerEnter2D(Collider2D col2D)
 	{
-		if(col2D.gameObject.tag.Equals("Ladder"))
-		{
-			Debug.Log("Police touched Ladder");
-			SetState(PlayerState.MOUNT);
-		}
+		
 	}
 	//---------------------------------------------------------------------------------------------------
+
+    //---------------------------------------------------------------------------------------------------
+    void OnTriggerStay2D(Collider2D col2D)
+    {
+        if (col2D.gameObject.tag.Equals("Ladder"))
+        {
+            if (m_currentState == PlayerState.IDLE)
+            {
+                SetState(PlayerState.MOUNT);
+                m_mountPosition.x = col2D.transform.position.x;
+                m_mountPosition.y = transform.position.y;
+                m_mountPosition.z = transform.position.z;
+            }
+        }
+    }
+    //---------------------------------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------------------------------
 	void Update () 
@@ -125,15 +140,7 @@ public class PoliceController : MonoBehaviour
     //---------------------------------------------------------------------------------------------------
     private void ProcessInput()
     {
-        if (m_isGoingUp)
-        {
-            SetState(PlayerState.CLIMB);
-        }
-        else if (m_isGoingDown)
-        {
-            SetState(PlayerState.FALLING);
-        }
-        else if (m_isMoving)
+        if (m_isMoving)
         {
             if(xInput != 0)
             {
@@ -296,65 +303,101 @@ public class PoliceController : MonoBehaviour
     //---------------------------------------------------------------------------------------------------
     private void PerformIdle()
     {
-        if (rigidbody2D.velocity.x != 0f)
-        {
-            rigidbody2D.velocity = new Vector2(0f , rigidbody2D.velocity.y);
-            m_isMoving = false;
-        }
+        rigidbody2D.velocity = new Vector2(0f, rigidbody2D.velocity.y);
+        m_isMoving = false;
     }
     //---------------------------------------------------------------------------------------------------
     
     //---------------------------------------------------------------------------------------------------
     public void PerformMovement()
     {
-		if (!m_isMoving || m_hasReachedTargetPosition)
-		{
-			SetState(PlayerState.IDLE);
-			return;
-		}
-		
-		if (m_isMovingRight)
-		{
-			if(!m_isFacingRight)
-			{
-				FlipPlayer();
-			}
-			
-			rigidbody2D.velocity = new Vector2(m_moveSpeed , rigidbody2D.velocity.y);
-		}
-		
-		else if (m_isMovingLeft)
-		{
-			if (m_isFacingRight)
-			{
-				FlipPlayer();
-			}
-			rigidbody2D.velocity = new Vector2(-m_moveSpeed , rigidbody2D.velocity.y);
-		}
-		
-		else
-		{
-			m_isMoving = false;
-			return;
-		}
+        if (!m_isMoving || m_hasReachedTargetPosition)
+        {
+            SetState(PlayerState.IDLE);
+            return;
+        }
+
+        if (m_isMovingRight)
+        {
+            if(!m_isFacingRight)
+            {
+                FlipPlayer();
+            }
+
+            rigidbody2D.velocity = new Vector2(m_moveSpeed , rigidbody2D.velocity.y);
+        }
+
+        else if (m_isMovingLeft)
+        {
+            if (m_isFacingRight)
+            {
+                FlipPlayer();
+            }
+            rigidbody2D.velocity = new Vector2(-m_moveSpeed , rigidbody2D.velocity.y);
+        }
+
+        else
+        {
+            m_isMoving = false;
+            return;
+        }
+
     }
    
 	public void PerformMount()
 	{
+		anim.SetInteger("AnimIndex" , 5);
+        transform.position = m_mountPosition;
+        rigidbody2D.velocity = new Vector2(0f, 0f);
 
+        if (m_isGoingUp)
+        {
+            SetState(PlayerState.CLIMB);
+            m_targetPosition.x = transform.position.x;
+            m_targetPosition.y = transform.position.y + m_jumpHeight;
+            m_targetPosition.z = transform.position.z;
+        }
+
+        else if (m_isGoingDown)
+        {
+            SetState(PlayerState.FALLING);
+            m_targetPosition.x = transform.position.x;
+            m_targetPosition.y = transform.position.y - m_jumpHeight;
+            m_targetPosition.z = transform.position.z;
+        }
 	}
 
 	//---------------------------------------------------------------------------------------------------
 	public void PerformClimb()
     {
-		rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x , m_jumpHeight);
+        if (transform.position.y - m_targetPosition.y > -m_touchDeadZone)
+        {
+            SetState(PlayerState.IDLE);
+            m_isGoingUp = false;
+            rigidbody2D.velocity = new Vector2(0f, 0f);
+        }
+
+        else
+        {
+			anim.SetInteger("AnimIndex" , 6);
+			rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, m_jumpHeight);
+        }
     }
     //---------------------------------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------------------------------
     public void PerformFall()
     {
-		rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x , -m_jumpHeight);
+        if (transform.position.y - m_targetPosition.y < m_touchDeadZone || m_isGrounded)
+        {
+            SetState(PlayerState.IDLE);
+            m_isGoingDown = false;
+            rigidbody2D.velocity = new Vector2(0f, 0f);
+        }
+        else
+        {
+            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -m_jumpHeight);
+        }
     }
     //---------------------------------------------------------------------------------------------------
 
@@ -383,6 +426,7 @@ public class PoliceController : MonoBehaviour
     public void TouchInput(TouchInfo touchInfo)
     {
         SriTouchGestures gesture = touchInfo.touchGesture;
+        m_touchReleased = false;
         switch(gesture)
         {
             case SriTouchGestures.SRI_NONE:
@@ -394,10 +438,16 @@ public class PoliceController : MonoBehaviour
                 //SwipedRight();
                 break;
             case SriTouchGestures.SRI_SWIPEDUP:
-                m_isGoingUp = true;
+                if(m_currentState == PlayerState.MOUNT)
+                {
+                    m_isGoingUp = true;
+                }
                 break;
             case SriTouchGestures.SRI_SWIPEDDOWN:
-                m_isGoingDown = true;
+                if (m_currentState == PlayerState.MOUNT)
+                {
+                    m_isGoingDown = true;
+                }
                 break;
             case SriTouchGestures.SRI_DOUBLETAPPED:
                 //DoubleTapped();
@@ -419,34 +469,36 @@ public class PoliceController : MonoBehaviour
     public void TouchHeld(TouchInfo touchInfo)
     {
         debugTouchDistance = touchInfo.touchPosition.x - transform.position.x;
-        if(m_touchHeld && !m_hasReachedTargetPosition)
-        {
-            m_isMoving = true;
-            if (debugTouchDistance > m_touchDeadZone)
-            {
-                m_isMovingRight = true;
-                m_isMovingLeft = false;
-            }
-            else if (debugTouchDistance < -m_touchDeadZone)
-            {
-                m_isMovingLeft = true;
-                m_isMovingRight = false;
-            }
-            else
-            {
-                m_hasReachedTargetPosition = true;
-            }
-
-			anim.SetInteger("AnimIndex" , 2);
-            SetState(PlayerState.MOVING);
-        }
         
+                if(m_touchHeld && !m_hasReachedTargetPosition)
+                {
+                    m_isMoving = true;
+                    SetState(PlayerState.MOVING);
+                    if (debugTouchDistance > m_touchDeadZone)
+                    {
+                        m_isMovingRight = true;
+                        m_isMovingLeft = false;
+                    }
+                    else if (debugTouchDistance < -m_touchDeadZone)
+                    {
+                        m_isMovingLeft = true;
+                        m_isMovingRight = false;
+                    }
+                    else
+                    {
+                        m_hasReachedTargetPosition = true;
+                    }
+
+                    anim.SetInteger("AnimIndex", 2);
+                }
+
     }
     //---------------------------------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------------------------------
     public void TouchReleased()
     {
+        m_touchReleased = true;
         if(m_touchHeld)
         {
             m_touchHeld = false;

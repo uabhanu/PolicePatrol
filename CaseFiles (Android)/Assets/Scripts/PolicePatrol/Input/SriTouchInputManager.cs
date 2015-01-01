@@ -227,12 +227,10 @@ public class SriTouchInputManager : MonoBehaviour
                             if (yDiff > 0f)
                             {
                                 m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDDOWN; //Swipe Down
-								policeControlScript.PerformFall();
                             }
                             else
                             {
                                 m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDUP; //Swipe Up
-								policeControlScript.PerformClimb();
                             }
                         }
                     }
