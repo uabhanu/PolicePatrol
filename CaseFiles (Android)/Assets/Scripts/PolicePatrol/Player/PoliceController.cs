@@ -12,9 +12,9 @@ public class PoliceController : MonoBehaviour
         SLAP,
         DYING,
         DEAD,
-        FALLING,
-		MOUNT,
-		CLIMB
+        LiftDown,
+		InLift,
+		LiftUp
     };
 
     public PlayerState m_currentState;
@@ -63,6 +63,8 @@ public class PoliceController : MonoBehaviour
     public bool m_touchReleased;
     private Vector3 m_mountPosition;
     private Vector3 m_targetPosition;
+    private GameObject m_liftReference;
+    public float m_liftSpeed = 0.5f;
     //---------------------------------------------------------------------------------------------------
 	void Start () 
     {
@@ -87,14 +89,16 @@ public class PoliceController : MonoBehaviour
     //---------------------------------------------------------------------------------------------------
     void OnTriggerStay2D(Collider2D col2D)
     {
-        if (col2D.gameObject.tag.Equals("Ladder"))
+        if (col2D.gameObject.tag.Equals("Lift"))
         {
             if (m_currentState == PlayerState.IDLE)
             {
-                SetState(PlayerState.MOUNT);
+                SetState(PlayerState.InLift);
                 m_mountPosition.x = col2D.transform.position.x;
                 m_mountPosition.y = transform.position.y;
                 m_mountPosition.z = transform.position.z;
+
+                m_liftReference = col2D.gameObject;
             }
         }
     }
@@ -168,7 +172,7 @@ public class PoliceController : MonoBehaviour
                 PerformMovement();
         	break;
 
-            case PlayerState.FALLING: 
+            case PlayerState.LiftDown: 
                 PerformFall();
         	break;
 
@@ -184,11 +188,11 @@ public class PoliceController : MonoBehaviour
                 PerformDeath();
         	break;
 
-			case PlayerState.MOUNT:
-				PerformMount();
+			case PlayerState.InLift:
+				PerformInLift();
 			break;
 
-			case PlayerState.CLIMB:
+			case PlayerState.LiftUp:
 				PerformClimb();
 			break;
         }
@@ -202,8 +206,8 @@ public class PoliceController : MonoBehaviour
         {
             case PlayerState.IDLE: break;
             case PlayerState.MOVING: break;
-            case PlayerState.CLIMB: break;
-            case PlayerState.FALLING: break;
+            case PlayerState.LiftUp: break;
+            case PlayerState.LiftDown: break;
             case PlayerState.SLAP: break;
             case PlayerState.DYING: break;
             case PlayerState.DEAD: break;
@@ -344,23 +348,21 @@ public class PoliceController : MonoBehaviour
 
     }
    
-	public void PerformMount()
+	public void PerformInLift()
 	{
 		anim.SetInteger("AnimIndex" , 5);
         transform.position = m_mountPosition;
         rigidbody2D.velocity = new Vector2(0f, 0f);
-
         if (m_isGoingUp)
         {
-            SetState(PlayerState.CLIMB);
+            SetState(PlayerState.LiftUp);
             m_targetPosition.x = transform.position.x;
             m_targetPosition.y = transform.position.y + m_jumpHeight;
             m_targetPosition.z = transform.position.z;
         }
-
         else if (m_isGoingDown)
         {
-            SetState(PlayerState.FALLING);
+            SetState(PlayerState.LiftDown);
             m_targetPosition.x = transform.position.x;
             m_targetPosition.y = transform.position.y - m_jumpHeight;
             m_targetPosition.z = transform.position.z;
@@ -376,11 +378,11 @@ public class PoliceController : MonoBehaviour
             m_isGoingUp = false;
             rigidbody2D.velocity = new Vector2(0f, 0f);
         }
-
         else
         {
-			anim.SetInteger("AnimIndex" , 6);
-			rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, m_jumpHeight);
+            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, m_liftSpeed);
+            m_liftReference.transform.position = new Vector3(m_liftReference.transform.position.x, transform.position.y, m_liftReference.transform.position.z);
+            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, m_liftSpeed);
         }
     }
     //---------------------------------------------------------------------------------------------------
@@ -396,7 +398,9 @@ public class PoliceController : MonoBehaviour
         }
         else
         {
-            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -m_jumpHeight);
+            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -m_liftSpeed);
+            m_liftReference.transform.position = new Vector3(m_liftReference.transform.position.x, transform.position.y, m_liftReference.transform.position.z);
+            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -m_liftSpeed);
         }
     }
     //---------------------------------------------------------------------------------------------------
@@ -438,13 +442,13 @@ public class PoliceController : MonoBehaviour
                 //SwipedRight();
                 break;
             case SriTouchGestures.SRI_SWIPEDUP:
-                if(m_currentState == PlayerState.MOUNT)
+                if(m_currentState == PlayerState.InLift)
                 {
                     m_isGoingUp = true;
                 }
                 break;
             case SriTouchGestures.SRI_SWIPEDDOWN:
-                if (m_currentState == PlayerState.MOUNT)
+                if (m_currentState == PlayerState.InLift)
                 {
                     m_isGoingDown = true;
                 }
