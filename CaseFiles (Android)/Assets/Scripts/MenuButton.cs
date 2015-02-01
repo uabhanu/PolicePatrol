@@ -72,6 +72,14 @@ public class MenuButton : MonoBehaviour
 				}
 			
 			break;
+
+			case "Play" :
+				Application.LoadLevel("LevelSelection");
+			break;
+
+			case "Rate" :
+				Application.OpenURL("https://play.google.com/store/apps/details?id=com.The3Brothers.C3");
+			break;
 		}
 	}
 
@@ -105,6 +113,16 @@ public class MenuButton : MonoBehaviour
 		if(buttonname == "Level 6")
 		{
 			ButtonClick("Level 6");
+		}
+
+		if(buttonname == "Play")
+		{
+			ButtonClick("Play");
+		}
+
+		if(buttonname == "Rate")
+		{
+			ButtonClick("Rate");
 		}
 	}
 
