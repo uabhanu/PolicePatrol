@@ -16,9 +16,10 @@ public class BlendUIBar : MonoBehaviour
 		StartCoroutine("BlendUIProperties");
 	}
 
+	#region IEnumerator BlendUIProperties()
 	IEnumerator BlendUIProperties()
 	{
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(0.5f);
 
 		if(m_blendUIRenderers[0].enabled)
 		{
@@ -34,7 +35,19 @@ public class BlendUIBar : MonoBehaviour
 
 		StartCoroutine("BlendUIProperties");
 	}
-		
+	#endregion
+
+	#region GravityScale()
+	void GravityScale()
+	{
+		if(m_blendUIRenderers[0].enabled && transform.position.y < 1.464f)
+		{
+			m_blendUIBarBody2D.gravityScale = -m_blendUIGravityScale;
+		}
+	}
+	#endregion
+
+	#region OnCollisionEnter2D()
 	void OnCollisionEnter2D(Collision2D col2D)
 	{
 		if(col2D.gameObject.name.Equals("BlendUI"))
@@ -67,9 +80,20 @@ public class BlendUIBar : MonoBehaviour
 
 		}
 	}
+	#endregion
 
+	#region Update()
 	void Update () 
 	{
+		if(Time.timeScale == 0)
+		{
+			return;
+		}
 
+		if(Input.GetMouseButtonDown(0))
+		{
+			GravityScale();
+		}
 	}
+	#endregion
 }

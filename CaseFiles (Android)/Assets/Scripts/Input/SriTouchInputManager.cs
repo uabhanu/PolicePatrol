@@ -47,7 +47,6 @@ public class SriTouchInputManager : MonoBehaviour
     public bool m_touchHeld = false;
     public bool m_touchProcessed = false;
     public bool m_checkedDoubleTap = false;
-	public PoliceController policeControlScript;
     //---------------------------------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------------------------------
@@ -60,6 +59,11 @@ public class SriTouchInputManager : MonoBehaviour
         m_sriTouchListeners = GameObject.FindObjectsOfType<SriTouchInputListener>();
     }
 	//---------------------------------------------------------------------------------------------------
+
+	void OnMouseDown()
+	{
+
+	}
 
     //---------------------------------------------------------------------------------------------------
 	void Update () 

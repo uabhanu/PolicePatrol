@@ -1032,6 +1032,7 @@ public class PoliceController : MonoBehaviour
 			
 			case SriTouchGestures.SRI_DOUBLETAPPED:
 				//DoubleTapped();
+				Debug.Log("Double Tapped");
 			break;
 			
 			case SriTouchGestures.SRI_TAPHELD:
@@ -1051,6 +1052,10 @@ public class PoliceController : MonoBehaviour
 					TouchReleased();
 				}
 
+			break;
+
+			case SriTouchGestures.SRI_TAPPED:
+				Debug.Log("Tapped");
 			break;
 		}
 	}

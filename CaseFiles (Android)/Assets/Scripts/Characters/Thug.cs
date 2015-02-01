@@ -78,7 +78,7 @@ public class Thug : MonoBehaviour
 		{
 			yield return new WaitForSeconds(m_flipTime);
 			FlipEnemy();
-			Debug.Log("Flipping");
+			//Debug.Log("Flipping");
 			StartCoroutine("Flipping");
 		}
 	}
@@ -89,7 +89,7 @@ public class Thug : MonoBehaviour
 	{
 		yield return new WaitForSeconds(m_flipTime);
 
-		Debug.Log("Start Flipping");
+		//Debug.Log("Start Flipping");
 
 		if(m_currentState == EnemyState.IDLE && m_flipping)
 		{
