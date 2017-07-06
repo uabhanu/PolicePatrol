@@ -103,111 +103,111 @@ public class PoliceController : MonoBehaviour
 		
 		m_anim = GetComponent<Animator>();
 
-		m_floorCheckObjs[0] = GameObject.Find("FloorCheck01");
+		//m_floorCheckObjs[0] = GameObject.Find("FloorCheck01");
 
-		if(m_floorCheckObjs[0] != null)
-		{
-			m_floorCheckScripts[0] = m_floorCheckObjs[0].GetComponent<FloorCheck>();
-		}
+		//if(m_floorCheckObjs[0] != null)
+		//{
+		//	m_floorCheckScripts[0] = m_floorCheckObjs[0].GetComponent<FloorCheck>();
+		//}
 
-		m_floorCheckObjs[1] = GameObject.Find("FloorCheck02");
+		//m_floorCheckObjs[1] = GameObject.Find("FloorCheck02");
 		
-		if(m_floorCheckObjs[1] != null)
-		{
-			m_floorCheckScripts[1] = m_floorCheckObjs[1].GetComponent<FloorCheck>();
-		}
+		//if(m_floorCheckObjs[1] != null)
+		//{
+		//	m_floorCheckScripts[1] = m_floorCheckObjs[1].GetComponent<FloorCheck>();
+		//}
 
-		m_floorCheckObjs[2] = GameObject.Find("FloorCheck03");
+		//m_floorCheckObjs[2] = GameObject.Find("FloorCheck03");
 		
-		if(m_floorCheckObjs[2] != null)
-		{
-			m_floorCheckScripts[2] = m_floorCheckObjs[2].GetComponent<FloorCheck>();
-		}
+		//if(m_floorCheckObjs[2] != null)
+		//{
+		//	m_floorCheckScripts[2] = m_floorCheckObjs[2].GetComponent<FloorCheck>();
+		//}
 
-		m_floorCheckObjs[3] = GameObject.Find("FloorCheck04");
+		//m_floorCheckObjs[3] = GameObject.Find("FloorCheck04");
 		
-		if(m_floorCheckObjs[3] != null)
-		{
-			m_floorCheckScripts[3] = m_floorCheckObjs[3].GetComponent<FloorCheck>();
-		}
+		//if(m_floorCheckObjs[3] != null)
+		//{
+		//	m_floorCheckScripts[3] = m_floorCheckObjs[3].GetComponent<FloorCheck>();
+		//}
 
-		m_gateObjs[0] = GameObject.Find("Gate01");
+		//m_gateObjs[0] = GameObject.Find("Gate01");
 
-		if(m_gateObjs[0] != null)
-		{
-			m_gateOpenAnims[0] = m_gateObjs[0].GetComponent<Animator>();
-		}
+		//if(m_gateObjs[0] != null)
+		//{
+		//	m_gateOpenAnims[0] = m_gateObjs[0].GetComponent<Animator>();
+		//}
 
-		m_liftObjs[0] = GameObject.Find("Lift01");
+		//m_liftObjs[0] = GameObject.Find("Lift01");
 
-		if(m_liftObjs[0] != null)
-		{
-			m_liftScripts[0] = m_liftObjs[0].GetComponent<Lift>();
-		}
+		//if(m_liftObjs[0] != null)
+		//{
+		//	m_liftScripts[0] = m_liftObjs[0].GetComponent<Lift>();
+		//}
 
-		m_liftObjs[1] = GameObject.Find("Lift02");
+		//m_liftObjs[1] = GameObject.Find("Lift02");
 
-		if(m_liftObjs[1] != null)
-		{
-			m_liftScripts[1] = m_liftObjs[1].GetComponent<Lift>();
-		}
+		//if(m_liftObjs[1] != null)
+		//{
+		//	m_liftScripts[1] = m_liftObjs[1].GetComponent<Lift>();
+		//}
 
-		m_liftObjs[2] = GameObject.Find("Lift03");
+		//m_liftObjs[2] = GameObject.Find("Lift03");
 		
-		if(m_liftObjs[2] != null)
-		{
-			m_liftScripts[2] = m_liftObjs[2].GetComponent<Lift>();
-		}
+		//if(m_liftObjs[2] != null)
+		//{
+		//	m_liftScripts[2] = m_liftObjs[2].GetComponent<Lift>();
+		//}
 
-		m_liftObjs[3] = GameObject.Find("Lift04");
+		//m_liftObjs[3] = GameObject.Find("Lift04");
 		
-		if(m_liftObjs[3] != null)
-		{
-			m_liftScripts[3] = m_liftObjs[3].GetComponent<Lift>();
-		}
+		//if(m_liftObjs[3] != null)
+		//{
+		//	m_liftScripts[3] = m_liftObjs[3].GetComponent<Lift>();
+		//}
 
-		m_liftObjs[4] = GameObject.Find("Lift05");
+		//m_liftObjs[4] = GameObject.Find("Lift05");
 		
-		if(m_liftObjs[4] != null)
-		{
-			m_liftScripts[4] = m_liftObjs[4].GetComponent<Lift>();
-		}
+		//if(m_liftObjs[4] != null)
+		//{
+		//	m_liftScripts[4] = m_liftObjs[4].GetComponent<Lift>();
+		//}
 
-		m_statueRenderers[0] = m_statueObjs[0].GetComponent<SpriteRenderer>();
-		m_statueRenderers[1] = m_statueObjs[1].GetComponent<SpriteRenderer>();
-		m_statueRenderers[2] = m_statueObjs[2].GetComponent<SpriteRenderer>();
-		m_statueRenderers[3] = m_statueObjs[3].GetComponent<SpriteRenderer>();
+		//m_statueRenderers[0] = m_statueObjs[0].GetComponent<SpriteRenderer>();
+		//m_statueRenderers[1] = m_statueObjs[1].GetComponent<SpriteRenderer>();
+		//m_statueRenderers[2] = m_statueObjs[2].GetComponent<SpriteRenderer>();
+		//m_statueRenderers[3] = m_statueObjs[3].GetComponent<SpriteRenderer>();
 
 
-		m_thugObjs[0] = GameObject.Find("Thug01");
+		//m_thugObjs[0] = GameObject.Find("Thug01");
 
-		if(m_thugObjs[0] != null)
-		{
-			m_thugScripts[0] = m_thugObjs[0].GetComponent<Thug>();
-		}
+		//if(m_thugObjs[0] != null)
+		//{
+		//	m_thugScripts[0] = m_thugObjs[0].GetComponent<Thug>();
+		//}
 
-		m_thugObjs[1] = GameObject.Find("Thug02");
+		//m_thugObjs[1] = GameObject.Find("Thug02");
 		
-		if(m_thugObjs[1] != null)
-		{
-			m_thugScripts[1] = m_thugObjs[1].GetComponent<Thug>();
-		}
+		//if(m_thugObjs[1] != null)
+		//{
+		//	m_thugScripts[1] = m_thugObjs[1].GetComponent<Thug>();
+		//}
 
-		m_thugObjs[2] = GameObject.Find("Thug03");
+		//m_thugObjs[2] = GameObject.Find("Thug03");
 		
-		if(m_thugObjs[2] != null)
-		{
-			m_thugScripts[2] = m_thugObjs[2].GetComponent<Thug>();
-		}
+		//if(m_thugObjs[2] != null)
+		//{
+		//	m_thugScripts[2] = m_thugObjs[2].GetComponent<Thug>();
+		//}
 
-		m_thugObjs[3] = GameObject.Find("Thug04");
+		//m_thugObjs[3] = GameObject.Find("Thug04");
 		
-		if(m_thugObjs[3] != null)
-		{
-			m_thugScripts[3] = m_thugObjs[3].GetComponent<Thug>();
-		}
+		//if(m_thugObjs[3] != null)
+		//{
+		//	m_thugScripts[3] = m_thugObjs[3].GetComponent<Thug>();
+		//}
 
-		m_gateOpenAnims[0].SetBool("Closed" , false);
+		//m_gateOpenAnims[0].SetBool("Closed" , false);
 	}
 	#endregion
 
