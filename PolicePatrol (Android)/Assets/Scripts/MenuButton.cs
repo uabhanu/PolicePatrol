@@ -2,6 +2,7 @@
 using System.Runtime;
 using System.Text;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuButton : MonoBehaviour 
@@ -23,7 +24,7 @@ public class MenuButton : MonoBehaviour
 
 				if(imageName == "Spr_Unlock" && xScale >= 5)
 				{
-					Application.LoadLevel("Level 1");
+					SceneManager.LoadScene("Level 1");
 				}
 	
 			break;
@@ -32,7 +33,7 @@ public class MenuButton : MonoBehaviour
 				
 				if(imageName == "Spr_Unlock" && xScale >= 5)
 				{
-					Application.LoadLevel("Level 2");
+					SceneManager.LoadScene("Level 2");
 				}
 			
 			break;
@@ -41,7 +42,7 @@ public class MenuButton : MonoBehaviour
 				
 				if(imageName == "Spr_Unlock" && xScale >= 5)
 				{
-					Application.LoadLevel("Level 3");
+					SceneManager.LoadScene("Level 3");
 				}
 			
 			break;
@@ -50,7 +51,7 @@ public class MenuButton : MonoBehaviour
 				
 				if(imageName == "Spr_Unlock" && xScale >= 5)
 				{
-					Application.LoadLevel("Level 4");
+					SceneManager.LoadScene("Level 4");;
 				}
 			
 			break;
@@ -59,7 +60,7 @@ public class MenuButton : MonoBehaviour
 				
 				if(imageName == "Spr_Unlock" && xScale >= 5)
 				{
-					Application.LoadLevel("Level 5");
+					SceneManager.LoadScene("Level 5");
 				}
 			
 			break;
@@ -68,17 +69,17 @@ public class MenuButton : MonoBehaviour
 				
 				if(imageName == "Spr_Unlock" && xScale >= 5)
 				{
-					Application.LoadLevel("Level 6");
+					SceneManager.LoadScene("Level 6");;
 				}
 			
 			break;
 
 			case "Play" :
-				Application.LoadLevel("LevelSelection");
+				SceneManager.LoadScene("LevelSelection");
 			break;
 
 			case "Rate" :
-				Application.OpenURL("https://play.google.com/store/apps/details?id=com.The3Brothers.C3");
+				Application.OpenURL("https://play.google.com/store/apps/details?id=com.The3Brothers.C3"); //Correct URL will come here when ready
 			break;
 		}
 	}

@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class BlendUIBar : MonoBehaviour 
 {
-	public float m_blendUIGravityScale;
-	public PoliceController m_policeScript;
-	public Rigidbody2D m_blendUIBarBody2D;
-	public SpriteRenderer[] m_blendUIRenderers;
-	public Thug[] m_thugScripts;
-	public Transform m_start;
+	[SerializeField] float m_blendUIGravityScale;
+	[SerializeField] PoliceController m_policeScript;
+	[SerializeField] Rigidbody2D m_blendUIBarBody2D;
+	[SerializeField] SpriteRenderer[] m_blendUIRenderers;
+	[SerializeField] Thug[] m_thugScripts;
+	[SerializeField] Transform m_start;
 
 	void Start () 
 	{
