@@ -7,16 +7,17 @@ public class BlendUIBar : MonoBehaviour
 	public PoliceController m_policeScript;
 	public Rigidbody2D m_blendUIBarBody2D;
 	public SpriteRenderer[] m_blendUIRenderers;
-	public Thug[] m_thugScripts;
+	public Thug m_thugScript;
 	public Transform m_start;
 
-	void Start () 
+
+    void Start () 
 	{
 		m_blendUIBarBody2D.isKinematic = true;
+        m_thugScript = GameObject.FindGameObjectWithTag("Thug").GetComponent<Thug>();
 		StartCoroutine("BlendUIProperties");
 	}
 
-	#region IEnumerator BlendUIProperties()
 	IEnumerator BlendUIProperties()
 	{
 		yield return new WaitForSeconds(0.5f);
@@ -35,9 +36,7 @@ public class BlendUIBar : MonoBehaviour
 
 		StartCoroutine("BlendUIProperties");
 	}
-	#endregion
 
-	#region GravityScale()
 	void GravityScale()
 	{
 		if(m_blendUIRenderers[0].enabled && transform.position.y < 1.464f)
@@ -45,48 +44,22 @@ public class BlendUIBar : MonoBehaviour
 			m_blendUIBarBody2D.gravityScale = -m_blendUIGravityScale;
 		}
 	}
-	#endregion
 
-	#region OnCollisionEnter2D()
 	void OnCollisionEnter2D(Collision2D col2D)
 	{
 		if(col2D.gameObject.name.Equals("BlendUI"))
 		{
 			//Debug.Log("BlendUI");
 
-			if(m_thugScripts[0] != null && m_thugScripts[0].m_currentState == Thug.EnemyState.LOOKOUT)
+			if(m_thugScript != null && m_thugScript.m_currentState == Thug.EnemyState.LOOKOUT)
 			{
 				m_policeScript.SetState(PoliceController.PlayerState.DYING);
-				m_thugScripts[0].SetState(Thug.EnemyState.ATTACK);
+				m_thugScript.SetState(Thug.EnemyState.ATTACK);
 				//Debug.Log("BlendUI");
 			}
-
-			if(m_thugScripts[1] != null && m_thugScripts[1].m_currentState == Thug.EnemyState.LOOKOUT)
-			{
-				m_policeScript.SetState(PoliceController.PlayerState.DYING);
-				m_thugScripts[1].SetState(Thug.EnemyState.ATTACK);
-				//Debug.Log("BlendUI");
-			}
-
-			if(m_thugScripts[2] != null && m_thugScripts[2].m_currentState == Thug.EnemyState.LOOKOUT)
-			{
-				m_policeScript.SetState(PoliceController.PlayerState.DYING);
-				m_thugScripts[2].SetState(Thug.EnemyState.ATTACK);
-				//Debug.Log("BlendUI");
-			}
-
-			if(m_thugScripts[3] != null && m_thugScripts[3].m_currentState == Thug.EnemyState.LOOKOUT)
-			{
-				m_policeScript.SetState(PoliceController.PlayerState.DYING);
-				m_thugScripts[3].SetState(Thug.EnemyState.ATTACK);
-				//Debug.Log("BlendUI");
-			}
-
 		}
 	}
-	#endregion
 
-	#region Update()
 	void Update () 
 	{
 		if(Time.timeScale == 0)
@@ -99,5 +72,4 @@ public class BlendUIBar : MonoBehaviour
 			GravityScale();
 		}
 	}
-	#endregion
 }
