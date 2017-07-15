@@ -28,11 +28,11 @@ public class SriTouchInputManager : MonoBehaviour
 {
 	#region Events
 	public delegate void TouchEvent(TouchInfo touchInfo);
-	public static event TouchEvent  Tapped;
-	public static event TouchEvent  DoubleTapped;
-	public static event TouchEvent  TapHeld;
-	public static event TouchEvent  Released;
-	public static event TouchEvent  Swiped;
+	public event TouchEvent  Tapped;
+	public event TouchEvent  DoubleTapped;
+	public event TouchEvent  TapHeld;
+	public event TouchEvent  Released;
+	public event TouchEvent  Swiped;
     #endregion
 
     #region Singleton Instance;
