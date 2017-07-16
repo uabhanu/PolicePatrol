@@ -66,7 +66,7 @@ public class SriTouchInputListener : MonoBehaviour
 	{
 		if (Tap != null)
 		{
-			Tap(touchInfo);
+            Tap(touchInfo);
 		}
 	}
 

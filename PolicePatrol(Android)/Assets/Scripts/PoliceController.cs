@@ -20,8 +20,9 @@ public class PoliceController : MonoBehaviour
 	public PlayerState m_currentState;
 	public PlayerState m_previousState;
 
-    bool m_isFacingRight , m_isMoving , m_isMovingRight;
+    bool m_isFacingRight , m_isMoving , m_isMovingRight , m_tapped , m_touchReleased;
     [SerializeField] float m_walkSpeed , m_runSpeed;
+    float m_xInput = 0f;
     [SerializeField] Rigidbody2D m_policeBody2D;
 
     private PlayerState GetState()
@@ -43,7 +44,7 @@ public class PoliceController : MonoBehaviour
     private void Start()
     {
         m_isFacingRight = true;
-        m_isMovingRight = true;
+        SetState(PlayerState.IDLE);
     }
 
     private void Update()
@@ -101,6 +102,21 @@ public class PoliceController : MonoBehaviour
         m_policeBody2D.velocity = new Vector2(0f , 0f);
     }
 
+    void OnTapped(TouchInfo touchInfo)
+    {
+        if(!m_isMoving)
+        {
+            m_isMoving = true;
+            SetState(PlayerState.WALK);
+        }
+
+        if(m_isMoving)
+        {
+            m_isMoving = false;
+            SetState(PlayerState.IDLE);
+        }
+    }
+
     void Run()
     {
 
@@ -109,6 +125,52 @@ public class PoliceController : MonoBehaviour
     void ThighSlap()
     {
 
+    }
+
+    public void TouchInput(TouchInfo touchInfo)
+    {
+        SriTouchGestures gesture = touchInfo.touchGesture;
+
+        switch(gesture)
+        {
+            case SriTouchGestures.SRI_NONE:
+                Debug.Log("Nothing Happened");
+            break;
+
+            case SriTouchGestures.SRI_SWIPEDLEFT:
+                Debug.Log("Swiped Left");
+            break;
+
+            case SriTouchGestures.SRI_SWIPEDRIGHT:
+                Debug.Log("Swiped Right");
+            break;
+
+            case SriTouchGestures.SRI_SWIPEDUP:
+                Debug.Log("Swiped Up");
+            break;
+
+            case SriTouchGestures.SRI_SWIPEDDOWN:
+                Debug.Log("Swiped Down");
+            break;
+
+            case SriTouchGestures.SRI_DOUBLETAPPED:
+                Debug.Log("Double Tapped");
+            break;
+
+            case SriTouchGestures.SRI_TAPHELD:
+                Debug.Log("Tap Held");
+            break;
+
+            case SriTouchGestures.SRI_RELEASED:
+                Debug.Log("Touch Released");
+                m_tapped = false;
+            break;
+
+            case SriTouchGestures.SRI_TAPPED:
+                Debug.Log("Tapped");
+                m_tapped = true;
+            break;
+        }
     }
 
     void Walk()
@@ -136,7 +198,7 @@ public class PoliceController : MonoBehaviour
 
     private void UpdateAnimations()
 	{
-		switch (m_currentState)
+		switch(m_currentState)
 		{
 			case PlayerState.ATTACK: break;
 			case PlayerState.BLEND: break;
@@ -153,7 +215,7 @@ public class PoliceController : MonoBehaviour
 
     private void UpdateStateMachine()
     {
-	    switch (m_currentState)
+	    switch(m_currentState)
 	    {
 		    case PlayerState.ATTACK:
 			    Attack();

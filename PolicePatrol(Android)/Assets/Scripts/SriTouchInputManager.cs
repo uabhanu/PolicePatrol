@@ -111,6 +111,7 @@ public class SriTouchInputManager : MonoBehaviour
 					if (Tapped != null)
 					{
 						Tapped(m_touchInfo);
+                        Debug.Log("Tapped");
 					}
 					break;
 				case SriTouchGestures.SRI_DOUBLETAPPED:
