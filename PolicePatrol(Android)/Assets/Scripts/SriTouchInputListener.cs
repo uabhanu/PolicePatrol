@@ -22,7 +22,7 @@ public class SriTouchInputListener : MonoBehaviour
 	#endregion
 
 	#region Private Methods
-	void Awake()
+	void Start()
 	{
 		RegisterInputEvents();
     }

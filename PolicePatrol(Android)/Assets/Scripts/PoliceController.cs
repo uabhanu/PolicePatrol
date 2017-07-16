@@ -21,6 +21,7 @@ public class PoliceController : MonoBehaviour
 	public PlayerState m_previousState;
 
     bool m_isFacingRight , m_isMovingRight , m_registeredInputEvents , m_tapped , m_touchReleased;
+    [SerializeField] bool m_isMoving;
     [SerializeField] float m_walkSpeed , m_runSpeed;
     float m_xInput = 0f;
     [SerializeField] Rigidbody2D m_policeBody2D;
@@ -45,7 +46,6 @@ public class PoliceController : MonoBehaviour
     private void Start()
     {
         m_isFacingRight = true;
-        m_previousState = PlayerState.IDLE;
         SetState(PlayerState.IDLE);
         RegisterEvents();
 
@@ -115,17 +115,17 @@ public class PoliceController : MonoBehaviour
     {
         Debug.Log("Tapped");
 
-        if(!m_isMovingRight)
+        if(!m_isMoving)
         {
-            m_isMovingRight = true;
-            SetState(PlayerState.WALK);
+            m_isMoving = true;
         }
 
-        if(m_isMovingRight)
+        else if(m_isMoving)
         {
-            m_isMovingRight = false;
-            SetState(PlayerState.IDLE);
+            m_isMoving = false;
         }
+
+        //SetState(PlayerState.WALK);
     }
 
     void RegisterEvents()
