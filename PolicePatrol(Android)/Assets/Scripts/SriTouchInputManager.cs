@@ -111,7 +111,6 @@ public class SriTouchInputManager : MonoBehaviour
 					if (Tapped != null)
 					{
 						Tapped(m_touchInfo);
-                        Debug.Log("Tapped");
 					}
 					break;
 				case SriTouchGestures.SRI_DOUBLETAPPED:
@@ -171,7 +170,7 @@ public class SriTouchInputManager : MonoBehaviour
 			if(m_hasTouched)
 			{
 				Vector3 screenToWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-				m_firstTouchPosition = new Vector2(screenToWorld.x, screenToWorld.y);
+				m_firstTouchPosition = new Vector2(screenToWorld.x , screenToWorld.y);
 				m_currentTouchPosition = m_firstTouchPosition;
 				m_touchInfo.touchPosition = m_currentTouchPosition;
 				m_firstTouchTime = Time.time;
@@ -251,6 +250,11 @@ public class SriTouchInputManager : MonoBehaviour
 					{
 						verticalSwipe = true;
 					}
+
+                    if(Time.time - m_firstTouchTime >= m_doubleTapDelay)
+			        {
+				        m_checkedDoubleTap = true;
+			        }
 
 					if(horizontalSwipe || verticalSwipe)
 					{
