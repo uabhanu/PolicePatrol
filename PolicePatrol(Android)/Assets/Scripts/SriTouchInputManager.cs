@@ -40,7 +40,7 @@ public class SriTouchInputManager : MonoBehaviour
 	#endregion
 
 	#region Serialized
-	[SerializeField] private float    m_doubleTapDelay    = 0.15f;
+	[SerializeField] private float    m_doubleTapDelay    = 0.1f;
 	[SerializeField] private float    m_touchHeldTime     = 0.20f;
 	#endregion
 	#region Private
