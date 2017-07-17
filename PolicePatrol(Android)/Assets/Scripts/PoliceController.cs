@@ -45,6 +45,7 @@ public class PoliceController : MonoBehaviour
     private void Start()
     {
         m_isFacingRight = true;
+        m_isMovingRight = true;
         SetState(PlayerState.IDLE);
         RegisterEvents();
 
