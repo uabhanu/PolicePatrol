@@ -20,8 +20,7 @@ public class PoliceController : MonoBehaviour
 	public PlayerState m_currentState;
 	public PlayerState m_previousState;
 
-    bool m_isFacingRight , m_isMovingRight , m_registeredInputEvents , m_tapped , m_touchReleased;
-    [SerializeField] bool m_isMoving;
+    bool m_isFacingRight , m_isMoving , m_isMovingRight , m_registeredInputEvents , m_tapped , m_touchReleased;
     [SerializeField] float m_walkSpeed , m_runSpeed;
     float m_xInput = 0f;
     [SerializeField] Rigidbody2D m_policeBody2D;
@@ -103,7 +102,8 @@ public class PoliceController : MonoBehaviour
 
     void Idle()
     {
-        m_policeBody2D.velocity = new Vector2(0f , 0f);
+        m_policeBody2D.velocity = new Vector2(0f , m_policeBody2D.velocity.y);
+		m_isMoving = false;
     }
 
     private void OnDestroy()
@@ -114,18 +114,18 @@ public class PoliceController : MonoBehaviour
     void OnTapped(TouchInfo touchInfo)
     {
         Debug.Log("Tapped");
-
-        if(!m_isMoving)
+        
+        if(m_currentState != PlayerState.WALK)
         {
             m_isMoving = true;
+            SetState(PlayerState.WALK);
         }
 
-        else if(m_isMoving)
+        else if(m_currentState == PlayerState.WALK)
         {
             m_isMoving = false;
+            SetState(PlayerState.IDLE);
         }
-
-        //SetState(PlayerState.WALK);
     }
 
     void RegisterEvents()
@@ -210,7 +210,13 @@ public class PoliceController : MonoBehaviour
 
     void Walk()
     {
-        if(m_isMovingRight)
+        if(!m_isMoving)
+		{
+			SetState(PlayerState.IDLE);
+			return;
+		}
+		
+		if(m_isMovingRight)
 		{
 			if(!m_isFacingRight)
 			{
@@ -228,6 +234,12 @@ public class PoliceController : MonoBehaviour
 			}
 			
 			m_policeBody2D.velocity = new Vector2(-m_walkSpeed , m_policeBody2D.velocity.y);
+		}
+		
+		else
+		{
+			m_isMoving = false;
+			return;
 		}
     }
 
