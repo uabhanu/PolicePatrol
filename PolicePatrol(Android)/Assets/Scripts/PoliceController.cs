@@ -20,11 +20,12 @@ public class PoliceController : MonoBehaviour
 	public PlayerState m_currentState;
 	public PlayerState m_previousState;
 
-    bool m_isFacingRight , m_isMoving , m_isMovingRight , m_registeredInputEvents , m_tapped , m_touchReleased;
+    bool m_isFacingRight , m_isMoving , m_isMovingLeft , m_isMovingRight , m_registeredInputEvents , m_tapped , m_tappedLeft , m_tappedRight , m_touchReleased;
     [SerializeField] float m_walkSpeed , m_runSpeed;
     float m_xInput = 0f;
-    [SerializeField] Rigidbody2D m_policeBody2D;
+    [SerializeField] Rigidbody2D m_constableBody;
     [SerializeField] SriTouchInputListener m_touchInputListener;
+    Vector2 m_firstTouchPosition;
 
     private PlayerState GetState()
 	{
@@ -45,6 +46,7 @@ public class PoliceController : MonoBehaviour
     private void Start()
     {
         m_isFacingRight = true;
+        m_isMovingLeft = false;
         m_isMovingRight = true;
         SetState(PlayerState.IDLE);
         RegisterEvents();
@@ -103,7 +105,7 @@ public class PoliceController : MonoBehaviour
 
     void Idle()
     {
-        m_policeBody2D.velocity = new Vector2(0f , m_policeBody2D.velocity.y);
+        m_constableBody.velocity = new Vector2(0f , m_constableBody.velocity.y);
 		m_isMoving = false;
     }
 
@@ -115,17 +117,34 @@ public class PoliceController : MonoBehaviour
     void OnTapped(TouchInfo touchInfo)
     {
         Debug.Log("Tapped");
-        
-        if(m_currentState != PlayerState.WALK)
+
+        if (m_currentState != PlayerState.WALK)
         {
             m_isMoving = true;
             SetState(PlayerState.WALK);
         }
 
-        else if(m_currentState == PlayerState.WALK)
+        else if (m_currentState == PlayerState.WALK)
         {
             m_isMoving = false;
             SetState(PlayerState.IDLE);
+        }
+
+        Vector3 screenToWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		m_firstTouchPosition = new Vector2(screenToWorld.x , screenToWorld.y);
+
+        if(screenToWorld.x < m_constableBody.position.x)
+        {
+            //Debug.Log("Left to Constable");
+            m_isMovingLeft = true;
+            m_isMovingRight = false;
+        }
+
+        else if(screenToWorld.x > m_constableBody.position.x)
+        {
+           //Debug.Log("Right to Constable");
+           m_isMovingLeft = false;
+            m_isMovingRight = true;
         }
     }
 
@@ -224,17 +243,17 @@ public class PoliceController : MonoBehaviour
 				Flip();
 			}
 			
-			m_policeBody2D.velocity = new Vector2(m_walkSpeed , m_policeBody2D.velocity.y);
+			m_constableBody.velocity = new Vector2(m_walkSpeed , m_constableBody.velocity.y);
 		}
 		
-		else if(!m_isMovingRight)
+		else if(m_isMovingLeft)
 		{
 			if(m_isFacingRight)
 			{
 				Flip();
 			}
 			
-			m_policeBody2D.velocity = new Vector2(-m_walkSpeed , m_policeBody2D.velocity.y);
+			m_constableBody.velocity = new Vector2(-m_walkSpeed , m_constableBody.velocity.y);
 		}
 		
 		else
