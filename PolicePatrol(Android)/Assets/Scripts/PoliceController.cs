@@ -27,30 +27,19 @@ public class PoliceController : MonoBehaviour
     [SerializeField] SriTouchInputListener m_touchInputListener;
     Vector2 m_firstTouchPosition;
 
-    private PlayerState GetState()
-	{
-		return m_currentState;
-	}
-
-    public void SetState(PlayerState newState)
-	{
-		if (m_currentState == newState)
-		{
-			return;
-		}
-		
-		m_previousState = m_currentState;
-		m_currentState = newState;
-	}
+    private void Reset()
+    {
+        m_runSpeed = 2.0f;
+        m_walkSpeed = 1.25f;
+    }
 
     private void Start()
     {
         m_isFacingRight = true;
         m_isMovingLeft = false;
         m_isMovingRight = true;
-        SetState(PlayerState.IDLE);
         RegisterEvents();
-
+        SetState(PlayerState.IDLE);
     }
 
     private void Update()
@@ -101,6 +90,11 @@ public class PoliceController : MonoBehaviour
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+    private PlayerState GetState()
+	{
+		return m_currentState;
 	}
 
     void Idle()
@@ -162,6 +156,17 @@ public class PoliceController : MonoBehaviour
     {
 
     }
+
+    public void SetState(PlayerState newState)
+	{
+		if (m_currentState == newState)
+		{
+			return;
+		}
+		
+		m_previousState = m_currentState;
+		m_currentState = newState;
+	}
 
     void ThighSlap()
     {
