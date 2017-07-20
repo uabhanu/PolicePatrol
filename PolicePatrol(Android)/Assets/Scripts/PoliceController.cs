@@ -144,11 +144,21 @@ public class PoliceController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D col2D)
+    private void OnTriggerEnter2D(Collider2D col2DEnter)
     {
-        if(col2D.gameObject.tag.Equals("Light"))
+        if(col2DEnter.gameObject.tag.Equals("Light"))
         {
             m_isVisible = true;
+            m_constableRenderer.color = Color.red;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D col2DExit)
+    {
+        if(col2DExit.gameObject.tag.Equals("Light"))
+        {
+            m_isVisible = false;
+            m_constableRenderer.color = Color.white;
         }
     }
 
