@@ -20,11 +20,12 @@ public class PoliceController : MonoBehaviour
 	public PlayerState m_currentState;
 	public PlayerState m_previousState;
 
-    bool m_isFacingRight , m_isMoving , m_isMovingLeft , m_isMovingRight , m_isVisible , m_registeredInputEvents , m_tapped , m_tappedLeft , m_tappedRight , m_touchReleased;
+    bool m_isFacingRight , m_isMoving , m_isMovingLeft , m_isMovingRight , m_registeredInputEvents , m_tapped , m_tappedLeft , m_tappedRight , m_touchReleased;
+    public bool m_isVisible;
     [SerializeField] float m_walkSpeed , m_runSpeed;
     float m_xInput = 0f;
-    Rigidbody2D m_constableBody;
-    [SerializeField] SpriteRenderer m_constableRenderer;
+    Rigidbody2D m_copBody2D;
+    [SerializeField] SpriteRenderer m_copRenderer;
     [SerializeField] SriTouchInputListener m_touchInputListener;
     Vector2 m_firstTouchPosition;
 
@@ -36,7 +37,8 @@ public class PoliceController : MonoBehaviour
 
     private void Start()
     {
-        m_constableBody = GetComponent<Rigidbody2D>();
+        m_copBody2D = GetComponent<Rigidbody2D>();
+        m_copRenderer = GetComponent<SpriteRenderer>();
         m_isFacingRight = true;
         m_isMovingLeft = false;
         m_isMovingRight = true;
@@ -101,7 +103,7 @@ public class PoliceController : MonoBehaviour
 
     void Idle()
     {
-        m_constableBody.velocity = new Vector2(0f , m_constableBody.velocity.y);
+        m_copBody2D.velocity = new Vector2(0f , m_copBody2D.velocity.y);
 		m_isMoving = false;
     }
 
@@ -129,14 +131,14 @@ public class PoliceController : MonoBehaviour
         Vector3 screenToWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		m_firstTouchPosition = new Vector2(screenToWorld.x , screenToWorld.y);
 
-        if(screenToWorld.x < m_constableBody.position.x)
+        if(screenToWorld.x < m_copBody2D.position.x)
         {
             //Debug.Log("Left to Constable");
             m_isMovingLeft = true;
             m_isMovingRight = false;
         }
 
-        else if(screenToWorld.x > m_constableBody.position.x)
+        else if(screenToWorld.x > m_copBody2D.position.x)
         {
            //Debug.Log("Right to Constable");
            m_isMovingLeft = false;
@@ -149,7 +151,7 @@ public class PoliceController : MonoBehaviour
         if(col2DEnter.gameObject.tag.Equals("Light"))
         {
             m_isVisible = true;
-            m_constableRenderer.color = Color.red;
+            m_copRenderer.color = Color.red;
         }
     }
 
@@ -158,7 +160,7 @@ public class PoliceController : MonoBehaviour
         if(col2DExit.gameObject.tag.Equals("Light"))
         {
             m_isVisible = false;
-            m_constableRenderer.color = Color.white;
+            m_copRenderer.color = Color.white;
         }
     }
 
@@ -268,7 +270,7 @@ public class PoliceController : MonoBehaviour
 				Flip();
 			}
 			
-			m_constableBody.velocity = new Vector2(m_walkSpeed , m_constableBody.velocity.y);
+			m_copBody2D.velocity = new Vector2(m_walkSpeed , m_copBody2D.velocity.y);
 		}
 		
 		else if(m_isMovingLeft)
@@ -278,7 +280,7 @@ public class PoliceController : MonoBehaviour
 				Flip();
 			}
 			
-			m_constableBody.velocity = new Vector2(-m_walkSpeed , m_constableBody.velocity.y);
+			m_copBody2D.velocity = new Vector2(-m_walkSpeed , m_copBody2D.velocity.y);
 		}
 		
 		else
