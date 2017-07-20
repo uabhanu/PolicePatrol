@@ -53,12 +53,13 @@ public class StandGroundThug : MonoBehaviour
 
     IEnumerator Flipping()
 	{
-		if(m_currentState == EnemyState.IDLE)
-		{
-			yield return new WaitForSeconds(m_flipTime);
-			Flip();
+		yield return new WaitForSeconds(m_flipTime);
+            
+        if(m_currentState == EnemyState.IDLE)
+        {
+            Flip();
 			StartCoroutine("Flipping");
-		}
+        }
 	}
 
     void Attack()
@@ -104,11 +105,11 @@ public class StandGroundThug : MonoBehaviour
 				RaycastHit2D hit2D = Physics2D.Raycast(new Vector2(transform.position.x + m_rayDistanceFromSelf , transform.position.y) , -transform.right , m_rayDistance);
 				
 				if(hit2D) 
-				{            
-					if(hit2D.collider.tag.Equals("Player") && m_copVisible)
-					{
-						SetState(EnemyState.RUN);
-					}
+				{
+                    if(hit2D.collider.tag.Equals("Player") && m_copVisible)
+                    {
+                        SetState(EnemyState.RUN);
+                    }
 				}
 				
 				Debug.DrawRay(new Vector2(transform.position.x + m_rayDistanceFromSelf , transform.position.y) , -transform.right * m_rayDistance , Color.red);
