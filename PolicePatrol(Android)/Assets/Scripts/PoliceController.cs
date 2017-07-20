@@ -20,10 +20,11 @@ public class PoliceController : MonoBehaviour
 	public PlayerState m_currentState;
 	public PlayerState m_previousState;
 
-    bool m_isFacingRight , m_isMoving , m_isMovingLeft , m_isMovingRight , m_registeredInputEvents , m_tapped , m_tappedLeft , m_tappedRight , m_touchReleased;
+    bool m_isFacingRight , m_isMoving , m_isMovingLeft , m_isMovingRight , m_isVisible , m_registeredInputEvents , m_tapped , m_tappedLeft , m_tappedRight , m_touchReleased;
     [SerializeField] float m_walkSpeed , m_runSpeed;
     float m_xInput = 0f;
-    [SerializeField] Rigidbody2D m_constableBody;
+    Rigidbody2D m_constableBody;
+    [SerializeField] SpriteRenderer m_constableRenderer;
     [SerializeField] SriTouchInputListener m_touchInputListener;
     Vector2 m_firstTouchPosition;
 
@@ -35,6 +36,7 @@ public class PoliceController : MonoBehaviour
 
     private void Start()
     {
+        m_constableBody = GetComponent<Rigidbody2D>();
         m_isFacingRight = true;
         m_isMovingLeft = false;
         m_isMovingRight = true;
@@ -139,6 +141,14 @@ public class PoliceController : MonoBehaviour
            //Debug.Log("Right to Constable");
            m_isMovingLeft = false;
             m_isMovingRight = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D col2D)
+    {
+        if(col2D.gameObject.tag.Equals("Light"))
+        {
+            m_isVisible = true;
         }
     }
 
