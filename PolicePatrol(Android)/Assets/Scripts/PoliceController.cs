@@ -20,8 +20,8 @@ public class PoliceController : MonoBehaviour
 	public PlayerState m_currentState;
 	public PlayerState m_previousState;
 
-    bool m_isFacingRight , m_isMoving , m_isMovingLeft , m_isMovingRight , m_registeredInputEvents , m_tapped , m_tappedLeft , m_tappedRight , m_touchReleased;
-    public bool m_isVisible;
+    bool m_isFacingRight , m_isMovingLeft , m_isMovingRight , m_registeredInputEvents , m_tapped , m_tappedLeft , m_tappedRight , m_touchReleased;
+    public bool m_coverBlown , m_isVisible;
     [SerializeField] float m_walkSpeed , m_runSpeed;
     float m_xInput = 0f;
     Rigidbody2D m_copBody2D;
@@ -104,7 +104,6 @@ public class PoliceController : MonoBehaviour
     void Idle()
     {
         m_copBody2D.velocity = new Vector2(0f , m_copBody2D.velocity.y);
-		m_isMoving = false;
     }
 
     private void OnDestroy()
@@ -116,18 +115,27 @@ public class PoliceController : MonoBehaviour
     {
         Debug.Log("Tapped");
 
-        if (m_currentState != PlayerState.WALK)
+        if(!m_coverBlown)
         {
-            m_isMoving = true;
-            SetState(PlayerState.WALK);
+            if (m_currentState != PlayerState.WALK)
+            {
+                SetState(PlayerState.WALK);
+            }
+
+            else if (m_currentState == PlayerState.WALK)
+            {
+                SetState(PlayerState.IDLE);
+            }
         }
 
-        else if (m_currentState == PlayerState.WALK)
+        else if(m_coverBlown) //Figure out a way to make this true as you can't use Thug Classes
         {
-            m_isMoving = false;
-            SetState(PlayerState.IDLE);
+            if (m_currentState != PlayerState.RUN)
+            {
+                SetState(PlayerState.RUN);
+            }
         }
-
+        
         Vector3 screenToWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		m_firstTouchPosition = new Vector2(screenToWorld.x , screenToWorld.y);
 
@@ -257,12 +265,6 @@ public class PoliceController : MonoBehaviour
 
     void Walk()
     {
-        if(!m_isMoving)
-		{
-			SetState(PlayerState.IDLE);
-			return;
-		}
-		
 		if(m_isMovingRight)
 		{
 			if(!m_isFacingRight)
@@ -285,7 +287,6 @@ public class PoliceController : MonoBehaviour
 		
 		else
 		{
-			m_isMoving = false;
 			return;
 		}
     }

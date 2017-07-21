@@ -18,8 +18,8 @@ public class StandGroundThug : MonoBehaviour
 	public EnemyState m_currentState;
 	public EnemyState m_previousState;
 	
-    bool m_copVisible , m_isFacingRight;
-    [SerializeField] float m_flipTime , m_rayDistance , m_rayDistanceFromSelf;
+    public bool m_copVisible , m_isFacingRight , m_isMovingLeft , m_isMovingRight , m_isRunning , m_isWalking;
+    [SerializeField] float m_flipTime , m_rayDistance , m_rayDistanceFromSelf , m_runSpeed , m_walkSpeed;
     PoliceController m_policeController;
     Rigidbody2D m_thugBody2D;
     [SerializeField] Transform m_startPosition;
@@ -29,6 +29,8 @@ public class StandGroundThug : MonoBehaviour
         m_flipTime = 2.5f;
         m_rayDistance = 11.35f;
         m_rayDistanceFromSelf = 0.35f;
+        m_runSpeed = 2.25f;
+        m_walkSpeed = 1.50f;
     }
 
     void Start() 
@@ -48,6 +50,19 @@ public class StandGroundThug : MonoBehaviour
 		}
 
         m_copVisible = m_policeController.m_isVisible;
+
+        if(m_isFacingRight)
+        {
+            m_isMovingRight = true;
+            m_isMovingLeft = false;
+        }
+
+        else if(!m_isFacingRight)
+        {
+            m_isMovingRight = false;
+            m_isMovingLeft = true;
+        }
+
 		UpdateStateMachine();
 	}
 
@@ -133,7 +148,33 @@ public class StandGroundThug : MonoBehaviour
 
     void Run()
     {
+        m_isRunning = true;
+        m_isWalking = false;
 
+        if(m_isMovingRight)
+		{
+			if(!m_isFacingRight)
+			{
+				Flip();
+			}
+			
+			m_thugBody2D.velocity = new Vector2(m_runSpeed , m_thugBody2D.velocity.y);
+		}
+		
+		else if(m_isMovingLeft)
+		{
+			if(m_isFacingRight)
+			{
+				Flip();
+			}
+			
+			m_thugBody2D.velocity = new Vector2(-m_runSpeed , m_thugBody2D.velocity.y);
+		}
+		
+		else
+		{
+			return;
+		}
     }
 
     public void SetState(EnemyState newState)
@@ -183,6 +224,32 @@ public class StandGroundThug : MonoBehaviour
 
     void Walk()
     {
-        
+        m_isRunning = false;
+        m_isWalking = true;
+
+        if(m_isMovingRight)
+		{
+			if(!m_isFacingRight)
+			{
+				Flip();
+			}
+			
+			m_thugBody2D.velocity = new Vector2(m_walkSpeed , m_thugBody2D.velocity.y);
+		}
+		
+		else if(m_isMovingLeft)
+		{
+			if(m_isFacingRight)
+			{
+				Flip();
+			}
+			
+			m_thugBody2D.velocity = new Vector2(-m_walkSpeed , m_thugBody2D.velocity.y);
+		}
+		
+		else
+		{
+			return;
+		}
     }
 }
