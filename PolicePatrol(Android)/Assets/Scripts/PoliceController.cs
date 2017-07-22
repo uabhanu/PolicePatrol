@@ -27,6 +27,7 @@ public class PoliceController : MonoBehaviour
     Rigidbody2D m_copBody2D;
     [SerializeField] SpriteRenderer m_copRenderer;
     [SerializeField] SriTouchInputListener m_touchInputListener;
+    Thug m_thugController;
     Vector2 m_firstTouchPosition;
 
     private void Reset()
@@ -44,6 +45,7 @@ public class PoliceController : MonoBehaviour
         m_isMovingRight = true;
         RegisterEvents();
         SetState(PlayerState.IDLE);
+        m_thugController = FindObjectOfType<Thug>();
     }
 
     private void Update()
@@ -53,6 +55,7 @@ public class PoliceController : MonoBehaviour
             return;
         }
 
+        m_coverBlown = m_thugController.m_thugChasing;
         UpdateAnimations();
         UpdateStateMachine();
     }
@@ -117,7 +120,7 @@ public class PoliceController : MonoBehaviour
 
         if(!m_coverBlown)
         {
-            if (m_currentState != PlayerState.WALK)
+            if (m_currentState == PlayerState.IDLE)
             {
                 SetState(PlayerState.WALK);
             }
@@ -128,11 +131,16 @@ public class PoliceController : MonoBehaviour
             }
         }
 
-        else if(m_coverBlown) //Figure out a way to make this true as you can't use Thug Classes
+        else if(m_coverBlown)
         {
-            if (m_currentState != PlayerState.RUN)
+            if (m_currentState == PlayerState.IDLE)
             {
                 SetState(PlayerState.RUN);
+            }
+
+            else if (m_currentState == PlayerState.RUN)
+            {
+                SetState(PlayerState.IDLE);
             }
         }
         
@@ -184,7 +192,30 @@ public class PoliceController : MonoBehaviour
 
     void Run()
     {
-
+        if(m_isMovingRight)
+		{
+			if(!m_isFacingRight)
+			{
+				Flip();
+			}
+			
+			m_copBody2D.velocity = new Vector2(m_runSpeed , m_copBody2D.velocity.y);
+		}
+		
+		else if(m_isMovingLeft)
+		{
+			if(m_isFacingRight)
+			{
+				Flip();
+			}
+			
+			m_copBody2D.velocity = new Vector2(-m_runSpeed , m_copBody2D.velocity.y);
+		}
+		
+		else
+		{
+			return;
+		}
     }
 
     public void SetState(PlayerState newState)
