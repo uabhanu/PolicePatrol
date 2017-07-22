@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StandGroundThug : Thug 
 {
-	private void Reset()
+	void Reset()
     {
         m_flipTime = 2.5f;
         m_rayDistance = 11.35f;
@@ -15,7 +15,7 @@ public class StandGroundThug : Thug
 
     void Start()
     {
-        m_policeController = GameObject.FindGameObjectWithTag("Player").GetComponent<PoliceController>();
+        m_policeController = GameObject.FindGameObjectWithTag("Cop").GetComponent<PoliceController>();
         m_startPosition = transform;	
         SetState(EnemyState.IDLE);
         StartCoroutine("Flipping");
@@ -56,7 +56,7 @@ public class StandGroundThug : Thug
 		UpdateStateMachine();
 	}
 
-    private EnemyState GetState()
+    EnemyState GetState()
 	{
 		return m_currentState;
 	}

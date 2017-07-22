@@ -21,7 +21,7 @@ public class PoliceController : MonoBehaviour
 	public PlayerState m_previousState;
 
     bool m_isFacingRight , m_isMovingLeft , m_isMovingRight , m_registeredInputEvents , m_tapped , m_tappedLeft , m_tappedRight , m_touchReleased;
-    public bool m_coverBlown , m_isVisible;
+    public bool m_blend , m_coverBlown , m_isRunning , m_isVisible , m_isWalking;
     [SerializeField] float m_walkSpeed , m_runSpeed;
     float m_xInput = 0f;
     Rigidbody2D m_copBody2D;
@@ -30,13 +30,16 @@ public class PoliceController : MonoBehaviour
     Thug m_thugController;
     Vector2 m_firstTouchPosition;
 
-    private void Reset()
+    void Reset()
     {
+        m_blend = false;
+        m_isRunning = false;
+        m_isWalking = false;
         m_runSpeed = 2.0f;
         m_walkSpeed = 1.25f;
     }
 
-    private void Start()
+    void Start()
     {
         m_copBody2D = GetComponent<Rigidbody2D>();
         m_copRenderer = GetComponent<SpriteRenderer>();
@@ -48,7 +51,7 @@ public class PoliceController : MonoBehaviour
         m_thugController = FindObjectOfType<Thug>();
     }
 
-    private void Update()
+    void Update()
     {
         if(Time.timeScale == 0)
         {
@@ -67,7 +70,8 @@ public class PoliceController : MonoBehaviour
 
     void Blend()
     {
-
+        m_blend = false;
+        m_copBody2D.velocity = new Vector2(0f , m_copBody2D.velocity.y);      
     }
 
     void Crouch()
@@ -99,7 +103,7 @@ public class PoliceController : MonoBehaviour
 		transform.localScale = theScale;
 	}
 
-    private PlayerState GetState()
+    PlayerState GetState()
 	{
 		return m_currentState;
 	}
@@ -169,6 +173,17 @@ public class PoliceController : MonoBehaviour
             m_isVisible = true;
             m_copRenderer.color = Color.red;
         }
+
+        if(col2DEnter.gameObject.tag.Equals("Statue"))
+        {
+            if(m_currentState == PlayerState.RUN)
+            {
+                m_blend = true;
+                m_isRunning = false;
+                m_isWalking = false;
+                SetState(PlayerState.BLEND);   
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D col2DExit)
@@ -178,6 +193,12 @@ public class PoliceController : MonoBehaviour
             m_isVisible = false;
             m_copRenderer.color = Color.white;
         }
+
+        //if(col2DExit.gameObject.tag.Equals("Statue"))
+        //{
+        //    m_blend = false;
+        //    SetState(PlayerState.IDLE);
+        //}
     }
 
     void RegisterEvents()
@@ -192,33 +213,39 @@ public class PoliceController : MonoBehaviour
 
     void Run()
     {
-        if(m_isMovingRight)
-		{
-			if(!m_isFacingRight)
-			{
-				Flip();
-			}
+        m_isRunning = true;
+        m_isWalking = false;
+
+        if(m_isRunning)
+        {
+            if(m_isMovingRight)
+		    {
+			    if(!m_isFacingRight)
+			    {
+				    Flip();
+			    }
 			
-			m_copBody2D.velocity = new Vector2(m_runSpeed , m_copBody2D.velocity.y);
-		}
+			    m_copBody2D.velocity = new Vector2(m_runSpeed , m_copBody2D.velocity.y);
+		    }
 		
-		else if(m_isMovingLeft)
-		{
-			if(m_isFacingRight)
-			{
-				Flip();
-			}
+		    else if(m_isMovingLeft)
+		    {
+			    if(m_isFacingRight)
+			    {
+				    Flip();
+			    }
 			
-			m_copBody2D.velocity = new Vector2(-m_runSpeed , m_copBody2D.velocity.y);
-		}
+			    m_copBody2D.velocity = new Vector2(-m_runSpeed , m_copBody2D.velocity.y);
+		    }
 		
-		else
-		{
-			return;
-		}
+		    else
+		    {
+			    return;
+		    }
+        }
     }
 
-    public void SetState(PlayerState newState)
+    void SetState(PlayerState newState)
 	{
 		if (m_currentState == newState)
 		{
@@ -296,30 +323,36 @@ public class PoliceController : MonoBehaviour
 
     void Walk()
     {
-		if(m_isMovingRight)
-		{
-			if(!m_isFacingRight)
-			{
-				Flip();
-			}
+        m_isRunning = false;
+        m_isWalking = true;
+        
+		if(m_isWalking)
+        {
+            if(m_isMovingRight)
+		    {
+			    if(!m_isFacingRight)
+			    {
+				    Flip();
+			    }
 			
-			m_copBody2D.velocity = new Vector2(m_walkSpeed , m_copBody2D.velocity.y);
-		}
+			    m_copBody2D.velocity = new Vector2(m_walkSpeed , m_copBody2D.velocity.y);
+		    }
 		
-		else if(m_isMovingLeft)
-		{
-			if(m_isFacingRight)
-			{
-				Flip();
-			}
+		    else if(m_isMovingLeft)
+		    {
+			    if(m_isFacingRight)
+			    {
+				    Flip();
+			    }
 			
-			m_copBody2D.velocity = new Vector2(-m_walkSpeed , m_copBody2D.velocity.y);
-		}
+			    m_copBody2D.velocity = new Vector2(-m_walkSpeed , m_copBody2D.velocity.y);
+		    }
 		
-		else
-		{
-			return;
-		}
+		    else
+		    {
+			    return;
+		    }
+        }
     }
 
     private void UpdateAnimations()

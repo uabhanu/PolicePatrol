@@ -29,30 +29,6 @@ public class Thug : MonoBehaviour
         
 	}
 
- //   void Update() 
- //   {
-	//	if(Time.timeScale == 0)
-	//	{
-	//		return;
-	//	}
-
- //       m_copVisible = m_policeController.m_isVisible;
-
- //       if(m_isFacingRight)
- //       {
- //           m_isMovingRight = true;
- //           m_isMovingLeft = false;
- //       }
-
- //       else if(!m_isFacingRight)
- //       {
- //           m_isMovingRight = false;
- //           m_isMovingLeft = true;
- //       }
-
-	//	UpdateStateMachine();
-	//}
-
     protected IEnumerator Flipping()
 	{
 		yield return new WaitForSeconds(m_flipTime);
@@ -103,7 +79,7 @@ public class Thug : MonoBehaviour
 				
 				if(hit2D) 
 				{
-                    if(hit2D.collider.tag.Equals("Player") && m_copVisible)
+                    if(hit2D.collider.tag.Equals("Cop") && m_copVisible)
                     {
                         SetState(EnemyState.RUN);
                     }
@@ -118,7 +94,7 @@ public class Thug : MonoBehaviour
 				
 				if(hit2D) 
 				{            
-					if(hit2D.collider.tag.Equals("Player") && m_copVisible)
+					if(hit2D.collider.tag.Equals("Cop") && m_copVisible)
 					{
 						SetState(EnemyState.RUN);
 					}
