@@ -60,6 +60,7 @@ public class StandGroundThug : Thug
     void CopDisappeared()
     {
         m_thugBody2D.velocity = new Vector2(0f , m_thugBody2D.velocity.y);
+        m_thugChasing = false;
     }
 
     void Death()

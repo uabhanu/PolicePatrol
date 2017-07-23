@@ -20,6 +20,7 @@ public class PoliceController : MonoBehaviour
 	public PlayerState m_currentState;
 	public PlayerState m_previousState;
 
+    [SerializeField] Animator m_copAnim;
     bool m_isFacingRight , m_isMovingLeft , m_isMovingRight , m_registeredInputEvents , m_tapped , m_tappedLeft , m_tappedRight , m_touchReleased;
     public bool m_isBlending , m_coverBlown , m_isDoingNothing , m_isRunning , m_isVisible , m_isWalking;
     [SerializeField] float m_walkSpeed , m_runSpeed;
@@ -69,6 +70,14 @@ public class PoliceController : MonoBehaviour
         UpdateStateMachine();
     }
 
+    IEnumerator BlendFinishRoutine()
+    {
+        yield return new WaitForSeconds(3.5f);
+        m_blendMeterObj.SetActive(false);
+        m_isBlending = false;
+        SetState(PlayerState.IDLE);
+    }
+
     void Attack()
     {
 
@@ -79,6 +88,7 @@ public class PoliceController : MonoBehaviour
         m_blendMeterObj.SetActive(true);
         m_copBody2D.velocity = new Vector2(0f , m_copBody2D.velocity.y);   
         m_isDoingNothing = false;
+        StartCoroutine("BlendFinishRoutine");
     }
 
     void Crouch()
@@ -117,6 +127,7 @@ public class PoliceController : MonoBehaviour
 
     void Idle()
     {
+        //m_copAnim.SetBool("Idle" , true);
         m_isDoingNothing = true;
         m_isRunning = false;
         m_isWalking = false;
@@ -336,6 +347,8 @@ public class PoliceController : MonoBehaviour
     void Walk()
     {
         m_isDoingNothing = false;
+        //m_copAnim.SetBool("Idle" , false);
+        //m_copAnim.SetBool("Walk" , true);
         
 		if(m_isWalking)
         {
