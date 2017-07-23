@@ -18,7 +18,7 @@ public class Thug : MonoBehaviour
 	public EnemyState m_currentState;
 	public EnemyState m_previousState;
 	
-    public bool m_copVisible , m_isFacingRight , m_isMovingLeft , m_isMovingRight , m_isRunning , m_thugChasing , m_isWalking;
+    public bool m_copBlended , m_copVisible , m_isFacingRight , m_isMovingLeft , m_isMovingRight , m_isRunning , m_thugChasing , m_isWalking;
     public float m_flipTime , m_rayDistance , m_rayDistanceFromSelf , m_runSpeed , m_walkSpeed;
     protected PoliceController m_policeController;
     protected Rigidbody2D m_thugBody2D;
@@ -41,21 +41,6 @@ public class Thug : MonoBehaviour
 	}
 
     protected void Attack()
-    {
-
-    }
-
-    protected void CopDisappeared()
-    {
-
-    }
-
-    protected void Death()
-    {
-
-    }
-
-    protected void Dying()
     {
 
     }
@@ -104,37 +89,6 @@ public class Thug : MonoBehaviour
 			}
     }
 
-    protected void Run()
-    {
-        m_isRunning = true;
-        m_isWalking = false;
-
-        if(m_isMovingRight)
-		{
-			if(!m_isFacingRight)
-			{
-				Flip();
-			}
-			
-			m_thugBody2D.velocity = new Vector2(m_runSpeed , m_thugBody2D.velocity.y);
-		}
-		
-		else if(m_isMovingLeft)
-		{
-			if(m_isFacingRight)
-			{
-				Flip();
-			}
-			
-			m_thugBody2D.velocity = new Vector2(-m_runSpeed , m_thugBody2D.velocity.y);
-		}
-		
-		else
-		{
-			return;
-		}
-    }
-
     protected void SetState(EnemyState newState)
 	{
 		if (m_currentState == newState)
@@ -144,40 +98,6 @@ public class Thug : MonoBehaviour
 		
 		m_previousState = m_currentState;
 		m_currentState = newState;
-	}
-
-    protected void UpdateStateMachine()
-	{
-		switch (m_currentState)
-		{
-			case EnemyState.ATTACK:
-				Attack();
-			break;
-
-            case EnemyState.COPDISAPPEARED:
-			    CopDisappeared();
-			break;
-
-			case EnemyState.DEAD: 
-				Death();
-			break;
-			
-			case EnemyState.DYING: 
-				Dying();
-			break;
-
-			case EnemyState.IDLE: 
-				Idle();
-			break;
-
-            case EnemyState.RUN:
-                Run();
-            break;
-
-			case EnemyState.WALK:
-				Walk();
-			break;
-		}
 	}
 
     protected void Walk()

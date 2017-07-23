@@ -21,7 +21,7 @@ public class PoliceController : MonoBehaviour
 	public PlayerState m_previousState;
 
     bool m_isFacingRight , m_isMovingLeft , m_isMovingRight , m_registeredInputEvents , m_tapped , m_tappedLeft , m_tappedRight , m_touchReleased;
-    public bool m_blend , m_coverBlown , m_isRunning , m_isVisible , m_isWalking;
+    public bool m_isBlending , m_coverBlown , m_isDoingNothing , m_isRunning , m_isVisible , m_isWalking;
     [SerializeField] float m_walkSpeed , m_runSpeed;
     float m_xInput = 0f;
     Rigidbody2D m_copBody2D;
@@ -32,9 +32,6 @@ public class PoliceController : MonoBehaviour
 
     void Reset()
     {
-        m_blend = false;
-        m_isRunning = false;
-        m_isWalking = false;
         m_runSpeed = 2.0f;
         m_walkSpeed = 1.25f;
     }
@@ -43,9 +40,13 @@ public class PoliceController : MonoBehaviour
     {
         m_copBody2D = GetComponent<Rigidbody2D>();
         m_copRenderer = GetComponent<SpriteRenderer>();
+        m_isBlending = false;
+        m_isDoingNothing = true;
         m_isFacingRight = true;
         m_isMovingLeft = false;
         m_isMovingRight = true;
+        m_isRunning = false;
+        m_isWalking = false;
         RegisterEvents();
         SetState(PlayerState.IDLE);
         m_thugController = FindObjectOfType<Thug>();
@@ -70,7 +71,6 @@ public class PoliceController : MonoBehaviour
 
     void Blend()
     {
-        m_blend = false;
         m_copBody2D.velocity = new Vector2(0f , m_copBody2D.velocity.y);      
     }
 
@@ -110,6 +110,9 @@ public class PoliceController : MonoBehaviour
 
     void Idle()
     {
+        m_isDoingNothing = true;
+        m_isRunning = false;
+        m_isWalking = false;
         m_copBody2D.velocity = new Vector2(0f , m_copBody2D.velocity.y);
     }
 
@@ -122,14 +125,14 @@ public class PoliceController : MonoBehaviour
     {
         Debug.Log("Tapped");
 
-        if(!m_coverBlown)
+        if(!m_coverBlown && !m_isRunning)
         {
-            if (m_currentState == PlayerState.IDLE)
+            if(m_isDoingNothing)
             {
                 SetState(PlayerState.WALK);
             }
 
-            else if (m_currentState == PlayerState.WALK)
+            else if(m_isWalking)
             {
                 SetState(PlayerState.IDLE);
             }
@@ -137,12 +140,12 @@ public class PoliceController : MonoBehaviour
 
         else if(m_coverBlown)
         {
-            if (m_currentState == PlayerState.IDLE)
+            if(m_isDoingNothing)
             {
                 SetState(PlayerState.RUN);
             }
 
-            else if (m_currentState == PlayerState.RUN)
+            else if(m_isRunning)
             {
                 SetState(PlayerState.IDLE);
             }
@@ -176,9 +179,9 @@ public class PoliceController : MonoBehaviour
 
         if(col2DEnter.gameObject.tag.Equals("Statue"))
         {
-            if(m_currentState == PlayerState.RUN)
+            if(m_isRunning)
             {
-                m_blend = true;
+                m_isBlending = true;
                 m_isRunning = false;
                 m_isWalking = false;
                 SetState(PlayerState.BLEND);   
@@ -196,7 +199,7 @@ public class PoliceController : MonoBehaviour
 
         //if(col2DExit.gameObject.tag.Equals("Statue"))
         //{
-        //    m_blend = false;
+        //    m_isBlending = false;
         //    SetState(PlayerState.IDLE);
         //}
     }
@@ -213,6 +216,7 @@ public class PoliceController : MonoBehaviour
 
     void Run()
     {
+        m_isDoingNothing = false;
         m_isRunning = true;
         m_isWalking = false;
 
@@ -323,6 +327,7 @@ public class PoliceController : MonoBehaviour
 
     void Walk()
     {
+        m_isDoingNothing = false;
         m_isRunning = false;
         m_isWalking = true;
         

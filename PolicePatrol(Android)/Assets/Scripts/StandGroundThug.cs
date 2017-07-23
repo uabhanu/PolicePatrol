@@ -29,6 +29,7 @@ public class StandGroundThug : Thug
 			return;
 		}
 
+        m_copBlended = m_policeController.m_isBlending;
         m_copVisible = m_policeController.m_isVisible;
 
         if(m_isRunning)
@@ -56,8 +57,98 @@ public class StandGroundThug : Thug
 		UpdateStateMachine();
 	}
 
+    void CopDisappeared()
+    {
+        m_thugBody2D.velocity = new Vector2(0f , m_thugBody2D.velocity.y);
+    }
+
+    void Death()
+    {
+
+    }
+
+    void Dying()
+    {
+
+    }
+
     EnemyState GetState()
+    {
+        return m_currentState;
+    }
+
+    void Run()
+    {
+        m_isRunning = true;
+        m_isWalking = false;
+ 
+        if(m_isMovingRight)
+		{
+			if(!m_isFacingRight)
+			{
+				Flip();
+			}
+			
+			m_thugBody2D.velocity = new Vector2(m_runSpeed , m_thugBody2D.velocity.y);
+            
+            if(m_copBlended)
+            {
+                SetState(EnemyState.COPDISAPPEARED);
+            }
+		}
+		
+		else if(m_isMovingLeft)
+		{
+			if(m_isFacingRight)
+			{
+				Flip();
+			}
+			
+			m_thugBody2D.velocity = new Vector2(-m_runSpeed , m_thugBody2D.velocity.y);
+
+            if(m_copBlended)
+            {
+                SetState(EnemyState.COPDISAPPEARED);
+            }
+		}
+
+		else
+		{
+			return;
+		}
+    }
+
+    void UpdateStateMachine()
 	{
-		return m_currentState;
+		switch (m_currentState)
+		{
+			case EnemyState.ATTACK:
+				Attack();
+			break;
+
+            case EnemyState.COPDISAPPEARED:
+			    CopDisappeared();
+			break;
+
+			case EnemyState.DEAD: 
+				Death();
+			break;
+			
+			case EnemyState.DYING: 
+				Dying();
+			break;
+
+			case EnemyState.IDLE: 
+				Idle();
+			break;
+
+            case EnemyState.RUN:
+                Run();
+            break;
+
+			case EnemyState.WALK:
+				Walk();
+			break;
+		}
 	}
 }
