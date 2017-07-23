@@ -24,6 +24,7 @@ public class PoliceController : MonoBehaviour
     public bool m_isBlending , m_coverBlown , m_isDoingNothing , m_isRunning , m_isVisible , m_isWalking;
     [SerializeField] float m_walkSpeed , m_runSpeed;
     float m_xInput = 0f;
+    [SerializeField] GameObject m_blendMeterObj;
     Rigidbody2D m_copBody2D;
     [SerializeField] SpriteRenderer m_copRenderer;
     [SerializeField] SriTouchInputListener m_touchInputListener;
@@ -38,6 +39,7 @@ public class PoliceController : MonoBehaviour
 
     void Start()
     {
+        m_blendMeterObj.SetActive(false);
         m_copBody2D = GetComponent<Rigidbody2D>();
         m_copRenderer = GetComponent<SpriteRenderer>();
         m_isBlending = false;
@@ -60,6 +62,9 @@ public class PoliceController : MonoBehaviour
         }
 
         m_coverBlown = m_thugController.m_thugChasing;
+        m_isRunning = m_coverBlown;
+        m_isWalking = !m_coverBlown;
+
         UpdateAnimations();
         UpdateStateMachine();
     }
@@ -71,7 +76,9 @@ public class PoliceController : MonoBehaviour
 
     void Blend()
     {
-        m_copBody2D.velocity = new Vector2(0f , m_copBody2D.velocity.y);    
+        m_blendMeterObj.SetActive(true);
+        m_copBody2D.velocity = new Vector2(0f , m_copBody2D.velocity.y);   
+        m_isDoingNothing = false;
     }
 
     void Crouch()
@@ -125,32 +132,6 @@ public class PoliceController : MonoBehaviour
     {
         Debug.Log("Tapped");
 
-        if(!m_coverBlown && !m_isBlending)
-        {
-            if(m_isDoingNothing)
-            {
-                SetState(PlayerState.WALK);
-            }
-
-            else if(m_isWalking)
-            {
-                SetState(PlayerState.IDLE);
-            }
-        }
-
-        else if(m_coverBlown)
-        {
-            if(m_isDoingNothing)
-            {
-                SetState(PlayerState.RUN);
-            }
-
-            else if(m_isRunning)
-            {
-                SetState(PlayerState.IDLE);
-            }
-        }
-        
         Vector3 screenToWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		m_firstTouchPosition = new Vector2(screenToWorld.x , screenToWorld.y);
 
@@ -166,6 +147,35 @@ public class PoliceController : MonoBehaviour
            //Debug.Log("Right to Constable");
            m_isMovingLeft = false;
             m_isMovingRight = true;
+        }
+
+        if(!m_isBlending)
+        {
+            if(!m_coverBlown)
+            {
+                if(m_isDoingNothing)
+                {
+                    SetState(PlayerState.WALK);
+                }
+
+                else if(m_isWalking)
+                {
+                    SetState(PlayerState.IDLE);
+                }
+            }
+
+            else if(m_coverBlown)
+            {
+                if(m_isDoingNothing)
+                {
+                    SetState(PlayerState.RUN);
+                }
+
+                else if(m_isRunning)
+                {
+                    SetState(PlayerState.IDLE);
+                }
+            }
         }
     }
 
@@ -217,8 +227,6 @@ public class PoliceController : MonoBehaviour
     void Run()
     {
         m_isDoingNothing = false;
-        m_isRunning = true;
-        m_isWalking = false;
 
         if(m_isRunning)
         {
@@ -328,8 +336,6 @@ public class PoliceController : MonoBehaviour
     void Walk()
     {
         m_isDoingNothing = false;
-        m_isRunning = false;
-        m_isWalking = true;
         
 		if(m_isWalking)
         {
