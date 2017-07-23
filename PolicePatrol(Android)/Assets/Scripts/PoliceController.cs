@@ -71,7 +71,7 @@ public class PoliceController : MonoBehaviour
 
     void Blend()
     {
-        m_copBody2D.velocity = new Vector2(0f , m_copBody2D.velocity.y);      
+        m_copBody2D.velocity = new Vector2(0f , m_copBody2D.velocity.y);    
     }
 
     void Crouch()
@@ -125,7 +125,7 @@ public class PoliceController : MonoBehaviour
     {
         Debug.Log("Tapped");
 
-        if(!m_coverBlown && !m_isRunning)
+        if(!m_coverBlown && !m_isBlending)
         {
             if(m_isDoingNothing)
             {
