@@ -19,7 +19,7 @@ public class Thug : MonoBehaviour
 	public EnemyState m_previousState;
 	
     public bool m_copBlended , m_copVisible , m_isFacingRight , m_isMovingLeft , m_isMovingRight , m_isRunning , m_thugChasing , m_isWalking;
-    public float m_flipTime , m_rayDistance , m_rayDistanceFromSelf , m_runSpeed , m_walkSpeed;
+    public float m_flipTime , m_rayDistance , m_rayDistanceFromSelf , m_runSpeed , m_timeToGoBack , m_walkSpeed;
     protected PoliceController m_policeController;
     protected Rigidbody2D m_thugBody2D;
     protected Transform m_startPosition;
@@ -29,14 +29,14 @@ public class Thug : MonoBehaviour
         
 	}
 
-    protected IEnumerator Flipping()
+    protected IEnumerator FlippingRoutine()
 	{
 		yield return new WaitForSeconds(m_flipTime);
             
         if(m_currentState == EnemyState.IDLE)
         {
             Flip();
-			StartCoroutine("Flipping");
+			StartCoroutine("FlippingRoutine");
         }
 	}
 

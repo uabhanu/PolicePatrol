@@ -21,10 +21,11 @@ public class PoliceController : MonoBehaviour
 	public PlayerState m_previousState;
 
     [SerializeField] Animator m_copAnim;
-    bool m_isFacingRight , m_isMovingLeft , m_isMovingRight , m_registeredInputEvents , m_tapped , m_tappedLeft , m_tappedRight , m_touchReleased;
-    public bool m_isBlending , m_coverBlown , m_isDoingNothing , m_isRunning , m_isVisible , m_isWalking;
+    bool m_isMovingLeft , m_isMovingRight , m_registeredInputEvents , m_tapped , m_tappedLeft , m_tappedRight , m_touchReleased;
+    public bool m_isBlending , m_isFacingRight , m_coverBlown , m_isDoingNothing , m_isRunning , m_isVisible , m_isWalking;
     [SerializeField] float m_walkSpeed , m_runSpeed;
     float m_xInput = 0f;
+    public float m_blendTime;
     [SerializeField] GameObject m_blendMeterObj;
     Rigidbody2D m_copBody2D;
     [SerializeField] SpriteRenderer m_copRenderer;
@@ -34,6 +35,7 @@ public class PoliceController : MonoBehaviour
 
     void Reset()
     {
+        m_blendTime = 3.5f;
         m_runSpeed = 2.0f;
         m_walkSpeed = 1.25f;
     }
@@ -72,7 +74,7 @@ public class PoliceController : MonoBehaviour
 
     IEnumerator BlendFinishRoutine()
     {
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(m_blendTime);
         m_blendMeterObj.SetActive(false);
         m_isBlending = false;
         SetState(PlayerState.IDLE);

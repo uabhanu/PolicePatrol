@@ -18,7 +18,7 @@ public class StandGroundThug : Thug
         m_policeController = GameObject.FindGameObjectWithTag("Cop").GetComponent<PoliceController>();
         m_startPosition = transform;	
         SetState(EnemyState.IDLE);
-        StartCoroutine("Flipping");
+        StartCoroutine("FlippingRoutine");
         m_thugBody2D = GetComponent<Rigidbody2D>();
 	}
 
@@ -31,6 +31,8 @@ public class StandGroundThug : Thug
 
         m_copBlended = m_policeController.m_isBlending;
         m_copVisible = m_policeController.m_isVisible;
+        m_isMovingLeft = !m_policeController.m_isFacingRight;
+        m_timeToGoBack = m_policeController.m_blendTime;
 
         if(m_isRunning)
         {
@@ -57,8 +59,15 @@ public class StandGroundThug : Thug
 		UpdateStateMachine();
 	}
 
+    IEnumerator GoBackRoutine()
+    {
+        yield return new WaitForSeconds(m_timeToGoBack);
+        SetState(EnemyState.WALK);
+    }
+
     void CopDisappeared()
     {
+        StartCoroutine("GoBackRoutine");
         m_thugBody2D.velocity = new Vector2(0f , m_thugBody2D.velocity.y);
         m_thugChasing = false;
     }
@@ -148,7 +157,13 @@ public class StandGroundThug : Thug
             break;
 
 			case EnemyState.WALK:
-				Walk();
+
+                if(m_isMovingLeft)
+                {
+                    Flip();
+                    Walk();
+                }
+              
 			break;
 		}
 	}
