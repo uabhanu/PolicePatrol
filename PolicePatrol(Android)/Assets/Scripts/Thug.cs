@@ -22,7 +22,7 @@ public class Thug : MonoBehaviour
     public float m_flipTime , m_rayDistance , m_rayDistanceFromSelf , m_runSpeed , m_timeToGoBack , m_walkSpeed;
     protected PoliceController m_policeController;
     protected Rigidbody2D m_thugBody2D;
-    protected Transform m_startPosition;
+    public Vector2 m_startPosition;
 
     void Start() 
     {
@@ -47,7 +47,7 @@ public class Thug : MonoBehaviour
 
     protected void Flip()
 	{
-		m_isFacingRight = !m_isFacingRight;
+        m_isFacingRight = !m_isFacingRight;
 		
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
@@ -56,6 +56,9 @@ public class Thug : MonoBehaviour
 
     protected void Idle()
     {
+        m_isRunning = false;
+        m_isWalking = false;
+   
         m_thugBody2D.velocity = new Vector2(0f , m_thugBody2D.velocity.y);
 
         if(m_isFacingRight)
@@ -105,29 +108,40 @@ public class Thug : MonoBehaviour
         m_isRunning = false;
         m_isWalking = true;
 
-        if(m_isMovingRight)
-		{
-			if(!m_isFacingRight)
-			{
-				Flip();
-			}
-			
-			m_thugBody2D.velocity = new Vector2(m_walkSpeed , m_thugBody2D.velocity.y);
-		}
+        if(m_isWalking)
+        {
+            if(m_isMovingRight)
+		    {
+			    if(!m_isFacingRight)
+			    {
+				    Flip();
+			    }
+
+                float step = m_walkSpeed * Time.deltaTime;
+		        transform.position = Vector2.MoveTowards(transform.position , m_startPosition , step);
+		    }
 		
-		else if(m_isMovingLeft)
-		{
-			if(m_isFacingRight)
-			{
-				Flip();
-			}
-			
-			m_thugBody2D.velocity = new Vector2(-m_walkSpeed , m_thugBody2D.velocity.y);
-		}
+		    else if(m_isMovingLeft)
+		    {
+			    if(m_isFacingRight)
+			    {
+				    Flip();
+			    }
+
+                float step = m_walkSpeed * Time.deltaTime;
+		        transform.position = Vector2.MoveTowards(transform.position , m_startPosition , step);
+		    }
 		
-		else
+		    else
+		    {
+			    return;
+		    }
+        }
+
+		if(transform.position.x == m_startPosition.x)
 		{
-			return;
+            SetState(EnemyState.IDLE);
+            StartCoroutine("FlippingRoutine");
 		}
     }
 }

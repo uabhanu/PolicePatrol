@@ -16,7 +16,6 @@ public class StandGroundThug : Thug
     void Start()
     {
         m_policeController = GameObject.FindGameObjectWithTag("Cop").GetComponent<PoliceController>();
-        m_startPosition = transform;	
         SetState(EnemyState.IDLE);
         StartCoroutine("FlippingRoutine");
         m_thugBody2D = GetComponent<Rigidbody2D>();
@@ -157,13 +156,7 @@ public class StandGroundThug : Thug
             break;
 
 			case EnemyState.WALK:
-
-                if(m_isMovingLeft)
-                {
-                    Flip();
-                    Walk();
-                }
-              
+                Walk();
 			break;
 		}
 	}
