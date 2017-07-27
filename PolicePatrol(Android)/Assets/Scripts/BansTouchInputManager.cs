@@ -2,17 +2,17 @@
 using System.Collections;
 
 //---------------------------------------------------------------------------------------------------
-public enum SriTouchGestures
+public enum BansTouchGestures
 {
-	SRI_TAPPED,
-	SRI_DOUBLETAPPED,
-	SRI_TAPHELD,
-	SRI_RELEASED,
-	SRI_SWIPEDRIGHT,
-	SRI_SWIPEDLEFT,
-	SRI_SWIPEDUP,
-	SRI_SWIPEDDOWN,
-	SRI_NONE,
+	Bans_TAPPED,
+	Bans_DOUBLETAPPED,
+	Bans_TAPHELD,
+	Bans_RELEASED,
+	Bans_SWIPEDRIGHT,
+	Bans_SWIPEDLEFT,
+	Bans_SWIPEDUP,
+	Bans_SWIPEDDOWN,
+	Bans_NONE,
 }
 //---------------------------------------------------------------------------------------------------
 
@@ -20,30 +20,24 @@ public struct TouchInfo
 {
 	public double           touchBeganTime;
 	public Vector2          touchPosition;
-	public SriTouchGestures touchGesture;
+	public BansTouchGestures touchGesture;
 };
 
 //---------------------------------------------------------------------------------------------------
-public class SriTouchInputManager : MonoBehaviour 
+public class BansTouchInputManager : MonoBehaviour 
 {
-	#region Events
 	public delegate void TouchEvent(TouchInfo touchInfo);
 	public event TouchEvent  Tapped;
 	public event TouchEvent  DoubleTapped;
 	public event TouchEvent  TapHeld;
 	public event TouchEvent  Released;
 	public event TouchEvent  Swiped;
-    #endregion
 
-    #region Singleton Instance;
-    public static SriTouchInputManager Instance;
-	#endregion
+    public static BansTouchInputManager Instance; //Singleton Instance
 
-	#region Serialized
 	[SerializeField] private float    m_doubleTapDelay    = 0.1f;
 	[SerializeField] private float    m_touchHeldTime     = 0.20f;
-	#endregion
-	#region Private
+
 	private Vector2     m_currentTouchPosition;
 	private Vector2     m_firstTouchPosition;
 	private float       m_firstTouchTime        = 0f;
@@ -61,28 +55,24 @@ public class SriTouchInputManager : MonoBehaviour
 	private bool        m_touchHeld             = false;
 	private bool        m_touchProcessed        = false;
 	private bool        m_checkedDoubleTap      = false;
-	#endregion
 
     void Awake()
     {
         Instance = this;
     }
 
-	//---------------------------------------------------------------------------------------------------
 	void Start () 
 	{
 		m_isIPhone = (Application.platform == RuntimePlatform.IPhonePlayer);
 
-		m_touchInfo.touchGesture = SriTouchGestures.SRI_NONE;
+		m_touchInfo.touchGesture = BansTouchGestures.Bans_NONE;
 	}
-	//---------------------------------------------------------------------------------------------------
 
 	void OnMouseDown()
 	{
 
 	}
 
-	//---------------------------------------------------------------------------------------------------
 	void Update () 
 	{
 		if(m_isIPhone)
@@ -96,60 +86,63 @@ public class SriTouchInputManager : MonoBehaviour
 
 		ProcessTouchInput();
 	}
-	//---------------------------------------------------------------------------------------------------
 
-	//---------------------------------------------------------------------------------------------------
 	private void ProcessTouchInput()
 	{
-		if(!m_touchProcessed && m_touchInfo.touchGesture != SriTouchGestures.SRI_NONE)
+		if(!m_touchProcessed && m_touchInfo.touchGesture != BansTouchGestures.Bans_NONE)
 		{
 			m_touchProcessed = true;
-			int index = -1;
+
 			switch (m_touchInfo.touchGesture)
 			{
-				case SriTouchGestures.SRI_TAPPED:
+				case BansTouchGestures.Bans_TAPPED:
 					if (Tapped != null)
 					{
 						Tapped(m_touchInfo);
 					}
-					break;
-				case SriTouchGestures.SRI_DOUBLETAPPED:
+				break;
+
+				case BansTouchGestures.Bans_DOUBLETAPPED:
 					if (DoubleTapped != null)
 					{
 						DoubleTapped(m_touchInfo);
 					}
-					break;
-				case SriTouchGestures.SRI_TAPHELD:
+				break;
+
+				case BansTouchGestures.Bans_TAPHELD:
 					if (TapHeld != null)
 					{
 						TapHeld(m_touchInfo);
 					}
-					break;
-				case SriTouchGestures.SRI_RELEASED:
+				break;
+
+				case BansTouchGestures.Bans_RELEASED:
 					if (Released != null)
 					{
 						Released(m_touchInfo);
 					}
-					break;
-				case SriTouchGestures.SRI_SWIPEDRIGHT:
-				case SriTouchGestures.SRI_SWIPEDLEFT:
-				case SriTouchGestures.SRI_SWIPEDUP:
-				case SriTouchGestures.SRI_SWIPEDDOWN:
+				break;
+
+				case BansTouchGestures.Bans_SWIPEDRIGHT:
+				case BansTouchGestures.Bans_SWIPEDLEFT:
+				case BansTouchGestures.Bans_SWIPEDUP:
+
+				case BansTouchGestures.Bans_SWIPEDDOWN:
 					if (Swiped != null)
 					{
 						Swiped(m_touchInfo);
 					}
-					break;
+				break;
 			}
-			m_touchInfo.touchGesture = SriTouchGestures.SRI_NONE;
+
+			m_touchInfo.touchGesture = BansTouchGestures.Bans_NONE;
 		}
 	}
-	//---------------------------------------------------------------------------------------------------
 
-	//---------------------------------------------------------------------------------------------------
-	private void RecieveIPhoneTouchInput()
+	void RecieveIPhoneTouchInput()
 	{
 		m_hasTouched = (Input.touchCount > 0);
+
 		if (m_hasTouched)
 		{
 			m_currentTouchPosition = Input.touches[0].position;
@@ -159,14 +152,13 @@ public class SriTouchInputManager : MonoBehaviour
 			m_currentTouchPosition = Vector2.zero;
 		}
 	}
-	//---------------------------------------------------------------------------------------------------
 
-	//---------------------------------------------------------------------------------------------------
-	private void RecieveOtherTouchInput()
+	void RecieveOtherTouchInput()
 	{
 		if(!m_hasTouched)
 		{
 			m_hasTouched = Input.GetMouseButton(0);
+
 			if(m_hasTouched)
 			{
 				Vector3 screenToWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -211,13 +203,14 @@ public class SriTouchInputManager : MonoBehaviour
 			{
 				m_touchHeld = true;
 				m_touchProcessed = false;
-				m_touchInfo.touchGesture = SriTouchGestures.SRI_TAPHELD;
+				m_touchInfo.touchGesture = BansTouchGestures.Bans_TAPHELD;
 			}
 		}
 
 		if(!m_hasReleased)
 		{
 			m_hasReleased = Input.GetMouseButtonUp(0);
+
 			if(m_hasReleased && m_hasTouched)
 			{
 				m_hasTouched = false;
@@ -233,7 +226,7 @@ public class SriTouchInputManager : MonoBehaviour
 				if (m_touchHeld)
 				{
 					m_touchHeld = false;
-					m_touchInfo.touchGesture = SriTouchGestures.SRI_RELEASED;
+					m_touchInfo.touchGesture = BansTouchGestures.Bans_RELEASED;
 				}
 				else
 				{
@@ -274,39 +267,42 @@ public class SriTouchInputManager : MonoBehaviour
 						{
 							if(xDiff > 0f)
 							{
-								m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDLEFT; //Swipe Left
+								m_touchInfo.touchGesture = BansTouchGestures.Bans_SWIPEDLEFT; //Swipe Left
 							}
 							else
 							{
-								m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDRIGHT; //Swipe Right
+								m_touchInfo.touchGesture = BansTouchGestures.Bans_SWIPEDRIGHT; //Swipe Right
 							}
 						}
 						else if(verticalSwipe)
 						{
 							if (yDiff > 0f)
 							{
-								m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDDOWN; //Swipe Down
+								m_touchInfo.touchGesture = BansTouchGestures.Bans_SWIPEDDOWN; //Swipe Down
 							}
 							else
 							{
-								m_touchInfo.touchGesture = SriTouchGestures.SRI_SWIPEDUP; //Swipe Up
+								m_touchInfo.touchGesture = BansTouchGestures.Bans_SWIPEDUP; //Swipe Up
 							}
 						}
 					}
+
 					else if (m_doubleTapped)
 					{
-						m_touchInfo.touchGesture = SriTouchGestures.SRI_DOUBLETAPPED;
+						m_touchInfo.touchGesture = BansTouchGestures.Bans_DOUBLETAPPED;
 						m_checkedDoubleTap = false;
 					}
+
 					else if (m_tapped && m_checkedDoubleTap)
 					{
-						m_touchInfo.touchGesture = SriTouchGestures.SRI_TAPPED;
+						m_touchInfo.touchGesture = BansTouchGestures.Bans_TAPPED;
 						m_tapped = false;
 						m_checkedDoubleTap = false;
 					}
+
 					else
 					{
-						m_touchInfo.touchGesture = SriTouchGestures.SRI_NONE;
+						m_touchInfo.touchGesture = BansTouchGestures.Bans_NONE;
 					}
 				}
 				
@@ -322,6 +318,4 @@ public class SriTouchInputManager : MonoBehaviour
 		}
 	   
 	}
-	//---------------------------------------------------------------------------------------------------
-
 }

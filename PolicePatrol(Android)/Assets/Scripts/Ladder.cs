@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ladder : MonoBehaviour 
 {
-    [SerializeField] SriTouchInputListener m_touchInputListener;
+    [SerializeField] BansTouchInputListener m_touchInputListener;
 
     void Start() 
     {

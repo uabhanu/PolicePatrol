@@ -7,7 +7,7 @@ public class Bar : MonoBehaviour
     bool m_registeredInputEvents;
     [SerializeField] float m_force;
     [SerializeField] Rigidbody2D m_barBody2D;
-    [SerializeField] SriTouchInputListener m_touchInputListener;
+    [SerializeField] BansTouchInputListener m_touchInputListener;
 
 	void Start()
     {

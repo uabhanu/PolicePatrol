@@ -29,7 +29,7 @@ public class PoliceController : MonoBehaviour
     [SerializeField] GameObject m_blendMeterObj;
     Rigidbody2D m_copBody2D;
     [SerializeField] SpriteRenderer m_copRenderer;
-    [SerializeField] SriTouchInputListener m_touchInputListener;
+    [SerializeField] BansTouchInputListener m_touchInputListener;
     Thug m_thugController;
     Vector2 m_firstTouchPosition;
 
@@ -288,44 +288,44 @@ public class PoliceController : MonoBehaviour
 
     public void TouchInput(TouchInfo touchInfo)
     {
-        SriTouchGestures gesture = touchInfo.touchGesture;
+        BansTouchGestures gesture = touchInfo.touchGesture;
 
         switch(gesture)
         {
-            case SriTouchGestures.SRI_NONE:
+            case BansTouchGestures.Bans_NONE:
                 Debug.Log("Nothing Happened");
             break;
 
-            case SriTouchGestures.SRI_SWIPEDLEFT:
+            case BansTouchGestures.Bans_SWIPEDLEFT:
                 Debug.Log("Swiped Left");
             break;
 
-            case SriTouchGestures.SRI_SWIPEDRIGHT:
+            case BansTouchGestures.Bans_SWIPEDRIGHT:
                 Debug.Log("Swiped Right");
             break;
 
-            case SriTouchGestures.SRI_SWIPEDUP:
+            case BansTouchGestures.Bans_SWIPEDUP:
                 Debug.Log("Swiped Up");
             break;
 
-            case SriTouchGestures.SRI_SWIPEDDOWN:
+            case BansTouchGestures.Bans_SWIPEDDOWN:
                 Debug.Log("Swiped Down");
             break;
 
-            case SriTouchGestures.SRI_DOUBLETAPPED:
+            case BansTouchGestures.Bans_DOUBLETAPPED:
                 Debug.Log("Double Tapped");
             break;
 
-            case SriTouchGestures.SRI_TAPHELD:
+            case BansTouchGestures.Bans_TAPHELD:
                 Debug.Log("Tap Held");
             break;
 
-            case SriTouchGestures.SRI_RELEASED:
+            case BansTouchGestures.Bans_RELEASED:
                 Debug.Log("Touch Released");
                 m_tapped = false;
             break;
 
-            case SriTouchGestures.SRI_TAPPED:
+            case BansTouchGestures.Bans_TAPPED:
                 Debug.Log("Tapped");
                 m_tapped = true;
             break;

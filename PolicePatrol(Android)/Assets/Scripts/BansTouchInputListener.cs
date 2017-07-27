@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-public class SriTouchInputListener : MonoBehaviour
+public class BansTouchInputListener : MonoBehaviour
 {
 	#region Events
 	public delegate void TouchEvent(TouchInfo touchInfo);
@@ -36,26 +36,26 @@ public class SriTouchInputListener : MonoBehaviour
 	#region Event Registations
 	private void RegisterInputEvents()
 	{
-		if (!m_registeredInputEvents)
+		if(!m_registeredInputEvents)
 		{
-			SriTouchInputManager.Instance.Tapped        += OnTapped;
-			SriTouchInputManager.Instance.DoubleTapped  += OnDoubleTapped;
-			SriTouchInputManager.Instance.TapHeld       += OnTapHeld;
-			SriTouchInputManager.Instance.Released      += OnReleased;
-			SriTouchInputManager.Instance.Swiped        += OnSwiped;
+			BansTouchInputManager.Instance.Tapped        += OnTapped;
+			BansTouchInputManager.Instance.DoubleTapped  += OnDoubleTapped;
+			BansTouchInputManager.Instance.TapHeld       += OnTapHeld;
+			BansTouchInputManager.Instance.Released      += OnReleased;
+			BansTouchInputManager.Instance.Swiped        += OnSwiped;
 			m_registeredInputEvents                      = true;
 		}
 	}
 
 	private void UnregisterInputEvents()
 	{
-		if (m_registeredInputEvents)
+		if(m_registeredInputEvents)
 		{
-			SriTouchInputManager.Instance.Tapped        -= OnTapped;
-			SriTouchInputManager.Instance.DoubleTapped  -= OnDoubleTapped;
-			SriTouchInputManager.Instance.TapHeld       -= OnTapHeld;
-			SriTouchInputManager.Instance.Released      -= OnReleased;
-			SriTouchInputManager.Instance.Swiped        -= OnSwiped;
+			BansTouchInputManager.Instance.Tapped        -= OnTapped;
+			BansTouchInputManager.Instance.DoubleTapped  -= OnDoubleTapped;
+			BansTouchInputManager.Instance.TapHeld       -= OnTapHeld;
+			BansTouchInputManager.Instance.Released      -= OnReleased;
+			BansTouchInputManager.Instance.Swiped        -= OnSwiped;
 			m_registeredInputEvents                      = false;
 		}
 	}
@@ -64,7 +64,7 @@ public class SriTouchInputListener : MonoBehaviour
 	#region Event Handlers
 	private void OnTapped(TouchInfo touchInfo)
 	{
-		if (Tap != null)
+		if(Tap != null)
 		{
             Tap(touchInfo);
 		}
@@ -72,7 +72,7 @@ public class SriTouchInputListener : MonoBehaviour
 
 	private void OnDoubleTapped(TouchInfo touchInfo)
 	{
-		if (DoubleTap != null)
+		if(DoubleTap != null)
 		{
 			DoubleTap(touchInfo);
 		}
@@ -80,7 +80,7 @@ public class SriTouchInputListener : MonoBehaviour
 
 	private void OnTapHeld(TouchInfo touchInfo)
 	{
-		if (Held != null && !m_calledOnHeld)
+		if(Held != null && !m_calledOnHeld)
 		{
 			Held(touchInfo);
 			m_calledOnHeld = true;
@@ -90,7 +90,8 @@ public class SriTouchInputListener : MonoBehaviour
 	private void OnReleased(TouchInfo touchInfo)
 	{
 		m_calledOnHeld = false;
-		if (Released != null)
+
+		if(Released != null)
 		{
 			Released(touchInfo);
 		}
@@ -100,30 +101,33 @@ public class SriTouchInputListener : MonoBehaviour
 	{
 		switch(touchInfo.touchGesture)
 		{
-			case SriTouchGestures.SRI_SWIPEDRIGHT:
+			case BansTouchGestures.Bans_SWIPEDRIGHT:
 				if (SwipedRight != null)
 				{
 					SwipedRight(touchInfo);
 				}
-				break;
-			case SriTouchGestures.SRI_SWIPEDLEFT:
+			break;
+
+			case BansTouchGestures.Bans_SWIPEDLEFT:
 				if (SwipedLeft != null)
 				{
 					SwipedLeft(touchInfo);
 				}
-				break;
-			case SriTouchGestures.SRI_SWIPEDUP:
+			break;
+
+			case BansTouchGestures.Bans_SWIPEDUP:
 				if (SwipedUp != null)
 				{
 					SwipedUp(touchInfo);
 				}
-				break;
-			case SriTouchGestures.SRI_SWIPEDDOWN:
+			break;
+
+			case BansTouchGestures.Bans_SWIPEDDOWN:
 				if (SwipedDown != null)
 				{
 					SwipedDown(touchInfo);
 				}
-				break;
+			break;
 		}
 	}
 	#endregion
