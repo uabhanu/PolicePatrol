@@ -30,7 +30,6 @@ public class StandGroundThug : Thug
 
         m_copBlended = m_policeController.m_isBlending;
         m_copVisible = m_policeController.m_isVisible;
-        m_isMovingLeft = !m_policeController.m_isFacingRight;
         m_timeToGoBack = m_policeController.m_blendTime;
 
         if(m_isRunning)
@@ -43,17 +42,17 @@ public class StandGroundThug : Thug
             m_thugChasing = false;
         }
 
-        if(m_isFacingRight)
-        {
-            m_isMovingRight = true;
-            m_isMovingLeft = false;
-        }
+        //if(m_isFacingRight)
+        //{
+        //    m_isMovingRight = true;
+        //    m_isMovingLeft = false;
+        //}
 
-        else if(!m_isFacingRight)
-        {
-            m_isMovingRight = false;
-            m_isMovingLeft = true;
-        }
+        //else if(!m_isFacingRight)
+        //{
+        //    m_isMovingRight = false;
+        //    m_isMovingLeft = true;
+        //}
 
 		UpdateStateMachine();
 	}
@@ -88,9 +87,21 @@ public class StandGroundThug : Thug
 
     void Run()
     {
+        if(m_policeController.m_isFacingRight && !m_isRunning)
+        {
+            m_isMovingLeft = true;
+            m_isMovingRight = false;
+        }
+
+        else if(!m_policeController.m_isFacingRight && !m_isRunning)
+        {
+            m_isMovingLeft = false;
+            m_isMovingRight = true;
+        }
+
         m_isRunning = true;
         m_isWalking = false;
- 
+
         if(m_isMovingRight)
 		{
 			if(!m_isFacingRight)

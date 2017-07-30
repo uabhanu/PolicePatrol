@@ -115,10 +115,9 @@ public class Thug : MonoBehaviour
 			    if(!m_isFacingRight)
 			    {
 				    Flip();
+                    float step = m_walkSpeed * Time.deltaTime;
+		            transform.position = Vector2.MoveTowards(transform.position , m_startPosition , step);
 			    }
-
-                float step = m_walkSpeed * Time.deltaTime;
-		        transform.position = Vector2.MoveTowards(transform.position , m_startPosition , step);
 		    }
 		
 		    else if(m_isMovingLeft)
@@ -126,10 +125,9 @@ public class Thug : MonoBehaviour
 			    if(m_isFacingRight)
 			    {
 				    Flip();
+                    float step = m_walkSpeed * Time.deltaTime;
+		            transform.position = Vector2.MoveTowards(transform.position , m_startPosition , step);
 			    }
-
-                float step = m_walkSpeed * Time.deltaTime;
-		        transform.position = Vector2.MoveTowards(transform.position , m_startPosition , step);
 		    }
 		
 		    else
