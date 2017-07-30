@@ -107,18 +107,36 @@ public class Thug : MonoBehaviour
 
     protected void Walk()
     {
-        if(!m_policeController.m_isFacingRight && m_policeController.m_isDoingNothing)
+        if(m_thugChasing)
         {
-            m_isMovingLeft = false;
-            m_isMovingRight = true;
-        } 
-        
-        else if(m_policeController.m_isFacingRight && m_policeController.m_isDoingNothing)
-        {
-            m_isMovingLeft = true;
-            m_isMovingRight = false;
-        }
+            if(m_policeController.m_isFacingRight)
+            {
+                m_isMovingLeft = false;
+                m_isMovingRight = true;
+            }
 
+            else if(!m_policeController.m_isFacingRight)
+            {
+                m_isMovingLeft = true;
+                m_isMovingRight = false;
+            }
+        }
+        
+        if(!m_thugChasing)
+        {
+            if(m_policeController.m_isFacingRight)
+            {
+                m_isMovingLeft = true;
+                m_isMovingRight = false;
+            }
+
+            else if(!m_policeController.m_isFacingRight)
+            {
+                m_isMovingLeft = false;
+                m_isMovingRight = true;
+            }
+        }
+        
         m_isRunning = false;
         m_isWalking = true;
 
@@ -134,7 +152,7 @@ public class Thug : MonoBehaviour
 		
 		    else if(m_isMovingLeft)
 		    {
-			    if(!m_isFacingRight)
+			    if(m_isFacingRight)
 			    {
 				    Flip();
 			    }
@@ -149,10 +167,10 @@ public class Thug : MonoBehaviour
 		    transform.position = Vector2.MoveTowards(transform.position , m_startPosition , step);
         }
 
-		if(transform.position.x == m_startPosition.x)
-		{
+        if(transform.position.x == m_startPosition.x)
+        {
             SetState(EnemyState.IDLE);
             StartCoroutine("FlippingRoutine");
-		}
+        }
     }
 }
