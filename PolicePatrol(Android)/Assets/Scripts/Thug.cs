@@ -56,6 +56,8 @@ public class Thug : MonoBehaviour
 
     protected void Idle()
     {
+        m_isMovingLeft = false;
+        m_isMovingRight = false;
         m_isRunning = false;
         m_isWalking = false;
    
@@ -105,6 +107,18 @@ public class Thug : MonoBehaviour
 
     protected void Walk()
     {
+        if(!m_policeController.m_isFacingRight && m_policeController.m_isDoingNothing)
+        {
+            m_isMovingLeft = false;
+            m_isMovingRight = true;
+        } 
+        
+        else if(m_policeController.m_isFacingRight && m_policeController.m_isDoingNothing)
+        {
+            m_isMovingLeft = true;
+            m_isMovingRight = false;
+        }
+
         m_isRunning = false;
         m_isWalking = true;
 
@@ -115,18 +129,14 @@ public class Thug : MonoBehaviour
 			    if(!m_isFacingRight)
 			    {
 				    Flip();
-                    float step = m_walkSpeed * Time.deltaTime;
-		            transform.position = Vector2.MoveTowards(transform.position , m_startPosition , step);
 			    }
 		    }
 		
 		    else if(m_isMovingLeft)
 		    {
-			    if(m_isFacingRight)
+			    if(!m_isFacingRight)
 			    {
 				    Flip();
-                    float step = m_walkSpeed * Time.deltaTime;
-		            transform.position = Vector2.MoveTowards(transform.position , m_startPosition , step);
 			    }
 		    }
 		
@@ -134,6 +144,9 @@ public class Thug : MonoBehaviour
 		    {
 			    return;
 		    }
+
+            float step = m_walkSpeed * Time.deltaTime;
+		    transform.position = Vector2.MoveTowards(transform.position , m_startPosition , step);
         }
 
 		if(transform.position.x == m_startPosition.x)

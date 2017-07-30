@@ -42,18 +42,6 @@ public class StandGroundThug : Thug
             m_thugChasing = false;
         }
 
-        //if(m_isFacingRight)
-        //{
-        //    m_isMovingRight = true;
-        //    m_isMovingLeft = false;
-        //}
-
-        //else if(!m_isFacingRight)
-        //{
-        //    m_isMovingRight = false;
-        //    m_isMovingLeft = true;
-        //}
-
 		UpdateStateMachine();
 	}
 
@@ -91,8 +79,8 @@ public class StandGroundThug : Thug
         {
             m_isMovingLeft = true;
             m_isMovingRight = false;
-        }
-
+        } 
+        
         else if(!m_policeController.m_isFacingRight && !m_isRunning)
         {
             m_isMovingLeft = false;
