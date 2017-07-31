@@ -21,7 +21,7 @@ public class PoliceController : MonoBehaviour
 	public PlayerState m_previousState;
 
     [SerializeField] Animator m_copAnim;
-    bool m_isMovingLeft , m_isMovingRight , m_registeredInputEvents , m_tapped , m_tappedLeft , m_tappedRight , m_touchReleased;
+    bool m_isMovingLeft , m_isMovingRight , m_registeredInputEvents;
     public bool m_isBlending , m_isFacingRight , m_coverBlown , m_isDoingNothing , m_isRunning , m_isVisible , m_isWalking;
     [SerializeField] float m_walkSpeed , m_runSpeed;
     float m_xInput = 0f;
@@ -91,6 +91,7 @@ public class PoliceController : MonoBehaviour
         m_copBody2D.velocity = new Vector2(0f , m_copBody2D.velocity.y);   
         m_isDoingNothing = false;
         StartCoroutine("BlendFinishRoutine");
+        UnregisterEvents();
     }
 
     void Crouch()
@@ -130,13 +131,14 @@ public class PoliceController : MonoBehaviour
     void Idle()
     {
         //m_copAnim.SetBool("Idle" , true);
+        m_copBody2D.velocity = new Vector2(0f , m_copBody2D.velocity.y);
         m_isDoingNothing = true;
         m_isRunning = false;
         m_isWalking = false;
-        m_copBody2D.velocity = new Vector2(0f , m_copBody2D.velocity.y);
+        RegisterEvents();
     }
 
-    private void OnDestroy()
+    void OnDestroy()
     {
         UnregisterEvents();
     }
@@ -219,12 +221,6 @@ public class PoliceController : MonoBehaviour
             m_isVisible = false;
             m_copRenderer.color = Color.white;
         }
-
-        //if(col2DExit.gameObject.tag.Equals("Statue"))
-        //{
-        //    m_isBlending = false;
-        //    SetState(PlayerState.IDLE);
-        //}
     }
 
     void RegisterEvents()
@@ -322,12 +318,10 @@ public class PoliceController : MonoBehaviour
 
             case BansTouchGestures.Bans_RELEASED:
                 Debug.Log("Touch Released");
-                m_tapped = false;
             break;
 
             case BansTouchGestures.Bans_TAPPED:
                 Debug.Log("Tapped");
-                m_tapped = true;
             break;
         }
     }

@@ -18,7 +18,7 @@ public class Thug : MonoBehaviour
 	public EnemyState m_currentState;
 	public EnemyState m_previousState;
 	
-    public bool m_copBlended , m_copVisible , m_isFacingRight , m_isMovingLeft , m_isMovingRight , m_isRunning , m_thugChasing , m_isWalking;
+    public bool m_copBlended , m_copVisible , m_isFacingLeft , m_isFacingRight , m_isMovingLeft , m_isMovingRight , m_isRunning , m_thugChasing , m_isWalking;
     public float m_flipTime , m_rayDistance , m_rayDistanceFromSelf , m_runSpeed , m_timeToGoBack , m_walkSpeed;
     protected PoliceController m_policeController;
     protected Rigidbody2D m_thugBody2D;
@@ -47,7 +47,17 @@ public class Thug : MonoBehaviour
 
     protected void Flip()
 	{
-        m_isFacingRight = !m_isFacingRight;
+        if(m_isFacingLeft)
+        {
+            m_isFacingLeft = false;
+            m_isFacingRight = true;
+        }
+
+        else if(m_isFacingRight)
+        {
+            m_isFacingLeft = true;
+            m_isFacingRight = false;
+        }
 		
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
@@ -78,7 +88,7 @@ public class Thug : MonoBehaviour
 				Debug.DrawRay(new Vector2(transform.position.x + m_rayDistanceFromSelf , transform.position.y) , -transform.right * m_rayDistance , Color.red);
 			}
 			
-			else if(!m_isFacingRight)
+			else if(m_isFacingLeft)
 			{
 				RaycastHit2D hit2D = Physics2D.Raycast(new Vector2(transform.position.x - m_rayDistanceFromSelf , transform.position.y) , transform.right , m_rayDistance);
 				

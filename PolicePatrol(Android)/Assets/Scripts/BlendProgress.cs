@@ -1,22 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Bar : MonoBehaviour
+public class BlendProgress : MonoBehaviour
 {
     bool m_registeredInputEvents;
-    [SerializeField] float m_force;
-    [SerializeField] Rigidbody2D m_barBody2D;
     [SerializeField] BansTouchInputListener m_touchInputListener;
+    [SerializeField] Slider m_blendSlider;
 
 	void Start()
     {
 	    RegisterEvents();
 	}
 
+    void Update()
+    {
+        m_blendSlider.value += 0.01f;
+    }
+
     void OnTapped(TouchInfo touchInfo)
     {
-        m_barBody2D.AddForce(new Vector2(0f , m_force));
+        m_blendSlider.value -= 0.1f;
     }
 	
 	void RegisterEvents()
