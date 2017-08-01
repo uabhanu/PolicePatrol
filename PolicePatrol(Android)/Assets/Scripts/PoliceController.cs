@@ -21,6 +21,7 @@ public class PoliceController : MonoBehaviour
 	public PlayerState m_previousState;
 
     [SerializeField] Animator m_copAnim;
+    [SerializeField] BlendProgress m_blendProgressScript;
     bool m_isMovingLeft , m_isMovingRight , m_registeredInputEvents;
     public bool m_isBlending , m_isFacingRight , m_coverBlown , m_isDoingNothing , m_isRunning , m_isVisible , m_isWalking;
     [SerializeField] float m_walkSpeed , m_runSpeed;
@@ -75,9 +76,10 @@ public class PoliceController : MonoBehaviour
     IEnumerator BlendFinishRoutine()
     {
         yield return new WaitForSeconds(m_blendTime);
-        m_blendMeterObj.SetActive(false);
         m_isBlending = false;
         SetState(PlayerState.IDLE);
+        m_blendProgressScript.ResetSliderValue();
+        m_blendMeterObj.SetActive(false);
     }
 
     void Attack()

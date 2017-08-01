@@ -5,18 +5,24 @@ using UnityEngine.UI;
 
 public class BlendProgress : MonoBehaviour
 {
-    bool m_registeredInputEvents;
     [SerializeField] BansTouchInputListener m_touchInputListener;
+    [SerializeField] bool m_registeredInputEvents;
+    [SerializeField] PoliceController m_copControlScript;
     [SerializeField] Slider m_blendSlider;
 
 	void Start()
     {
-	    RegisterEvents();
+        RegisterEvents();
 	}
 
     void Update()
     {
-        m_blendSlider.value += 0.01f;
+        if(Time.timeScale == 0)
+        {
+            return;
+        }
+
+        m_blendSlider.value += 0.005f;
     }
 
     void OnTapped(TouchInfo touchInfo)
@@ -31,6 +37,11 @@ public class BlendProgress : MonoBehaviour
 			m_touchInputListener.Tap += OnTapped;
 			m_registeredInputEvents = true;
 		}
+    }
+
+    public void ResetSliderValue()
+    {
+        m_blendSlider.value = 0;
     }
 
     void UnregisterEvents()
