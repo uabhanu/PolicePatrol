@@ -75,18 +75,6 @@ public class StandGroundThug : Thug
 
     void Run()
     {
-        if(m_policeController.transform.position.x < transform.position.x)
-        {
-            m_isMovingLeft = true;
-            m_isMovingRight = false;
-        } 
-        
-        else if(m_policeController.transform.position.x > transform.position.x)
-        {
-            m_isMovingLeft = false;
-            m_isMovingRight = true;
-        }
-
         m_isRunning = true;
         m_isWalking = false;
 
