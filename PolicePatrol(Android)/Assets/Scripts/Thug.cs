@@ -147,11 +147,11 @@ public class Thug : MonoBehaviour
 
         if(m_isFacingLeft)
 		{
-			RaycastHit2D hit2D = Physics2D.Raycast(new Vector2(transform.position.x - m_rayDistanceFromSelf , transform.position.y) , transform.right , m_rayDistance);
+			RaycastHit2D hit2DLeft = Physics2D.Raycast(new Vector2(transform.position.x - m_rayDistanceFromSelf , transform.position.y) , transform.right , m_rayDistance);
 				
-			if(hit2D) 
+			if(hit2DLeft) 
 			{            
-				if(hit2D.collider.tag.Equals("Cop") && m_copVisible)
+				if(hit2DLeft.collider.tag.Equals("Cop") && m_copVisible)
 				{
 					SetState(EnemyState.RUN);
 				}
@@ -162,17 +162,17 @@ public class Thug : MonoBehaviour
 
         else if(m_isFacingRight)
 		{
-			RaycastHit2D hit2D = Physics2D.Raycast(new Vector2(transform.position.x + m_rayDistanceFromSelf , transform.position.y) , -transform.right , m_rayDistance);
+			RaycastHit2D hit2DRight = Physics2D.Raycast(new Vector2(transform.position.x + m_rayDistanceFromSelf , transform.position.y) , -transform.right , m_rayDistance);
 				
-			if(hit2D) 
+			if(hit2DRight) 
 			{
-                if(hit2D.collider.tag.Equals("Cop") && m_copVisible)
+                if(hit2DRight.collider.tag.Equals("Cop") && m_copVisible)
                 {
                     SetState(EnemyState.RUN);
                 }
 			}
 				
-			Debug.DrawRay(new Vector2(transform.position.x + m_rayDistanceFromSelf , transform.position.y) , -transform.right * m_rayDistance , Color.red);
+			Debug.DrawRay(new Vector2(transform.position.x + m_rayDistanceFromSelf , transform.position.y) , -transform.right * m_rayDistance , Color.blue);
 		}
     }
 }
