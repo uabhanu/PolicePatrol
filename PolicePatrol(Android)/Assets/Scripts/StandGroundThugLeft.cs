@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StandGroundThug : Thug 
+public class StandGroundThugLeft : Thug 
 {
 	void Reset()
     {
@@ -10,6 +10,7 @@ public class StandGroundThug : Thug
         m_rayDistance = 11.35f;
         m_rayDistanceFromSelf = 0.35f;
         m_runSpeed = 2.25f;
+        m_startPosition.x = transform.position.x;
         m_walkSpeed = 1.50f;
     }
 
@@ -74,14 +75,16 @@ public class StandGroundThug : Thug
         m_isRunning = true;
         m_isWalking = false;
 
-        if(m_policeController.transform.position.x < transform.position.x)
+        if(m_policeController.transform.position.x > transform.position.x)
         {
-            m_isMovingLeft = true;
+            m_isMovingLeft = false;
+            m_isMovingRight = true;
         }
 
-        else if(m_policeController.transform.position.x > transform.position.x)
+        else if(m_policeController.transform.position.x < transform.position.x)
         {
             m_isMovingRight = true;
+            m_isMovingLeft = false;
         }
 
         if(m_isMovingRight)
@@ -157,4 +160,45 @@ public class StandGroundThug : Thug
 			break;
 		}
 	}
+
+    void Watch()
+    {
+        m_isMovingLeft = false;
+        m_isMovingRight = false;
+        m_isRunning = false;
+        m_isWalking = false;
+   
+        m_thugBody2D.velocity = new Vector2(0f , m_thugBody2D.velocity.y);
+
+        if(m_isFacingRight)
+		{
+			RaycastHit2D hit2DRight = Physics2D.Raycast(new Vector2(transform.position.x + m_rayDistanceFromSelf , transform.position.y) , transform.right , m_rayDistance);
+				
+			if(hit2DRight) 
+			{            
+				if(hit2DRight.collider.tag.Equals("Cop") && m_copVisible)
+				{
+                    Debug.Log(hit2DRight.collider.tag);
+					SetState(EnemyState.RUN);
+				}
+			}
+				
+			Debug.DrawRay(new Vector2(transform.position.x + m_rayDistanceFromSelf , transform.position.y) , transform.right * m_rayDistance , Color.red);
+		}
+
+        else if(m_isFacingLeft)
+		{
+			RaycastHit2D hit2DLeft = Physics2D.Raycast(new Vector2(transform.position.x - m_rayDistanceFromSelf , transform.position.y) , -transform.right , m_rayDistance);
+				
+			if(hit2DLeft) 
+			{
+                if(hit2DLeft.collider.tag.Equals("Cop") && m_copVisible)
+                {
+                    SetState(EnemyState.RUN);
+                }
+			}
+				
+			Debug.DrawRay(new Vector2(transform.position.x - m_rayDistanceFromSelf , transform.position.y) , -transform.right * m_rayDistance , Color.blue);
+		}
+    }
 }

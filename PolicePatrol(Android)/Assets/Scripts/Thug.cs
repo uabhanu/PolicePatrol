@@ -135,44 +135,4 @@ public class Thug : MonoBehaviour
             StartCoroutine("FlippingRoutine");
         }
     }
-
-    protected void Watch()
-    {
-        m_isMovingLeft = false;
-        m_isMovingRight = false;
-        m_isRunning = false;
-        m_isWalking = false;
-   
-        m_thugBody2D.velocity = new Vector2(0f , m_thugBody2D.velocity.y);
-
-        if(m_isFacingLeft)
-		{
-			RaycastHit2D hit2DLeft = Physics2D.Raycast(new Vector2(transform.position.x - m_rayDistanceFromSelf , transform.position.y) , transform.right , m_rayDistance);
-				
-			if(hit2DLeft) 
-			{            
-				if(hit2DLeft.collider.tag.Equals("Cop") && m_copVisible)
-				{
-					SetState(EnemyState.RUN);
-				}
-			}
-				
-			Debug.DrawRay(new Vector2(transform.position.x - m_rayDistanceFromSelf , transform.position.y) , transform.right * m_rayDistance , Color.red);
-		}
-
-        else if(m_isFacingRight)
-		{
-			RaycastHit2D hit2DRight = Physics2D.Raycast(new Vector2(transform.position.x + m_rayDistanceFromSelf , transform.position.y) , -transform.right , m_rayDistance);
-				
-			if(hit2DRight) 
-			{
-                if(hit2DRight.collider.tag.Equals("Cop") && m_copVisible)
-                {
-                    SetState(EnemyState.RUN);
-                }
-			}
-				
-			Debug.DrawRay(new Vector2(transform.position.x + m_rayDistanceFromSelf , transform.position.y) , -transform.right * m_rayDistance , Color.blue);
-		}
-    }
 }
