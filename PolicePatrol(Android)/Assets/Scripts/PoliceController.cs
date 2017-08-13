@@ -16,21 +16,25 @@ public class PoliceController : MonoBehaviour
 		SLAP,
 		WALK,
 	};
-	
+
+	public bool m_isBlending , m_isFacingRight , m_coverBlown , m_isDoingNothing , m_isRunning , m_isVisible , m_isWalking;
+    public float m_blendTime;
 	public PlayerState m_currentState;
 	public PlayerState m_previousState;
 
     [SerializeField] Animator m_copAnim;
-    [SerializeField] BlendProgress m_blendProgressScript;
-    bool m_isMovingLeft , m_isMovingRight , m_registeredInputEvents;
-    public bool m_isBlending , m_isFacingRight , m_coverBlown , m_isDoingNothing , m_isRunning , m_isVisible , m_isWalking;
+
     [SerializeField] float m_walkSpeed , m_runSpeed;
-    float m_xInput = 0f;
-    public float m_blendTime;
-    [SerializeField] GameObject m_blendMeterObj;
-    Rigidbody2D m_copBody2D;
+
     [SerializeField] SpriteRenderer m_copRenderer;
+
     [SerializeField] BansTouchInputListener m_touchInputListener;
+
+    BlendProgress m_blendProgressScript;
+    bool m_isMovingLeft , m_isMovingRight , m_registeredInputEvents;
+    float m_xInput = 0f;
+    GameObject m_blendMeterObj;
+    Rigidbody2D m_copBody2D;
     Thug m_thugController;
     Vector2 m_firstTouchPosition;
 
@@ -43,7 +47,18 @@ public class PoliceController : MonoBehaviour
 
     void Start()
     {
-        m_blendMeterObj.SetActive(false);
+        m_blendMeterObj = GameObject.Find("BlendMeterUIObj");
+
+        if(m_blendMeterObj != null)
+        {
+            m_blendMeterObj.SetActive(false);
+            m_blendProgressScript = m_blendMeterObj.GetComponent<BlendProgress>();
+        }
+        else
+        {
+            Debug.LogError("BlendMeterObj cannot be found");
+        }
+
         m_copBody2D = GetComponent<Rigidbody2D>();
         m_copRenderer = GetComponent<SpriteRenderer>();
         m_isBlending = false;
